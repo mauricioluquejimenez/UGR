@@ -1,0 +1,314 @@
+body
+{
+    background-color: rgb(235, 235, 235);
+    margin-left: 5%;
+    margin-right: 2.5%;
+}
+
+img { width: 85%; }
+
+#logo
+{
+    margin-left: 1%;
+    margin-top: 1%;
+    width: 35%;
+}
+
+#portada
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5%;
+}
+
+h1, h2, h3, h4, h5
+{
+    font-family: "Cinzel", serif;
+    text-align: center;
+}
+
+p, label, blockquote
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.05em;
+}
+
+a
+{
+    font-family: "Cinzel", serif;
+    font-size: 1.35em;
+    text-decoration: none;
+}
+
+a:link, a:visited { color: black; }
+
+a:hover { color: red; }
+
+a:active { color: darkred; }
+
+#usuario, #passwd, #usuario_signup, #correo_signup, #telefono_signup, #passwd_signup, #edad, #visita
+{
+    display: block;
+    width: 75%;
+}
+
+label, input, button
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5%;
+}
+
+#login
+{
+    border-style: groove;
+    border-width: thick;
+    float: right;
+    margin-top: 1.25%;
+    margin-right: 2.5%;
+    padding: 1%;
+    text-align: center;
+    width: 20%;
+}
+
+#signup
+{
+    border-style: groove;
+    border-width: thick;
+    margin: 0 auto;
+    margin-top: 1.5%;
+    padding: 1%;
+    text-align: center;
+    width: 30%;
+}
+
+#alta_confirmada
+{
+    border-style: groove;
+    border-width: thick;
+    margin-right: 2.5%;
+    text-align: center;
+}
+
+ul { list-style-type: none; }
+
+#menu
+{
+    border-style: groove;
+    border-width: thick;
+    display: block;
+    margin-top: 1.5%;
+    margin-right: 2.5%;
+    padding: 0.5%;
+    text-align: center;
+    width: 70%;
+}
+.menu_item
+{
+    display: inline-block;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    padding: 1%;
+    text-align: center;
+}
+
+#contenido
+{
+    align-items: start;
+    display: flex;
+    flex-direction: row;
+}
+
+#colecciones
+{
+    font-size: 0.85em;
+    width: 30%;
+}
+
+#autores, #epocas, #temas
+{
+    border-style: groove;
+    border-width: thick;
+    margin-right: 1.5%;
+    padding-bottom: 5%;
+    padding-top: 1%;
+}
+
+.row { display: flex; }
+
+#obras_coleccion
+{
+    border-collapse: collapse;
+    border-style: groove;
+    border-width: thick;
+    margin-right: 1%;
+    width: 70%;
+}
+
+#obras_relacionadas
+{
+    border-collapse: collapse;
+    border-style: groove;
+    border-width: thick;
+    margin-right: 1%;
+    padding-bottom: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    width: 33%;
+}
+
+#obra
+{
+    border: none;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    text-align: center;
+}
+
+.obra_coleccion
+{
+    border: groove;
+    flex: 1;
+    float: right;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    margin-top: 0.5%;
+    padding: 1%;
+    text-align: center;
+}
+
+.obra_relacionada
+{
+    border-style: groove;
+    float: right;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    padding-top: 2.5%;
+    text-align: center;
+}
+
+#descripcion
+{
+    margin: 5%;
+    text-align: center;
+}
+
+figcaption
+{
+    font-family: "Cinzel", serif;
+    font-weight: bold;
+    margin-bottom: 2.5%;
+    padding: 2.5%;
+}
+
+.sala, .exposicion
+{
+    display: flex;
+    margin: auto;
+    width: 75%;
+}
+
+.sala p, .exposicion p
+{
+    margin-bottom: 2.5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2.5%;
+    width: 45%;
+}
+
+.sala img
+{
+    float: right;
+    margin-bottom: 2.5%;
+    margin-left: 7.5%;
+    margin-top: 2.5%;
+    width: 25%;
+}
+
+.exposicion img
+{
+    float: right;
+    margin-bottom: 5%;
+    margin-top: 2.5%;
+    width: 50%;
+}
+
+#titulo_obras, #titulo_inicio, #titulo_visita, #titulo_exposiciones, .titulo_reseñas
+{
+    font-size: 2.5em;
+    margin-top: 2.5%;
+    margin-bottom: 3.5%;
+    text-align: center;
+}
+
+#comentarios
+{
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+}
+
+.comentario
+{
+    margin-right: 1%;
+    margin-top: 1%;
+}
+
+#comentario_user
+{
+    border-collapse: collapse;
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+}
+
+#comentario_user p { margin-bottom: 1%; margin-top: 1.5%;}
+
+#usuario_reseña
+{
+    display:block;
+    margin-bottom: 2.5%;
+}
+
+#tablas { display: flex; }
+
+table
+{
+    align-items: stretch;
+    border-collapse: collapse;
+    margin-bottom: 1.5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5%;
+    text-align: center;
+    width: auto;
+}
+
+#horario th, tr, td { padding-left: 1%; padding-right: 1%; }
+
+th, tr, td
+{
+    border-style: groove;
+    border-width: thick;
+    font-family: "Cinzel", serif; 
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+footer
+{
+    border-collapse: collapse;
+    border-style: groove;
+    border-width: thick;
+    margin-bottom: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+footer a
+{
+    padding: 1%;
+}

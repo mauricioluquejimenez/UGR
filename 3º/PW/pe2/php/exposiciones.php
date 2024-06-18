@@ -1,0 +1,119 @@
+<?php
+session_start();
+require_once('../php/config.php');
+
+$login = isset($_SESSION['usuario']);
+
+if (isset($_POST['usuario']) && isset($_POST['passwd']))
+{
+    $usuario = $_POST['usuario'];
+    $passwd = $_POST['passwd'];
+
+    $sql = "SELECT usuario, tipo FROM usuarios WHERE usuario = :usuario AND passwd = :passwd";
+
+    try {
+        $parametros = $conexion_pdo->prepare($sql);
+        $parametros->bindParam(':usuario', $usuario);
+        $parametros->bindParam(':passwd', $passwd);
+        $parametros->execute();
+
+        if ($parametros->rowCount() > 0)
+        {
+            $usuarioData = $parametros->fetch(PDO::FETCH_ASSOC);
+            $_SESSION['usuario'] = $usuarioData['usuario'];
+            $_SESSION['tipo'] = $usuarioData['tipo'];
+            $login = true;
+        }
+    } catch (PDOException $e) {
+        echo "Consulta fallida: " . $e->getMessage();
+    }
+}
+
+if (isset($_POST['logout'])) {
+    session_destroy();
+    header("Location: ../index.php");
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang = "es">
+    <head>
+        <title> MRG | Exposiciones </title>
+        <base href = "../pe2/">
+        <link rel = "stylesheet" type = "text/css" href = "../css/style.css"> 
+    </head>
+
+    <body>
+        <header>
+            <a href = "../index.php"><img id = "logo" src = "../imagenes/logo.png" alt = "Museo Real de Granada"></a>
+            
+            <section id = "login">
+            <?php
+                if (!$login) {
+                    echo '
+                    <form id="loginForm" method="POST">
+                    <label for="usuario">Nombre de usuario:</label>
+                    <input type="text" id="usuario" name="usuario">
+                    <label for="passwd">Contraseña:</label>
+                    <input type="text" id="passwd" name="passwd">
+                    <p><button type="submit">Iniciar Sesión</button></p>
+                    <a href="../php/altausuarios.php">¿No tienes cuenta? Regístrate</a>
+                    </form>';
+                } else
+                {
+                    echo '<h2>¡Bienvenido, ' . $_SESSION['usuario'] . '!</h2>';
+                    echo '<h3> Tipo: ' . $_SESSION['tipo'] . '</h3>';
+                    echo '
+                        <form method = "POST">
+                        <button type = "submit" name = "logout"> Cerrar Sesión </button>
+                        </form>';
+                }
+            ?>
+            </section>
+        
+            <nav>
+                <ul id = "menu">
+                    <li class = "menu_item"><a href = "../index.php"> INICIO </a></li>
+                    <li class = "menu_item"><a href = "../php/coleccion_1.php"> COLECCIÓN </a></li>
+                    <li class = "menu_item"><a href = "../php/visita.php"> VISITA </a></li>
+                    <li class = "menu_item"><a href = "../php/exposiciones.php"> EXPOSICIONES </a></li>
+                    <li class = "menu_item"><a href = "../php/informacion.php"> INFORMACIÓN </a></li>
+                    <li class = "menu_item"><a href = "../php/experiencias.php"> EXPERIENCIAS </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <h1 id = "titulo_exposiciones"> Exposiciones</h1>
+        <p style = "margin-left: 7.5%; margin-right: 7.5%;"> El Museo de la Alhambra presenta todos los años un programa de exposiciones temporales continuado en el que se dan a conocer, de forma temática, los fondos conservados en sus almacenes e inéditos. Las muestras son el resultado de un estudio previo de las colecciones y de un programa de restauración complementario, con la intención de dar a conocer estos fondos en exposiciones y su publicación a través de catálogos, cursos, videos, conferencias, etc</p>
+
+        <h2 style = "margin-top: 2.5%;"> La representación figurativa en el mundo musulmán </h2>
+        <h3> Siglo X - Siglo XIV </h3>
+        <section class = "exposicion">
+            <p> El Corán en ningún lugar prohíbe la representación figurativa, solo hay una intención para evitar la vuelta al antiguo paganismo. Con anterioridad a la aparición del islam hay en Siria y Asia Menor una tendencia generalizada a suprimir la iconografía con tendencia hacia la ornamentación geométrica y floral. ¿Por qué se cree que el Islam condena las formas plásticas? Todo arranca de varios ḥadīces recogidos de la tradición oral en época abbasí, pero si se analizan, realmente en lo que se insiste es en una constante intención de evitar la idolatría, ya que el culto y veneración debe dirigirse solo a Dios: <br>
+            <br> Dios es el único creador La realidad artística figurativa estará presente desde los primeros momentos sin problema, aunque las representaciones figurativas quedaron reservadas al ámbito privado y se alejan de edificios religiosos. Desde los primeros momentos omeyas, encontramos ejemplos espectaculares, continuados con los abasíes y mantenida en todos los periodos históricos y áreas geográficas. Bajo el poder hispanomusulmán la decoración figurativa aparece con frecuencia. Por una parte, valorando y usando elementos clásicos escultóricos de los que queda constancia, y por otra, realizando los artistas musulmanes temas figurativos de la vida, en la que narran escenas de la corte y, la vida usual y cotidiana (cacerías, juegos, bailes, músicos…) gracias a los cuales se conoce más sobre los protocolos oficiales de recepciones, formas de vestir y su evolución, costumbres, etc. </p>
+            <img class = "img_exposicion" src = "../imagenes/exposiciones/exposicion1.jpg" alt = "La representación figurativa en el mundo musulmán">
+        </section>
+
+        <h2> ¿Una bóveda desaparecida de la Alhambra? </h2>
+        <h3> Siglo XIV </h3>
+        <section class = "exposicion">
+            <p> En la reforma realizada en época del sultán Muhammad V, en el patio del Palacio de Comares, muestra en cada una de las esquinas, un īwān cubierto con bóveda de mocárabes. Los dos īwānes a N son mayores que los conservados a S. Todos se conservan, menos el que se encuentra en el ángulo SO que ha sufrido un desplome de su bóveda. Cada una de las 4 bóvedas son diferentes entre sí y ésta desaparecida, gracias al fragmento in situ y los 4 conservados en el Museo Real de Granada, permiten una restitución de cómo fue. <br>
+            <br> En esta exposición se realiza un estudio de esta bóveda desaparecida, como fue y porque desapareció. </p>
+            <img class = "img_exposicion" src = "../imagenes/exposiciones/exposicion2.jpg" alt = "¿Una bóveda desaparecida de la Alhambra?">
+        </section>
+
+        <h2> Un fragmento de ARROCABE NAZARÍ de la Torre de las Damas </h2>
+        <h3> Siglo XIV </h3>
+        <section class = "exposicion">
+            <p> Con motivo del Día Internacional de los Museos, que se celebra anualmente en una convocatoria mundial del ICOM el día 18 de mayo, se va a exponer, junto a las piezas más sobresalientes del arte nazarí, un fragmento de arrocabe nazarí originario de la Torre de las Damas del Partal, después de la reciente restauración a la que se ha sometido por técnicos especializados del Patronato de la Alhambra, tras ser devuelto generosamente a la Alhambra por los descendientes del escritor y dibujante británico Richard Ford. <br>
+            <br> La estancia principal del Palacio del Partal (finales del siglo XIII o principios del XIV) se encuentra en el interior de la Torre de las Damas y está cubierta por un techo en forma de artesa ataujerada, bajo la que presenta una tablazón decorativa a manera de friso, llamado arrocabe (ar-rukkab en árabe, que significa “los montantes”) con dos niveles. El nivel superior del friso es de mocárabes sobre columnillas que sirven de arranque a cuerpos prismáticos que parten de cartelas con el lema dinástico nazarí. El cuerpo inferior presenta una cenefa de rosetas tetrapétalas que compartimentan una sucesión de arcos lobulados con epigrafía cúfica interior (con el vocablo árabe yumm, “ventura”) repetida “en espejo”. Es uno de los frisos en armadura ataujerada nazaríes más antiguos que se conservan. </p>
+            <img class = "img_exposicion" src = "../imagenes/exposiciones/exposicion3.jpg" alt = "Un fragmento de ARROCABE NAZARÍ de la Torre de las Damas">
+        </section>
+
+        <footer id = "pie_de_página">
+            <a href = "../php/contacto.php"> Contacto </a>
+            <a href = "../como_se_hizo.pdf"> Cómo se hizo </a>
+        </footer>
+    </body>
+</html>

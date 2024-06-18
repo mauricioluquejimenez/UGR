@@ -1,0 +1,30 @@
+<!--
+    - creación y validación de formulario
+    - formulario con "Nombre: " y "Edad: " (input type = "number") + botón de envío -> "onsubmit" (si el código devuelve FALSE, el formulario no se envía
+    - cuando se envía el formulario, se comprueba que 18 < edad < 100
+-->
+
+<!DOCTYPE html>
+    <head>
+        <script>
+            function validar_edad(elem)
+            {
+                let campo = elem['edad'].value
+                
+                if(campo < 18 || campo > 100)
+                {
+                    alert("Edad " + campo + " es incorrecto")
+                    return false
+                }
+                else return true
+            }
+        </script>
+    </head>
+    <body>
+        <form id = "formulario" onsubmit = "return validar_edad(this)">
+            <label for = "nombre"> Nombre: </label><input type = "text" id = "nombre">
+            <label for = "edad"> Edad: </label><input type = "number" id = "edad">
+            <input type = "submit" value = "Enviar">
+        </form>
+    </body>
+</html>

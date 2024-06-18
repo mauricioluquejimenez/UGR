@@ -1,0 +1,14 @@
+JavaScript
+	Cuando hay que hacer pocos cambios -> cambios más eficientes y rápidos
+	
+PHP
+	Cuando hay que hacer más grandes o más extensos -> cambios más eficientes
+	Mayor seguridad con programación en el servidor (p.ej. sistemas de autenticación)*
+	
+*No es raro tener doble autenticación en el cliente Y en el servidor
+	
+La etiqueta <script> aparece en el <head> si se quiere que se ejecute nada más cargar la página
+	Es posible que un script muy extenso ralentice la carga inicial de la página
+	Si el <script> está dentro del <head> se puede ejecutar una vez cargada la página usando la etiqueta defer
+	
+La etiqueta <script> aparece en el <body> si se quiere que se ejecute una vez cargada la página

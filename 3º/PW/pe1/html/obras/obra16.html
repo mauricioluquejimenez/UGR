@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang = "es">
+    <head>
+        <title> MRG | San Diego de Alcalá </title>
+        <base href = "../pe1/">
+        <link rel = "stylesheet" type = "text/css" href = "../../css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <a href = "../../index.html"><img id = "logo" src = "../../imagenes/logo.png" alt = "Museo Real de Granada"></a>
+            
+            <section id = "login">
+                <form>
+                    <label for = "usuario"> Nombre de usuario: </label><input type = "text" id = "usuario" required>
+                    <label for = "passwd"> Contraseña: </label><input type = "password" id = "passwd" required>
+                    <p><button> Iniciar Sesión </button></p>
+                    <a href = "../altausuarios.html"> ¿No tienes cuenta? Regístrate </a>
+                </form>  
+            </section>
+        
+            <nav>
+                <ul id = "menu">
+                    <li class = "menu_item"><a href = "../../index.html"> INICIO </a></li>
+                    <li class = "menu_item"><a href = "../coleccion_1.html"> COLECCIÓN </a></li>
+                    <li class = "menu_item"><a href = "../visita.html"> VISITA </a></li>
+                    <li class = "menu_item"><a href = "../exposiciones.html"> EXPOSICIONES </a></li>
+                    <li class = "menu_item"><a href = "../informacion.html"> INFORMACIÓN </a></li>
+                    <li class = "menu_item"><a href = "../experiencias.html"> EXPERIENCIAS </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id = "contenido">
+            <main id = "obras_coleccion">
+                <figure id = "obra">
+                    <figcaption id = "titulo_obras"> San Diego de Alcalá, Alonso Cano (1653-1657) </figcaption>
+                    <img src = "../../imagenes/obras/obra16.jpg" alt = "San Diego de Alcalá">
+                </figure>
+
+                <p id = "descripcion"> Este retrato de San Diego refleja la importancia de este santo en la devoción popular española. </p>
+            </main>        
+
+            <aside id = "obras_relacionadas">
+                <h2> Obras relacionadas </h2>
+                <ul>
+                    <li>
+                        <figure class = "obra_relacionada">
+                            <a href = "../obras/obra17.html"><img src = "../../imagenes/obras/obra17.jpg" alt = "Decoraciones para las fiestas del Corpus"></a>
+                            <figcaption> Decoraciones para las fiestas del Corpus, J. Ruano (1850) </figcaption>
+                        </figure>
+                    </li>
+
+                    <li>
+                        <figure class = "obra_relacionada">
+                            <a href = "../obras/obra18.html"><img src = "../../imagenes/obras/obra18.jpg" alt = "Mapa topográfico de la ciudad de Granada"></a>
+                            <figcaption> Mapa topográfico de la ciudad de Granada, Francisco Dalmau (1796)</figcaption>
+                        </figure>
+                    </li>
+
+                    <li>
+                        <figure class = "obra_relacionada">
+                            <a href = "../obras/obra1.html"><img src = "../../imagenes/obras/obra1.jpg" alt = "Retrato de Ángel Ganivet"></a>
+                            <figcaption> Retrato de Ángel Ganivet, José Ruiz de Almodóvar (Siglo XIX) </figcaption>
+                        </figure>
+                    </li>
+
+                    <li>
+                        <figure class = "obra_relacionada">
+                            <a href = "../obras/obra2.html"><img src = "../../imagenes/obras/obra2.jpg" alt = "Danza del bolero en Granada"></a>
+                            <figcaption> Danza del bolero en Granada, Dutailly (1805) </figcaption>
+                        </figure>
+                    </li>
+
+                    <li>
+                        <figure class = "obra_relacionada">
+                            <a href = "../obras/obra3.html"><img src = "../../imagenes/obras/obra3.jpg" alt = "La plaza de Bib-Rambla"></a>
+                            <figcaption> La plaza de Bib-Rambla, Luis Muriel (1834) </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+
+        <footer id = "pie_de_página">
+            <a href = "../contacto.html"> Contacto </a>
+            <a href = "../../como_se_hizo.pdf"> Cómo se hizo </a>
+        </footer>
+    </body>
+</html>
