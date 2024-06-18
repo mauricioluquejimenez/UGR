@@ -1,0 +1,387 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gexf xmlns="http://gexf.net/1.3" version="1.3" xmlns:viz="http://gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://gexf.net/1.3 http://gexf.net/1.3/gexf.xsd">
+  <meta lastmodifieddate="2023-12-17">
+    <creator>Gephi 0.10.1</creator>
+    <title></title>
+    <description></description>
+  </meta>
+  <graph defaultedgetype="directed" mode="static">
+    <attributes class="node" mode="static">
+      <attribute id="indegree" title="Grado de entrada" type="integer">
+        <default>0</default>
+      </attribute>
+      <attribute id="outdegree" title="Grado de salida" type="integer">
+        <default>0</default>
+      </attribute>
+      <attribute id="degree" title="Grado" type="integer">
+        <default>0</default>
+      </attribute>
+      <attribute id="weighted degree" title="Weighted Degree" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="weighted indegree" title="Weighted In-Degree" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="weighted outdegree" title="Weighted Out-Degree" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="eccentricity" title="Eccentricity" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="closnesscentrality" title="Closeness Centrality" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="betweenesscentrality" title="Betweenness Centrality" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="clustering" title="Clustering Coefficient" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="componentnumber" title="Component ID" type="integer">
+        <default>0</default>
+      </attribute>
+      <attribute id="strongcompnum" title="Strongly-Connected ID" type="integer">
+        <default>0</default>
+      </attribute>
+      <attribute id="eigencentrality" title="Eigenvector Centrality" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="triangles" title="Number of triangles" type="integer">
+        <default>0</default>
+      </attribute>
+      <attribute id="modularity_class" title="Modularity Class" type="integer">
+        <default>0</default>
+      </attribute>
+    </attributes>
+    <nodes>
+      <node id="14" label="Casillas">
+        <attvalues>
+          <attvalue for="indegree" value="1"/>
+          <attvalue for="outdegree" value="3"/>
+          <attvalue for="degree" value="4"/>
+          <attvalue for="weighted degree" value="7.0"/>
+          <attvalue for="weighted indegree" value="2.0"/>
+          <attvalue for="weighted outdegree" value="5.0"/>
+          <attvalue for="eccentricity" value="3.0"/>
+          <attvalue for="closnesscentrality" value="0.5238095238095238"/>
+          <attvalue for="betweenesscentrality" value="0.004090909090909091"/>
+          <attvalue for="clustering" value="0.6666667"/>
+          <attvalue for="componentnumber" value="0"/>
+          <attvalue for="strongcompnum" value="0"/>
+          <attvalue for="eigencentrality" value="0.16189416805320203"/>
+          <attvalue for="triangles" value="3"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="29.285715"/>
+        <viz:position x="2225.3992" y="61.65278"/>
+        <viz:color r="153" g="153" b="153"/>
+      </node>
+      <node id="15" label="Bale">
+        <attvalues>
+          <attvalue for="indegree" value="6"/>
+          <attvalue for="outdegree" value="4"/>
+          <attvalue for="degree" value="10"/>
+          <attvalue for="weighted degree" value="27.0"/>
+          <attvalue for="weighted indegree" value="20.0"/>
+          <attvalue for="weighted outdegree" value="7.0"/>
+          <attvalue for="eccentricity" value="2.0"/>
+          <attvalue for="closnesscentrality" value="0.611111111111111"/>
+          <attvalue for="betweenesscentrality" value="0.02484848484848485"/>
+          <attvalue for="clustering" value="0.5714286"/>
+          <attvalue for="componentnumber" value="0"/>
+          <attvalue for="strongcompnum" value="0"/>
+          <attvalue for="eigencentrality" value="0.7220359974289036"/>
+          <attvalue for="triangles" value="15"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="43.428574"/>
+        <viz:position x="-1346.1354" y="1678.8209"/>
+        <viz:color r="153" g="153" b="153"/>
+      </node>
+      <node id="16" label="Cristiano">
+        <attvalues>
+          <attvalue for="indegree" value="7"/>
+          <attvalue for="outdegree" value="6"/>
+          <attvalue for="degree" value="13"/>
+          <attvalue for="weighted degree" value="31.0"/>
+          <attvalue for="weighted indegree" value="20.0"/>
+          <attvalue for="weighted outdegree" value="11.0"/>
+          <attvalue for="eccentricity" value="2.0"/>
+          <attvalue for="closnesscentrality" value="0.6875"/>
+          <attvalue for="betweenesscentrality" value="0.15181818181818182"/>
+          <attvalue for="clustering" value="0.58928573"/>
+          <attvalue for="componentnumber" value="0"/>
+          <attvalue for="strongcompnum" value="0"/>
+          <attvalue for="eigencentrality" value="0.9427705602081203"/>
+          <attvalue for="triangles" value="21"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="71.71429"/>
+        <viz:position x="-1899.567" y="-515.9026"/>
+        <viz:color r="153" g="153" b="153"/>
+      </node>
+      <node id="17" label="Morata">
+        <attvalues>
+          <attvalue for="indegree" value="7"/>
+          <attvalue for="outdegree" value="6"/>
+          <attvalue for="degree" value="13"/>
+          <attvalue for="weighted degree" value="22.0"/>
+          <attvalue for="weighted indegree" value="13.0"/>
+          <attvalue for="weighted outdegree" value="9.0"/>
+          <attvalue for="eccentricity" value="3.0"/>
+          <attvalue for="closnesscentrality" value="0.6470588235294118"/>
+          <attvalue for="betweenesscentrality" value="0.07545454545454545"/>
+          <attvalue for="clustering" value="0.5555556"/>
+          <attvalue for="componentnumber" value="0"/>
+          <attvalue for="strongcompnum" value="0"/>
+          <attvalue for="eigencentrality" value="0.8095621396415059"/>
+          <attvalue for="triangles" value="25"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="71.71429"/>
+        <viz:position x="-2002.1116" y="656.1461"/>
+        <viz:color r="153" g="153" b="153"/>
+      </node>
+      <node id="18" label="Carvajal">
+        <attvalues>
+          <attvalue for="indegree" value="3"/>
+          <attvalue for="outdegree" value="6"/>
+          <attvalue for="degree" value="9"/>
+          <attvalue for="weighted degree" value="11.0"/>
+          <attvalue for="weighted indegree" value="4.0"/>
+          <attvalue for="weighted outdegree" value="7.0"/>
+          <attvalue for="eccentricity" value="3.0"/>
+          <attvalue for="closnesscentrality" value="0.6470588235294118"/>
+          <attvalue for="betweenesscentrality" value="0.02681818181818182"/>
+          <attvalue for="clustering" value="0.6"/>
+          <attvalue for="componentnumber" value="0"/>
+          <attvalue for="strongcompnum" value="0"/>
+          <attvalue for="eigencentrality" value="0.3327040632870146"/>
+          <attvalue for="triangles" value="12"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="71.71429"/>
+        <viz:position x="1238.3248" y="1629.8518"/>
+        <viz:color r="153" g="153" b="153"/>
+      </node>
+      <node id="19" label="Varane">
+        <attvalues>
+          <attvalue for="indegree" value="4"/>
+          <attvalue for="outdegree" value="3"/>
+          <attvalue for="degree" value="7"/>
+          <attvalue for="weighted degree" value="8.0"/>
+          <attvalue for="weighted indegree" value="4.0"/>
+          <attvalue for="weighted outdegree" value="4.0"/>
+          <attvalue for="eccentricity" value="3.0"/>
+          <attvalue for="closnesscentrality" value="0.5238095238095238"/>
+          <attvalue for="betweenesscentrality" value="0.015909090909090907"/>
+          <attvalue for="clustering" value="0.7"/>
+          <attvalue for="componentnumber" value="0"/>
+          <attvalue for="strongcompnum" value="0"/>
+          <attvalue for="eigencentrality" value="0.4872406166897493"/>
+          <attvalue for="triangles" value="9"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="29.285715"/>
+        <viz:position x="1148.1018" y="299.1609"/>
+        <viz:color r="153" g="153" b="153"/>
+      </node>
+      <node id="20" label="Modric">
+        <attvalues>
+          <attvalue for="indegree" value="7"/>
+          <attvalue for="outdegree" value="8"/>
+          <attvalue for="degree" value="15"/>
+          <attvalue for="weighted degree" value="43.0"/>
+          <attvalue for="weighted indegree" value="24.0"/>
+          <attvalue for="weighted outdegree" value="19.0"/>
+          <attvalue for="eccentricity" value="2.0"/>
+          <attvalue for="closnesscentrality" value="0.7857142857142857"/>
+          <attvalue for="betweenesscentrality" value="0.1453030303030303"/>
+          <attvalue for="clustering" value="0.47777778"/>
+          <attvalue for="componentnumber" value="0"/>
+          <attvalue for="strongcompnum" value="0"/>
+          <attvalue for="eigencentrality" value="0.9402283925535523"/>
+          <attvalue for="triangles" value="28"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="100.0"/>
+        <viz:position x="-219.6488" y="1052.8971"/>
+        <viz:color r="153" g="153" b="153"/>
+      </node>
+      <node id="21" label="Isco">
+        <attvalues>
+          <attvalue for="indegree" value="8"/>
+          <attvalue for="outdegree" value="6"/>
+          <attvalue for="degree" value="14"/>
+          <attvalue for="weighted degree" value="48.0"/>
+          <attvalue for="weighted indegree" value="16.0"/>
+          <attvalue for="weighted outdegree" value="32.0"/>
+          <attvalue for="eccentricity" value="2.0"/>
+          <attvalue for="closnesscentrality" value="0.6875"/>
+          <attvalue for="betweenesscentrality" value="0.07075757575757576"/>
+          <attvalue for="clustering" value="0.5833333"/>
+          <attvalue for="componentnumber" value="0"/>
+          <attvalue for="strongcompnum" value="0"/>
+          <attvalue for="eigencentrality" value="1.0"/>
+          <attvalue for="triangles" value="27"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="71.71429"/>
+        <viz:position x="-236.3107" y="-891.0002"/>
+        <viz:color r="153" g="153" b="153"/>
+      </node>
+      <node id="22" label="Ramos">
+        <attvalues>
+          <attvalue for="indegree" value="5"/>
+          <attvalue for="outdegree" value="7"/>
+          <attvalue for="degree" value="12"/>
+          <attvalue for="weighted degree" value="28.0"/>
+          <attvalue for="weighted indegree" value="8.0"/>
+          <attvalue for="weighted outdegree" value="20.0"/>
+          <attvalue for="eccentricity" value="3.0"/>
+          <attvalue for="closnesscentrality" value="0.6875"/>
+          <attvalue for="betweenesscentrality" value="0.06030303030303031"/>
+          <attvalue for="clustering" value="0.625"/>
+          <attvalue for="componentnumber" value="0"/>
+          <attvalue for="strongcompnum" value="0"/>
+          <attvalue for="eigencentrality" value="0.6198079395380334"/>
+          <attvalue for="triangles" value="22"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="85.85715"/>
+        <viz:position x="1250.3575" y="-499.44595"/>
+        <viz:color r="153" g="153" b="153"/>
+      </node>
+      <node id="23" label="Marcelo">
+        <attvalues>
+          <attvalue for="indegree" value="6"/>
+          <attvalue for="outdegree" value="5"/>
+          <attvalue for="degree" value="11"/>
+          <attvalue for="weighted degree" value="45.0"/>
+          <attvalue for="weighted indegree" value="23.0"/>
+          <attvalue for="weighted outdegree" value="22.0"/>
+          <attvalue for="eccentricity" value="2.0"/>
+          <attvalue for="closnesscentrality" value="0.6470588235294118"/>
+          <attvalue for="betweenesscentrality" value="0.019696969696969695"/>
+          <attvalue for="clustering" value="0.76666665"/>
+          <attvalue for="componentnumber" value="0"/>
+          <attvalue for="strongcompnum" value="0"/>
+          <attvalue for="eigencentrality" value="0.9030984191505655"/>
+          <attvalue for="triangles" value="15"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="57.57143"/>
+        <viz:position x="965.9424" y="-1671.0929"/>
+        <viz:color r="153" g="153" b="153"/>
+      </node>
+      <node id="24" label="DiMaria">
+        <attvalues>
+          <attvalue for="indegree" value="7"/>
+          <attvalue for="outdegree" value="7"/>
+          <attvalue for="degree" value="14"/>
+          <attvalue for="weighted degree" value="34.0"/>
+          <attvalue for="weighted indegree" value="18.0"/>
+          <attvalue for="weighted outdegree" value="16.0"/>
+          <attvalue for="eccentricity" value="2.0"/>
+          <attvalue for="closnesscentrality" value="0.7333333333333334"/>
+          <attvalue for="betweenesscentrality" value="0.1322727272727273"/>
+          <attvalue for="clustering" value="0.4861111"/>
+          <attvalue for="componentnumber" value="0"/>
+          <attvalue for="strongcompnum" value="0"/>
+          <attvalue for="eigencentrality" value="0.9272398492309544"/>
+          <attvalue for="triangles" value="23"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="85.85715"/>
+        <viz:position x="-1143.4254" y="-1715.4323"/>
+        <viz:color r="153" g="153" b="153"/>
+      </node>
+      <node id="25" label="Khedira">
+        <attvalues>
+          <attvalue for="indegree" value="1"/>
+          <attvalue for="outdegree" value="1"/>
+          <attvalue for="degree" value="2"/>
+          <attvalue for="weighted degree" value="2.0"/>
+          <attvalue for="weighted indegree" value="1.0"/>
+          <attvalue for="weighted outdegree" value="1.0"/>
+          <attvalue for="eccentricity" value="3.0"/>
+          <attvalue for="closnesscentrality" value="0.45833333333333337"/>
+          <attvalue for="betweenesscentrality" value="0.0"/>
+          <attvalue for="clustering" value="1.0"/>
+          <attvalue for="componentnumber" value="0"/>
+          <attvalue for="strongcompnum" value="0"/>
+          <attvalue for="eigencentrality" value="0.1615511542913125"/>
+          <attvalue for="triangles" value="1"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="1.0"/>
+        <viz:position x="19.07302" y="-85.655815"/>
+        <viz:color r="153" g="153" b="153"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="64" source="14" target="15" weight="2.0"/>
+      <edge id="65" source="14" target="16"/>
+      <edge id="66" source="14" target="17" weight="2.0"/>
+      <edge id="118" source="15" target="16"/>
+      <edge id="117" source="15" target="17" weight="3.0"/>
+      <edge id="116" source="15" target="20"/>
+      <edge id="119" source="15" target="21" weight="2.0"/>
+      <edge id="124" source="16" target="14" weight="2.0"/>
+      <edge id="120" source="16" target="20" weight="3.0"/>
+      <edge id="121" source="16" target="21"/>
+      <edge id="125" source="16" target="22"/>
+      <edge id="122" source="16" target="23" weight="3.0"/>
+      <edge id="123" source="16" target="24"/>
+      <edge id="110" source="17" target="15" weight="3.0"/>
+      <edge id="114" source="17" target="16"/>
+      <edge id="112" source="17" target="18"/>
+      <edge id="111" source="17" target="21" weight="2.0"/>
+      <edge id="115" source="17" target="23"/>
+      <edge id="113" source="17" target="24"/>
+      <edge id="72" source="18" target="15" weight="2.0"/>
+      <edge id="67" source="18" target="17"/>
+      <edge id="68" source="18" target="19"/>
+      <edge id="69" source="18" target="20"/>
+      <edge id="70" source="18" target="21"/>
+      <edge id="71" source="18" target="22"/>
+      <edge id="81" source="19" target="18"/>
+      <edge id="80" source="19" target="21" weight="2.0"/>
+      <edge id="82" source="19" target="22"/>
+      <edge id="109" source="20" target="15" weight="2.0"/>
+      <edge id="104" source="20" target="16" weight="3.0"/>
+      <edge id="106" source="20" target="17" weight="3.0"/>
+      <edge id="103" source="20" target="19"/>
+      <edge id="105" source="20" target="21" weight="4.0"/>
+      <edge id="108" source="20" target="23" weight="4.0"/>
+      <edge id="107" source="20" target="24"/>
+      <edge id="102" source="20" target="25"/>
+      <edge id="98" source="21" target="15" weight="10.0"/>
+      <edge id="96" source="21" target="16" weight="6.0"/>
+      <edge id="101" source="21" target="17"/>
+      <edge id="97" source="21" target="20" weight="8.0"/>
+      <edge id="100" source="21" target="23" weight="5.0"/>
+      <edge id="99" source="21" target="24" weight="2.0"/>
+      <edge id="79" source="22" target="17" weight="2.0"/>
+      <edge id="75" source="22" target="18" weight="2.0"/>
+      <edge id="76" source="22" target="19"/>
+      <edge id="73" source="22" target="20" weight="3.0"/>
+      <edge id="78" source="22" target="21" weight="3.0"/>
+      <edge id="74" source="22" target="23" weight="3.0"/>
+      <edge id="77" source="22" target="24" weight="6.0"/>
+      <edge id="84" source="23" target="16" weight="6.0"/>
+      <edge id="88" source="23" target="17"/>
+      <edge id="85" source="23" target="20" weight="6.0"/>
+      <edge id="86" source="23" target="22" weight="3.0"/>
+      <edge id="87" source="23" target="24" weight="6.0"/>
+      <edge id="95" source="24" target="15"/>
+      <edge id="93" source="24" target="16" weight="2.0"/>
+      <edge id="94" source="24" target="19"/>
+      <edge id="92" source="24" target="20" weight="2.0"/>
+      <edge id="91" source="24" target="21"/>
+      <edge id="90" source="24" target="22" weight="2.0"/>
+      <edge id="89" source="24" target="23" weight="7.0"/>
+      <edge id="83" source="25" target="24"/>
+    </edges>
+  </graph>
+</gexf>

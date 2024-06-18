@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-12-17">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <attributes mode="static" class="edge">
+      <attribute id="0" title="x" type="double" />
+    </attributes>
+    <nodes>
+      <node id="Marcelo" label="Marcelo" />
+      <node id="Luka Modrić" label="Luka Modrić" />
+      <node id="Cristiano Ronaldo" label="Cristiano Ronaldo" />
+      <node id="Isco" label="Isco" />
+      <node id="Toni Kroos" label="Toni Kroos" />
+      <node id="Casemiro" label="Casemiro" />
+      <node id="Daniel Carvajal" label="Daniel Carvajal" />
+      <node id="Sergio Ramos" label="Sergio Ramos" />
+      <node id="Raphaël Varane" label="Raphaël Varane" />
+      <node id="Keylor Navas" label="Keylor Navas" />
+      <node id="Karim Benzema" label="Karim Benzema" />
+    </nodes>
+    <edges>
+      <edge source="Marcelo" target="Luka Modrić" id="0">
+        <attvalues>
+          <attvalue for="0" value="101.0" />
+        </attvalues>
+      </edge>
+      <edge source="Marcelo" target="Cristiano Ronaldo" id="1">
+        <attvalues>
+          <attvalue for="0" value="52.0" />
+        </attvalues>
+      </edge>
+      <edge source="Marcelo" target="Isco" id="2">
+        <attvalues>
+          <attvalue for="0" value="97.0" />
+        </attvalues>
+      </edge>
+      <edge source="Marcelo" target="Casemiro" id="3">
+        <attvalues>
+          <attvalue for="0" value="23.0" />
+        </attvalues>
+      </edge>
+      <edge source="Marcelo" target="Sergio Ramos" id="4">
+        <attvalues>
+          <attvalue for="0" value="18.0" />
+        </attvalues>
+      </edge>
+      <edge source="Marcelo" target="Toni Kroos" id="5">
+        <attvalues>
+          <attvalue for="0" value="32.0" />
+        </attvalues>
+      </edge>
+      <edge source="Marcelo" target="Keylor Navas" id="6">
+        <attvalues>
+          <attvalue for="0" value="8.0" />
+        </attvalues>
+      </edge>
+      <edge source="Marcelo" target="Karim Benzema" id="7">
+        <attvalues>
+          <attvalue for="0" value="10.0" />
+        </attvalues>
+      </edge>
+      <edge source="Marcelo" target="Raphaël Varane" id="8">
+        <attvalues>
+          <attvalue for="0" value="63.0" />
+        </attvalues>
+      </edge>
+      <edge source="Marcelo" target="Daniel Carvajal" id="9">
+        <attvalues>
+          <attvalue for="0" value="92.0" />
+        </attvalues>
+      </edge>
+      <edge source="Luka Modrić" target="Daniel Carvajal" id="10">
+        <attvalues>
+          <attvalue for="0" value="91.0" />
+        </attvalues>
+      </edge>
+      <edge source="Luka Modrić" target="Isco" id="11">
+        <attvalues>
+          <attvalue for="0" value="78.0" />
+        </attvalues>
+      </edge>
+      <edge source="Luka Modrić" target="Toni Kroos" id="12">
+        <attvalues>
+          <attvalue for="0" value="92.0" />
+        </attvalues>
+      </edge>
+      <edge source="Luka Modrić" target="Casemiro" id="13">
+        <attvalues>
+          <attvalue for="0" value="56.0" />
+        </attvalues>
+      </edge>
+      <edge source="Luka Modrić" target="Cristiano Ronaldo" id="14">
+        <attvalues>
+          <attvalue for="0" value="78.0" />
+        </attvalues>
+      </edge>
+      <edge source="Luka Modrić" target="Raphaël Varane" id="15">
+        <attvalues>
+          <attvalue for="0" value="63.0" />
+        </attvalues>
+      </edge>
+      <edge source="Luka Modrić" target="Sergio Ramos" id="16">
+        <attvalues>
+          <attvalue for="0" value="36.0" />
+        </attvalues>
+      </edge>
+      <edge source="Luka Modrić" target="Karim Benzema" id="17">
+        <attvalues>
+          <attvalue for="0" value="85.0" />
+        </attvalues>
+      </edge>
+      <edge source="Cristiano Ronaldo" target="Toni Kroos" id="18">
+        <attvalues>
+          <attvalue for="0" value="69.0" />
+        </attvalues>
+      </edge>
+      <edge source="Cristiano Ronaldo" target="Sergio Ramos" id="19">
+        <attvalues>
+          <attvalue for="0" value="43.0" />
+        </attvalues>
+      </edge>
+      <edge source="Cristiano Ronaldo" target="Isco" id="20">
+        <attvalues>
+          <attvalue for="0" value="115.0" />
+        </attvalues>
+      </edge>
+      <edge source="Cristiano Ronaldo" target="Raphaël Varane" id="21">
+        <attvalues>
+          <attvalue for="0" value="51.0" />
+        </attvalues>
+      </edge>
+      <edge source="Cristiano Ronaldo" target="Daniel Carvajal" id="22">
+        <attvalues>
+          <attvalue for="0" value="92.0" />
+        </attvalues>
+      </edge>
+      <edge source="Cristiano Ronaldo" target="Casemiro" id="23">
+        <attvalues>
+          <attvalue for="0" value="30.0" />
+        </attvalues>
+      </edge>
+      <edge source="Cristiano Ronaldo" target="Karim Benzema" id="24">
+        <attvalues>
+          <attvalue for="0" value="60.0" />
+        </attvalues>
+      </edge>
+      <edge source="Cristiano Ronaldo" target="Keylor Navas" id="25">
+        <attvalues>
+          <attvalue for="0" value="10.0" />
+        </attvalues>
+      </edge>
+      <edge source="Isco" target="Toni Kroos" id="26">
+        <attvalues>
+          <attvalue for="0" value="56.0" />
+        </attvalues>
+      </edge>
+      <edge source="Isco" target="Daniel Carvajal" id="27">
+        <attvalues>
+          <attvalue for="0" value="49.0" />
+        </attvalues>
+      </edge>
+      <edge source="Isco" target="Sergio Ramos" id="28">
+        <attvalues>
+          <attvalue for="0" value="22.0" />
+        </attvalues>
+      </edge>
+      <edge source="Isco" target="Casemiro" id="29">
+        <attvalues>
+          <attvalue for="0" value="67.0" />
+        </attvalues>
+      </edge>
+      <edge source="Isco" target="Karim Benzema" id="30">
+        <attvalues>
+          <attvalue for="0" value="62.0" />
+        </attvalues>
+      </edge>
+      <edge source="Isco" target="Keylor Navas" id="31">
+        <attvalues>
+          <attvalue for="0" value="25.0" />
+        </attvalues>
+      </edge>
+      <edge source="Isco" target="Raphaël Varane" id="32">
+        <attvalues>
+          <attvalue for="0" value="69.0" />
+        </attvalues>
+      </edge>
+      <edge source="Toni Kroos" target="Casemiro" id="33">
+        <attvalues>
+          <attvalue for="0" value="20.0" />
+        </attvalues>
+      </edge>
+      <edge source="Toni Kroos" target="Daniel Carvajal" id="34">
+        <attvalues>
+          <attvalue for="0" value="37.0" />
+        </attvalues>
+      </edge>
+      <edge source="Toni Kroos" target="Sergio Ramos" id="35">
+        <attvalues>
+          <attvalue for="0" value="9.0" />
+        </attvalues>
+      </edge>
+      <edge source="Toni Kroos" target="Raphaël Varane" id="36">
+        <attvalues>
+          <attvalue for="0" value="49.0" />
+        </attvalues>
+      </edge>
+      <edge source="Toni Kroos" target="Karim Benzema" id="37">
+        <attvalues>
+          <attvalue for="0" value="90.0" />
+        </attvalues>
+      </edge>
+      <edge source="Toni Kroos" target="Keylor Navas" id="38">
+        <attvalues>
+          <attvalue for="0" value="51.0" />
+        </attvalues>
+      </edge>
+      <edge source="Casemiro" target="Sergio Ramos" id="39">
+        <attvalues>
+          <attvalue for="0" value="15.0" />
+        </attvalues>
+      </edge>
+      <edge source="Casemiro" target="Raphaël Varane" id="40">
+        <attvalues>
+          <attvalue for="0" value="28.0" />
+        </attvalues>
+      </edge>
+      <edge source="Casemiro" target="Karim Benzema" id="41">
+        <attvalues>
+          <attvalue for="0" value="61.0" />
+        </attvalues>
+      </edge>
+      <edge source="Casemiro" target="Keylor Navas" id="42">
+        <attvalues>
+          <attvalue for="0" value="56.0" />
+        </attvalues>
+      </edge>
+      <edge source="Casemiro" target="Daniel Carvajal" id="43">
+        <attvalues>
+          <attvalue for="0" value="21.0" />
+        </attvalues>
+      </edge>
+      <edge source="Daniel Carvajal" target="Raphaël Varane" id="44">
+        <attvalues>
+          <attvalue for="0" value="16.0" />
+        </attvalues>
+      </edge>
+      <edge source="Daniel Carvajal" target="Sergio Ramos" id="45">
+        <attvalues>
+          <attvalue for="0" value="57.0" />
+        </attvalues>
+      </edge>
+      <edge source="Daniel Carvajal" target="Keylor Navas" id="46">
+        <attvalues>
+          <attvalue for="0" value="19.0" />
+        </attvalues>
+      </edge>
+      <edge source="Daniel Carvajal" target="Karim Benzema" id="47">
+        <attvalues>
+          <attvalue for="0" value="94.0" />
+        </attvalues>
+      </edge>
+      <edge source="Sergio Ramos" target="Keylor Navas" id="48">
+        <attvalues>
+          <attvalue for="0" value="49.0" />
+        </attvalues>
+      </edge>
+      <edge source="Sergio Ramos" target="Karim Benzema" id="49">
+        <attvalues>
+          <attvalue for="0" value="16.0" />
+        </attvalues>
+      </edge>
+      <edge source="Sergio Ramos" target="Raphaël Varane" id="50">
+        <attvalues>
+          <attvalue for="0" value="14.0" />
+        </attvalues>
+      </edge>
+      <edge source="Raphaël Varane" target="Karim Benzema" id="51">
+        <attvalues>
+          <attvalue for="0" value="112.0" />
+        </attvalues>
+      </edge>
+      <edge source="Raphaël Varane" target="Keylor Navas" id="52">
+        <attvalues>
+          <attvalue for="0" value="3.0" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

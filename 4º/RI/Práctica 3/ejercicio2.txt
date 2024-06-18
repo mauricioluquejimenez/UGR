@@ -1,0 +1,26 @@
+Capítulos Unidos
+
+episode_id			KeyWordAnalyzer -> Todo el campo como un único token (el número)
+spoken_words			SimpleAnalyzer o EnglishAnalyzer/CustomAnalyzer con un stemmer en inglés (dependiendo de cómo se quieren contar las abreviaciones)
+raw_character_text		KeyWordAnalyzer -> Todo el campo como un único token (el nombre del personaje -> no tiene sentido dividir "Homer Simpson" en distintos tokens, aunque si se quisiera separar para buscar familiares o tocayos se podría usar el WhiteSpaceAnalyzer o el SimpleAnalyzer para pasarlo a minúscula) 
+imdb_rating			KeyWordAnalyzer -> Todo el campo como un único token (el número)
+imdb_votes			KeyWordAnalyzer -> Todo el campo como un único token (el número)
+number_in_season		KeyWordAnalyzer -> Todo el campo como un único token (el número)
+original_air_date		KeyWordAnalyzer -> Todo el campo como un único token (el número)
+original_air_year		KeyWordAnalyzer -> Todo el campo como un único token (el número)
+season				KeyWordAnalyzer -> Todo el campo como un único token (el número)
+title				StopAnalyzer o EnglishAnalyzer/CustomAnalyzer con un stemmer en inglés (caso similar al de los diálogos, en el que se puede entender que se quieran separar las palabras. En este caso se eliminan las palabras vacías para quedarnos únicamente con aquellas palabras que pueden ser explicativos de la historia del episodio)
+us_viewers_in_millions		KeyWordAnalyzer -> Todo el campo como un único token (el número)
+views				KeyWordAnalyzer -> Todo el campo como un único token (el número)
+
+
+
+Capítulos
+
+episode_id			KeyWordAnalyzer -> Todo el campo como un único token (el número)
+number				KeyWordAnalyzer -> Todo el campo como un único token (el número)
+timestamp_in_ms			KeyWordAnalyzer -> Todo el campo como un único token (el número)
+raw_character_text		KeyWordAnalyzer -> Todo el campo como un único token (el nombre del personaje -> no tiene sentido dividir "Homer Simpson" en distintos tokens, aunque si se quisiera separar para buscar familiares o tocayos se podría usar el WhiteSpaceAnalyzer o el SimpleAnalyzer para pasarlo a minúscula) 
+raw_location_text		KeyWordAnalyzer -> Todo el campo como un único token (la localización -> mismo caso que el anterior, en el caso de que se quisiera separar por el tipo de escenario, por ejemplo, entre hogares y hospitales, sí podría usarse un analizador básico, pero en principio se entiende cada localización como un único token)
+spoken_words			SimpleAnalyzer o EnglishAnalyzer/CustomAnalyzer con un stemmer en inglés (dependiendo de cómo se quieren contar las abreviaciones)
+

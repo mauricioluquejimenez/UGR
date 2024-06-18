@@ -1,0 +1,18 @@
+public static Analyzer crearAnalyzer():
+•	Este método crea un analizador de texto utilizando la biblioteca Lucene.
+•	CustomAnalyzer.builder(): Se utiliza para construir un analizador personalizado.
+•	addCharFilter(PatternReplaceCharFilterFactory.NAME, "pattern", "[/(/)/{/};]", "replacement", "X"): Se agrega un filtro de caracteres personalizado que reemplaza ciertos caracteres (paréntesis y punto y coma) por "X".
+•	withTokenizer(ClassicTokenizerFactory.NAME): Se especifica que se utilizará el tokenizador "ClassicTokenizer" para dividir el texto en tokens.
+•	addTokenFilter(LowerCaseFilterFactory.NAME): Se agrega un filtro que convierte los tokens en minúsculas.
+public static Analyzer crearAnalyzer2():
+•	En este caso, en lugar de utilizar las clases predefinidas de Lucene, se crea un analizador personalizado anónimo que hereda de la clase Analyzer.
+•	Se implementa el método protegido createComponents, que es donde se definen los componentes del analizador. En este caso:
+•	Se utiliza un tokenizador llamado WhitespaceTokenizer para dividir el texto en tokens separados por espacios en blanco.
+•	Se agrega un filtro EdgeNGramTokenFilter que crea n-gramas (subconjuntos de caracteres) de longitud 3 a 3.
+•	Se llama al método normalizar para aplicar un filtro que convierte los tokens en minúsculas (LowerCaseFilter).
+•	El método normalizar simplemente agrega un filtro que convierte los tokens en minúsculas y luego devuelve el resultado.
+•	El analizador personalizado mi_analizador se devuelve como resultado.
+Ambos métodos crean analizadores de texto personalizados con configuraciones específicas, y el primero utiliza las facilidades proporcionadas por Lucene, mientras que el segundo implementa un analizador personalizado desde cero. Estos analizadores se pueden utilizar para procesar y analizar texto de acuerdo con las necesidades de una aplicación específica.
+Por otro lado SimpleAnalyzer() lo único que hace es dividir el texto en palabras y ponerlas todas en minúscula.
+
+El procedimiento para hacer el conteo de frecuencia de términos es el mismo que en la practica anterior solo que ahora se analiza el texto para cada analizador y dependiendo del analizador que sea se escribe los resultados en una columna u otra.
