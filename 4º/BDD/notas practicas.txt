@@ -1,9 +1,0 @@
-¿Tiene sentido almacenar los suministros de forma independiente?
-
-- Los suministros NO tienen fecha -> los pedidos y las distribuciones SÍ
-- Los suministros NO tienen cantidad -> los pedidos y las distribuciones SÍ
-- No hay información almacenada en SUMINISTRO que no se almacene en PEDIDO y DISTRIBUCIÓN
-- Distribución y pedido se almacenan de la misma forma
-
-ALTERNATIVA EN EL PASO A TABLAS -> transformar PEDIDO y DISTRIBUCIÓN anexionando los datos de SUMINISTRO a cada una de ellas
-
