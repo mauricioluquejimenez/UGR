@@ -1,0 +1,31 @@
+/*! \mainpage Práctica 2: TDAs lineales. Pilas y Colas
+
+# Introducción
+
+En esta práctica hemos tenido que representar dos TDA, la pila y la cola, con la particularidad de que el TDA pila se representa utilizando una cola, y el TDA cola se representa utilizando una pila.
+Además, cada TDA permite almacenar el valor máximo existente en cada momento.
+Para cumplir estos dos objetivos, hemos tenido que sobreescribir las funciones básicas de una pila y una cola, tales como devolver un elemento, borrarlo, comprobar si la estructura está vacía, y, principalmente, insertar un nuevo valor.
+Es aquí donde hemos hecho la comprobación y la actualización del valor máximo de la estructura en el momento de la inserción de un valor.
+
+# Ejecutables
+
+## Cola_Max:
+> _MaxQueue_ \<ValoresAIntroducirQueue\>
+@param <ValoresAIntroducirQueue> Valor de los numeros a introducir en la cola separados por espacios.
+También se puede introducir un punto "." que indica sacar el primer elemento de la cola(FIFO: first in first out).
+
+Representación del TDA MaxQueue utilizando como contenedor subyacente una pila
+
+
+
+## Pila_Max
+> _MaxStack_ \<NumerosAIntroducirStack\>
+@param <NumerosAIntroducirEnLaPila> Valor de los numeros a introducir en la cola separados por espacios.
+También se puede introducir un punto "." que indica sacar el último elemento de la pila (LIFO: last in last out).
+
+Representación del TDA MaxStack utilizando como contenedor subyacente una cola
+
+
+ <span style="font-size:1.1em">Práctica realizada por: <strong> Salma Ezzamarty y Mauricio Luque Jiménez
+
+*/

@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "practica2",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "image::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-image-Debug-2c824918c8307c7651d3.json",
+					"name" : "image",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "negativo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-negativo-Debug-d150233746a1985ad266.json",
+					"name" : "negativo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "subimagen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-subimagen-Debug-7099f453321605a6c788.json",
+					"name" : "subimagen",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/mauri/Documents/Personal/Universidad/2\u00ba/Primer Cuatrimestre/Estructura de Datos/Pr\u00e1cticas/Pr\u00e1cticas/ej01_imagenes/cmake-build-debug",
+		"source" : "D:/mauri/Documents/Personal/Universidad/2\u00ba/Primer Cuatrimestre/Estructura de Datos/Pr\u00e1cticas/Pr\u00e1cticas/ej01_imagenes"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

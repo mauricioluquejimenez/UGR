@@ -1,0 +1,6 @@
+D:/mauri/Documents/Personal/Universidad/2º/Primer Cuatrimestre/Estructura de Datos/Prácticas/Prácticas/ej02_pilas_colas/cmake-build-debug/CMakeFiles/maxstack.dir
+D:/mauri/Documents/Personal/Universidad/2º/Primer Cuatrimestre/Estructura de Datos/Prácticas/Prácticas/ej02_pilas_colas/cmake-build-debug/CMakeFiles/maxqueue.dir
+D:/mauri/Documents/Personal/Universidad/2º/Primer Cuatrimestre/Estructura de Datos/Prácticas/Prácticas/ej02_pilas_colas/cmake-build-debug/CMakeFiles/pila_max.dir
+D:/mauri/Documents/Personal/Universidad/2º/Primer Cuatrimestre/Estructura de Datos/Prácticas/Prácticas/ej02_pilas_colas/cmake-build-debug/CMakeFiles/cola_max.dir
+D:/mauri/Documents/Personal/Universidad/2º/Primer Cuatrimestre/Estructura de Datos/Prácticas/Prácticas/ej02_pilas_colas/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/mauri/Documents/Personal/Universidad/2º/Primer Cuatrimestre/Estructura de Datos/Prácticas/Prácticas/ej02_pilas_colas/cmake-build-debug/CMakeFiles/rebuild_cache.dir

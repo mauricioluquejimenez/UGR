@@ -1,0 +1,3 @@
+"C:\Program Files (x86)\JetBrains\CLion 2022.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cola_max.dir/objects.a
+C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\ar.exe qc CMakeFiles\cola_max.dir/objects.a @CMakeFiles\cola_max.dir\objects1.rsp
+C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\cola_max.dir/objects.a -Wl,--no-whole-archive -o cola_max.exe -Wl,--out-implib,libcola_max.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cola_max.dir\linklibs.rsp

@@ -1,0 +1,8 @@
+/home/mauricio/Escritorio/ED/ej03_tdas_letras/build/CMakeFiles/conjunto_letras.dir
+/home/mauricio/Escritorio/ED/ej03_tdas_letras/build/CMakeFiles/bolsa.dir
+/home/mauricio/Escritorio/ED/ej03_tdas_letras/build/CMakeFiles/bolsa_letras.dir
+/home/mauricio/Escritorio/ED/ej03_tdas_letras/build/CMakeFiles/cantidad_letras.dir
+/home/mauricio/Escritorio/ED/ej03_tdas_letras/build/CMakeFiles/palabras_longitud.dir
+/home/mauricio/Escritorio/ED/ej03_tdas_letras/build/CMakeFiles/doc_doxygen.dir
+/home/mauricio/Escritorio/ED/ej03_tdas_letras/build/CMakeFiles/edit_cache.dir
+/home/mauricio/Escritorio/ED/ej03_tdas_letras/build/CMakeFiles/rebuild_cache.dir

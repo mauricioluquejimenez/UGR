@@ -1,0 +1,57 @@
+[
+{
+  "directory": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/build",
+  "command": "/usr/bin/g++ -I/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/include -g -std=gnu++14 -o CMakeFiles/conjunto_letras.dir/estudiante/src/conjunto_letras.cpp.o -c /home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/conjunto_letras.cpp",
+  "file": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/conjunto_letras.cpp"
+},
+{
+  "directory": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/build",
+  "command": "/usr/bin/g++ -I/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/include -g -std=gnu++14 -o CMakeFiles/conjunto_letras.dir/estudiante/src/letters_set.cpp.o -c /home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/letters_set.cpp",
+  "file": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/letters_set.cpp"
+},
+{
+  "directory": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/build",
+  "command": "/usr/bin/g++ -I/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/include -g -std=gnu++14 -o CMakeFiles/bolsa.dir/estudiante/src/bolsa.cpp.o -c /home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/bolsa.cpp",
+  "file": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/bolsa.cpp"
+},
+{
+  "directory": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/build",
+  "command": "/usr/bin/g++ -I/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/include -g -std=gnu++14 -o CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.o -c /home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/bolsa_letras.cpp",
+  "file": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/bolsa_letras.cpp"
+},
+{
+  "directory": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/build",
+  "command": "/usr/bin/g++ -I/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/include -g -std=gnu++14 -o CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.o -c /home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/letters_bag.cpp",
+  "file": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/letters_bag.cpp"
+},
+{
+  "directory": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/build",
+  "command": "/usr/bin/g++ -I/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/include -g -std=gnu++14 -o CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.o -c /home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/letters_set.cpp",
+  "file": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/letters_set.cpp"
+},
+{
+  "directory": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/build",
+  "command": "/usr/bin/g++ -I/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/include -g -std=gnu++14 -o CMakeFiles/cantidad_letras.dir/estudiante/src/cantidad_letras.cpp.o -c /home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/cantidad_letras.cpp",
+  "file": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/cantidad_letras.cpp"
+},
+{
+  "directory": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/build",
+  "command": "/usr/bin/g++ -I/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/include -g -std=gnu++14 -o CMakeFiles/cantidad_letras.dir/estudiante/src/dictionary.cpp.o -c /home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/dictionary.cpp",
+  "file": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/dictionary.cpp"
+},
+{
+  "directory": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/build",
+  "command": "/usr/bin/g++ -I/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/include -g -std=gnu++14 -o CMakeFiles/cantidad_letras.dir/estudiante/src/letters_set.cpp.o -c /home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/letters_set.cpp",
+  "file": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/letters_set.cpp"
+},
+{
+  "directory": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/build",
+  "command": "/usr/bin/g++ -I/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/include -g -std=gnu++14 -o CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o -c /home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/palabras_longitud.cpp",
+  "file": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/palabras_longitud.cpp"
+},
+{
+  "directory": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/build",
+  "command": "/usr/bin/g++ -I/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/include -g -std=gnu++14 -o CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o -c /home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/dictionary.cpp",
+  "file": "/home/mauricio/Escritorio/ED/ej03_tdas_letras/estudiante/src/dictionary.cpp"
+}
+]

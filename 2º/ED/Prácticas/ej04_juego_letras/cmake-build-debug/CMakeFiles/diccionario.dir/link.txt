@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/diccionario.dir/estudiante/src/diccionario.cpp.o CMakeFiles/diccionario.dir/estudiante/src/dictionary.cpp.o -o diccionario 

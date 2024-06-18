@@ -1,0 +1,87 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "p03_pilas_colas",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "cola_max::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cola_max-Debug-9252fbe5c1177cdc9b89.json",
+					"name" : "cola_max",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maxqueue::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maxqueue-Debug-4b7857a187686ca14fac.json",
+					"name" : "maxqueue",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maxstack::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maxstack-Debug-d8080dbd5e8e62669499.json",
+					"name" : "maxstack",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pila_max::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pila_max-Debug-388a97f79f09baf7a29d.json",
+					"name" : "pila_max",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/mauri/Documents/Personal/Universidad/2\u00ba/Primer Cuatrimestre/Estructura de Datos/Pr\u00e1cticas/Pr\u00e1cticas/ej02_pilas_colas/cmake-build-debug",
+		"source" : "D:/mauri/Documents/Personal/Universidad/2\u00ba/Primer Cuatrimestre/Estructura de Datos/Pr\u00e1cticas/Pr\u00e1cticas/ej02_pilas_colas"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

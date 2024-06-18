@@ -1,0 +1,6 @@
+PROJECT_NAME           = "Práctica 5. Juego de las Letras - Árbol para Diccionario"
+OUTPUT_DIRECTORY       = /home/salma/Desktop/EDSalma/ej04_juego_letras/ej04_juego_letras/cmake-build-debug/doc_doxygen/
+INPUT                  = /home/salma/Desktop/EDSalma/ej04_juego_letras/ej04_juego_letras/estudiante/include /home/salma/Desktop/EDSalma/ej04_juego_letras/ej04_juego_letras/estudiante/src /home/salma/Desktop/EDSalma/ej04_juego_letras/ej04_juego_letras/estudiante/doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/salma/Desktop/EDSalma/ej04_juego_letras/ej04_juego_letras/estudiante/doc
+EXTRACT_PRIVATE	       = NO

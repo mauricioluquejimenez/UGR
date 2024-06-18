@@ -1,0 +1,83 @@
+/*! \mainpage Título de la página principal
+
+# Introducción
+
+En esta práctica, que continúa la lógica de la práctica anterior, el objetivo es optimizar el almacenamiento de las palabras del diccionario, para hacer consultas e
+iteraciones más rápidas. De esta manera, se mantienen algunos TDA de la práctica anterior, pero se reformula la estructura
+del diccionario, que pasa de ser una lista de palabras a ser un árbol, de manera que se evita la repetición de caracteres que no formen
+la misma palabra. Esto requiere otra manera de formar y consultar palabras, pero ayuda a resolver el problema de las letras de forma
+más eficiente.
+
+# Ejecutables
+
+##LettersSet
+Contiene la información sobre los caracteres del juego de las letras.
+
+> __LettersSet__ \<RutaDelArchivoConInformacion\>\<PalabraCalcularPuntuacion\>
+@param <RutaDelArchivoConInformacion> Ruta al archivo con la información sobre el conjunto de letras.
+@param <PalabraCalcularPuntuacion> Palabra de la que hay que calcular la puntuación. Imprimirá por pantalla la puntuación de la palabra.
+
+
+##Bag
+Este TDA almacena un conjunto de chars utilizado en el juego de letras.
+
+> __Bag__ \<TipoBolsa\>\<ListaEnterosCaracteres\>
+@param <TipoBolsa> Dependiendo de la letra (I, enteros y C, caracteres), usaremos una bolsa de caracteres o de enteros.
+@param <ListaEnterosCaracteres> El resto de argumentos serán una lista de enteros o de caracteres que deben meterse en la bolsa.
+
+
+##LettersBag
+
+Nos permite seleccionar las letras con las que vamos a jugar una  partida de las letras.
+
+> __LettersBag__ \<RutaDelArchivoConInformacion\>
+@param <RutaDelArchivoConInformacion> Ruta al archivo con la información sobre el conjunto de letras.
+
+
+##Dictionary
+
+Almacena las palabras en un fichero de texto y permite iterar sobre ellas. A diferencia de la práctica anterior,
+su estructura interna es un árbol, lo que mejora el almacenamiento de las palabras.
+
+> _Dictionary_ \<RutaDelArchivoConInformacion\>
+@param <RutaDelArchivoConInformacion> Ruta al archivo con información sobre el conjunto de letras.
+
+
+## Diccionario
+> __dictionary__ \<Diccionario\>
+Recibe un diccionario con estructura de árbol como argumento, lo recorre y muestra todas las palabras almacenadas en este.
+
+@param <Diccionario> Archivo con extensión .txt que contiene todas las palabras incluidas en un diccionario.
+
+
+## Cantidad_Letras
+> __cantidad_letras__ \<Diccionario\> \<Letras\>
+Calcula el número de veces que se usa una palabra dada de una lista de palabras, así como el número de ocurrencias de la letra
+en el diccionario
+
+@param <Diccionario> Archivo con extensión .txt que contiene todas las palabras incluidas en un diccionario.
+@param <Letras> Archivo con las letras que se van a contar
+
+
+## Partida_Letras
+> __parida_letras__ \<Diccionario\> \<Letras\>
+Construye un LetterSet a partir de un conjunto de letras, el diccionario con las palabras que se consideran soluciones, el Solver
+que va a jugar la partida y la LettersBag con la que se van a extraer las letras.
+
+@param <Diccionario> Archivo con extensión .txt que contiene todas las palabras incluidas en un diccionario.
+@param <Letras> Archivo con las letras con las que se va a intetnar formar palabras
+
+
+## Palabras_Validas_Diccionario
+> __palabra_validas__diccionario_\<Diccionario\> \<Letras\>
+@param <Diccionario> Archivo con extensión .txt que contiene todas las palabras incluidas en un diccionario. Se carga en la estructura de árbol
+@param <Letras> Archivo con las letras disponibles para formar palabras.
+
+
+## Partida_Letras_Eficiente
+> __partida_letras_eficiente__ \<LetrasPuntuacion\> \<Diccionario\> \<ModoJuego\>
+@param <LetrasPuntuación> Archivo que contiene las letras disponibles, así como su puntuación
+@param <Diccionario> Archivo con extensión .txt que contiene todas las palabras incluidas en un diccionario. Se carga en la estructura de árbol
+@param <ModoJuego> Modo de juego según el cual se va a calcular la puntuación dentro de una partida. Puede ser L (longitud) o P (puntuación)
+
+*/

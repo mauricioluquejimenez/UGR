@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/palabras_validas_diccionario.dir/estudiante/src/palabras_validas_diccionario.cpp.o CMakeFiles/palabras_validas_diccionario.dir/estudiante/src/dictionary.cpp.o -o palabras_validas_diccionario 

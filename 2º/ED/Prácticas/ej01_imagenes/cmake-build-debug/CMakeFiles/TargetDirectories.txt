@@ -1,0 +1,5 @@
+D:/mauri/Documents/Personal/Universidad/2º/Primer Cuatrimestre/Estructura de Datos/Prácticas/Prácticas/ej01_imagenes/cmake-build-debug/CMakeFiles/image.dir
+D:/mauri/Documents/Personal/Universidad/2º/Primer Cuatrimestre/Estructura de Datos/Prácticas/Prácticas/ej01_imagenes/cmake-build-debug/CMakeFiles/negativo.dir
+D:/mauri/Documents/Personal/Universidad/2º/Primer Cuatrimestre/Estructura de Datos/Prácticas/Prácticas/ej01_imagenes/cmake-build-debug/CMakeFiles/subimagen.dir
+D:/mauri/Documents/Personal/Universidad/2º/Primer Cuatrimestre/Estructura de Datos/Prácticas/Prácticas/ej01_imagenes/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/mauri/Documents/Personal/Universidad/2º/Primer Cuatrimestre/Estructura de Datos/Prácticas/Prácticas/ej01_imagenes/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,2 @@
+C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\ar.exe qc libmaxqueue.a CMakeFiles/maxqueue.dir/estudiante/src/maxqueue.cpp.obj
+C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\ranlib.exe libmaxqueue.a

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/partida_letras.dir/estudiante/src/partida_letras.cpp.o CMakeFiles/partida_letras.dir/estudiante/src/letters_set.cpp.o CMakeFiles/partida_letras.dir/estudiante/src/letters_bag.cpp.o CMakeFiles/partida_letras.dir/estudiante/src/solver.cpp.o CMakeFiles/partida_letras.dir/estudiante/src/dictionary.cpp.o -o partida_letras 
