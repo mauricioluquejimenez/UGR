@@ -1,0 +1,7 @@
+"La solución tipo 0 implica considerar que los atributos de una dimensión no deben cambiar en ningún caso."
+
+Falso. La solución de tipo 0 implica considerar que UN ATRIBUTO no debe cambiar, NO LOS ATRIBUTOS DE UNA DIMENSIÓN.
+
+Solución Tipo 7 para SCD
+  Ideal para tablas en las que cambia más de una columna
+  Dos tablas para cada dimensión

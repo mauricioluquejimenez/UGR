@@ -1,0 +1,30 @@
+Valores vacío en OLTP vs OLAP:
+	OLTP -> null
+	OLAP -> "Desconocido"
+
+	Según el tipo de sistema varía la manera de llamar a valores vacíos
+	Influye en la manera de agrupar por dimensiones (null = vacío, ¿cómo se agrupa?)
+
+Sistemas OLAP requieren de una mayor legibilidad para el decisor
+
+Niveles y jerarquías
+	Año 2024:
+		- Marzo de 2024 es exclusivo de 2024
+		- Marzo no es exclusivo de 2024 (Marzo de 2023, Marzo de 2022...)
+	El día determina la semana y el mes
+	La semana no determina el mes (una semana puede estar entre dos meses)
+
+	- Conteo de semanas: Primera y última semana del año de menos de siete días (ej. de jueves 1 de enero a domingo 4 de enero)
+
+		Fecha/hora -> Día -> Mes -> Año
+			    	\	                 /
+			     	 v     Semana     v
+
+	- - Conteo de semanas: La primera y última semana del año están en dos años a la vez (ej. de lunes 29 de diciembre a domingo 4 de enero)
+
+		Fecha/hora -> Día -> Mes -> Año -> Todo
+			    	  \	   	                  /
+			    	   \		                 /
+			    	    \		                /
+			    	     \		             /
+			     	      v     Semana    v

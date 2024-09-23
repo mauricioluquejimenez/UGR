@@ -1,0 +1,7 @@
+Los índices de join mediante mapas de bits y los índices Bitmap son dos técnicas diferentes utilizadas en sistemas ROLAP para representar relaciones entre tablas.
+
+  - Para representar relaciones están las claves primarias y externas, los índices sirven para optimizar consultas.
+
+¿Cuál es uno de los principales beneficios del uso de índices Bitmap en sistemas ROLAP? Optimizar el rendimiento en consultas ad hoc.
+
+  - Consultas ad hoc: consultas para un tema específico (???)
