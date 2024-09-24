@@ -29,7 +29,6 @@ modulo modelo.c
     Función Idle
 
 */
-#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -41,43 +40,56 @@ modulo modelo.c
 
 Inicializa el modelo y de las variables globales
 
-
 **/
 void
-initModel ()
+initModel() {}
+
+class Cubo:Objeto3D
 {
+  private:
+    float lado;
 
-}
+  public:
+    void draw(float x, float y, float z)
+    {
+      glBegin(GL_QUADS);
 
+      glNormal3f( -1.0, 0.0, 0.0 );
+      glVertex3f( x, 0, 0 );
+      glVertex3f( x, y, 0 );
+      glVertex3f( x, y, z );
+      glVertex3f( x, 0, z );
 
+      glEnd ();
+    }
+};
 
 class Ejes:Objeto3D 
 { 
 public: 
     float longitud = 30;
-// Dibuja el objeto
-void draw( )
-{
-  glDisable (GL_LIGHTING);
-  glBegin (GL_LINES);
-  {
-    glColor3f (0, 1, 0);
-    glVertex3f (0, 0, 0);
-    glVertex3f (0, longitud, 0);
+    // Dibuja el objeto
+    void draw( )
+    {
+      glDisable (GL_LIGHTING);
+      glBegin (GL_LINES);
+      {
+        glColor3f (0, 1, 0);
+        glVertex3f (0, 0, 0);
+        glVertex3f (0, longitud, 0);
 
-    glColor3f (1, 0, 0);
-    glVertex3f (0, 0, 0);
-    glVertex3f (longitud, 0, 0);
+        glColor3f (1, 0, 0);
+        glVertex3f (0, 0, 0);
+        glVertex3f (longitud, 0, 0);
 
-    glColor3f (0, 0, 1);
-    glVertex3f (0, 0, 0);
-    glVertex3f (0, 0, longitud);
+        glColor3f (0, 0, 1);
+        glVertex3f (0, 0, 0);
+        glVertex3f (0, 0, longitud);
+      }
+      glEnd ();
+      glEnable (GL_LIGHTING);
   }
-  glEnd ();
-  glEnable (GL_LIGHTING);
-
-}
-} ; 
+}; 
 
 Ejes ejesCoordenadas;
 
