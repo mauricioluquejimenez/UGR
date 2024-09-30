@@ -88,19 +88,39 @@ void letra (unsigned char k, int x, int y)
 
   switch (k)
     {
-    case 'h':
-    case 'H':
-      printHelp ();		// H y h imprimen ayuda
+      case 'f':
+      case 'F':
+        setModo(GL_FILL);
       break;
-    case '+':			// acerca la cámara
-      dCamara -= 5.0;
+
+      case 'l':
+      case 'L':
+        setModo(GL_LINE);
       break;
-    case '-':			// aleja la cámara
-      dCamara += 5.0;
+
+      case 'p':
+      case 'P':
+        setModo(GL_POINT);
       break;
-    case 27:			// Escape  Terminar
-      exit (0);
-    default:
+
+      case 'i':
+      case 'I':
+        setLuz();
+      break;
+
+      case 'h':
+      case 'H':
+        printHelp ();		// H y h imprimen ayuda
+        break;
+      case '+':			// acerca la cámara
+        dCamara -= 5.0;
+        break;
+      case '-':			// aleja la cámara
+        dCamara += 5.0;
+        break;
+      case 27:			// Escape  Terminar
+        exit (0);
+      default:
       return;
     }
   setCamara (rotxCamara, rotyCamara, 0.0, dCamara);
@@ -125,33 +145,35 @@ void especial (int k, int x, int y)
 
   switch (k)
     {
-    case GLUT_KEY_UP:
-      rotxCamara += 5.0;	// Cursor arriba + rotacion x
-      if (rotxCamara > 360)
-	rotxCamara -= 360;
+      case GLUT_KEY_UP:
+        rotxCamara += 5.0;	// Cursor arriba + rotacion x
+        if (rotxCamara > 360) rotxCamara -= 360;
       break;
-    case GLUT_KEY_DOWN:
-      rotxCamara -= 5.0;
-      if (rotxCamara < 0)
-	rotxCamara += 360;
+
+      case GLUT_KEY_DOWN:
+        rotxCamara -= 5.0;
+        if (rotxCamara < 0) rotxCamara += 360;
       break;
-    case GLUT_KEY_LEFT:
-      rotyCamara += 5.0;
-      if (rotyCamara > 360)
-	rotyCamara -= 360;
+
+      case GLUT_KEY_LEFT:
+        rotyCamara += 5.0;
+        if (rotyCamara > 360) rotyCamara -= 360;
       break;
-    case GLUT_KEY_RIGHT:
-      rotyCamara -= 5.0;
-      if (rotyCamara < 0)
-	rotyCamara += 360;
+
+      case GLUT_KEY_RIGHT:
+        rotyCamara -= 5.0;
+        if (rotyCamara < 0) rotyCamara += 360;
       break;
-    case GLUT_KEY_PAGE_DOWN:	// acerca la cámara
-      dCamara -= 5.0;
+
+      case GLUT_KEY_PAGE_DOWN:	// acerca la cámara
+        dCamara -= 5.0;
       break;
-    case GLUT_KEY_PAGE_UP:	// aleja la cámara
-      dCamara += 5.0;
+
+      case GLUT_KEY_PAGE_UP:	// aleja la cámara
+        dCamara += 5.0;
       break;
-    default:
+
+      default:
       return;
     }
   setCamara (rotxCamara, rotyCamara, 0.0, dCamara);
