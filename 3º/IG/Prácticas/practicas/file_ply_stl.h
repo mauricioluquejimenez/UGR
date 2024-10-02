@@ -27,6 +27,8 @@
 
 #include <vector>
 
+using namespace std;
+
 namespace ply
 {
 
@@ -48,9 +50,9 @@ namespace ply
 // *********************************************************************
 
   void read (const char *nombre_archivo_pse,	// entrada: nombre de archivo 
-	     std::vector < float >&vertices,	// salida:  vector de coords. de vert.
-	     std::vector < int >&caras	// salida:  vector de triángulos (índices)
-    );
+	    vector < float >&vertices,	// salida:  vector de coords. de vert.
+	    vector < int >&caras	// salida:  vector de triángulos (índices)
+  );
 
 // **********************************************************************
 // **
@@ -70,8 +72,8 @@ namespace ply
 // *********************************************************************
 
   void read_vertices (const char *nombre_archivo_pse,	// entrada: nombre de archivo 
-		      std::vector < float >&vertices	// salida:  vector de coords. de vert.
-    );
+		vector < float >&vertices	// salida:  vector de coords. de vert.
+  );
 
 };				// fin namespace ply
 

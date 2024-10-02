@@ -34,6 +34,7 @@ modulo modelo.c
 #include <math.h>
 #include <GL/glut.h>		// Libreria de utilidades de OpenGL
 #include "practicasIG.h"
+#include "file_ply_stl.h"
 
 int modo = GL_FILL;
 bool luz = true;
@@ -180,6 +181,29 @@ class Piramide : Objeto3D
 
 };
 
+class Malla : Objeto3D
+{
+  private:
+    vector <float> vertices;
+    vector <int> caras;
+    vector <float> normales;
+
+  public:
+    Malla(const char *archivo)
+    {
+      ply::read(archivo, vertices, caras);
+    }
+
+    void calculoNormales()
+    {
+      for (int i = 0; i < caras.size(); i++)
+      {
+        
+      }
+    }
+
+};
+
 class Ejes:Objeto3D 
 { 
   public: 
@@ -203,7 +227,7 @@ class Ejes:Objeto3D
         glVertex3f (0, 0, longitud);
       }
       glEnd ();
-      glEnable (GL_LIGHTING);
+      if (modo == GL_FILL && luz) glEnable (GL_LIGHTING);
     }
 }; 
 

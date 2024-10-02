@@ -35,7 +35,6 @@
 
 #include "file_ply_stl.h"
 
-
 namespace ply
 {
 

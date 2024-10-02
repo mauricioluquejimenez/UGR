@@ -42,6 +42,10 @@ void idle (int v);
 **/
 void initModel ();
 
+/**
+  	Funciones de la P1
+**/
+
 void setModo(int m);
 
 void setLuz();

@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "file_ply_stl.h": "c",
+        "string": "c"
+    }
+}

@@ -100,6 +100,7 @@ void letra (unsigned char k, int x, int y)
 
       case 'p':
       case 'P':
+        glPointSize(10);
         setModo(GL_POINT);
       break;
 
