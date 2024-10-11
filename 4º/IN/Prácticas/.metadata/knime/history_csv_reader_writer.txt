@@ -1,0 +1,2 @@
+/home/mauricio/Documentos/Material UGR/IN/Datos/iris/iris.data
+/home/mauricio/Documentos/Material UGR/IN/iris/iris.data

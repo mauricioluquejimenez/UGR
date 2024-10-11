@@ -1,0 +1,38 @@
+{
+  "version" : "5.3.2.v202409051351",
+  "projects" : [ {
+    "name" : "Primer flujo",
+    "active" : true,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "Primer flujo"
+    }
+  }, {
+    "name" : "Validacion Cruzada",
+    "active" : false,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "Validacion Cruzada"
+    }
+  } ],
+  "mostRecentlyUsedProjects" : [ {
+    "name" : "IN",
+    "timeUsed" : "2024-10-11T09:24:59.174925601+02:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "IN"
+    }
+  }, {
+    "name" : "Validacion Cruzada",
+    "timeUsed" : "2024-10-11T09:50:59.575766735+02:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Validacion Cruzada"
+    }
+  } ]
+}
