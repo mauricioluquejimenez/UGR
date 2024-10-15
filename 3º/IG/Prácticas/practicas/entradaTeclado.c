@@ -83,6 +83,9 @@ float rotxCamara = 30, rotyCamara = 45;
 float dCamara = 10;
 
 
+float cian[4] = {0.0, 1.0, 1.0, 1};
+float magenta[4] = {1.0, 0.0, 1.0, 1};
+
 void letra (unsigned char k, int x, int y)
 {
 
@@ -106,6 +109,11 @@ void letra (unsigned char k, int x, int y)
 
       case 'i':
       case 'I':
+        setLuz();
+      break;
+
+      case 's':
+      case 'S':
         setLuz();
       break;
 

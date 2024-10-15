@@ -50,6 +50,10 @@ void setModo(int m);
 
 void setLuz();
 
+void P1(float color1[4], float color2[4]);
+
+void P2(float color1[4], float color2[4]);
+
 
 
 class Objeto3D 

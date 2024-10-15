@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "file_ply_stl.h": "c",
-        "string": "c"
+        "string": "c",
+        "ostream": "c",
+        "cmath": "c"
     }
 }
