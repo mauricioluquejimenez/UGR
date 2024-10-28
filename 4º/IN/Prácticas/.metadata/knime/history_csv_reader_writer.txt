@@ -1,2 +1,5 @@
+/home/mauricio/Documentos/Material UGR/IN/Datos/datasets_practica1/dermatology.csv
+/home/mauricio/Documentos/Material UGR/IN/Datos/datasets_practica1/speed_dating.csv
+/home/mauricio/Documentos/Material UGR/IN/Datos/datasets_practica1/credit_risk_dataset.csv
 /home/mauricio/Documentos/Material UGR/IN/Datos/iris/iris.data
 /home/mauricio/Documentos/Material UGR/IN/iris/iris.data

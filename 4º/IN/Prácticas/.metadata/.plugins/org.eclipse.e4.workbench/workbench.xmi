@@ -24,7 +24,7 @@
           <tags>persp.actionSet:org.eclipse.ui.actionSet.keyBindings</tags>
           <tags>persp.actionSet:org.eclipse.ui.actionSet.openFiles</tags>
           <tags>persp.actionSet:org.knime.workbench.ui.global</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_5-Pf0IehEe-eXf4dtwrdOA" elementId="org.knime.ui.java.browser.viewcontainer" selectedElement="_5-Pf0YehEe-eXf4dtwrdOA">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_5-Pf0IehEe-eXf4dtwrdOA" elementId="org.knime.ui.java.browser.viewcontainer" selectedElement="_W2F5EYebEe-ifoyG7C_8cA">
             <children xsi:type="basic:Part" xmi:id="_W2F5EYebEe-ifoyG7C_8cA" elementId="org.knime.ui.java.browser.view" contributorURI="platform:/plugin/org.knime.ui.java" containerData="5000" contributionURI="bundleclass://org.knime.ui.java/org.knime.ui.java.browser.KnimeBrowserView" iconURI="platform:/plugin/org.knime.ui.java/icons/knime.png">
               <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
               <tags>active</tags>
@@ -59,6 +59,8 @@
           <tags>persp.newWizSC:org.knime.workbench.explorer.view.actions.NewWorkflowWizard</tags>
           <tags>persp.newWizSC:org.knime.workbench.explorer.view.actions.NewWorkflowGroupWizard</tags>
           <tags>persp.viewSC:com.knime.workbench.hubview</tags>
+          <tags>persp.actionSet:org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo</tags>
+          <tags>persp.actionSet:org.eclipse.ui.actionSet.openFiles</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_4God8YehEe-eXf4dtwrdOA" selectedElement="_4God8oehEe-eXf4dtwrdOA" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_4God8oehEe-eXf4dtwrdOA" containerData="3000" selectedElement="_4God84ehEe-eXf4dtwrdOA">
               <children xsi:type="basic:PartStack" xmi:id="_4God84ehEe-eXf4dtwrdOA" elementId="org.knime.workbench.explorer.viewMStack" containerData="3000" selectedElement="_4God9IehEe-eXf4dtwrdOA">

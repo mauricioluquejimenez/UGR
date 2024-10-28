@@ -16,12 +16,12 @@
             {
                 "id": "org.knime.base.node.viz.property.color.ColorManager2NodeFactory",
                 "nodename": "Color Manager",
-                "nrexecs": 4,
+                "nrexecs": 5,
                 "nrfails": 0,
-                "exectime": 2,
-                "nrcreated": 2,
-                "successor": "org.knime.base.node.viz.table.TableNodeFactory",
-                "successornodename": "Interactive Table (legacy)"
+                "exectime": 4,
+                "nrcreated": 3,
+                "successor": "org.knime.base.node.meta.xvalidation.XValidatePartitionerFactory",
+                "successornodename": "X-Partitioner"
             },
             {
                 "id": "org.knime.base.node.viz.plotter.scattermatrix.ScatterMatrixNodeFactory",
@@ -36,10 +36,10 @@
             {
                 "id": "org.knime.base.node.viz.table.TableNodeFactory",
                 "nodename": "Interactive Table (legacy)",
-                "nrexecs": 2,
+                "nrexecs": 7,
                 "nrfails": 0,
-                "exectime": 1,
-                "nrcreated": 1,
+                "exectime": 2,
+                "nrcreated": 2,
                 "successor": "n/a",
                 "successornodename": "n/a"
             },
@@ -66,22 +66,22 @@
             {
                 "id": "org.knime.base.node.mine.decisiontree2.learner2.DecisionTreeLearnerNodeFactory3",
                 "nodename": "Decision Tree Learner",
-                "nrexecs": 22,
+                "nrexecs": 42,
                 "nrfails": 0,
-                "exectime": 345,
-                "nrcreated": 2,
+                "exectime": 842,
+                "nrcreated": 4,
                 "successor": "org.knime.base.node.mine.decisiontree2.predictor2.DecTreePredictorNodeFactory",
                 "successornodename": "Decision Tree Predictor"
             },
             {
                 "id": "org.knime.base.node.mine.decisiontree2.predictor2.DecTreePredictorNodeFactory",
                 "nodename": "Decision Tree Predictor",
-                "nrexecs": 22,
+                "nrexecs": 42,
                 "nrfails": 0,
-                "exectime": 396,
-                "nrcreated": 2,
-                "successor": "org.knime.base.node.mine.scorer.accuracy.AccuracyScorer2NodeFactory",
-                "successornodename": "Scorer"
+                "exectime": 988,
+                "nrcreated": 4,
+                "successor": "org.knime.base.node.meta.xvalidation.AggregateOutputNodeFactory",
+                "successornodename": "X-Aggregator"
             },
             {
                 "id": "org.knime.base.views.node.scatterplot.ScatterPlotNodeFactory",
@@ -99,47 +99,127 @@
                 "nrexecs": 2,
                 "nrfails": 0,
                 "exectime": 13,
-                "nrcreated": 1,
+                "nrcreated": 2,
                 "successor": "n/a",
                 "successornodename": "n/a"
             },
             {
                 "id": "org.knime.base.node.io.arffreader.ARFFReaderNodeFactory",
                 "nodename": "ARFF Reader",
-                "nrexecs": 2,
+                "nrexecs": 5,
                 "nrfails": 0,
-                "exectime": 62,
-                "nrcreated": 1,
-                "successor": "org.knime.base.node.viz.property.color.ColorManager2NodeFactory",
-                "successornodename": "Color Manager"
+                "exectime": 179,
+                "nrcreated": 2,
+                "successor": "org.knime.base.node.preproc.correlation.filter.CorrelationFilterNodeFactory",
+                "successornodename": "Correlation Filter"
             },
             {
                 "id": "org.knime.base.node.meta.xvalidation.XValidatePartitionerFactory",
                 "nodename": "X-Partitioner",
-                "nrexecs": 21,
+                "nrexecs": 51,
                 "nrfails": 0,
-                "exectime": 94,
-                "nrcreated": 1,
-                "successor": "org.knime.base.node.mine.decisiontree2.learner2.DecisionTreeLearnerNodeFactory3",
-                "successornodename": "Decision Tree Learner"
+                "exectime": 311,
+                "nrcreated": 3,
+                "successor": "org.knime.base.node.mine.neural.mlp2.MLPPredictorNodeFactory",
+                "successornodename": "MultiLayerPerceptron Predictor"
             },
             {
                 "id": "org.knime.base.node.meta.xvalidation.AggregateOutputNodeFactory",
                 "nodename": "X-Aggregator",
-                "nrexecs": 20,
+                "nrexecs": 50,
                 "nrfails": 0,
-                "exectime": 26,
-                "nrcreated": 1,
-                "successor": "org.knime.base.views.node.roccurve.ROCCurveNodeFactory",
-                "successornodename": "ROC Curve"
+                "exectime": 75,
+                "nrcreated": 2,
+                "successor": "org.knime.base.node.preproc.columnappend2.ColumnAppender2NodeFactory",
+                "successornodename": "Column Appender"
             },
             {
                 "id": "org.knime.base.views.node.roccurve.ROCCurveNodeFactory",
                 "nodename": "ROC Curve",
+                "nrexecs": 5,
+                "nrfails": 0,
+                "exectime": 2,
+                "nrcreated": 2,
+                "successor": "n/a",
+                "successornodename": "n/a"
+            },
+            {
+                "id": "org.knime.base.node.preproc.columnappend2.ColumnAppender2NodeFactory",
+                "nodename": "Column Appender",
+                "nrexecs": 4,
+                "nrfails": 0,
+                "exectime": 15,
+                "nrcreated": 2,
+                "successor": "org.knime.base.node.preproc.filter.column.DataColumnSpecFilterNodeFactory",
+                "successornodename": "Column Filter"
+            },
+            {
+                "id": "org.knime.base.node.preproc.filter.column.DataColumnSpecFilterNodeFactory",
+                "nodename": "Column Filter",
                 "nrexecs": 2,
                 "nrfails": 0,
-                "exectime": 0,
+                "exectime": 4,
                 "nrcreated": 1,
+                "successor": "org.knime.base.node.stats.viz.extended.ExtendedStatisticsNodeFactory",
+                "successornodename": "Statistics"
+            },
+            {
+                "id": "org.knime.base.node.stats.viz.extended.ExtendedStatisticsNodeFactory",
+                "nodename": "Statistics",
+                "nrexecs": 2,
+                "nrfails": 0,
+                "exectime": 357,
+                "nrcreated": 1,
+                "successor": "n/a",
+                "successornodename": "n/a"
+            },
+            {
+                "id": "org.knime.base.node.mine.neural.rprop.RPropNodeFactory2",
+                "nodename": "RProp MLP Learner",
+                "nrexecs": 10,
+                "nrfails": 0,
+                "exectime": 1178,
+                "nrcreated": 1,
+                "successor": "org.knime.base.node.mine.neural.mlp2.MLPPredictorNodeFactory",
+                "successornodename": "MultiLayerPerceptron Predictor"
+            },
+            {
+                "id": "org.knime.base.node.mine.neural.mlp2.MLPPredictorNodeFactory",
+                "nodename": "MultiLayerPerceptron Predictor",
+                "nrexecs": 10,
+                "nrfails": 0,
+                "exectime": 291,
+                "nrcreated": 1,
+                "successor": "org.knime.base.node.meta.xvalidation.AggregateOutputNodeFactory",
+                "successornodename": "X-Aggregator"
+            },
+            {
+                "id": "org.knime.base.node.preproc.correlation.compute2.CorrelationCompute2NodeFactory",
+                "nodename": "Linear Correlation",
+                "nrexecs": 2,
+                "nrfails": 0,
+                "exectime": 92,
+                "nrcreated": 1,
+                "successor": "org.knime.base.node.preproc.correlation.filter.CorrelationFilterNodeFactory",
+                "successornodename": "Correlation Filter"
+            },
+            {
+                "id": "org.knime.base.node.preproc.correlation.filter.CorrelationFilterNodeFactory",
+                "nodename": "Correlation Filter",
+                "nrexecs": 2,
+                "nrfails": 0,
+                "exectime": 59,
+                "nrcreated": 1,
+                "successor": "org.knime.base.node.viz.table.TableNodeFactory",
+                "successornodename": "Interactive Table (legacy)"
+            },
+            {
+                "id": "org.knime.base.node.io.filehandling.csv.reader.CSVTableReaderNodeFactory",
+                "nodename": "CSV Reader",
+                "nrexecs": 3,
+                "nrfails": 0,
+                "exectime": 318,
+                "nrcreated": 3,
                 "successor": "n/a",
                 "successornodename": "n/a"
             }
@@ -149,11 +229,11 @@
         "wrappedNodes": {
         },
         "createdVia": {
-            "WEB_UI": 17
+            "WEB_UI": 40
         }
     },
-    "uptime": 1964532,
-    "workflowsOpened": 5,
+    "uptime": 3084945,
+    "workflowsOpened": 16,
     "remoteWorkflowsOpened": 0,
     "columnarStorageWorkflowsOpened": 0,
     "workflowsImported": 0,
@@ -161,9 +241,9 @@
     "webUIPerspectiveSwitches": 1,
     "javaUIPerspectiveSwitches": 1,
     "lastUsedPerspective": "none",
-    "launches": 3,
+    "launches": 5,
     "lastApplicationID": "org.knime.product.KNIME_APPLICATION",
-    "timeSinceLastStart": 4503600,
+    "timeSinceLastStart": 6459717,
     "crashes": 0,
     "properlyShutDown": true
 }
