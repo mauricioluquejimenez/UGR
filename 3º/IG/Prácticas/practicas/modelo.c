@@ -377,11 +377,14 @@ class Ejes:Objeto3D
 
 Ejes ejesCoordenadas;
 
+Cubo cubo = Cubo (1.0);
+Piramide piramide = Piramide(1.0, 5.0);
+
+Malla cubo_ply = Malla("cubo.ply");
+Malla coche = Malla("big_dodge.ply");
+
 void P1(float color1[4], float color2[4])
 {
-  Cubo cubo = Cubo (1.0);
-  Piramide piramide = Piramide(1.0, 5.0);
-
   glMaterialfv (GL_FRONT, GL_AMBIENT_AND_DIFFUSE, color1);  
   cubo.draw();
 
@@ -392,17 +395,17 @@ void P1(float color1[4], float color2[4])
 
 void P2(float color1[4], float color2[4])
 {
-  Malla coche = Malla("big_dodge.ply");
   coche.calculoNormales();
   glMaterialfv (GL_FRONT, GL_AMBIENT_AND_DIFFUSE, color1);
+  //coche.drawFlat();
   coche.drawSmooth();
+  //coche.draw();
 
-  glTranslatef(2,0,0);
+  glTranslatef(10,0,0);
 
-  Malla cubo = Malla("cubo.ply");
-  cubo.calculoNormales();
+  cubo_ply.calculoNormales();
   glMaterialfv (GL_FRONT, GL_AMBIENT_AND_DIFFUSE, color2);
-  cubo.draw();
+  cubo_ply.draw();
 }
 
 /**	void Dibuja( void )
