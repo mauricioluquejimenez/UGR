@@ -10,7 +10,7 @@
     }
   }, {
     "name" : "Validacion Cruzada",
-    "active" : false,
+    "active" : true,
     "origin" : {
       "providerId" : "local",
       "spaceId" : "local",
@@ -42,7 +42,7 @@
     }
   }, {
     "name" : "P1.2",
-    "active" : true,
+    "active" : false,
     "origin" : {
       "providerId" : "local",
       "spaceId" : "local",
