@@ -36,6 +36,7 @@ modulo modelo.c
 #include <GL/glut.h>		// Libreria de utilidades de OpenGL
 #include "practicasIG.h"
 #include "file_ply_stl.h"
+#include "lector-jpg.h"
 
 int modo = GL_FILL;
 bool luz = true;
@@ -127,7 +128,7 @@ class Cubo : public Objeto3D
     }
 };
 
-class Piramide : Objeto3D
+class Piramide : public Objeto3D
 {
   private:
     float lado, alto;
@@ -279,7 +280,7 @@ class Malla : Objeto3D
 
       float v0, v1, v2;
 
-      for(int i = 0; i < caras.size(); i++)
+      for(int i = 0; i < caras.size() - 2; i++)
       {
         glNormal3f(normales_c[i], normales_c[i + 1], normales_c[i + 2]);
  
@@ -380,8 +381,12 @@ Ejes ejesCoordenadas;
 Cubo cubo = Cubo (1.0);
 Piramide piramide = Piramide(1.0, 5.0);
 
-Malla cubo_ply = Malla("cubo.ply");
-Malla coche = Malla("big_dodge.ply");
+Malla cubo_ply = Malla("./ply/cubo.ply");
+Malla coche = Malla("./ply/big_dodge.ply");
+
+Malla dado = Malla("./ply/cubo.ply");
+unsigned ancho = 1024, alto = 1024;
+unsigned char * textura = LeerArchivoJPEG("./jpg/dado.jpg", ancho, alto);
 
 void P1(float color1[4], float color2[4])
 {
@@ -397,8 +402,8 @@ void P2(float color1[4], float color2[4])
 {
   coche.calculoNormales();
   glMaterialfv (GL_FRONT, GL_AMBIENT_AND_DIFFUSE, color1);
-  //coche.drawFlat();
-  coche.drawSmooth();
+  coche.drawFlat();
+  //coche.drawSmooth();
   //coche.draw();
 
   glTranslatef(10,0,0);
@@ -406,6 +411,29 @@ void P2(float color1[4], float color2[4])
   cubo_ply.calculoNormales();
   glMaterialfv (GL_FRONT, GL_AMBIENT_AND_DIFFUSE, color2);
   cubo_ply.draw();
+}
+
+void P4(float color[4])
+{
+  dado.calculoNormales();
+
+  glMaterialfv (GL_FRONT, GL_AMBIENT_AND_DIFFUSE, color);
+  dado.draw();
+
+  glTranslatef(2,0,0);
+
+  glMaterialfv (GL_FRONT, GL_AMBIENT, color);
+  dado.draw();
+
+  glTranslatef(2,0,0);
+
+  glMaterialfv (GL_FRONT, GL_DIFFUSE, color);
+  dado.draw();
+
+  glTranslatef(2,0,0);
+
+  glMaterialfv (GL_FRONT, GL_AMBIENT_AND_DIFFUSE, color);
+  dado.draw();
 }
 
 /**	void Dibuja( void )
@@ -436,7 +464,8 @@ void Dibuja (void)
   // Dibuja el modelo (A rellenar en prácticas 1,2 y 3)
     
   //P1(magenta, cian);
-  P2(cian, magenta);
+  //P2(cian, magenta);
+  P4(magenta);
 
   glPopMatrix ();		// Desapila la transformacion geometrica
 

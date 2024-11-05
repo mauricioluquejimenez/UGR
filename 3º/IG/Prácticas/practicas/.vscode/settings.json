@@ -3,6 +3,7 @@
         "file_ply_stl.h": "c",
         "string": "c",
         "ostream": "c",
-        "cmath": "c"
+        "cmath": "c",
+        "iostream": "c"
     }
 }
