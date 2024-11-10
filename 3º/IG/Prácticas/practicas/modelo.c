@@ -42,9 +42,7 @@ int modo = GL_FILL;
 bool luz = true;
 
 /**	void initModel()
-
-Inicializa el modelo y de las variables globales
-
+  Inicializa el modelo y de las variables globales
 **/
 void initModel() {}
 
@@ -71,6 +69,7 @@ class Cubo : public Objeto3D
 {
   private:
     float lado;
+    GLuint textid;
 
   public:
     Cubo (float l)
@@ -125,6 +124,66 @@ class Cubo : public Objeto3D
       glVertex3f(-lado, -lado,  lado);
 
       glEnd();
+    }
+
+    void setTextura(unsigned char * textura, unsigned ancho, unsigned alto)
+    {
+      glGenTextures(1, &textid);
+      glBindTexture(GL_TEXTURE_2D, textid);
+
+      glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
+      glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+      glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+      glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, ancho, alto, 0, GL_RGB, GL_UNSIGNED_BYTE, textura);
+    
+    }
+
+    void drawTextura()
+    {
+      glEnable(GL_TEXTURE_2D);  // Habilitar texturización
+
+      glBegin(GL_QUADS);
+
+      // Cara frontal (con el número 6 en el dado)
+      glTexCoord2f(0.75f, 0.75f); glVertex3f(-0.5f, 0.5f, 0.5f);
+      glTexCoord2f(1.0f, 0.75f); glVertex3f(-0.5f, -0.5f, 0.5f);
+      glTexCoord2f(1.0f, 0.5f); glVertex3f(0.5f, -0.5f, 0.5f);
+      glTexCoord2f(0.75f, 0.5f); glVertex3f(0.5f, 0.5f, 0.5f);
+      
+      // Cara trasera (con el número 1 en el dado)
+      glTexCoord2f(0.25f, 0.75f); glVertex3f(-0.5f, -0.5f, -0.5f);
+      glTexCoord2f(0.5f, 0.75f); glVertex3f(-0.5f, 0.5f, -0.5f);
+      glTexCoord2f(0.5f, 0.5f); glVertex3f(0.5f,  0.5f, -0.5f);
+      glTexCoord2f(0.25f, 0.5f); glVertex3f(0.5f, -0.5f, -0.5f);
+
+      // Cara superior (con el número 5 en el dado)
+      glTexCoord2f(0.0f, 0.75f); glVertex3f(-0.5f, 0.5f, -0.5f);
+      glTexCoord2f(0.25f, 0.75f); glVertex3f(-0.5f, 0.5f, 0.5f);
+      glTexCoord2f(0.25f, 0.5f); glVertex3f(0.5f, 0.5f, 0.5f);
+      glTexCoord2f(0.0f, 0.5f); glVertex3f(0.5f, 0.5f, -0.5f);
+
+      // Cara inferior (con el número 2 en el dado)
+      glTexCoord2f(0.5f, 0.75f); glVertex3f(-0.5f, -0.5f, 0.5f);
+      glTexCoord2f(0.75f, 0.75f); glVertex3f(-0.5f, -0.5f, -0.5f);
+      glTexCoord2f(0.75f, 0.5f); glVertex3f(0.5f, -0.5f, -0.5f);
+      glTexCoord2f(0.5f, 0.5f); glVertex3f(0.5f, -0.5f, 0.5f);
+
+      // Cara derecha (con el número 3 en el dado)
+      glTexCoord2f(0.5f, 0.5f); glVertex3f(0.5f, 0.5f, -0.5f);
+      glTexCoord2f(0.75f, 0.5f); glVertex3f(0.5f, 0.5f, 0.5f);
+      glTexCoord2f(0.75f, 0.25f); glVertex3f(0.5f, -0.5f, 0.5f);
+      glTexCoord2f(0.5f, 0.25f); glVertex3f(0.5f, -0.5f, -0.5f);
+
+      // Cara izquierda (con el número 4 en el dado)
+      glTexCoord2f(0.5f, 1.0f); glVertex3f(-0.5f, 0.5f, 0.5f);
+      glTexCoord2f(0.75f, 1.0f); glVertex3f(-0.5f, 0.5f, -0.5f);
+      glTexCoord2f(0.75f, 0.75f); glVertex3f(-0.5f, -0.5f, -0.5f);
+      glTexCoord2f(0.5f, 0.75f); glVertex3f(-0.5f, -0.5f, 0.5f);
+      
+      glEnd();
+
+      glDisable(GL_TEXTURE_2D);  // Deshabilitar texturización
     }
 };
 
@@ -190,6 +249,25 @@ class Malla : Objeto3D
     vector <int> caras;
     vector <float> normales_v;
     vector <float> normales_c;
+    vector <pair<float, float>> texturas = 
+    {
+      {0.75f, 0.75f},
+      {1.0f, 0.5f},
+      {0.75f, 0.5f},
+      {1.0f, 0.75f},
+      {0.25f, 0.75f},
+      {0.5f, 0.5f},
+      {0.5f, 0.75f},
+      {0.25f, 0.5f},
+      {0.0f, 0.5f},
+      {0.0f, 0.75f},
+      {0.75f, 1.0f},
+      {0.5f, 1.0f},
+      {0.75f, 0.25f},
+      {0.5f, 0.25f}
+    };
+
+    GLuint textid;
 
   public:
     Malla(const char *archivo)
@@ -312,7 +390,7 @@ class Malla : Objeto3D
 
         NX = normales_c[i];
         NY = normales_c[i + 1];
-        NY = normales_c[i + 2];
+        NZ = normales_c[i + 2];
 
         glNormal3f(NX, NY, NZ);
 
@@ -347,6 +425,83 @@ class Malla : Objeto3D
       }
       glEnd();
     }
+
+    void setTextura(unsigned char * textura, unsigned ancho, unsigned alto)
+    {
+      glGenTextures(1, &textid);
+      glBindTexture(GL_TEXTURE_2D, textid);
+
+      glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
+      glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+      glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+      glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, ancho, alto, 0, GL_RGB, GL_UNSIGNED_BYTE, textura);
+    }
+
+    void drawTextura()
+    {
+      glEnable(GL_TEXTURE_2D);  // Habilitar texturización
+
+      glBegin(GL_TRIANGLES);
+
+      // Cara frontal (con el número 6 en el dado)
+      glTexCoord2f(texturas[0].first, texturas[0].second); glVertex3f(vertices[18], vertices[19], vertices[20]);
+      glTexCoord2f(texturas[1].first, texturas[1].second); glVertex3f(vertices[15], vertices[16], vertices[17]);
+      glTexCoord2f(texturas[2].first, texturas[2].second); glVertex3f(vertices[21], vertices[22], vertices[23]);
+
+      glTexCoord2f(texturas[1].first, texturas[1].second); glVertex3f(vertices[15], vertices[16], vertices[17]);
+      glTexCoord2f(texturas[0].first, texturas[0].second); glVertex3f(vertices[18], vertices[19], vertices[20]);
+      glTexCoord2f(texturas[3].first, texturas[3].second); glVertex3f(vertices[12], vertices[13], vertices[14]);
+
+      // Cara trasera (con el número 1 en el dado)
+      glTexCoord2f(texturas[4].first, texturas[4].second); glVertex3f(vertices[6], vertices[7], vertices[8]);
+      glTexCoord2f(texturas[5].first, texturas[5].second); glVertex3f(vertices[3], vertices[4], vertices[5]);
+      glTexCoord2f(texturas[6].first, texturas[6].second); glVertex3f(vertices[0], vertices[1], vertices[2]);
+
+      glTexCoord2f(texturas[5].first, texturas[5].second); glVertex3f(vertices[3], vertices[4], vertices[5]);
+      glTexCoord2f(texturas[4].first, texturas[4].second); glVertex3f(vertices[6], vertices[7], vertices[8]);
+      glTexCoord2f(texturas[7].first, texturas[7].second); glVertex3f(vertices[9], vertices[10], vertices[11]);
+
+      // Cara superior (con el número 5 en el dado)
+      glTexCoord2f(texturas[8].first, texturas[8].second); glVertex3f(vertices[9], vertices[10], vertices[11]);
+      glTexCoord2f(texturas[4].first, texturas[4].second); glVertex3f(vertices[18], vertices[19], vertices[20]);
+      glTexCoord2f(texturas[7].first, texturas[7].second); glVertex3f(vertices[21], vertices[22], vertices[23]);
+
+      glTexCoord2f(texturas[4].first, texturas[4].second); glVertex3f(vertices[18], vertices[19], vertices[20]);
+      glTexCoord2f(texturas[8].first, texturas[8].second); glVertex3f(vertices[9], vertices[10], vertices[11]);
+      glTexCoord2f(texturas[9].first, texturas[9].second); glVertex3f(vertices[6], vertices[7], vertices[8]);
+
+      // Cara inferior (con el número 2 en el dado)
+      glTexCoord2f(texturas[5].first, texturas[5].second); glVertex3f(vertices[3], vertices[4], vertices[5]);
+      glTexCoord2f(texturas[0].first, texturas[0].second); glVertex3f(vertices[12], vertices[13], vertices[14]);
+      glTexCoord2f(texturas[6].first, texturas[6].second); glVertex3f(vertices[0], vertices[1], vertices[2]);
+
+      glTexCoord2f(texturas[0].first, texturas[0].second); glVertex3f(vertices[12], vertices[13], vertices[14]);
+      glTexCoord2f(texturas[5].first, texturas[5].second); glVertex3f(vertices[3], vertices[4], vertices[5]);
+      glTexCoord2f(texturas[2].first, texturas[2].second); glVertex3f(vertices[15], vertices[16], vertices[17]);
+
+      // Cara derecha (con el número 3 en el dado)
+      glTexCoord2f(texturas[12].first, texturas[12].second); glVertex3f(vertices[15], vertices[16], vertices[17]);
+      glTexCoord2f(texturas[5].first, texturas[5].second); glVertex3f(vertices[9], vertices[10], vertices[11]);
+      glTexCoord2f(texturas[2].first, texturas[2].second); glVertex3f(vertices[21], vertices[22], vertices[23]);
+
+      glTexCoord2f(texturas[5].first, texturas[5].second); glVertex3f(vertices[9], vertices[10], vertices[11]);
+      glTexCoord2f(texturas[12].first, texturas[12].second); glVertex3f(vertices[15], vertices[16], vertices[17]);
+      glTexCoord2f(texturas[13].first, texturas[13].second); glVertex3f(vertices[3], vertices[4], vertices[5]);
+
+      // Cara izquierda (con el número 4 en el dado)
+      glTexCoord2f(texturas[10].first, texturas[10].second); glVertex3f(vertices[12], vertices[13], vertices[14]);
+      glTexCoord2f(texturas[6].first, texturas[6].second); glVertex3f(vertices[6], vertices[7], vertices[8]);
+      glTexCoord2f(texturas[11].first, texturas[11].second); glVertex3f(vertices[0], vertices[1], vertices[2]);
+
+      glTexCoord2f(texturas[6].first, texturas[6].second); glVertex3f(vertices[6], vertices[7], vertices[8]);
+      glTexCoord2f(texturas[10].first, texturas[10].second); glVertex3f(vertices[12], vertices[13], vertices[14]);
+      glTexCoord2f(texturas[0].first, texturas[0].second); glVertex3f(vertices[18], vertices[19], vertices[20]);
+
+      glEnd();
+
+      glDisable(GL_TEXTURE_2D);  // Deshabilitar texturización
+    }
 };
 
 class Ejes:Objeto3D 
@@ -379,16 +534,20 @@ class Ejes:Objeto3D
 Ejes ejesCoordenadas;
 
 Cubo cubo = Cubo (1.0);
-Piramide piramide = Piramide(1.0, 5.0);
+//Piramide piramide = Piramide(1.0, 5.0);
 
-Malla cubo_ply = Malla("./ply/cubo.ply");
-Malla coche = Malla("./ply/big_dodge.ply");
-
+//Malla cubo_ply = Malla("./ply/cubo.ply");
+//Malla coche = Malla("./ply/big_dodge.ply");
 Malla dado = Malla("./ply/cubo.ply");
+
+Cubo C1 = Cubo(0.5);
+Cubo C2 = Cubo(0.5);
+Cubo C3 = Cubo(0.5);
+
 unsigned ancho = 1024, alto = 1024;
 unsigned char * textura = LeerArchivoJPEG("./jpg/dado.jpg", ancho, alto);
 
-void P1(float color1[4], float color2[4])
+/*void P1(float color1[4], float color2[4])
 {
   glMaterialfv (GL_FRONT, GL_AMBIENT_AND_DIFFUSE, color1);  
   cubo.draw();
@@ -396,57 +555,54 @@ void P1(float color1[4], float color2[4])
   glTranslatef(5,0,0);
   glMaterialfv (GL_FRONT, GL_AMBIENT_AND_DIFFUSE, color2);
   piramide.draw();
-}
+}*/
 
-void P2(float color1[4], float color2[4])
+/*void P2(float color1[4], float color2[4])
 {
   coche.calculoNormales();
   glMaterialfv (GL_FRONT, GL_AMBIENT_AND_DIFFUSE, color1);
+  //coche.draw();
   coche.drawFlat();
   //coche.drawSmooth();
-  //coche.draw();
 
   glTranslatef(10,0,0);
 
   cubo_ply.calculoNormales();
   glMaterialfv (GL_FRONT, GL_AMBIENT_AND_DIFFUSE, color2);
   cubo_ply.draw();
-}
+}*/
 
 void P4(float color[4])
 {
+  cubo.setTextura(textura, ancho, alto);
+  cubo.drawTextura();
+
+  glTranslatef(2,0,0);
   dado.calculoNormales();
-
-  glMaterialfv (GL_FRONT, GL_AMBIENT_AND_DIFFUSE, color);
-  dado.draw();
+  dado.setTextura(textura, ancho, alto);
+  dado.drawTextura();
 
   glTranslatef(2,0,0);
-
   glMaterialfv (GL_FRONT, GL_AMBIENT, color);
-  dado.draw();
+  C1.draw();
 
   glTranslatef(2,0,0);
-
   glMaterialfv (GL_FRONT, GL_DIFFUSE, color);
-  dado.draw();
+  C2.draw();
 
   glTranslatef(2,0,0);
-
   glMaterialfv (GL_FRONT, GL_AMBIENT_AND_DIFFUSE, color);
-  dado.draw();
+  C3.draw();
 }
 
 /**	void Dibuja( void )
-
-Procedimiento de dibujo del modelo. Es llamado por glut cada vez que se debe redibujar.
-
+  Procedimiento de dibujo del modelo. Es llamado por glut cada vez que se debe redibujar.
 **/
 
 void Dibuja (void)
 {
   static GLfloat  pos[4] = { 5.0, 5.0, 10.0, 0.0 };	// Posicion de la fuente de luz
 
-  float color[4] = { 0.8, 0.0, 1, 1 };
   float cian[4] = {0.0, 1.0, 1.0, 1};
   float magenta[4] = {1.0, 0.0, 1.0, 1};
 
@@ -456,16 +612,16 @@ void Dibuja (void)
   glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// Inicializa el buffer de color y el Z-Buffer
 
   transformacionVisualizacion ();	// Carga transformacion de visualizacion
-  
+
   glLightfv (GL_LIGHT0, GL_POSITION, pos);	// Declaracion de luz. Colocada aqui esta fija en la escena
-  
+
   ejesCoordenadas.draw();			// Dibuja los ejes  
 
   // Dibuja el modelo (A rellenar en prácticas 1,2 y 3)
     
   //P1(magenta, cian);
   //P2(cian, magenta);
-  P4(magenta);
+  P4(cian);
 
   glPopMatrix ();		// Desapila la transformacion geometrica
 
@@ -473,9 +629,7 @@ void Dibuja (void)
 }
 
 /**	void idle()
-
-Procedimiento de fondo. Es llamado por glut cuando no hay eventos pendientes.
-
+  Procedimiento de fondo. Es llamado por glut cuando no hay eventos pendientes.
 **/
 
 void idle (int v)
