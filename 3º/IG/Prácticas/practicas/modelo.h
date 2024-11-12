@@ -62,7 +62,7 @@ void P2(float color1[4], float color2[4]);
   	Funciones de la P4
 **/
 
-void P4();
+void P4(float color[4]);
 
 class Objeto3D 
 { 
