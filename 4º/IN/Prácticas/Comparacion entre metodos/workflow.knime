@@ -8,7 +8,7 @@
         <entry key="authored-by" type="xstring" value="mauricio"/>
         <entry key="authored-when" type="xstring" value="2024-10-18 09:31:47 +0200"/>
         <entry key="lastEdited-by" type="xstring" value="mauricio"/>
-        <entry key="lastEdited-when" type="xstring" value="2024-10-18 09:49:36 +0200"/>
+        <entry key="lastEdited-when" type="xstring" value="2024-11-13 17:21:55 +0100"/>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
     <entry key="state" type="xstring" value="EXECUTED"/>
@@ -318,14 +318,14 @@
         </config>
         <config key="connection_10">
             <entry key="sourceID" type="xint" value="10"/>
-            <entry key="destID" type="xint" value="13"/>
-            <entry key="sourcePort" type="xint" value="1"/>
+            <entry key="destID" type="xint" value="14"/>
+            <entry key="sourcePort" type="xint" value="2"/>
             <entry key="destPort" type="xint" value="2"/>
         </config>
         <config key="connection_11">
             <entry key="sourceID" type="xint" value="10"/>
-            <entry key="destID" type="xint" value="14"/>
-            <entry key="sourcePort" type="xint" value="2"/>
+            <entry key="destID" type="xint" value="13"/>
+            <entry key="sourcePort" type="xint" value="1"/>
             <entry key="destPort" type="xint" value="2"/>
         </config>
         <config key="connection_12">
@@ -364,5 +364,14 @@
             <entry key="sourcePort" type="xint" value="1"/>
             <entry key="destPort" type="xint" value="1"/>
         </config>
+    </config>
+    <config key="workflow_editor_settings">
+        <entry key="workflow.editor.snapToGrid" type="xboolean" value="false"/>
+        <entry key="workflow.editor.ShowGrid" type="xboolean" value="false"/>
+        <entry key="workflow.editor.gridX" type="xint" value="-1"/>
+        <entry key="workflow.editor.gridY" type="xint" value="-1"/>
+        <entry key="workflow.editor.zoomLevel" type="xdouble" value="1.0"/>
+        <entry key="workflow.editor.curvedConnections" type="xboolean" value="false"/>
+        <entry key="workflow.editor.connectionWidth" type="xint" value="1"/>
     </config>
 </config>

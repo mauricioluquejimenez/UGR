@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+    <entry key="node_file" type="xstring" value="settings.xml"/>
+    <config key="flow_stack"/>
+    <config key="internal_node_subsettings">
+        <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+    </config>
+    <config key="model">
+        <config key="include">
+            <entry key="filter-type" type="xstring" value="STANDARD"/>
+            <config key="included_names">
+                <entry key="array-size" type="xint" value="1"/>
+                <entry key="0" type="xstring" value="match"/>
+            </config>
+            <config key="excluded_names">
+                <entry key="array-size" type="xint" value="59"/>
+                <entry key="0" type="xstring" value="age"/>
+                <entry key="1" type="xstring" value="age_o"/>
+                <entry key="2" type="xstring" value="d_age"/>
+                <entry key="3" type="xstring" value="samerace"/>
+                <entry key="4" type="xstring" value="importance_same_race"/>
+                <entry key="5" type="xstring" value="importance_same_religion"/>
+                <entry key="6" type="xstring" value="pref_o_attractive"/>
+                <entry key="7" type="xstring" value="pref_o_sincere"/>
+                <entry key="8" type="xstring" value="pref_o_intelligence"/>
+                <entry key="9" type="xstring" value="pref_o_funny"/>
+                <entry key="10" type="xstring" value="pref_o_ambitious"/>
+                <entry key="11" type="xstring" value="pref_o_shared_interests"/>
+                <entry key="12" type="xstring" value="attractive_o"/>
+                <entry key="13" type="xstring" value="sinsere_o"/>
+                <entry key="14" type="xstring" value="intelligence_o"/>
+                <entry key="15" type="xstring" value="funny_o"/>
+                <entry key="16" type="xstring" value="ambitous_o"/>
+                <entry key="17" type="xstring" value="shared_interests_o"/>
+                <entry key="18" type="xstring" value="attractive_important"/>
+                <entry key="19" type="xstring" value="sincere_important"/>
+                <entry key="20" type="xstring" value="intellicence_important"/>
+                <entry key="21" type="xstring" value="funny_important"/>
+                <entry key="22" type="xstring" value="ambtition_important"/>
+                <entry key="23" type="xstring" value="shared_interests_important"/>
+                <entry key="24" type="xstring" value="attractive"/>
+                <entry key="25" type="xstring" value="sincere"/>
+                <entry key="26" type="xstring" value="intelligence"/>
+                <entry key="27" type="xstring" value="funny"/>
+                <entry key="28" type="xstring" value="ambition"/>
+                <entry key="29" type="xstring" value="attractive_partner"/>
+                <entry key="30" type="xstring" value="sincere_partner"/>
+                <entry key="31" type="xstring" value="intelligence_partner"/>
+                <entry key="32" type="xstring" value="funny_partner"/>
+                <entry key="33" type="xstring" value="ambition_partner"/>
+                <entry key="34" type="xstring" value="shared_interests_partner"/>
+                <entry key="35" type="xstring" value="sports"/>
+                <entry key="36" type="xstring" value="tvsports"/>
+                <entry key="37" type="xstring" value="exercise"/>
+                <entry key="38" type="xstring" value="dining"/>
+                <entry key="39" type="xstring" value="museums"/>
+                <entry key="40" type="xstring" value="art"/>
+                <entry key="41" type="xstring" value="hiking"/>
+                <entry key="42" type="xstring" value="gaming"/>
+                <entry key="43" type="xstring" value="clubbing"/>
+                <entry key="44" type="xstring" value="reading"/>
+                <entry key="45" type="xstring" value="tv"/>
+                <entry key="46" type="xstring" value="theater"/>
+                <entry key="47" type="xstring" value="movies"/>
+                <entry key="48" type="xstring" value="concerts"/>
+                <entry key="49" type="xstring" value="music"/>
+                <entry key="50" type="xstring" value="shopping"/>
+                <entry key="51" type="xstring" value="yoga"/>
+                <entry key="52" type="xstring" value="interests_correlate"/>
+                <entry key="53" type="xstring" value="expected_happy_with_sd_people"/>
+                <entry key="54" type="xstring" value="expected_num_interested_in_me"/>
+                <entry key="55" type="xstring" value="expected_num_matches"/>
+                <entry key="56" type="xstring" value="like"/>
+                <entry key="57" type="xstring" value="guess_prob_liked"/>
+                <entry key="58" type="xstring" value="met"/>
+            </config>
+            <entry key="enforce_option" type="xstring" value="EnforceInclusion"/>
+            <config key="name_pattern">
+                <entry key="pattern" type="xstring" value=""/>
+                <entry key="type" type="xstring" value="Wildcard"/>
+                <entry key="caseSensitive" type="xboolean" value="true"/>
+                <entry key="excludeMatching" type="xboolean" value="false"/>
+            </config>
+            <config key="datatype">
+                <config key="typelist"/>
+            </config>
+        </config>
+    </config>
+    <config key="variables"/>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="EXECUTED"/>
+    <entry key="factory" type="xstring" value="org.knime.base.node.preproc.colconvert.numbertostring2.NumberToString2NodeFactory"/>
+    <entry key="node-name" type="xstring" value="Number to String"/>
+    <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
+    <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.base"/>
+    <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-bundle-version" type="xstring" value="5.3.2.v202409100934"/>
+    <entry key="node-feature-name" type="xstring" value="KNIME Base nodes"/>
+    <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.base.feature.group"/>
+    <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-feature-version" type="xstring" value="5.3.2.v202409100934"/>
+    <config key="factory_settings"/>
+    <entry key="name" type="xstring" value="Number to String"/>
+    <entry key="hasContent" type="xboolean" value="true"/>
+    <entry key="isInactive" type="xboolean" value="false"/>
+    <config key="ports">
+        <config key="port_1">
+            <entry key="index" type="xint" value="1"/>
+            <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
+            <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 8378, Cols: 119"/>
+            <entry key="port_dir_location" type="xstring" value="port_1"/>
+        </config>
+    </config>
+    <config key="filestores">
+        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" value="498f50bc-167b-4cc3-905a-6bf8b613f8a2"/>
+    </config>
+</config>

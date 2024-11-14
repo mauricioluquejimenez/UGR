@@ -1917,3 +1917,918 @@
 2024-10-25 09:26:36,531 : WARN  : comm-pool-thread-4 :  : Node : CSV Reader : 7:1 : Please specify a file
 2024-10-25 09:34:26,364 : WARN  : comm-pool-thread-8 :  : Node : CSV Reader : 8:1 : Please specify a file
 2024-10-25 09:35:10,191 : WARN  : comm-pool-thread-6 :  : Node : CSV Reader : 9:1 : Please specify a file
+2024-11-13 16:40:46,765 : WARN  : comm-pool-thread-1 :  : Node : Color Manager : 4:2 : Selected column "cb_person_default_on_file" with default nominal color mapping.
+2024-11-13 16:42:35,001 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 3.
+2024-11-13 16:42:35,001 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 3.
+2024-11-13 16:42:35,001 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 4.
+2024-11-13 16:42:35,001 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 4.
+2024-11-13 16:42:35,001 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 5.
+2024-11-13 16:42:35,001 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 5.
+2024-11-13 16:42:35,001 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 6.
+2024-11-13 16:42:35,002 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 6.
+2024-11-13 16:42:35,002 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 7.
+2024-11-13 16:42:35,002 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 7.
+2024-11-13 16:42:35,002 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 8.
+2024-11-13 16:42:35,002 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 8.
+2024-11-13 16:42:35,002 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 9.
+2024-11-13 16:42:35,002 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 9.
+2024-11-13 16:42:35,002 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 10.
+2024-11-13 16:42:35,002 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 10.
+2024-11-13 16:42:35,002 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 11.
+2024-11-13 16:42:35,002 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 11.
+2024-11-13 16:42:35,003 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 12.
+2024-11-13 16:42:35,003 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 12.
+2024-11-13 16:42:35,003 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 13.
+2024-11-13 16:42:35,003 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 13.
+2024-11-13 16:42:35,003 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 14.
+2024-11-13 16:42:35,003 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 14.
+2024-11-13 16:42:35,003 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 15.
+2024-11-13 16:42:35,003 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 15.
+2024-11-13 16:42:35,003 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 16.
+2024-11-13 16:42:35,003 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 16.
+2024-11-13 16:42:35,003 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 17.
+2024-11-13 16:42:35,003 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 17.
+2024-11-13 16:42:35,004 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 18.
+2024-11-13 16:42:35,004 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 18.
+2024-11-13 16:42:35,004 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 19.
+2024-11-13 16:42:35,004 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 19.
+2024-11-13 16:42:35,004 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 20.
+2024-11-13 16:42:35,004 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 20.
+2024-11-13 16:42:35,004 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 21.
+2024-11-13 16:42:35,004 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 21.
+2024-11-13 16:42:35,004 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 22.
+2024-11-13 16:42:35,004 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 22.
+2024-11-13 16:42:35,004 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 23.
+2024-11-13 16:42:35,005 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 23.
+2024-11-13 16:42:35,005 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 24.
+2024-11-13 16:42:35,005 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 24.
+2024-11-13 16:42:35,005 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 25.
+2024-11-13 16:42:35,005 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 25.
+2024-11-13 16:42:35,005 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 26.
+2024-11-13 16:42:35,005 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 26.
+2024-11-13 16:42:35,005 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 27.
+2024-11-13 16:42:35,005 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 27.
+2024-11-13 16:42:35,005 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 28.
+2024-11-13 16:42:35,005 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 28.
+2024-11-13 16:42:35,006 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 29.
+2024-11-13 16:42:35,006 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 29.
+2024-11-13 16:42:35,006 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 30.
+2024-11-13 16:42:35,006 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 30.
+2024-11-13 16:42:35,006 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 31.
+2024-11-13 16:42:35,006 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 31.
+2024-11-13 16:42:35,006 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 32.
+2024-11-13 16:42:35,006 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 32.
+2024-11-13 16:42:35,006 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 33.
+2024-11-13 16:42:35,006 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 33.
+2024-11-13 16:42:35,006 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 34.
+2024-11-13 16:42:35,006 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 34.
+2024-11-13 16:42:35,007 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 35.
+2024-11-13 16:42:35,007 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 35.
+2024-11-13 16:42:35,007 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 36.
+2024-11-13 16:42:35,007 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 36.
+2024-11-13 16:42:35,007 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 37.
+2024-11-13 16:42:35,007 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 37.
+2024-11-13 16:42:35,007 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 38.
+2024-11-13 16:42:35,007 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 38.
+2024-11-13 16:42:35,007 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 39.
+2024-11-13 16:42:35,007 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 39.
+2024-11-13 16:42:35,007 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 40.
+2024-11-13 16:42:35,007 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 40.
+2024-11-13 16:42:35,008 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 41.
+2024-11-13 16:42:35,008 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 41.
+2024-11-13 16:42:35,008 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 42.
+2024-11-13 16:42:35,008 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 42.
+2024-11-13 16:42:35,008 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 43.
+2024-11-13 16:42:35,008 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 43.
+2024-11-13 16:42:35,008 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 44.
+2024-11-13 16:42:35,008 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 44.
+2024-11-13 16:42:35,008 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 45.
+2024-11-13 16:42:35,008 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 45.
+2024-11-13 16:42:35,008 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 46.
+2024-11-13 16:42:35,008 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 46.
+2024-11-13 16:42:35,009 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 47.
+2024-11-13 16:42:35,009 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 47.
+2024-11-13 16:42:35,009 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 48.
+2024-11-13 16:42:35,009 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 48.
+2024-11-13 16:42:35,009 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 49.
+2024-11-13 16:42:35,009 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 49.
+2024-11-13 16:42:35,009 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 50.
+2024-11-13 16:42:35,009 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 50.
+2024-11-13 16:42:35,009 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 51.
+2024-11-13 16:42:35,009 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 51.
+2024-11-13 16:42:35,009 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 52.
+2024-11-13 16:42:35,009 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 52.
+2024-11-13 16:42:35,009 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 53.
+2024-11-13 16:42:35,009 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 53.
+2024-11-13 16:42:35,010 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 54.
+2024-11-13 16:42:35,010 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 54.
+2024-11-13 16:42:35,010 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 55.
+2024-11-13 16:42:35,010 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 55.
+2024-11-13 16:42:35,010 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 56.
+2024-11-13 16:42:35,010 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 56.
+2024-11-13 16:42:35,010 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 57.
+2024-11-13 16:42:35,010 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 57.
+2024-11-13 16:42:35,010 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 58.
+2024-11-13 16:42:35,010 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 58.
+2024-11-13 16:42:35,010 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 59.
+2024-11-13 16:42:35,010 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 59.
+2024-11-13 16:42:35,010 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 60.
+2024-11-13 16:42:35,010 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 60.
+2024-11-13 16:42:35,010 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 61.
+2024-11-13 16:42:35,010 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 61.
+2024-11-13 16:42:35,011 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 62.
+2024-11-13 16:42:35,011 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 62.
+2024-11-13 16:42:35,012 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Unsupported control statement '@inputs' in line 63. Ignoring it! File: file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff
+2024-11-13 16:42:35,012 : WARN  : comm-pool-thread-2 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Unsupported control statement '@outputs' in line 64. Ignoring it! File: file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff
+2024-11-13 16:42:36,054 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 3.
+2024-11-13 16:42:36,054 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 3.
+2024-11-13 16:42:36,054 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 4.
+2024-11-13 16:42:36,054 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 4.
+2024-11-13 16:42:36,055 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 5.
+2024-11-13 16:42:36,055 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 5.
+2024-11-13 16:42:36,055 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 6.
+2024-11-13 16:42:36,055 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 6.
+2024-11-13 16:42:36,055 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 7.
+2024-11-13 16:42:36,055 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 7.
+2024-11-13 16:42:36,055 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 8.
+2024-11-13 16:42:36,055 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 8.
+2024-11-13 16:42:36,055 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 9.
+2024-11-13 16:42:36,056 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 9.
+2024-11-13 16:42:36,056 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 10.
+2024-11-13 16:42:36,056 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 10.
+2024-11-13 16:42:36,056 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 11.
+2024-11-13 16:42:36,056 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 11.
+2024-11-13 16:42:36,056 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 12.
+2024-11-13 16:42:36,056 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 12.
+2024-11-13 16:42:36,056 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 13.
+2024-11-13 16:42:36,056 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 13.
+2024-11-13 16:42:36,057 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 14.
+2024-11-13 16:42:36,057 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 14.
+2024-11-13 16:42:36,057 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 15.
+2024-11-13 16:42:36,057 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 15.
+2024-11-13 16:42:36,058 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 16.
+2024-11-13 16:42:36,058 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 16.
+2024-11-13 16:42:36,058 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 17.
+2024-11-13 16:42:36,058 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 17.
+2024-11-13 16:42:36,058 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 18.
+2024-11-13 16:42:36,058 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 18.
+2024-11-13 16:42:36,058 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 19.
+2024-11-13 16:42:36,058 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 19.
+2024-11-13 16:42:36,058 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 20.
+2024-11-13 16:42:36,059 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 20.
+2024-11-13 16:42:36,059 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 21.
+2024-11-13 16:42:36,059 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 21.
+2024-11-13 16:42:36,059 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 22.
+2024-11-13 16:42:36,059 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 22.
+2024-11-13 16:42:36,059 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 23.
+2024-11-13 16:42:36,059 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 23.
+2024-11-13 16:42:36,059 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 24.
+2024-11-13 16:42:36,059 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 24.
+2024-11-13 16:42:36,060 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 25.
+2024-11-13 16:42:36,060 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 25.
+2024-11-13 16:42:36,060 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 26.
+2024-11-13 16:42:36,060 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 26.
+2024-11-13 16:42:36,060 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 27.
+2024-11-13 16:42:36,060 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 27.
+2024-11-13 16:42:36,060 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 28.
+2024-11-13 16:42:36,060 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 28.
+2024-11-13 16:42:36,060 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 29.
+2024-11-13 16:42:36,060 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 29.
+2024-11-13 16:42:36,061 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 30.
+2024-11-13 16:42:36,061 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 30.
+2024-11-13 16:42:36,061 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 31.
+2024-11-13 16:42:36,061 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 31.
+2024-11-13 16:42:36,061 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 32.
+2024-11-13 16:42:36,061 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 32.
+2024-11-13 16:42:36,061 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 33.
+2024-11-13 16:42:36,061 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 33.
+2024-11-13 16:42:36,061 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 34.
+2024-11-13 16:42:36,062 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 34.
+2024-11-13 16:42:36,062 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 35.
+2024-11-13 16:42:36,062 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 35.
+2024-11-13 16:42:36,062 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 36.
+2024-11-13 16:42:36,062 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 36.
+2024-11-13 16:42:36,062 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 37.
+2024-11-13 16:42:36,062 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 37.
+2024-11-13 16:42:36,062 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 38.
+2024-11-13 16:42:36,062 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 38.
+2024-11-13 16:42:36,062 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 39.
+2024-11-13 16:42:36,063 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 39.
+2024-11-13 16:42:36,063 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 40.
+2024-11-13 16:42:36,063 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 40.
+2024-11-13 16:42:36,063 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 41.
+2024-11-13 16:42:36,063 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 41.
+2024-11-13 16:42:36,063 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 42.
+2024-11-13 16:42:36,063 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 42.
+2024-11-13 16:42:36,063 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 43.
+2024-11-13 16:42:36,063 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 43.
+2024-11-13 16:42:36,063 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 44.
+2024-11-13 16:42:36,064 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 44.
+2024-11-13 16:42:36,064 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 45.
+2024-11-13 16:42:36,064 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 45.
+2024-11-13 16:42:36,064 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 46.
+2024-11-13 16:42:36,064 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 46.
+2024-11-13 16:42:36,064 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 47.
+2024-11-13 16:42:36,064 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 47.
+2024-11-13 16:42:36,064 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 48.
+2024-11-13 16:42:36,064 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 48.
+2024-11-13 16:42:36,064 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 49.
+2024-11-13 16:42:36,064 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 49.
+2024-11-13 16:42:36,065 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 50.
+2024-11-13 16:42:36,065 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 50.
+2024-11-13 16:42:36,065 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 51.
+2024-11-13 16:42:36,065 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 51.
+2024-11-13 16:42:36,065 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 52.
+2024-11-13 16:42:36,065 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 52.
+2024-11-13 16:42:36,065 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 53.
+2024-11-13 16:42:36,065 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 53.
+2024-11-13 16:42:36,065 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 54.
+2024-11-13 16:42:36,065 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 54.
+2024-11-13 16:42:36,066 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 55.
+2024-11-13 16:42:36,066 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 55.
+2024-11-13 16:42:36,066 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 56.
+2024-11-13 16:42:36,066 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 56.
+2024-11-13 16:42:36,066 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 57.
+2024-11-13 16:42:36,066 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 57.
+2024-11-13 16:42:36,066 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 58.
+2024-11-13 16:42:36,066 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 58.
+2024-11-13 16:42:36,066 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 59.
+2024-11-13 16:42:36,066 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 59.
+2024-11-13 16:42:36,067 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 60.
+2024-11-13 16:42:36,067 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 60.
+2024-11-13 16:42:36,067 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 61.
+2024-11-13 16:42:36,067 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 61.
+2024-11-13 16:42:36,067 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 62.
+2024-11-13 16:42:36,067 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 62.
+2024-11-13 16:42:36,067 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Unsupported control statement '@inputs' in line 63. Ignoring it! File: file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff
+2024-11-13 16:42:36,068 : WARN  : KNIME-Worker-2-ARFF Reader 3:1 :  : ARFFTable : ARFF Reader : 3:1 : ARFF reader WARNING: Unsupported control statement '@outputs' in line 64. Ignoring it! File: file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff
+2024-11-13 16:45:18,111 : WARN  : comm-pool-thread-6 :  : JsonRpcErrorResolver :  :  : An unexpected json rpc error occurred
+java.lang.IllegalStateException: No rpc data service available
+	at org.knime.core.webui.node.DataServiceManager.callRpcDataService(DataServiceManager.java:164)
+	at org.knime.gateway.impl.webui.service.DefaultPortService.callPortDataService(DefaultPortService.java:156)
+	at org.knime.gateway.impl.webui.jsonrpc.service.JsonRpcPortServiceWrapper.callPortDataService(JsonRpcPortServiceWrapper.java:85)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at com.googlecode.jsonrpc4j.JsonRpcBasicServer.invoke(JsonRpcBasicServer.java:478)
+	at com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleObject(JsonRpcBasicServer.java:349)
+	at com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleJsonNodeRequest(JsonRpcBasicServer.java:274)
+	at com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleRequest(JsonRpcBasicServer.java:242)
+	at org.knime.gateway.impl.jsonrpc.JsonRpcRequestHandler.handle(JsonRpcRequestHandler.java:104)
+	at org.knime.ui.java.browser.lifecycle.Init.lambda$11(Init.java:296)
+	at com.equo.comm.common.MessageHandler.processReceivedEventMessage(MessageHandler.java:131)
+	at com.equo.comm.ee.provider.service.ChromiumService.receiveMessage(ChromiumService.java:98)
+	at com.equo.comm.ee.provider.CommunicationManagerChromiumImpl.receiveMessage(CommunicationManagerChromiumImpl.java:48)
+	at com.equo.chromium.swt.internal.spi.CommRouterHandler.handleRequest(CommRouterHandler.java:33)
+	at com.equo.chromium.swt.internal.spi.CommRouterHandler.lambda$1(CommRouterHandler.java:51)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2024-11-13 16:45:18,126 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Error making RPC call 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      Error: No rpc data service available (source: http://org.knime.ui.java/assets/index-PyhZB-uQ.js; line: 64)
+2024-11-13 16:45:18,127 : ERROR : main :  : KnimeBrowserView :  :  : Uncaught (in promise) Error: No rpc data service available (source: http://org.knime.ui.java/assets/index-PyhZB-uQ.js; line: 22)
+2024-11-13 16:50:10,888 : WARN  : comm-pool-thread-7 :  : Node : Color Manager : 6:2 : Column "Column4" has no nominal values set: execute predecessor or add Binner.
+2024-11-13 16:50:54,460 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Error making RPC call 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      Error: No such node ID: 4:4 valid [4:1, 4:2, 4:3] (source: http://org.knime.ui.java/assets/index-PyhZB-uQ.js; line: 64)
+2024-11-13 16:50:54,461 : ERROR : main :  : KnimeBrowserView :  :  : Uncaught (in promise) Error: No such node ID: 4:4 valid [4:1, 4:2, 4:3] (source: http://org.knime.ui.java/assets/index-PyhZB-uQ.js; line: 22)
+2024-11-13 16:50:58,472 : WARN  : comm-pool-thread-8 :  : Node : Partitioning : 4:4 : No sampling method selected
+2024-11-13 16:52:31,484 : WARN  : comm-pool-thread-10 :  : Node : Color Manager : 8:2 : Selected column "d_guess_prob_liked" with default nominal color mapping.
+2024-11-13 16:59:12,920 : WARN  : KNIME-Worker-25-Missing Value 8:3 :  : Node : Missing Value : 8:3 : Column "guess_prob_liked" still contains missing values.
+Column "met" still contains missing values.
+Column "expected_num_matches" still contains missing values.
+Column "ambitous_o" still contains missing values.
+Column "shared_interests_o" still contains missing values.
+Column "shared_interests_partner" still contains missing values.
+Column "attractive_o" still contains missing values.
+Column "ambition_partner" still contains missing values.
+Column "attractive_partner" still contains missing values.
+Column "funny_o" still contains missing values.
+Column "sinsere_o" still contains missing values.
+Column "sincere_partner" still contains missing values.
+Column "intelligence_partner" still contains missing values.
+Column "funny_partner" still contains missing values.
+Column "like" still contains missing values.
+Column "intelligence_o" still contains missing values.
+Column "importance_same_race" still contains missing values.
+Column "importance_same_religion" still contains missing values.
+Column "attractive_important" still contains missing values.
+Column "sincere_important" still contains missing values.
+Column "intellicence_important" still contains missing values.
+Column "funny_important" still contains missing values.
+Column "ambtition_important" still contains missing values.
+Column "shared_interests_important" still contains missing values.
+Column "attractive" still contains missing values.
+Column "sincere" still contains missing values.
+Column "intelligence" still contains missing values.
+Column "funny" still contains missing values.
+Column "ambition" still contains missing values.
+Column "sports" still contains missing values.
+Column "tvsports" still contains missing values.
+Column "exercise" still contains missing values.
+Column "dining" still contains missing values.
+Column "museums" still contains missing values.
+Column "art" still contains missing values.
+Column "hiking" still contains missing values.
+Column "gaming" still contains missing values.
+Column "clubbing" still contains missing values.
+Column "reading" still contains missing values.
+Column "tv" still contains missing values.
+Column "theater" still contains missing values.
+Column "movies" still contains missing values.
+Column "concerts" still contains missing values.
+Column "music" still contains missing values.
+Column "shopping" still contains missing values.
+Column "yoga" still contains missing values.
+Column "interests_correlate" still contains missing values.
+Column "expected_happy_with_sd_people" still contains missing values.
+Column "expected_num_interested_in_me" still contains missing values.
+Column "pref_o_attractive" still contains missing values.
+Column "pref_o_sincere" still contains missing values.
+Column "pref_o_intelligence" still contains missing values.
+Column "pref_o_funny" still contains missing values.
+Column "pref_o_ambitious" still contains missing values.
+Column "pref_o_shared_interests" still contains missing values.
+Column "age" still contains missing values.
+Column "race" still contains missing values.
+Column "field" still contains missing values.
+Column "age_o" still contains missing values.
+Column "race_o" still contains missing values.
+2024-11-13 17:00:40,907 : WARN  : KNIME-Worker-26-Missing Value 8:3 :  : Node : Missing Value : 8:3 : Column "expected_num_matches" still contains missing values.
+2024-11-13 17:01:14,374 : WARN  : KNIME-Worker-30-Missing Value 8:3 :  : Node : Missing Value : 8:3 : Column "expected_num_matches" still contains missing values.
+2024-11-13 17:01:47,363 : WARN  : KNIME-Worker-34-Missing Value 8:3 :  : Node : Missing Value : 8:3 : Column "guess_prob_liked" still contains missing values.
+Column "met" still contains missing values.
+Column "ambitous_o" still contains missing values.
+Column "shared_interests_o" still contains missing values.
+Column "shared_interests_partner" still contains missing values.
+Column "attractive_o" still contains missing values.
+Column "ambition_partner" still contains missing values.
+Column "attractive_partner" still contains missing values.
+Column "funny_o" still contains missing values.
+Column "sinsere_o" still contains missing values.
+Column "sincere_partner" still contains missing values.
+Column "intelligence_partner" still contains missing values.
+Column "funny_partner" still contains missing values.
+Column "like" still contains missing values.
+Column "intelligence_o" still contains missing values.
+Column "importance_same_race" still contains missing values.
+Column "importance_same_religion" still contains missing values.
+Column "attractive_important" still contains missing values.
+Column "sincere_important" still contains missing values.
+Column "intellicence_important" still contains missing values.
+Column "funny_important" still contains missing values.
+Column "ambtition_important" still contains missing values.
+Column "shared_interests_important" still contains missing values.
+Column "attractive" still contains missing values.
+Column "sincere" still contains missing values.
+Column "intelligence" still contains missing values.
+Column "funny" still contains missing values.
+Column "ambition" still contains missing values.
+Column "sports" still contains missing values.
+Column "tvsports" still contains missing values.
+Column "exercise" still contains missing values.
+Column "dining" still contains missing values.
+Column "museums" still contains missing values.
+Column "art" still contains missing values.
+Column "hiking" still contains missing values.
+Column "gaming" still contains missing values.
+Column "clubbing" still contains missing values.
+Column "reading" still contains missing values.
+Column "tv" still contains missing values.
+Column "theater" still contains missing values.
+Column "movies" still contains missing values.
+Column "concerts" still contains missing values.
+Column "music" still contains missing values.
+Column "shopping" still contains missing values.
+Column "yoga" still contains missing values.
+Column "interests_correlate" still contains missing values.
+Column "expected_happy_with_sd_people" still contains missing values.
+Column "expected_num_interested_in_me" still contains missing values.
+Column "pref_o_attractive" still contains missing values.
+Column "pref_o_sincere" still contains missing values.
+Column "pref_o_intelligence" still contains missing values.
+Column "pref_o_funny" still contains missing values.
+Column "pref_o_ambitious" still contains missing values.
+Column "pref_o_shared_interests" still contains missing values.
+Column "age" still contains missing values.
+Column "age_o" still contains missing values.
+2024-11-13 17:02:51,756 : WARN  : comm-pool-thread-12 :  : Node : Partitioning : 8:5 : No sampling method selected
+2024-11-13 17:03:49,123 : WARN  : comm-pool-thread-17 :  : Node : Decision Tree Learner : 8:6 : Guessing target column: "match".
+2024-11-13 17:06:23,658 : WARN  : comm-pool-thread-17 :  : Node : Decision Tree Learner : 8:9 : Class column "Column4" not found or incompatible
+2024-11-13 17:07:52,978 : WARN  : comm-pool-thread-17 :  : Node : X-Aggregator : 8:10 : Selected columns 'Prediction (match)' and 'match' as prediction and target columns
+2024-11-13 17:08:04,990 : WARN  : KNIME-Worker-40-X-Aggregator 8:10 :  : NodeContainer : X-Aggregator : 8:10 : Encountered loop-end without corresponding head!
+org.knime.core.node.workflow.IllegalFlowObjectStackException: Encountered loop-end without corresponding head!
+	at org.knime.core.node.workflow.WorkflowManager.doBeforeExecution(WorkflowManager.java:3472)
+	at org.knime.core.node.workflow.NodeContainer.notifyParentExecuteStart(NodeContainer.java:660)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:168)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-11-13 17:08:52,668 : WARN  : KNIME-Worker-51-X-Aggregator 8:10 :  : NodeContainer : X-Aggregator : 8:10 : Encountered loop-end without corresponding head!
+org.knime.core.node.workflow.IllegalFlowObjectStackException: Encountered loop-end without corresponding head!
+	at org.knime.core.node.workflow.WorkflowManager.doBeforeExecution(WorkflowManager.java:3472)
+	at org.knime.core.node.workflow.NodeContainer.notifyParentExecuteStart(NodeContainer.java:660)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:168)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-11-13 17:09:04,308 : WARN  : KNIME-Worker-52-X-Aggregator 8:10 :  : NodeContainer : X-Aggregator : 8:10 : Encountered loop-end without corresponding head!
+org.knime.core.node.workflow.IllegalFlowObjectStackException: Encountered loop-end without corresponding head!
+	at org.knime.core.node.workflow.WorkflowManager.doBeforeExecution(WorkflowManager.java:3472)
+	at org.knime.core.node.workflow.NodeContainer.notifyParentExecuteStart(NodeContainer.java:660)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:168)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-11-13 17:11:23,860 : WARN  : KNIME-Worker-53-X-Aggregator 8:10 :  : NodeContainer : X-Aggregator : 8:10 : Encountered loop-end without corresponding head!
+org.knime.core.node.workflow.IllegalFlowObjectStackException: Encountered loop-end without corresponding head!
+	at org.knime.core.node.workflow.WorkflowManager.doBeforeExecution(WorkflowManager.java:3472)
+	at org.knime.core.node.workflow.NodeContainer.notifyParentExecuteStart(NodeContainer.java:660)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:168)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-11-13 17:12:27,384 : WARN  : KNIME-Worker-56-X-Aggregator 8:10 :  : NodeContainer : X-Aggregator : 8:10 : Encountered loop-end without corresponding head!
+org.knime.core.node.workflow.IllegalFlowObjectStackException: Encountered loop-end without corresponding head!
+	at org.knime.core.node.workflow.WorkflowManager.doBeforeExecution(WorkflowManager.java:3472)
+	at org.knime.core.node.workflow.NodeContainer.notifyParentExecuteStart(NodeContainer.java:660)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:168)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-11-13 17:12:30,714 : WARN  : KNIME-Worker-57-X-Aggregator 8:10 :  : NodeContainer : X-Aggregator : 8:10 : Encountered loop-end without corresponding head!
+org.knime.core.node.workflow.IllegalFlowObjectStackException: Encountered loop-end without corresponding head!
+	at org.knime.core.node.workflow.WorkflowManager.doBeforeExecution(WorkflowManager.java:3472)
+	at org.knime.core.node.workflow.NodeContainer.notifyParentExecuteStart(NodeContainer.java:660)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:168)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-11-13 17:12:40,134 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 3.
+2024-11-13 17:12:40,134 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 3.
+2024-11-13 17:12:40,134 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 4.
+2024-11-13 17:12:40,134 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 4.
+2024-11-13 17:12:40,134 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 5.
+2024-11-13 17:12:40,134 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 5.
+2024-11-13 17:12:40,134 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 6.
+2024-11-13 17:12:40,135 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 6.
+2024-11-13 17:12:40,135 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 7.
+2024-11-13 17:12:40,135 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 7.
+2024-11-13 17:12:40,135 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 8.
+2024-11-13 17:12:40,135 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 8.
+2024-11-13 17:12:40,135 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 9.
+2024-11-13 17:12:40,135 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 9.
+2024-11-13 17:12:40,135 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 10.
+2024-11-13 17:12:40,135 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 10.
+2024-11-13 17:12:40,135 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 11.
+2024-11-13 17:12:40,135 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 11.
+2024-11-13 17:12:40,135 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 12.
+2024-11-13 17:12:40,135 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 12.
+2024-11-13 17:12:40,135 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 13.
+2024-11-13 17:12:40,135 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 13.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 14.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 14.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 15.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 15.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 16.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 16.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 17.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 17.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 18.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 18.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 19.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 19.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 20.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 20.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 21.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 21.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 22.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 22.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 23.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 23.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 24.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 24.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 25.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 25.
+2024-11-13 17:12:40,136 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 26.
+2024-11-13 17:12:40,137 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 26.
+2024-11-13 17:12:40,137 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 27.
+2024-11-13 17:12:40,137 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 27.
+2024-11-13 17:12:40,137 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 28.
+2024-11-13 17:12:40,137 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 28.
+2024-11-13 17:12:40,137 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 29.
+2024-11-13 17:12:40,137 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 29.
+2024-11-13 17:12:40,137 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 30.
+2024-11-13 17:12:40,137 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 30.
+2024-11-13 17:12:40,137 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 31.
+2024-11-13 17:12:40,137 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 31.
+2024-11-13 17:12:40,138 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 32.
+2024-11-13 17:12:40,138 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 32.
+2024-11-13 17:12:40,138 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 33.
+2024-11-13 17:12:40,138 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 33.
+2024-11-13 17:12:40,138 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 34.
+2024-11-13 17:12:40,138 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 34.
+2024-11-13 17:12:40,138 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 35.
+2024-11-13 17:12:40,138 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 35.
+2024-11-13 17:12:40,138 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 36.
+2024-11-13 17:12:40,138 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 36.
+2024-11-13 17:12:40,138 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 37.
+2024-11-13 17:12:40,138 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 37.
+2024-11-13 17:12:40,138 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 38.
+2024-11-13 17:12:40,138 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 38.
+2024-11-13 17:12:40,138 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 39.
+2024-11-13 17:12:40,139 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 39.
+2024-11-13 17:12:40,139 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 40.
+2024-11-13 17:12:40,139 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 40.
+2024-11-13 17:12:40,139 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 41.
+2024-11-13 17:12:40,139 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 41.
+2024-11-13 17:12:40,139 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 42.
+2024-11-13 17:12:40,139 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 42.
+2024-11-13 17:12:40,139 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 43.
+2024-11-13 17:12:40,139 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 43.
+2024-11-13 17:12:40,139 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 44.
+2024-11-13 17:12:40,139 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 44.
+2024-11-13 17:12:40,139 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 45.
+2024-11-13 17:12:40,139 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 45.
+2024-11-13 17:12:40,139 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 46.
+2024-11-13 17:12:40,139 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 46.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 47.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 47.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 48.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 48.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 49.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 49.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 50.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 50.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 51.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 51.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 52.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 52.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 53.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 53.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 54.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 54.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 55.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 55.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 56.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 56.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 57.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 57.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 58.
+2024-11-13 17:12:40,140 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 58.
+2024-11-13 17:12:40,141 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 59.
+2024-11-13 17:12:40,141 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 59.
+2024-11-13 17:12:40,141 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 60.
+2024-11-13 17:12:40,141 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 60.
+2024-11-13 17:12:40,141 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 61.
+2024-11-13 17:12:40,141 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 61.
+2024-11-13 17:12:40,141 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 62.
+2024-11-13 17:12:40,141 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 62.
+2024-11-13 17:12:40,141 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Unsupported control statement '@inputs' in line 63. Ignoring it! File: file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff
+2024-11-13 17:12:40,141 : WARN  : comm-pool-thread-18 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Unsupported control statement '@outputs' in line 64. Ignoring it! File: file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff
+2024-11-13 17:12:41,319 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 3.
+2024-11-13 17:12:41,319 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 3.
+2024-11-13 17:12:41,319 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 4.
+2024-11-13 17:12:41,319 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 4.
+2024-11-13 17:12:41,319 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 5.
+2024-11-13 17:12:41,319 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 5.
+2024-11-13 17:12:41,319 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 6.
+2024-11-13 17:12:41,319 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 6.
+2024-11-13 17:12:41,320 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 7.
+2024-11-13 17:12:41,320 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 7.
+2024-11-13 17:12:41,320 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 8.
+2024-11-13 17:12:41,320 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 8.
+2024-11-13 17:12:41,320 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 9.
+2024-11-13 17:12:41,320 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 9.
+2024-11-13 17:12:41,320 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 10.
+2024-11-13 17:12:41,320 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 10.
+2024-11-13 17:12:41,320 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 11.
+2024-11-13 17:12:41,320 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 11.
+2024-11-13 17:12:41,320 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 12.
+2024-11-13 17:12:41,320 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 12.
+2024-11-13 17:12:41,321 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 13.
+2024-11-13 17:12:41,321 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 13.
+2024-11-13 17:12:41,321 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 14.
+2024-11-13 17:12:41,321 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 14.
+2024-11-13 17:12:41,321 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 15.
+2024-11-13 17:12:41,321 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 15.
+2024-11-13 17:12:41,321 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 16.
+2024-11-13 17:12:41,321 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 16.
+2024-11-13 17:12:41,321 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 17.
+2024-11-13 17:12:41,321 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 17.
+2024-11-13 17:12:41,321 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 18.
+2024-11-13 17:12:41,321 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 18.
+2024-11-13 17:12:41,321 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 19.
+2024-11-13 17:12:41,322 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 19.
+2024-11-13 17:12:41,322 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 20.
+2024-11-13 17:12:41,322 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 20.
+2024-11-13 17:12:41,322 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 21.
+2024-11-13 17:12:41,322 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 21.
+2024-11-13 17:12:41,322 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 22.
+2024-11-13 17:12:41,322 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 22.
+2024-11-13 17:12:41,322 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 23.
+2024-11-13 17:12:41,322 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 23.
+2024-11-13 17:12:41,322 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 24.
+2024-11-13 17:12:41,322 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 24.
+2024-11-13 17:12:41,322 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 25.
+2024-11-13 17:12:41,322 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 25.
+2024-11-13 17:12:41,323 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 26.
+2024-11-13 17:12:41,323 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 26.
+2024-11-13 17:12:41,323 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 27.
+2024-11-13 17:12:41,323 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 27.
+2024-11-13 17:12:41,323 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 28.
+2024-11-13 17:12:41,323 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 28.
+2024-11-13 17:12:41,323 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 29.
+2024-11-13 17:12:41,323 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 29.
+2024-11-13 17:12:41,323 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 30.
+2024-11-13 17:12:41,323 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 30.
+2024-11-13 17:12:41,323 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 31.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 31.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 32.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 32.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 33.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 33.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 34.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 34.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 35.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 35.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 36.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 36.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 37.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 37.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 38.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 38.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 39.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 39.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 40.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 40.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 41.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 41.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 42.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 42.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 43.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 43.
+2024-11-13 17:12:41,324 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 44.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 44.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 45.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 45.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 46.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 46.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 47.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 47.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 48.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 48.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 49.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 49.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 50.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 50.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 51.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 51.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 52.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 52.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 53.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 53.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 54.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 54.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 55.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 55.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 56.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 56.
+2024-11-13 17:12:41,325 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 57.
+2024-11-13 17:12:41,326 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 57.
+2024-11-13 17:12:41,326 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 58.
+2024-11-13 17:12:41,326 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 58.
+2024-11-13 17:12:41,326 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 59.
+2024-11-13 17:12:41,326 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 59.
+2024-11-13 17:12:41,326 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 60.
+2024-11-13 17:12:41,326 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 60.
+2024-11-13 17:12:41,326 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 61.
+2024-11-13 17:12:41,326 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 61.
+2024-11-13 17:12:41,326 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 62.
+2024-11-13 17:12:41,326 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Ignoring extra characters in header of file 'file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff' line 62.
+2024-11-13 17:12:41,326 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Unsupported control statement '@inputs' in line 63. Ignoring it! File: file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff
+2024-11-13 17:12:41,326 : WARN  : KNIME-Worker-58-ARFF Reader 7:1 :  : ARFFTable : ARFF Reader : 7:1 : ARFF reader WARNING: Unsupported control statement '@outputs' in line 64. Ignoring it! File: file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff
+2024-11-13 17:13:16,550 : WARN  : KNIME-Worker-56-X-Aggregator 8:10 :  : NodeContainer : X-Aggregator : 8:10 : Encountered loop-end without corresponding head!
+org.knime.core.node.workflow.IllegalFlowObjectStackException: Encountered loop-end without corresponding head!
+	at org.knime.core.node.workflow.WorkflowManager.doBeforeExecution(WorkflowManager.java:3472)
+	at org.knime.core.node.workflow.NodeContainer.notifyParentExecuteStart(NodeContainer.java:660)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:168)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-11-13 17:15:30,667 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Error making RPC call 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      Error: No such node ID: 8:4 valid [8:1, 8:2, 8:3, 8:5, 8:7, 8:8, 8:9, 8:10] (source: http://org.knime.ui.java/assets/index-PyhZB-uQ.js; line: 64)
+2024-11-13 17:15:30,669 : ERROR : main :  : KnimeBrowserView :  :  : Uncaught (in promise) Error: No such node ID: 8:4 valid [8:1, 8:2, 8:3, 8:5, 8:7, 8:8, 8:9, 8:10] (source: http://org.knime.ui.java/assets/index-PyhZB-uQ.js; line: 22)
+2024-11-13 17:15:32,898 : WARN  : comm-pool-thread-18 :  : Node : Decision Tree Learner : 8:9 : Class column "match" not found or incompatible
+2024-11-13 17:15:50,845 : WARN  : main :  : Node : Decision Tree Learner : 8:9 : Class column "match" not found or incompatible
+2024-11-13 17:15:51,499 : WARN  : main :  : Node : Decision Tree Learner : 8:9 : Class column "match" not found or incompatible
+2024-11-13 17:15:54,506 : WARN  : KNIME-Worker-62-Missing Value 8:3 :  : Node : Missing Value : 8:3 : Column "guess_prob_liked" still contains missing values.
+Column "expected_num_matches" still contains missing values.
+Column "ambitous_o" still contains missing values.
+Column "shared_interests_o" still contains missing values.
+Column "shared_interests_partner" still contains missing values.
+Column "attractive_o" still contains missing values.
+Column "ambition_partner" still contains missing values.
+Column "attractive_partner" still contains missing values.
+Column "funny_o" still contains missing values.
+Column "sinsere_o" still contains missing values.
+Column "sincere_partner" still contains missing values.
+Column "intelligence_partner" still contains missing values.
+Column "funny_partner" still contains missing values.
+Column "like" still contains missing values.
+Column "intelligence_o" still contains missing values.
+Column "attractive_important" still contains missing values.
+Column "sincere_important" still contains missing values.
+Column "intellicence_important" still contains missing values.
+Column "funny_important" still contains missing values.
+Column "ambtition_important" still contains missing values.
+Column "shared_interests_important" still contains missing values.
+Column "interests_correlate" still contains missing values.
+Column "pref_o_attractive" still contains missing values.
+Column "pref_o_sincere" still contains missing values.
+Column "pref_o_intelligence" still contains missing values.
+Column "pref_o_funny" still contains missing values.
+Column "pref_o_ambitious" still contains missing values.
+Column "pref_o_shared_interests" still contains missing values.
+Column "race" still contains missing values.
+Column "field" still contains missing values.
+Column "race_o" still contains missing values.
+2024-11-13 17:15:54,547 : WARN  : KNIME-Worker-63-Partitioning 8:5 :  : Node : Decision Tree Learner : 8:9 : Class column "match" not found or incompatible
+2024-11-13 17:16:07,021 : WARN  : main :  : Node : Decision Tree Learner : 8:9 : Class column "match" not found or incompatible
+2024-11-13 17:16:07,492 : WARN  : main :  : Node : Decision Tree Learner : 8:9 : Class column "match" not found or incompatible
+2024-11-13 17:16:09,208 : WARN  : KNIME-Worker-69-Missing Value 8:3 :  : Node : Missing Value : 8:3 : Column "guess_prob_liked" still contains missing values.
+Column "expected_num_matches" still contains missing values.
+Column "ambitous_o" still contains missing values.
+Column "shared_interests_o" still contains missing values.
+Column "shared_interests_partner" still contains missing values.
+Column "attractive_o" still contains missing values.
+Column "ambition_partner" still contains missing values.
+Column "attractive_partner" still contains missing values.
+Column "funny_o" still contains missing values.
+Column "sinsere_o" still contains missing values.
+Column "sincere_partner" still contains missing values.
+Column "intelligence_partner" still contains missing values.
+Column "funny_partner" still contains missing values.
+Column "like" still contains missing values.
+Column "intelligence_o" still contains missing values.
+Column "attractive_important" still contains missing values.
+Column "sincere_important" still contains missing values.
+Column "intellicence_important" still contains missing values.
+Column "funny_important" still contains missing values.
+Column "ambtition_important" still contains missing values.
+Column "shared_interests_important" still contains missing values.
+Column "interests_correlate" still contains missing values.
+Column "pref_o_attractive" still contains missing values.
+Column "pref_o_sincere" still contains missing values.
+Column "pref_o_intelligence" still contains missing values.
+Column "pref_o_funny" still contains missing values.
+Column "pref_o_ambitious" still contains missing values.
+Column "pref_o_shared_interests" still contains missing values.
+2024-11-13 17:16:09,259 : WARN  : KNIME-Worker-66-Partitioning 8:5 :  : Node : Decision Tree Learner : 8:9 : Class column "match" not found or incompatible
+2024-11-13 17:16:22,163 : WARN  : main :  : Node : Decision Tree Learner : 8:9 : Class column "match" not found or incompatible
+2024-11-13 17:16:22,916 : WARN  : main :  : Node : Decision Tree Learner : 8:9 : Class column "match" not found or incompatible
+2024-11-13 17:16:25,960 : WARN  : KNIME-Worker-69-Partitioning 8:5 :  : Node : Decision Tree Learner : 8:9 : Class column "match" not found or incompatible
+2024-11-13 17:17:28,365 : WARN  : KNIME-Worker-74-X-Aggregator 8:10 :  : NodeContainer : X-Aggregator : 8:10 : Encountered loop-end without corresponding head!
+org.knime.core.node.workflow.IllegalFlowObjectStackException: Encountered loop-end without corresponding head!
+	at org.knime.core.node.workflow.WorkflowManager.doBeforeExecution(WorkflowManager.java:3472)
+	at org.knime.core.node.workflow.NodeContainer.notifyParentExecuteStart(NodeContainer.java:660)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:168)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-11-13 17:18:49,571 : WARN  : KNIME-Worker-64-X-Aggregator 8:10 :  : NodeContainer : X-Aggregator : 8:10 : Encountered loop-end without corresponding head!
+org.knime.core.node.workflow.IllegalFlowObjectStackException: Encountered loop-end without corresponding head!
+	at org.knime.core.node.workflow.WorkflowManager.doBeforeExecution(WorkflowManager.java:3472)
+	at org.knime.core.node.workflow.NodeContainer.notifyParentExecuteStart(NodeContainer.java:660)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:168)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-11-13 17:18:59,401 : WARN  : KNIME-Worker-76-X-Aggregator 8:10 :  : NodeContainer : X-Aggregator : 8:10 : Encountered loop-end without corresponding head!
+org.knime.core.node.workflow.IllegalFlowObjectStackException: Encountered loop-end without corresponding head!
+	at org.knime.core.node.workflow.WorkflowManager.doBeforeExecution(WorkflowManager.java:3472)
+	at org.knime.core.node.workflow.NodeContainer.notifyParentExecuteStart(NodeContainer.java:660)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:168)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-11-13 17:19:44,916 : WARN  : KNIME-Worker-79-X-Aggregator 8:10 :  : NodeContainer : X-Aggregator : 8:10 : Encountered loop-end without corresponding head!
+org.knime.core.node.workflow.IllegalFlowObjectStackException: Encountered loop-end without corresponding head!
+	at org.knime.core.node.workflow.WorkflowManager.doBeforeExecution(WorkflowManager.java:3472)
+	at org.knime.core.node.workflow.NodeContainer.notifyParentExecuteStart(NodeContainer.java:660)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:168)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-11-13 17:21:29,551 : WARN  : KNIME-Worker-82-X-Aggregator 8:10 :  : NodeContainer : X-Aggregator : 8:10 : Encountered loop-end without corresponding head!
+org.knime.core.node.workflow.IllegalFlowObjectStackException: Encountered loop-end without corresponding head!
+	at org.knime.core.node.workflow.WorkflowManager.doBeforeExecution(WorkflowManager.java:3472)
+	at org.knime.core.node.workflow.NodeContainer.notifyParentExecuteStart(NodeContainer.java:660)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:168)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-11-13 17:22:25,236 : WARN  : comm-pool-thread-21 :  : Node : Scorer : 8:11 : No columns selected yet.
+2024-11-13 17:22:28,499 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Error making RPC call 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      Error: No such node ID: 8:10 valid [8:1, 8:2, 8:3, 8:4, 8:5, 8:7, 8:8, 8:9, 8:11] (source: http://org.knime.ui.java/assets/index-PyhZB-uQ.js; line: 64)
+2024-11-13 17:22:28,500 : ERROR : main :  : KnimeBrowserView :  :  : Uncaught (in promise) Error: No such node ID: 8:10 valid [8:1, 8:2, 8:3, 8:4, 8:5, 8:7, 8:8, 8:9, 8:11] (source: http://org.knime.ui.java/assets/index-PyhZB-uQ.js; line: 22)
+2024-11-13 17:23:53,672 : WARN  : comm-pool-thread-23 :  : Node : Color Manager : 6:2 : Column "Column4" has no nominal values set: execute predecessor or add Binner.
+2024-11-13 17:31:18,365 : WARN  : comm-pool-thread-25 :  : Node : Number to String : 8:4 : No columns selected.
+2024-11-13 17:31:18,366 : WARN  : comm-pool-thread-25 :  : Node : Decision Tree Learner : 8:9 : Class column "match" not found or incompatible
+2024-11-13 17:32:10,607 : WARN  : comm-pool-thread-21 :  : Node : Number to String : 8:4 : No columns selected.
+2024-11-13 17:32:10,608 : WARN  : comm-pool-thread-21 :  : Node : Decision Tree Learner : 8:9 : Class column "match" not found or incompatible
+2024-11-13 17:32:17,742 : WARN  : KNIME-Worker-117-Number to String 8:4 :  : Node : Number to String : 8:4 : No columns selected for conversion, returning the unchanged input table as output table.
+2024-11-13 17:32:22,668 : WARN  : KNIME-Worker-112-Partitioning 8:5 :  : Node : Decision Tree Learner : 8:9 : Class column "match" not found or incompatible
+2024-11-13 17:33:11,994 : WARN  : KNIME-Worker-114-Scorer 8:11 :  : Node : Scorer : 8:11 : There were missing values in the reference or in the prediction class columns.
+2024-11-13 17:38:18,545 : WARN  : comm-pool-thread-27 :  : Node : Id3 (3.7) : 8:14 : No target column specified. Target column was set to match
+2024-11-13 17:38:41,984 : WARN  : KNIME-Worker-125-Scorer 8:11 :  : Node : Scorer : 8:11 : There were missing values in the reference or in the prediction class columns.
+2024-11-13 17:38:42,034 : ERROR : KNIME-Worker-122-Id3 (3.7) 8:14 :  : Node : Id3 (3.7) : 8:14 : Execute failed: Weka classifier cannot work with given data. Reason: weka.classifiers.trees.Id3: Cannot handle string attributes!
+java.lang.Exception: Weka classifier cannot work with given data. Reason: weka.classifiers.trees.Id3: Cannot handle string attributes!
+	at org.knime.ext.weka37.classifier.WekaClassifierNodeModel.execute(WekaClassifierNodeModel.java:240)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1286)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:594)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-11-13 17:38:47,900 : ERROR : comm-pool-thread-28 :  : InitialDataService :  :  : {"internalError":{"typeName":"com.fasterxml.jackson.databind.JsonMappingException","message":"class org.knime.core.data.def.StringCell cannot be cast to class org.knime.core.data.DoubleValue (org.knime.core.data.def.StringCell and org.knime.core.data.DoubleValue are in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @59a6a27d) (through reference chain: org.knime.base.views.node.roccurve.data.ROCCurveInitialDataImpl[\"data\"])","stackTrace":["com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:402)","com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:361)","com.fasterxml.jackson.databind.ser.std.StdSerializer.wrapAndThrow(StdSerializer.java:323)","com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:778)","com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:183)","com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:502)","com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:341)","com.fasterxml.jackson.databind.ObjectMapper._writeValueAndClose(ObjectMapper.java:4793)","com.fasterxml.jackson.databind.ObjectMapper.writeValueAsString(ObjectMapper.java:4038)","org.knime.core.webui.node.dialog.defaultdialog.DefaultNodeSettingsSerializer.serialize(DefaultNodeSettingsSerializer.java:100)","org.knime.core.webui.data.InitialDataService.getInitialData(InitialDataService.java:109)","org.knime.core.webui.node.DataServiceManager.callInitialDataService(DataServiceManager.java:143)","org.knime.gateway.api.entity.UIExtensionEnt.<init>(UIExtensionEnt.java:120)","org.knime.gateway.api.entity.NodeViewEnt.<init>(NodeViewEnt.java:168)","org.knime.gateway.api.entity.NodeViewEnt.create(NodeViewEnt.java:104)","org.knime.gateway.api.entity.NodeViewEnt.create(NodeViewEnt.java:94)","org.knime.gateway.api.entity.NodeViewEnt.create(NodeViewEnt.java:123)","org.knime.gateway.impl.webui.service.DefaultNodeService.getNodeView(DefaultNodeService.java:211)","org.knime.gateway.impl.webui.jsonrpc.service.JsonRpcNodeServiceWrapper.getNodeView(JsonRpcNodeServiceWrapper.java:193)","jdk.internal.reflect.GeneratedMethodAccessor366.invoke(Unknown Source)","java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)","java.base/java.lang.reflect.Method.invoke(Unknown Source)","com.googlecode.jsonrpc4j.JsonRpcBasicServer.invoke(JsonRpcBasicServer.java:478)","com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleObject(JsonRpcBasicServer.java:349)","com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleJsonNodeRequest(JsonRpcBasicServer.java:274)","com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleRequest(JsonRpcBasicServer.java:242)","org.knime.gateway.impl.jsonrpc.JsonRpcRequestHandler.handle(JsonRpcRequestHandler.java:104)","org.knime.ui.java.browser.lifecycle.Init.lambda$11(Init.java:296)","com.equo.comm.common.MessageHandler.processReceivedEventMessage(MessageHandler.java:131)","com.equo.comm.ee.provider.service.ChromiumService.receiveMessage(ChromiumService.java:98)","com.equo.comm.ee.provider.CommunicationManagerChromiumImpl.receiveMessage(CommunicationManagerChromiumImpl.java:48)","com.equo.chromium.swt.internal.spi.CommRouterHandler.handleRequest(CommRouterHandler.java:33)","com.equo.chromium.swt.internal.spi.CommRouterHandler.lambda$1(CommRouterHandler.java:51)","java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)","java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)","java.base/java.lang.Thread.run(Unknown Source)"]}}
+2024-11-13 17:38:48,029 : ERROR : main :  : KnimeBrowserView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'settings') (source: http://org.knime.core.ui.view/uiext-view/org.knime.base.views.node.roccurve.ROCCurveNodeFactory/assets/index-DkTVnUD-.js; line: 8)
+2024-11-13 17:38:58,779 : ERROR : comm-pool-thread-28 :  : InitialDataService :  :  : {"internalError":{"typeName":"com.fasterxml.jackson.databind.JsonMappingException","message":"class org.knime.core.data.def.StringCell cannot be cast to class org.knime.core.data.DoubleValue (org.knime.core.data.def.StringCell and org.knime.core.data.DoubleValue are in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @59a6a27d) (through reference chain: org.knime.base.views.node.roccurve.data.ROCCurveInitialDataImpl[\"data\"])","stackTrace":["com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:402)","com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:361)","com.fasterxml.jackson.databind.ser.std.StdSerializer.wrapAndThrow(StdSerializer.java:323)","com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:778)","com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:183)","com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:502)","com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:341)","com.fasterxml.jackson.databind.ObjectMapper._writeValueAndClose(ObjectMapper.java:4793)","com.fasterxml.jackson.databind.ObjectMapper.writeValueAsString(ObjectMapper.java:4038)","org.knime.core.webui.node.dialog.defaultdialog.DefaultNodeSettingsSerializer.serialize(DefaultNodeSettingsSerializer.java:100)","org.knime.core.webui.data.InitialDataService.getInitialData(InitialDataService.java:109)","org.knime.core.webui.node.DataServiceManager.callInitialDataService(DataServiceManager.java:143)","org.knime.gateway.api.entity.UIExtensionEnt.<init>(UIExtensionEnt.java:120)","org.knime.gateway.api.entity.NodeViewEnt.<init>(NodeViewEnt.java:168)","org.knime.gateway.api.entity.NodeViewEnt.create(NodeViewEnt.java:104)","org.knime.gateway.api.entity.NodeViewEnt.create(NodeViewEnt.java:94)","org.knime.gateway.api.entity.NodeViewEnt.create(NodeViewEnt.java:123)","org.knime.gateway.impl.webui.service.DefaultNodeService.getNodeView(DefaultNodeService.java:211)","org.knime.gateway.impl.webui.jsonrpc.service.JsonRpcNodeServiceWrapper.getNodeView(JsonRpcNodeServiceWrapper.java:193)","jdk.internal.reflect.GeneratedMethodAccessor366.invoke(Unknown Source)","java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)","java.base/java.lang.reflect.Method.invoke(Unknown Source)","com.googlecode.jsonrpc4j.JsonRpcBasicServer.invoke(JsonRpcBasicServer.java:478)","com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleObject(JsonRpcBasicServer.java:349)","com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleJsonNodeRequest(JsonRpcBasicServer.java:274)","com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleRequest(JsonRpcBasicServer.java:242)","org.knime.gateway.impl.jsonrpc.JsonRpcRequestHandler.handle(JsonRpcRequestHandler.java:104)","org.knime.ui.java.browser.lifecycle.Init.lambda$11(Init.java:296)","com.equo.comm.common.MessageHandler.processReceivedEventMessage(MessageHandler.java:131)","com.equo.comm.ee.provider.service.ChromiumService.receiveMessage(ChromiumService.java:98)","com.equo.comm.ee.provider.CommunicationManagerChromiumImpl.receiveMessage(CommunicationManagerChromiumImpl.java:48)","com.equo.chromium.swt.internal.spi.CommRouterHandler.handleRequest(CommRouterHandler.java:33)","com.equo.chromium.swt.internal.spi.CommRouterHandler.lambda$1(CommRouterHandler.java:51)","java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)","java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)","java.base/java.lang.Thread.run(Unknown Source)"]}}
+2024-11-13 17:38:58,999 : ERROR : main :  : KnimeBrowserView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'settings') (source: http://org.knime.core.ui.view/uiext-view/org.knime.base.views.node.roccurve.ROCCurveNodeFactory/assets/index-DkTVnUD-.js; line: 8)
+2024-11-13 17:39:00,440 : ERROR : main :  : InitialDataService :  :  : {"internalError":{"typeName":"com.fasterxml.jackson.databind.JsonMappingException","message":"class org.knime.core.data.def.StringCell cannot be cast to class org.knime.core.data.DoubleValue (org.knime.core.data.def.StringCell and org.knime.core.data.DoubleValue are in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @59a6a27d) (through reference chain: org.knime.base.views.node.roccurve.data.ROCCurveInitialDataImpl[\"data\"])","stackTrace":["com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:402)","com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:361)","com.fasterxml.jackson.databind.ser.std.StdSerializer.wrapAndThrow(StdSerializer.java:323)","com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:778)","com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:183)","com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:502)","com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:341)","com.fasterxml.jackson.databind.ObjectMapper._writeValueAndClose(ObjectMapper.java:4793)","com.fasterxml.jackson.databind.ObjectMapper.writeValueAsString(ObjectMapper.java:4038)","org.knime.core.webui.node.dialog.defaultdialog.DefaultNodeSettingsSerializer.serialize(DefaultNodeSettingsSerializer.java:100)","org.knime.core.webui.data.InitialDataService.getInitialData(InitialDataService.java:109)","org.knime.core.webui.node.DataServiceManager.callInitialDataService(DataServiceManager.java:143)","org.knime.gateway.api.entity.UIExtensionEnt.<init>(UIExtensionEnt.java:120)","org.knime.gateway.api.entity.NodeViewEnt.<init>(NodeViewEnt.java:168)","org.knime.gateway.api.entity.NodeViewEnt.create(NodeViewEnt.java:104)","org.knime.gateway.api.entity.NodeViewEnt.create(NodeViewEnt.java:94)","org.knime.gateway.api.entity.NodeViewEnt.create(NodeViewEnt.java:123)","org.knime.gateway.impl.webui.entity.UIExtensionEntityFactory.createNodeViewEntAndSetupEvents(UIExtensionEntityFactory.java:112)","org.knime.js.cef.pagebuilder.PageBuilderUtil$UIExtensionEnts.<init>(PageBuilderUtil.java:344)","org.knime.js.cef.pagebuilder.PageBuilderUtil.initializePageBuilderForView(PageBuilderUtil.java:124)","org.knime.js.cef.nodeview.CEFNodeView.lambda$6(CEFNodeView.java:413)","org.knime.js.cef.nodeview.CEFNodeView$3.completed(CEFNodeView.java:427)","com.equo.chromium.swt.internal.Chromium.lambda$9(Chromium.java:841)","org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)","org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)","org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5040)","org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4520)","org.knime.js.cef.nodeview.CEFNodeView.blockUntilDisposed(CEFNodeView.java:463)","org.knime.js.cef.nodeview.CEFNodeView.callOpenView(CEFNodeView.java:357)","org.knime.core.node.AbstractNodeView.openView(AbstractNodeView.java:197)","org.knime.core.node.Node.invokeOpenView(Node.java:2708)","org.knime.workbench.editor2.actions.OpenNodeViewAction.openNodeView(OpenNodeViewAction.java:146)","org.knime.workbench.editor2.editparts.NodeContainerEditPart.openNodeDialog(NodeContainerEditPart.java:865)","org.knime.ui.java.api.NodeAPI.openNodeDialog(NodeAPI.java:99)","jdk.internal.reflect.GeneratedMethodAccessor268.invoke(Unknown Source)","java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)","java.base/java.lang.reflect.Method.invoke(Unknown Source)","org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:174)","org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:145)","org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)","org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)","org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5040)","org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4520)","org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)","org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)","org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)","org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:152)","org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)","org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)","org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)","org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)","org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:211)","org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)","org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)","org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)","org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)","org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)","java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)","java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)","java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)","java.base/java.lang.reflect.Method.invoke(Unknown Source)","org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)","org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)","org.eclipse.equinox.launcher.Main.run(Main.java:1459)","org.eclipse.equinox.launcher.Main.main(Main.java:1432)"]}}
+2024-11-13 17:39:00,541 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'settings') (source: http://org.knime.core.ui.view/uiext-view/org.knime.base.views.node.roccurve.ROCCurveNodeFactory/assets/index-DkTVnUD-.js; line: 8)

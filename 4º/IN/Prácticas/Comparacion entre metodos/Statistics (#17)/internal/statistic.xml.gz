@@ -46,7 +46,7 @@
                 <config key="upper_bound">
                     <entry key="datacell" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
                     <config key="org.knime.core.data.def.DoubleCell">
-                        <entry key="DoubleCell" type="xdouble" value="38.095238095238095"/>
+                        <entry key="DoubleCell" type="xdouble" value="33.333333333333336"/>
                     </config>
                 </config>
             </config>
@@ -80,7 +80,7 @@
         <config key="1">
             <entry key="datacell" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
             <config key="org.knime.core.data.def.DoubleCell">
-                <entry key="DoubleCell" type="xdouble" value="38.095238095238095"/>
+                <entry key="DoubleCell" type="xdouble" value="33.333333333333336"/>
             </config>
         </config>
     </config>
@@ -110,19 +110,19 @@
         <config key="1">
             <entry key="datacell" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
             <config key="org.knime.core.data.def.DoubleCell">
-                <entry key="DoubleCell" type="xdouble" value="38.095238095238095"/>
+                <entry key="DoubleCell" type="xdouble" value="33.333333333333336"/>
             </config>
         </config>
     </config>
     <config key="mean">
         <entry key="array-size" type="xint" value="2"/>
         <entry key="0" type="xdouble" value="30.809523809523807"/>
-        <entry key="1" type="xdouble" value="19.690476190476193"/>
+        <entry key="1" type="xdouble" value="19.19047619047619"/>
     </config>
     <config key="variance">
         <entry key="array-size" type="xint" value="2"/>
         <entry key="0" type="xdouble" value="139.67246157722346"/>
-        <entry key="1" type="xdouble" value="117.36016628873774"/>
+        <entry key="1" type="xdouble" value="74.68127991937519"/>
     </config>
     <config key="median">
         <entry key="array-size" type="xint" value="2"/>
@@ -152,17 +152,17 @@
     <config key="sums">
         <entry key="array-size" type="xint" value="2"/>
         <entry key="0" type="xdouble" value="308.0952380952381"/>
-        <entry key="1" type="xdouble" value="196.90476190476193"/>
+        <entry key="1" type="xdouble" value="191.9047619047619"/>
     </config>
     <config key="skewness">
         <entry key="array-size" type="xint" value="2"/>
         <entry key="0" type="xdouble" value="0.32450967789797697"/>
-        <entry key="1" type="xdouble" value="0.28904822991719664"/>
+        <entry key="1" type="xdouble" value="-0.03529704332885238"/>
     </config>
     <config key="kurtosis">
         <entry key="array-size" type="xint" value="2"/>
         <entry key="0" type="xdouble" value="-0.3842032597690767"/>
-        <entry key="1" type="xdouble" value="-1.0785576931337637"/>
+        <entry key="1" type="xdouble" value="-0.4144582596549252"/>
     </config>
     <entry key="row_count" type="xint" value="10"/>
 </config>
