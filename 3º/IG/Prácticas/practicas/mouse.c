@@ -26,12 +26,12 @@
 
 	 mouse.c
 */
+#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <GL/glut.h>
 #include "practicasIG.h"
-
 
 #define __mouse__ 
 #include "mouse.h"
@@ -41,9 +41,21 @@ int MOUSE_MIDDLE_DOWN=0;
 int MOUSE_RIGHT_DOWN=0;
 int MOUSE_X, MOUSE_Y;
 
-
-
 int ISINTERACTING;
+
+int pick(int x, int y)
+{
+	unsigned char data[4];
+	
+	DibujaEscena(true);
+
+	glReadPixels(x, y, 1, 1, GL_RGBA, GL_UNSIGNED_BYTE, data);
+	unsigned int i = data[0] + (data[1] << 8) + (data[2] << 16);
+	cout << (int)data[0] << " " << (int)data[1] << " " << (int)data[2] << endl;
+
+	glutPostRedisplay();
+	return i;
+}
 
 /**
 
@@ -59,31 +71,38 @@ x,y: Posicion, en coordenadas de pantalla, en que se encuantra el cursor.
 
 **/
 
- void clickRaton( int boton, int estado, int x, int y )
+void clickRaton( int boton, int estado, int x, int y )
 {
-ISINTERACTING=1;
-if(boton==GLUT_LEFT_BUTTON && estado==GLUT_DOWN) {
-	MOUSE_LEFT_DOWN=1;
-	MOUSE_X=x;
-	MOUSE_Y=y;
+	ISINTERACTING=1;
+	if(boton == GLUT_LEFT_BUTTON && estado == GLUT_DOWN) {
+		MOUSE_LEFT_DOWN = 1;
+		MOUSE_X = x;
+		MOUSE_Y = y;
+
+		unsigned int idSeleccionado = pick(x, y);
+		setObjetoSeleccionado(idSeleccionado);
+
+		cout << "x: " << x << " y: " << y << endl;
+		cout << idSeleccionado << endl;
+		
 	}
-else if(boton==GLUT_MIDDLE_BUTTON && estado==GLUT_DOWN) {
-	MOUSE_MIDDLE_DOWN=1;
-	MOUSE_X=x;
-	MOUSE_Y=y;
+	else if(boton == GLUT_MIDDLE_BUTTON && estado == GLUT_DOWN) {
+		MOUSE_MIDDLE_DOWN = 1;
+		MOUSE_X = x;
+		MOUSE_Y = y;
 	}
-else if(boton==GLUT_RIGHT_BUTTON && estado==GLUT_DOWN) {
-	MOUSE_RIGHT_DOWN=1;
-	MOUSE_X=x;
-	MOUSE_Y=y;
+	else if(boton == GLUT_RIGHT_BUTTON && estado == GLUT_DOWN) {
+		MOUSE_RIGHT_DOWN=1;
+		MOUSE_X = x;
+		MOUSE_Y = y;
 	}
-else {	
-	MOUSE_LEFT_DOWN=0;
-	MOUSE_MIDDLE_DOWN=0;
-	MOUSE_RIGHT_DOWN=0;
-	ISINTERACTING=0;
+	else {	
+		MOUSE_LEFT_DOWN = 0;
+		MOUSE_MIDDLE_DOWN = 0;
+		MOUSE_RIGHT_DOWN = 0;
+		ISINTERACTING = 0;
 	}
-glutPostRedisplay();
+	glutPostRedisplay();
 }
 
 

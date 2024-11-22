@@ -37,9 +37,28 @@ modulo modelo.c
 #include "practicasIG.h"
 #include "file_ply_stl.h"
 #include "lector-jpg.h"
+#include "mouse.h"
 
 int modo = GL_FILL;
 bool luz = true;
+
+unsigned int idSeleccionado = 0;
+bool seleccion = false;
+//enum modoDibujo {SELECCION, NORMAL};
+
+void colorSeleccion(unsigned int i)
+{
+  unsigned char r = i & 0xFF;
+  unsigned char g = (i >> 8) & 0xFF;
+  unsigned char b = (i >> 16) & 0xFF;
+
+  glColor3ub(r, g, b);
+}
+
+void setObjetoSeleccionado(unsigned int id)
+{
+  idSeleccionado = id;
+}
 
 /**	void initModel()
   Inicializa el modelo y de las variables globales
@@ -70,15 +89,26 @@ class Cubo : public Objeto3D
   private:
     float lado;
     GLuint textid;
+    unsigned int idSeleccion;
 
   public:
-    Cubo (float l)
+    Cubo (float l, unsigned int id)
     {
       lado = l;
+      idSeleccion = id;
+    }
+
+    unsigned int getId()
+    {
+      return idSeleccion;
     }
 
     void draw()
     {
+      if(seleccion)
+      {
+        colorSeleccion(idSeleccion);
+      }
       glBegin(GL_QUADS);
 
       // Cara frontal
@@ -533,11 +563,11 @@ class Ejes:Objeto3D
 
 Ejes ejesCoordenadas;
 
-Cubo cubo = Cubo (1.0);
-//Piramide piramide = Piramide(1.0, 5.0);
+Cubo cubo = Cubo (1.0, 1);
+/*Piramide piramide = Piramide(1.0, 5.0);
 
-//Malla cubo_ply = Malla("./ply/cubo.ply");
-//Malla coche = Malla("./ply/big_dodge.ply");
+Malla cubo_ply = Malla("./ply/cubo.ply");
+Malla coche = Malla("./ply/big_dodge.ply");
 Malla dado = Malla("./ply/cubo.ply");
 
 Cubo C1 = Cubo(0.5);
@@ -545,7 +575,7 @@ Cubo C2 = Cubo(0.5);
 Cubo C3 = Cubo(0.5);
 
 unsigned ancho = 1024, alto = 1024;
-unsigned char * textura = LeerArchivoJPEG("./jpg/dado.jpg", ancho, alto);
+unsigned char * textura = LeerArchivoJPEG("./jpg/dado.jpg", ancho, alto);*/
 
 /*void P1(float color1[4], float color2[4])
 {
@@ -572,7 +602,7 @@ unsigned char * textura = LeerArchivoJPEG("./jpg/dado.jpg", ancho, alto);
   cubo_ply.draw();
 }*/
 
-void P4(float color[4])
+/*void P4(float color[4])
 {
   cubo.setTextura(textura, ancho, alto);
   cubo.drawTextura();
@@ -593,38 +623,57 @@ void P4(float color[4])
   glTranslatef(2,0,0);
   glMaterialfv (GL_FRONT, GL_AMBIENT_AND_DIFFUSE, color);
   C3.draw();
+}*/
+
+void P5()
+{
+  cubo.draw();
+  glutMouseFunc(clickRaton);
 }
 
 /**	void Dibuja( void )
   Procedimiento de dibujo del modelo. Es llamado por glut cada vez que se debe redibujar.
 **/
 
-void Dibuja (void)
+void DibujaEscena(bool seleccion)
 {
-  static GLfloat  pos[4] = { 5.0, 5.0, 10.0, 0.0 };	// Posicion de la fuente de luz
+  if(seleccion)
+  {
+    glDisable(GL_DITHER);
+    glDisable(GL_LIGHTING);
+    glDisable(GL_TEXTURE);
+  }
+  else
+  {
+    ejesCoordenadas.draw();
+  }
 
-  float cian[4] = {0.0, 1.0, 1.0, 1};
-  float magenta[4] = {1.0, 0.0, 1.0, 1};
-
-  glPushMatrix ();		// Apila la transformacion geometrica actual
-
-  glClearColor (0.0, 0.0, 0.0, 1.0);	// Fija el color de fondo a negro
-  glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// Inicializa el buffer de color y el Z-Buffer
-
-  transformacionVisualizacion ();	// Carga transformacion de visualizacion
-
-  glLightfv (GL_LIGHT0, GL_POSITION, pos);	// Declaracion de luz. Colocada aqui esta fija en la escena
-
-  ejesCoordenadas.draw();			// Dibuja los ejes  
-
-  // Dibuja el modelo (A rellenar en prácticas 1,2 y 3)
-    
   //P1(magenta, cian);
   //P2(cian, magenta);
-  P4(cian);
+  //P4(cian);
+  P5();
 
-  glPopMatrix ();		// Desapila la transformacion geometrica
+  glEnable(GL_LIGHTING);
+	glEnable(GL_DITHER);
+}
 
+void Dibuja (void)
+{
+  glPushMatrix ();
+  glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// Inicializa el buffer de color y el Z-Buffer
+  transformacionVisualizacion ();
+
+  static GLfloat  luz[4] = { 5.0, 5.0, 10.0, 0.0 };	
+  glLightfv (GL_LIGHT0, GL_POSITION, luz);
+
+  float cian[4] = {0.0, 0.75, 1.0, 1};
+  //float magenta[4] = {1.0, 0.0, 1.0, 1};
+
+  glMaterialfv (GL_FRONT, GL_AMBIENT, cian);
+
+  DibujaEscena(false);
+    
+  glPopMatrix ();	// Desapila la transformacion geometrica
   glutSwapBuffers ();		// Intercambia el buffer de dibujo y visualizacion
 }
 
