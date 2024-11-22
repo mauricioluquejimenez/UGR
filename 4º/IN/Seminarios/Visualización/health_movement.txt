@@ -1,0 +1,7 @@
+data	Non-users	Healthy	Low_Risk	Moderate_Risk	High_Risk	Very_High_Risk
+Non-users	488	14	97	225	108	44
+Healthy	240	2984	514	1373	591	266
+Low_Risk	4	53	1861	833	703	268
+Moderate_Risk	16	143	196	2999	1633	1011
+High_Risk	3	9	8	77	1042	945
+Very_High_Risk	0	2	1	10	148	161
