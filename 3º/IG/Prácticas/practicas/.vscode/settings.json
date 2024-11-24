@@ -4,6 +4,7 @@
         "string": "c",
         "ostream": "c",
         "cmath": "c",
-        "iostream": "c"
+        "iostream": "c",
+        "modelo.h": "c"
     }
 }
