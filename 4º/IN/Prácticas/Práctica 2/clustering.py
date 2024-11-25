@@ -23,11 +23,11 @@ import time
 
 import matplotlib.pyplot as plt
 import pandas as pd
-import numpy as np
+# import numpy as np
 
 from sklearn.cluster import KMeans
 from sklearn import metrics
-from sklearn.impute import KNNImputer
+# from sklearn.impute import KNNImputer
 from math import floor
 import seaborn as sns
 
@@ -36,13 +36,12 @@ def norm_to_zero_one(df):
 
 datos = pd.read_csv('alojamientos_booking_Granada_2024.csv',sep= ';', encoding="iso-8859-1")
 
-
 # Seleccionar casos, alojamineto del ALbaicín
 subset = datos[datos.Location.str.contains('Ronda') & datos.Rating != 0]
 
 # Seleccionar variables de interés para clustering
 # renombramos las variables por comodidad
-subset=subset.rename(columns={"Price difference": "precio", "Distance": "distancia", "Rating": "valoracion", "Ranking position avg": "posicion", "Total Beds": "dormitorios"})
+subset = subset.rename(columns={"Price difference": "precio", "Distance": "distancia", "Rating": "valoracion", "Ranking position avg": "posicion", "Total Beds": "dormitorios"})
 usadas = ['precio','distancia','valoracion','posicion', 'dormitorios']
 
 n_var = len(usadas)
@@ -78,9 +77,6 @@ size = size.sort_index()
 for i,c in enumerate(size):
    print('%s: %5d (%5.2f%%)' % (i,c,100*c/len(clusters)))
 
-
-
-
 k = len(size)
 colors = sns.color_palette(palette='Paired', n_colors=k, desat=None)
 
@@ -93,7 +89,7 @@ centers_desnormal = centers.copy()
 for var in list(centers):
     centers_desnormal[var] = X[var].min() + centers[var] * (X[var].max() - X[var].min())
 
-plt.figure()
+# plt.figure()
 centers.index += 1
 plt.figure()
 hm = sns.heatmap(centers, cmap="YlGnBu", annot=centers_desnormal, annot_kws={"fontsize":18}, fmt='.3f')
@@ -108,7 +104,7 @@ X_kmeans = pd.concat([X, clusters], axis=1)
 
 #'''
 print("---------- Scatter matrix...")
-plt.figure()
+# plt.figure()
 sns.set()
 variables = list(X_kmeans)
 variables.remove('cluster')
