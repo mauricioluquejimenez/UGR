@@ -1,33 +1,12 @@
-# -*- coding: utf-8 -*-
-"""
-Autor:
-    Jorge Casillas
-Fecha:
-    Noviembre/2023
-Contenido:
-    Ejemplo de uso de clustering en Python
-    Inteligencia de Negocio
-    Universidad de Granada
-"""
-
-'''
-Documentación sobre clustering en Python:
-    http://scikit-learn.org/stable/modules/clustering.html
-    http://www.learndatasci.com/k-means-clustering-algorithms-python-intro/
-    http://hdbscan.readthedocs.io/en/latest/comparing_clustering_algorithms.html
-    https://joernhees.de/blog/2015/08/26/scipy-hierarchical-clustering-and-dendrogram-tutorial/
-    http://www.learndatasci.com/k-means-clustering-algorithms-python-intro/
-'''
-
 import time
 
 import matplotlib.pyplot as plt
 import pandas as pd
-# import numpy as np
+import numpy as np
 
 from sklearn.cluster import KMeans
 from sklearn import metrics
-# from sklearn.impute import KNNImputer
+from sklearn.impute import KNNImputer
 from math import floor
 import seaborn as sns
 
@@ -44,9 +23,8 @@ subset = datos[datos.Location.str.contains('Ronda') & datos.Rating != 0]
 subset = subset.rename(columns={"Price difference": "precio", "Distance": "distancia", "Rating": "valoracion", "Ranking position avg": "posicion", "Total Beds": "dormitorios"})
 usadas = ['precio','distancia','valoracion','posicion', 'dormitorios']
 
-n_var = len(usadas)
+#n_var = len(usadas)
 X = subset[usadas]
-
 
 # normalizamos
 X_normal = X.apply(norm_to_zero_one)
@@ -71,7 +49,7 @@ print("Silhouette Coefficient: {:.5f}".format(metric_SC))
 clusters = pd.DataFrame(cluster_predict,index=X.index,columns=['cluster'])
 
 print("Tamaño de cada cluster:")
-size=clusters['cluster'].value_counts()
+size = clusters['cluster'].value_counts()
 size = size.sort_index()
 
 for i,c in enumerate(size):
