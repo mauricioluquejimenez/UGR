@@ -17,6 +17,7 @@ datos = pd.read_csv('alojamientos_booking_Granada_2024.csv',sep= ';', encoding="
 
 # Seleccionar casos, alojamineto del ALbaicín
 subset = datos[datos.Location.str.contains('Ronda') & datos.Rating != 0]
+print(subset)
 
 # Seleccionar variables de interés para clustering
 # renombramos las variables por comodidad
@@ -92,5 +93,5 @@ X_kmeans['cluster'] -= 1
 sns_plot.fig.subplots_adjust(wspace=.03, hspace=.03)
 sns_plot.fig.set_size_inches(15,15)
 sns_plot.savefig("scatter.pdf")
-plt.show()
+#plt.show()
 #'''
