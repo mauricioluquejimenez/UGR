@@ -33,12 +33,6 @@ modulo entradaTeclado.c
 #include <GL/glut.h>		// Libreria de utilidades de OpenGL
 #include "practicasIG.h"
 
-
-/** 
-
-Imprime en la consola las instrucciones del programa
-
-**/
 void printHelp ()
 {
 
@@ -56,9 +50,6 @@ void printHelp ()
   printf ("\n Escape: Salir");
   printf ("\n\n\n");
 }
-
-
-
 
 /* @teclado ---------------------------------------------------------------- */
 
@@ -79,18 +70,36 @@ y:
 
 **/
 
+float dirX = 0.0f, dirY = 0.0f, dirZ = -1.0f; // Dirección inicial hacia el origen
+float camPosX = 0.0f, camPosY = 0.0f, camPosZ = 10.0f;
 float rotxCamara = 30, rotyCamara = 45;
-float dCamara = 10;
+float dCamara = 15;
 
+float coche_x = 0.0f, coche_z = 0.0f, baymax_x = 0.0f, baymax_z = 0.0f;
+float coche_rotacion = 0.0f, baymax_rotacion = 0.0f;
 
-float cian[4] = {0.0, 1.0, 1.0, 1};
-float magenta[4] = {1.0, 0.0, 1.0, 1};
+float arm_r_rot = 0.0f, arm_l_rot = 0.0f;
+float leg_r_rot = 0.0f, leg_l_rot = 0.0f;
 
 void letra (unsigned char k, int x, int y)
 {
+  float radianes = baymax_rotacion * (M_PI / 180.0f);
 
   switch (k)
     {
+      case '+':			// acerca la cámara
+        dCamara -= 5.0;
+      break;
+
+      case '-':			// aleja la cámara
+        dCamara += 5.0;
+      break;
+
+      case 'h':
+      case 'H':
+        printHelp ();		// H y h imprimen ayuda
+      break;      
+
       case 'f':
       case 'F':
         setModo(GL_FILL);
@@ -112,66 +121,105 @@ void letra (unsigned char k, int x, int y)
         setLuz();
       break;
 
-      case 's':
-      case 'S':
-        setLuz();
+      case 'w': // Mover Baymax hacia adelante
+        baymax_x += /*velocidad */ cos(radianes);
+        baymax_z -= /*velocidad */ sin(radianes);
       break;
 
-      case 'h':
-      case 'H':
-        printHelp ();		// H y h imprimen ayuda
-        break;
-      case '+':			// acerca la cámara
-        dCamara -= 5.0;
-        break;
-      case '-':			// aleja la cámara
-        dCamara += 5.0;
-        break;
+      case 's': // Mover Baymax hacia atrás
+        baymax_x -= /*velocidad */ cos(radianes);
+        baymax_z += /*velocidad */ sin(radianes);
+      break;
+
+      case 'a': // Rotar Baymax a la izquierda
+        baymax_rotacion += 15.0;
+        if(baymax_rotacion > 360.0) baymax_rotacion -= 360.0;
+      break;
+
+      case 'd': // Rotar Baymax a la derecha
+        baymax_rotacion -= 15.0;
+        if(baymax_rotacion < 0.0) baymax_rotacion += 360.0;
+      break;
+
+      case 'm': // Brazo derecho hacia adelante
+        if (arm_r_rot < 10.0f) arm_r_rot += 1.0f;
+      break;
+        
+      case 'M': // Brazo derecho hacia atrás
+        if (arm_r_rot > -10.0f) arm_r_rot -= 1.0f;
+      break;
+
+        // Movimiento de la pierna derecha
+      case 'n': // Pierna derecha hacia adelante
+        if (leg_r_rot > -45.0f) leg_r_rot -= 5.0f;
+      break;
+
+      case 'N': // Pierna derecha hacia atrás
+        if (leg_r_rot < 0.0f) leg_r_rot += 5.0f;
+      break;
+
+        // Movimiento de la pierna izquierda
+      case 'b': // Pierna izquierda hacia adelante
+        if (leg_l_rot < 45.0f) leg_l_rot += 5.0f;
+      break;
+
+      case 'B': // Pierna izquierda hacia atrás
+        if (leg_l_rot > 0.0f) leg_l_rot -= 5.0f;
+      break;
+
+        // Movimiento del brazo izquierdo
+      case 'v': // Brazo izquierdo hacia adelante
+        if (arm_l_rot < 10.0f) arm_l_rot += 1.0f;
+      break;
+
+      case 'V': // Brazo izquierdo hacia atrás
+            if (arm_l_rot > -10.0f) arm_l_rot -= 1.0f;
+      break;
+
+      case 'A':
+        set_animacion();
+      break;
+
+      case 't':
+      case 'T':
+        set_textura();
+      break;
+
       case 27:			// Escape  Terminar
         exit (0);
+
       default:
-      return;
+        return;
     }
   setCamara (rotxCamara, rotyCamara, 0.0, dCamara);
   glutPostRedisplay ();		// Algunas de las opciones cambian paramentros
-}				// de la camara. Es necesario actualziar la imagen
+}				                  // de la camara. Es necesario actualziar la imagen
 
-/**		void especial(int k, int x, int y)
-Este procedimiento es llamado por el sistema cuando se pulsa una tecla
-especial. El codigo k esta definido en glut mediante constantes
-
-Parametros de entrada:
-
-k: codigo del caracter pulsado (definido en glut mediante constantes).
-
-x:
-
-y:
-
-**/
 void especial (int k, int x, int y)
 {
+  float radianes = coche_rotacion * (M_PI / 180.0f);
+  //float velocidad = 25.0;
 
   switch (k)
     {
       case GLUT_KEY_UP:
-        rotxCamara += 5.0;	// Cursor arriba + rotacion x
-        if (rotxCamara > 360) rotxCamara -= 360;
+        coche_x += /*velocidad */ cos(radianes);
+        coche_z -= /*velocidad */ sin(radianes);
       break;
 
       case GLUT_KEY_DOWN:
-        rotxCamara -= 5.0;
-        if (rotxCamara < 0) rotxCamara += 360;
+        coche_x -= /*velocidad */ cos(radianes);
+        coche_z += /*velocidad */ sin(radianes);
       break;
 
       case GLUT_KEY_LEFT:
-        rotyCamara += 5.0;
-        if (rotyCamara > 360) rotyCamara -= 360;
+        coche_rotacion += 15.0;
+        if(coche_rotacion > 360.0) coche_rotacion -= 360.0;
       break;
 
       case GLUT_KEY_RIGHT:
-        rotyCamara -= 5.0;
-        if (rotyCamara < 0) rotyCamara += 360;
+        coche_rotacion -= 15.0;
+        if(coche_rotacion < 0.0) coche_rotacion += 360.0;
       break;
 
       case GLUT_KEY_PAGE_DOWN:	// acerca la cámara
@@ -183,7 +231,7 @@ void especial (int k, int x, int y)
       break;
 
       default:
-      return;
+        return;
     }
   setCamara (rotxCamara, rotyCamara, 0.0, dCamara);
   glutPostRedisplay ();		// Actualiza la imagen (ver proc. letra)

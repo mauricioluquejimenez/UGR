@@ -295,12 +295,13 @@ namespace ply
     src.open (nombre_archivo.c_str ());	// abrir (¿en modo lectura?)
 
     if (!src.is_open ())
-      {
-	string msg =
-	  string ("no puedo abrir el archivo '") + nombre_archivo +
-	  "' para lectura.";
-	error (msg.c_str ());
-      }
+    {
+  	  string msg =
+	    string ("no puedo abrir el archivo '") + nombre_archivo +
+	    "' para lectura. ";
+
+	    error (msg.c_str ());
+    }
 
     src >> token;
 

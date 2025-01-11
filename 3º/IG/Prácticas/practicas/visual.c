@@ -56,7 +56,7 @@ Distancia de la cámara
 
 **/
 
-float D = 10;
+float D = 15;
 
 
 /**

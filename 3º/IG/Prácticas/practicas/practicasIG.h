@@ -32,3 +32,11 @@
 #include  "entradaTeclado.h"
 #include  "visual.h"
 #include  "file_ply_stl.h"
+
+extern float coche_rotacion, baymax_rotacion;
+extern float coche_x, coche_z, baymax_x, baymax_z;
+
+extern float arm_r_rot, arm_l_rot;
+extern float leg_r_rot, leg_l_rot;
+
+extern void set_animacion();
