@@ -1,0 +1,67 @@
+Clasificación (problemas categóricos)
+1. Criterios de evaluación de clasificadores:
+   - Precisión: Relación entre aciertos y errores, calculada como s = (VP + VN) / (VP + FP + VN + FN). También se mide el error ε = 1 - s.
+   - Otros criterios incluyen velocidad (tiempo de entrenamiento), escalabilidad (capacidad de manejar grandes volúmenes de datos), interpretabilidad (facilidad de comprensión del modelo) y complejidad (coste computacional).
+
+2. Métodos de validación:
+   - Hold-out: Divide los datos en conjuntos de entrenamiento y prueba, adecuado para bases de datos grandes.
+   - Validación cruzada: Divide los datos en K subconjuntos. Cada uno actúa como prueba mientras los demás son entrenamiento, útil para bases de tamaño moderado.
+   - Leaving-One-Out: Caso extremo de validación cruzada donde K es igual al número de registros, ideal para bases pequeñas.
+
+3. Clasificadores:
+   - Basados en instancias:
+     - Ejemplo: K-NN (K Nearest Neighbors), donde no hay un entrenamiento previo. Clasifica puntos calculando la distancia euclídea con todos los ejemplos del conjunto inicial y seleccionando los K más cercanos. Es robusto frente al ruido, pero requiere memoria intensiva y todas las variables deben ser numéricas.
+   - Basados en árboles de decisión:
+     - Dividen los datos según atributos para maximizar la diversidad entre grupos. Usan medidas como entropía, Gini y ganancia de información.
+     - ID3: Algoritmo basado en ganancia de información, no maneja variables continuas y busca construir árboles cortos.
+     - C4.5: Refinamiento de ID3, maneja variables continuas y valores perdidos, y utiliza la razón de ganancia para evitar priorizar atributos con muchas categorías.
+   - Basados en reglas:
+     - Ejemplo: PRISM, que genera reglas de clasificación asegurando una exactitud total en cada regla antes de definirla. Tiende al sobreajuste.
+   - Métodos bayesianos:
+     - Basados en probabilidades, asumen independencia entre atributos. Son fáciles de implementar y ofrecen buenos resultados, pero su precisión puede verse limitada por esta suposición.
+   - Redes neuronales:
+     - Utilizan valores continuos y aprenden a partir de ajustes de pesos. Sin embargo, tienden al sobreaprendizaje y ofrecen poca interpretabilidad.
+   - Ensemble learning (aprendizaje en conjunto):
+     - Combina clasificadores para mejorar el rendimiento.
+       - Bagging: Reduce la varianza al entrenar clasificadores en diferentes subconjuntos de datos.
+       - Boosting: Da más peso a ejemplos mal clasificados para enfocarse en ellos y mejorar el clasificador global.
+   - Problemas multiclase:
+     - One vs One: Construye clasificadores binarios para cada par de clases.
+     - One vs All: Crea un clasificador binario por cada clase frente al resto, útil pero propenso a problemas con clases desbalanceadas.
+
+---
+
+Regresión (problemas continuos)
+1. Características:
+   - Busca predecir valores numéricos basándose en variables de entrada. Similar a la clasificación, pero con un enfoque en variables continuas.
+
+2. Técnicas:
+   - Métodos basados en instancias: K-NN aplica promedios ponderados para estimar valores.
+   - Redes neuronales: Adaptan los pesos en función del error cometido. La salida se compone de una sola neurona.
+   - Regresión lineal: El modelo más sencillo, calcula relaciones entre variables mediante mínimos cuadrados.
+     - Variantes como regresión múltiple y exponencial permiten analizar datos con múltiples predictores o relaciones no lineales.
+
+3. Árboles de regresión:
+   - Predicen valores numéricos en sus hojas. Las particiones maximizan la reducción de desviación o varianza, evitando sobreajuste mediante podas.
+   - Árboles de modelos: Extienden los árboles de regresión, usando ecuaciones locales en lugar de valores numéricos simples.
+
+4. Sistemas basados en reglas difusas:
+   - Convierte valores numéricos en valores difusos para modelar relaciones complejas y luego traduce estos resultados a valores concretos.
+
+5. Stacking: Combina resultados de diferentes modelos de regresión para mejorar las predicciones.
+
+---
+
+Series temporales
+1. Componentes:
+   - Tendencia: Cambios a largo plazo.
+   - Estacionalidad: Patrones repetitivos en intervalos regulares.
+   - Ciclo: Variaciones más largas asociadas a factores económicos o sociales.
+   - Ruido: Fluctuaciones aleatorias e impredecibles.
+
+2. Modelos de descomposición:
+   - Aditivo: y_t = T_t + S_t + R_t.
+   - Multiplicativo: y_t = T_t * S_t * R_t.
+
+3. Factores que afectan la predicción:
+   - Horizonte temporal, patrones históricos y disponibilidad de datos numéricos.

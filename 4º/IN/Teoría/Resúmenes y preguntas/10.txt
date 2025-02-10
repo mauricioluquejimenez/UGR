@@ -1,0 +1,50 @@
+Motivación
+- El crecimiento exponencial de datos supera las capacidades de almacenamiento y procesamiento tradicionales.
+- Necesidad de analizar los datos en tiempo real sin requerir conjuntos de entrenamiento completos.
+- Requiere sistemas adaptativos que actualicen el modelo conforme llegan nuevos datos.
+
+---
+
+Aprendizaje incremental
+1. Características principales:
+   - Diseñado para datos estáticos que llegan de forma incremental.
+   - Permite procesar datos en varias iteraciones.
+2. Aplicaciones:
+   - Construcción de árboles de decisión incrementales.
+     - Criterios de división: Ganancia de información (ID3) o coeficiente de Hoeffding para datos incrementales.
+     - Very Fast Decision Tree (VFDT): Modelo disponible en todo momento, pero no adapta atributos continuos ni cambios dinámicos.
+   - Adaptaciones del clustering (K-Medias) y algoritmos que simplifican las operaciones para datos incrementales.
+
+---
+
+Minería de flujo de datos
+1. Características principales:
+   - Procesa datos dependientes del tiempo a medida que llegan.
+   - Diseñado para entornos no estacionarios donde la dinámica de los datos varía.
+   - Los datos antiguos son descartados tras su uso.
+2. Principales tareas:
+   - Concept Drift: Cambios en la distribución de datos que hacen inconsistentes los modelos previos.
+     - Métodos: Priorizar datos recientes y olvidar datos antiguos.
+   - Aprendizaje online:
+     - Procesa cada dato una sola vez.
+     - Consume memoria limitada.
+     - Algoritmos: CVFDT (Concept-Adapting VFDT) y Dynamic Weighted Majority (DWM).
+
+---
+
+Clustering incremental
+1. Componentes clave:
+   - Online: Crea microclusters que resumen estadísticamente los datos.
+   - Offline: Realiza clustering sobre microclusters según las preferencias del usuario.
+2. Desafíos:
+   - Adaptar los clusters a cambios en el flujo de datos.
+   - Mantener información relevante sin procesar todos los datos simultáneamente.
+
+---
+
+Reglas de asociación en flujo de datos
+- Obtienen patrones frecuentes online y extraen reglas offline.
+- Limitaciones:
+  - Dificultad para tratar cambios dinámicos (concept drift).
+  - Enfoque mayoritario en variables categóricas.
+- Association Stream Mining: Extrae asociaciones en flujos continuos, respetando restricciones de memoria y adaptándose a cambios en los datos.

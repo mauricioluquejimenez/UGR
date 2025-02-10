@@ -1,0 +1,115 @@
+- Métodos de validación en aprendizaje supervisado
+	- Hold out
+		- Útil para BD de gran tamaño
+		- División de base de datos en conjunto de entrenamiento y conjunto de test
+		- Conjunto de entrenamiento sensiblemente más grande que conjunto de test (70-30)
+		- Conjunto de entrenamiento conoce la clase objetivo; conjunto de test no
+		
+	- Validación cruzada
+		- Útil para BD de tamaño medio
+		- Separación de conjunto de datos en n subconjuntos de igual tamaño
+		- Cada subconjunto tiene su propio conjunto de entrenamiento
+		- Cada conjunto de entrenamiento se valida con su propio conjunto de test
+		
+	- Leaving One Out
+		- Útil para BD de tamaño pequeño
+		- N subconjuntos (n = nº de registros en la BD)
+		- Validación cruzada con los n subconjuntos
+
+- Cómo tratar el sobreaprendizaje
+	- Podas en árboles de decisión
+	- Eliminar reglas complejas
+	- Criterios de parada en la extracción de características
+
+
+- Bagging vs. boosting
+	- Métodoos de ensemble learning
+		- Combinación de distintos clasificadores del mismo tipo
+	- Bagging
+		- Funciona bien para árboles de decisión
+		- No todos los clasificadorers ven los mismos datos
+	- Boosting
+		- Voto ponderado
+		- Presta atención a ejemplos mal clasificados
+		- Cálculo del peso de cada categoría (todas empiezan con peso 0)
+		- Se devuelve la categoría con menor peso
+
+
+
+- Componentes de series temporales
+
+
+
+- Medidas de calidad de reglas de asociación
+	- Soporte
+		- Veces que aparece A en el conjunto de items
+	- Confianza
+		- Veces que se cumple A si ocurre B
+	- Empuje
+		- Factor de mejora de una regla
+		- Ganancia respecto al soporte del consecuente
+	- Cómo de útil es
+		- Cuánta información se obtiene de la regla
+		- Más útil si es muy común
+	- Cómo de inesperada es
+		- Descubre patrones poco imaginables
+
+- Ventajas e inconvenientes de distintos métodos de clustering
+	- K-Means
+		- Ventajas
+			- Eficiente
+			- Encuentra un óptimo local
+			- Incluye a todos los datos en clusters
+		- Desventajas
+			- No funciona con variables no numéricas
+			- Necesita fijar el número de clusters a formar
+			- Sólo genera clusters convexos
+			
+	- Mean Shift
+		- Ventajas
+			- Todos los clusters tienen el mismo tamaño
+		- Desventajas
+			- Puede haber datos fuera de un cluster
+			- Puede haber clusters de una sola instancia
+		
+		
+	- DBSCAN
+		- Ventajas
+			- Maneja bien los outliers
+			- No está obligado a formar clusters convexos
+		- Desventajas
+			- Necesita fijar varios parámetros antes de comenzar
+		
+	- Birch
+		- Ventajas
+			- Cluster incremental
+		- Desventajas
+
+- Cómo se puede abordar algún problema singular en concreto (desbalanceo, multi-instancia, multi-etiqueta, etc.)
+	- Desbalanceo
+		- Tomek Links
+			- Formación de pares con los datos más cercanos de clases distintas 
+		- CNN
+			- Nuevo ejemplo a partir del dataset original con todos los ejemplos de la clase minoritaria y sólo uno de la clase mayoritaria
+			- Clasificación del dataset original con 1NN
+			- Mover todos los ejemplos mal clasificados al nuevo dataset
+			- Repetir hasta que el nuevo dataset deje de cambia
+		- SMOTE
+			- Generación de ejemplos sintéticos de la clase minoritaria
+			- Interpolación entre pares de instancias de la clase minoritaria cercanos
+			
+	- Aprendizaje multi-instancia
+		- Bolsa de instancias
+		- Bolsa positiva si contiene alguna instancia positiva
+	- Aprendizaje multi-etiqueta
+
+
+- Diferencia entre aprendizaje incremental y minería de flujo de datos
+	- Aprendizaje incremental
+		- Evita tratar todos los datos simultáneamente
+		- Adaptar nuevos datos a la clasificación ya realizada
+	- Minería de flujo de datos
+		- Consiste en recibir y tratar datos conforme llegan en directo
+
+- Métodos para abordar el concept drift en aprendizaje supervisado
+	- Los datos recientes que entren en conflicto con asunciones pasadas tienen prioridad en la construcción del modelo

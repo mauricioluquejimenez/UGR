@@ -1,0 +1,17 @@
+1. (1,5 ptos.) Justifica en qué orden aplicarías los siguientes métodos de procesado de datos: reducción del ruido, balanceo de clases por muestreo, selección de características e imputación de valores perdidos.
+
+	1. Imputación de valores perdidos:
+
+		Justificación: Antes de realizar cualquier otro procesamiento, es crucial abordar los valores perdidos. Si no se imputan, pueden generar errores o 		inconsistencias en las siguientes etapas (como en la selección de características o el balanceo). Además, muchas técnicas de reducción de ruido y balanceo requieren 		conjuntos de datos completos para funcionar correctamente.
+
+	2. Reducción del ruido:
+
+		Justificación: Una vez que los datos estén completos, se debe eliminar el ruido (valores atípicos o inconsistencias) para garantizar que las siguientes etapas no se vean afectadas por anomalías que puedan distorsionar los resultados, como la selección incorrecta de características o un balanceo inadecuado.
+
+	3. Balanceo de clases por muestreo:
+
+		Justificación: El balanceo de clases debe aplicarse después de reducir el ruido para evitar sobremuestrear ejemplos con ruido o eliminar ejemplos importantes durante el submuestreo. Esto asegura que los datos representen mejor las distribuciones deseadas antes de entrenar el modelo.
+
+	4. Selección de características:
+
+		Justificación: Este es el último paso porque depende de que los datos estén limpios, balanceados y completos. La selección de características es más efectiva cuando se basa en un conjunto de datos de alta calidad y representativo, ya que reduce la dimensionalidad y mejora la eficiencia del modelo.

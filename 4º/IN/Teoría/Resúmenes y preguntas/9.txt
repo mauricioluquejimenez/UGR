@@ -1,0 +1,41 @@
+Clases desbalanceadas
+- Definición: Ocurre cuando una clase tiene significativamente más ejemplos que otra, dificultando el entrenamiento efectivo del modelo.
+- Técnicas para abordar el desbalanceo:
+  1. Inframuestreo:
+     - Técnica: Elimina datos de la clase mayoritaria para equilibrar el conjunto de datos.
+     - Ejemplo: Tomek Links.
+       - Crea pares de ejemplos cercanos entre clases distintas.
+       - Elimina el ejemplo de la clase mayoritaria en cada par.
+  2. Sobremuestreo:
+     - Técnica: Duplica o genera nuevos ejemplos de la clase minoritaria.
+     - Ejemplo: SMOTE (Synthetic Minority Oversampling Technique).
+       - Genera ejemplos sintéticos interpolando entre instancias cercanas de la clase minoritaria.
+       - Parámetros:
+         - K: Número de vecinos seleccionados para interpolación.
+         - N: Cantidad de datos sintéticos a generar.
+       - Limitación: Puede sobregeneralizar.
+
+---
+
+Aprendizaje multi-instancia
+- Definición: Cada ejemplo de entrenamiento está compuesto por un conjunto de instancias (bolsa).
+- Características:
+  - Una bolsa es positiva si contiene al menos una instancia positiva.
+  - Se conocen las etiquetas de las bolsas, pero no las de las instancias individuales.
+- Ejemplo:
+  - Adaptación de citation-KNN:
+    - Define la distancia entre bolsas.
+    - Utiliza referencias y citadores para predecir etiquetas.
+
+---
+
+Clasificación multi-etiqueta
+- Definición: Los ejemplos pueden pertenecer a múltiples clases simultáneamente.
+- Enfoque: Generaliza los clasificadores tradicionales para manejar etiquetas múltiples por ejemplo.
+
+---
+
+Aprendizaje semisupervisado
+- Definición: Utiliza tanto datos etiquetados como no etiquetados para mejorar el aprendizaje.
+- Funcionamiento:
+  - Ajusta o prioriza las hipótesis generadas a partir de datos etiquetados mediante información adicional de los datos no etiquetados.
