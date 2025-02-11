@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "cmath": "c",
-        "type_traits": "c",
-        "ostream": "c",
-        "iostream": "c",
-        "new": "c"
-    }
-}
