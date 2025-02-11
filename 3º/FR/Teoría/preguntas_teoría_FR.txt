@@ -1,0 +1,216 @@
+1. Conmutación de circuitos vs conmutación de paquetes
+	
+	Conmutación de circuitos:
+		- Orientado a conexión (requiere establecimiento y cierre de conexión)
+		- Canal de comunicación dedicado entre dos puntos: uso ineficiente de recursos
+		- Transmisión en tiempo real
+		- Simplicidad y transparencia
+		
+	Conmutación de paquetes:
+		- Emisor divide información en paquetes (datagramas) y los envía a través de red. Los paquetes se reensamblan en destino.
+		- No es necesario establecer conexión previa: cada paquete contiene puertos y dirección origen/destino. Sin embargo, la variante de conmutación mediante circuitos virtuales sí está orientada a conexión
+		- Cada paquete se envía de forma individual: no hay un camino fijo
+		
+2. Encaminamiento
+	
+	Establecimiento de rutas entre puntos origen/destino para la trasmisión de información.
+	
+	El encaminamiento estático es aquél que se rellena manualmente, mientras que en el dinámico son los routers los que intercambian información para generar la ruta.
+	
+	Los protocolos más comunes para el encaminamiento son RIP (busca la ruta más corta) y OSPF (busca la ruta de menor coste aplicando el algoritmo de Dijkstra)
+
+3. NAT: SNAT y DNAT
+	El protocolo NAT es el encargado de reasignar direcciones IP privadas a direcciones IP públicas.
+	
+	Hay dos tipos principales: SNAT (el origen de los datos está en la red privada, de manera que la IP que se cambia es la de origen) y DNAT (el origen de los datos está en la red pública, de manera que es la dirección IP de destino la que se reasigna).
+	
+4. Funciones de capa de transporte
+
+	Multiplexación: se reúnen datos provenientes de diferentes sockes en host de origen, se encapsulan en segmentos y se envían a la capa de red
+	
+	Demultiplexación: se entregan todos los segmentos recibidos en sus sockets correspondientes
+	
+	Control de flujo: para evitar saturar el receptor, se crea una ventana que determina qué segmentos llegan a destino en función de la ventana ofertada y de los bits ya en tránsito
+	
+5. TCP vs UDP
+
+	TCP: orientado a conexión (requiere establecimiento y cierre de ésta), servicio punto a punto, control de flujo y de congestión, garantía de entrega ordenada y fiable de datos.
+
+	UDP: no orientado a conexión, cada segmento UDP se encapsula en datagrama IP, no incluye control de flujo ni de congestión, los mensajes pueden llegar desordenados y puede haber fallos durante la entrega.
+	
+6. Conexión TCP
+
+	1. Establecimiento de conexión three-way handshake (SYNC, SYNC+ACK, ACK)
+	2. Envío de información
+	3. Cierre de conexión con el mismo procedimiento que el establecimiento
+	
+7. Control de congestión TCP
+
+	La congestión en la red se origina en la red (el control de flujo se produce en el receptor) cuando se envía más información de la que se puede procesar en el medio de envío. Para ello, se crea una ventana de congestión que controla la cantidad de segmentos TCP que se pueden enviar. Esta ventana no crece hasta que el emisor no recibe la confirmación del receptor de haber recibido los segmentos previamente enviados.
+
+8. Aspectos de seguridad
+
+	Confidencialidad: sólo las entidades autorizadas a un intercambio de información tienen acceso a esos datos, ningún externo puede leer la información.
+	
+	Autenticación: cada identidad de una comunicación debe garantizar que es quien dice ser.
+	
+	Integridad: los mensajes llegan a destino tal y como se enviaron por parte del emisor, sin que nadie los intercepte de por medio para modificarlos o evitar que lleguen al receptor
+	
+	Disponibilidad: la información enviada siempre puede ser consultada y siempre se puede realizar un intercambio de información
+	
+9. Ataques a seguridad en redes
+
+	Sniffing: vulneración de confidencialidad
+	Spoofing: suplantación de identidad
+	Man in the Middle: vulneración de integridad (interceptación de mensajes) mediante spoofing
+	Denegación de servicio distribuido: interrupción de intercambio de mensajes
+	Malware
+	
+10. Certificado digital
+	
+	Un certificado digital es un mecanismo de seguridad que garantiza la asociación entre la clave pública y privada de un usuario. Es decir, garantiza su autenticidad y su no repudio. Para ello, es clave la función de una autoridad de certificación confiable por todo el mundo que se encarga de comprobar la solicitud (firmada digitalmente, indicando su identidad y su clave pública) de un usuario firmando con su propia clave privada.
+	
+11. DNS
+	
+		En DNS, un dominio está dividido en subdominios para facilitar su gestión. Esta división se realiza en forma de árbol, de manera que las hojas son los subdominios que no contienen otros subdominios.
+
+		Resolucióon recursiva: host realiza consulta a DNS 1, que determina que DNS 2 es quien tiene autoridad en ese dominio. El propio DNS 1 transfiere consulta a DNS 2 y posteriormente la reenvía al host
+		
+		Resolución iterativa: host realiza consulta a DNS 1, que determina que DNS 2 es quien tiene autoridad en ese dominio. El propio host realiza consulta a DNS 2
+		
+12. HTTP
+
+	Operaciones básicas:
+		- OPTIONS: solicitud de información sobre opciones disponibles
+		- GET: recoger información del servidor
+		- POST: enviar información al servidor
+		- HEAD: solicitar características de un objeto
+		- PUT: solicitud de cambiar la URI de un objeto con datos incluidos en la propia solicitud
+		- DELETE: solicitud de eliminar la URI
+		
+	Códigos de respuesta:
+		1xx: mensajes exclusivamente informativos
+		2xx: éxito
+		3xx: redirección a otra URL
+		4xx y 5xx: error
+	
+13. POP3 vs IMAP
+	
+		POP3:
+			- Se inicia cuando el usuario arranca el gestor de correo
+			- El servidor de correo llama al servidor y establece conexión TCP con agente de transferencia de mensajes
+			- Obtiene correo electónico del buzón remoto y lo almacena en la máquina local del usuario
+			- Cuando se envía el correo, elimina el correo del MTA
+			- Permite encriptación SSL
+			- Bloque bandeja de entrada durante el acceso: imposible que dos usuarios accedan simultáneamente a la misma bandeja de entrada
+			
+		IMAP:
+			- No copia el correo electrónico en la máquina local del usuario
+			- Supone que todo el correo electrónico permanece en el servidor de forma indefinida
+			- Mantiene información entre sesiones
+			- Permite descargar parte de los mensajes
+			- Permite acceder con varios clientes
+			- Permite encriptación SSL
+
+14. QoS
+
+	La calidad de servicio es la capacidad de una aplicación para ofrecer un rendimiento adecuado. Para aplicaciones de transmisión de vídeo, la calidad de servicio supone una transmisión continua, ininterrumpida y con una buena calidad de audio y vídeo. De la misma manera, para una llamada de voz supone una conexión ininterrumpida y una nitidez notable de ambas voces
+
+15. ARP
+
+	ARP es el protocolo pensado para asociar direcciones IP a direcciones MAC. Después de hacer la redirección IP, se envía la dirección MAC (6 bytes en código hexadecimal) del siguiente nodo.
+	
+16. IP
+
+	- Protocolo diseñado para la interconexión de redes
+	- Retransmisión salto a salto: resolución local de camino entre origen y destino
+	- No orientado a conexión: no fiable
+	- Unidad de datos: datagrama
+	- Protocolo de máximo esfuerzo: no se garantiza la entrega
+	- Direccionamiento jerárquico
+	
+17. Conmutación mediante datagramas y conmutación con circuitos virtuales
+	- Datagramas
+		- No orientados a conexión
+		- Cada paquete se enruta individualmente
+		- Más rápida para pocos paquetes
+		- Datagramas más flexibles
+		- Más fiable (si falla un nodo, no arrastra al resto)
+		
+	- Circuitos virtuales
+		- Orientados a conexión
+		- El encaminamiento sólo se realiza una red: más rápido para muchos paquetes
+		- Mismo orden de salida que de llegada
+		- Detección de errores en cada nodo
+		
+18.
+
+19. Certificado digital y firma digital
+
+	Certificado digital:
+		- Garantiza asociación identidad-clave pública
+		- Requiere de una autoridad de certificación que resuelve la clave pública del usuario con su propia clave privada
+		- Garantiza autenticación y no repudio
+		
+	Firma digital:
+		- El receptor garantiza al autenticidad del emisor mediante la firma
+		- Asegura no repudio
+	
+20. Protocolos basados en UDP y TCP:
+
+	Protocolos basados en UDP:
+		- SNMP: gestión de red
+		- DNS: nomenclatura y asignación de dominios a direcciones IP
+		
+	Protocolos basados en TCP:
+		- Telnet: terminal remoto
+		- FTP: trasmisión de ficheros
+		- SMTP: correo electrónico
+		- HTTP: navegación y carga de páginas web
+		
+21. Encaminamiento dinámico
+
+	Consiste en el encaminamiento automático (los propios routers se comparten información para establecer rutas entre ellos).
+	
+	Protocolos:
+		- RIP: busca la ruta más corta
+		- OSPF: busca la ruta de menor peso (usa algoritmo de Dijksra)
+		
+22. Correo electrónico y entidades involucradas
+
+	- Entidades:
+		- usuario origen, usuario destino, agente usuario origen (MUA origen), agente usuario destino (MUA destino), servidor de correo origen (MTA origen) y servidor de correo destino (MTA destino)
+		
+	- Procesamiento
+		- usuario1 compone mensaje a enviar mediante su MUA
+		- MTA origen sitúa el mensaje en la cola de mensajes salientes
+		- Cliente SMTP abre conexión TCP entre usuario origen y usuario destino y trasfiere el mensaje del servidor de correo origen al servidor de correo destino
+		- MTA destino sitúa el mensaje en la bandeja de entrada del usuario destino
+		- usuario2 lee el correo mediante su MUA utilizando protocolos de lectura como POP3 o IMAP
+
+23. Resolución de dominios
+	a) 1. Consulta inicial al servidor DNS local (www.ejemplo.jp)
+		2. Si el servidor DNS local no tiene la respuesta, consulta al servidor raíz (TLP)
+		3. Consulta al servidor TLD
+		4. Consulta al servidor autoritativo para ejemplo.jp
+		5. Respuesta al cliente
+	b) Significa ser el responsable del funcionamiento de un grupo de dominios (también conocido como zona): almacenar datos relativos a esos dominios y atender peticiones directa o indirectamente
+	c) Significa trasferir la gestión de un dominio a otro administrador
+
+24. Propiedades de seguridad
+
+	- DES_{k_secreta}[Kpriv_a(MD5(T))+T]
+		- Integridad (MD5)
+		- Autenticación (Kpriv_a)
+		
+	- Kpub_b(K_secreta)
+		- Confidencialidad (sólo B puede resolver con su clave privada)
+		
+25. Congestión en redes
+	- La congestión de una red se genera en el emisor cuando éste satura el medio por el que se propagan, generando demsasiado tráfico en la red.
+	
+26. Servicios de seguridad en redes
+	- Confidencialidad: nadie que no deba entrometerse en una comunicación interfiere en ella.
+	- Autenticación: todas las entidades son quienes dicen ser
+	- Integridad: los mensajes llega al destino tal y como se enviaron sin que haya interceptación o modificado de por medio
+	- No repudio: ninguna entidad de una comunicación puede desdecirse de algo que haya hecho durante la misma.

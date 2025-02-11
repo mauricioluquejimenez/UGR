@@ -1,0 +1,42 @@
+Definición
+- El deep learning utiliza redes neuronales con múltiples capas ocultas, diseñadas para aprender jerárquicamente características de los datos.
+- Es especialmente efectivo en tareas como el procesamiento de imágenes y otros problemas que requieren extracción de patrones complejos.
+
+---
+
+Redes neuronales artificiales (RNA)
+- Características principales:
+  - Cada ejemplo de entrenamiento pasa por la red generando una salida.
+  - El error entre la salida obtenida y la esperada se propaga hacia atrás (retropropagación) para ajustar los pesos.
+  - Necesitan grandes volúmenes de datos y múltiples iteraciones para converger.
+- Detectores de características:
+  - Cada nodo en las capas ocultas procesa una parte específica del ejemplo.
+  - La combinación de estas partes individuales genera un conocimiento más completo.
+
+---
+
+Aprendizaje profundo
+- El aprendizaje profundo extiende las RNA convencionales utilizando capas apiladas y autoencoders:
+  - Autoencoders: Entrenan las capas ocultas para reproducir sus entradas, convirtiendo estas capas en buenos detectores de características.
+  - Ventaja clave: Incrementa el nivel de detalle y abstracción a medida que la información avanza entre capas.
+
+---
+
+Redes neuronales convolucionales (CNN)
+- Definición: Especializadas en procesar datos espaciales, como imágenes. Aprenden los valores de los filtros basados en la tarea específica.
+- Componentes clave:
+  1. Campos receptivos locales: Detectan características locales en la entrada.
+  2. Pesos compartidos: Reducen la complejidad del modelo al aplicar los mismos pesos en diferentes posiciones.
+  3. Agrupación (Pooling): Reduce la dimensionalidad y controla el sobreajuste.
+     - Max pooling: Toma el valor máximo en una ventana, manteniendo la información más significativa.
+  4. Zancada (Stride): Define el desplazamiento del filtro en la entrada, ajustando la resolución del procesamiento.
+  5. Relleno (Padding): Añade píxeles de valor 0 para evitar la reducción del tamaño de las características extraídas.
+- Funcionamiento:
+  - Las primeras capas actúan como detectores de bordes y formas básicas.
+  - Las capas más profundas abstraen conceptos de alto nivel, útiles para la clasificación pero menos interpretables.
+
+---
+
+Soluciones para desafíos de datos
+1. Aumento de datos: Replica instancias y realiza transformaciones para incrementar la cantidad de datos de entrenamiento.
+2. Transferencia de aprendizaje: Reutiliza redes preentrenadas para nuevas tareas, ajustando solo las capas finales.

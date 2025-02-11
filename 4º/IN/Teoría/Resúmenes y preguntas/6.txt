@@ -1,0 +1,81 @@
+Características principales
+- Propiedades deseables:
+  - Similitud intra-clúster: Elementos de un mismo clúster deben ser lo más similares posible.
+  - Similitud inter-clúster: Elementos de diferentes clústeres deben ser lo más distintos posible.
+- Problemas abordados:
+  - Identificación y tratamiento de outliers.
+  - Análisis de bases de datos dinámicas y grandes.
+  - Necesidad de interpretación humana de los resultados.
+- Limitaciones: El clustering no tiene una solución única para un conjunto de datos; la elección del algoritmo depende del caso de uso y las características de los datos.
+
+---
+
+Tipos de clustering
+
+Clustering particional
+Los métodos particionales buscan dividir un conjunto de datos en K clústeres predefinidos maximizando la similitud intra-clúster e inter-clúster. Este tipo de clustering es ideal para datos numéricos y tiene varias variantes:
+
+1. K-Means:
+   - Funcionamiento:
+     - Selecciona aleatoriamente K centroides iniciales.
+     - Cada punto se asigna al clúster con el centroide más cercano.
+     - Actualiza los centroides como el promedio de los puntos asignados al clúster.
+     - Repite el proceso hasta que los centroides dejen de cambiar o se alcance un número máximo de iteraciones.
+   - Ventajas:
+     - Alta eficiencia en bases de datos grandes.
+     - Fácil de implementar y entender.
+   - Desventajas:
+     - Sensible a la inicialización de centroides (puede quedar atrapado en mínimos locales).
+     - No funciona bien con datos no convexos o de densidad variable.
+     - No maneja outliers correctamente.
+   - Aplicaciones: Segmentación de clientes, compresión de imágenes, análisis de redes sociales.
+
+2. Mean Shift:
+   - Funcionamiento:
+     - Encuentra regiones densas en el espacio de datos utilizando funciones de densidad de kernel.
+     - Agrupa puntos en torno a las máximas densidades locales (modos).
+   - Ventajas:
+     - No requiere especificar K de antemano.
+     - Detecta automáticamente el número de clústeres.
+   - Desventajas:
+     - Sensible a la selección del ancho de banda del kernel.
+     - Costoso computacionalmente para datos grandes.
+   - Aplicaciones: Seguimiento de objetos en visión por computadora.
+
+3. DBSCAN (Density-Based Spatial Clustering of Applications with Noise):
+   - Funcionamiento:
+     - Agrupa puntos que tienen una densidad mínima (minPts) en un radio específico (ε).
+     - Marca como outliers los puntos que no cumplen con la densidad mínima.
+   - Ventajas:
+     - Identifica clústeres de forma arbitraria y detecta outliers.
+     - No necesita especificar K.
+   - Desventajas:
+     - Sensible a la elección de parámetros (ε y minPts).
+     - Menos eficiente en datos de alta dimensionalidad.
+   - Aplicaciones: Detección de anomalías, agrupamiento geoespacial.
+
+4. K-Medoids:
+   - Similar a K-Means, pero utiliza puntos reales como centroides (medoides) en lugar de promedios.
+   - Ventajas:
+     - Menos sensible a outliers que K-Means.
+   - Desventajas:
+     - Computacionalmente más intensivo.
+
+---
+
+Clustering jerárquico
+Organiza los datos en una estructura jerárquica (árbol o dendrograma). Este tipo incluye métodos aglomerativos y divisivos, con variantes basadas en diferentes métodos de enlace, como el enlace simple, completo y de varianza mínima.
+
+---
+
+Métricas de rendimiento
+1. Coeficiente de Silhouette (S(i)):
+   - Mide la relación entre cohesión intra-clúster y separación inter-clúster.
+   - Valores:
+     - 1: Excelente agrupamiento.
+     - 0: El punto está en el límite entre dos clústeres.
+     - Negativos: El punto está mal asignado.
+
+2. Índice de Calinski-Harabasz:
+   - Mide la proporción de la varianza inter-clúster frente a la intra-clúster.
+   - Valores más altos indican una mejor separación entre clústeres.

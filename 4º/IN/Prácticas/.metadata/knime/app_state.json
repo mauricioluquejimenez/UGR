@@ -1,0 +1,186 @@
+{
+  "version" : "5.3.2.v202409051351",
+  "projects" : [ {
+    "name" : "Primer flujo",
+    "active" : false,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "Knime/Primer flujo"
+    }
+  }, {
+    "name" : "Comparacion entre metodos",
+    "active" : false,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "Knime/Comparacion entre metodos"
+    }
+  }, {
+    "name" : "Correlacion Lineal",
+    "active" : false,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "Knime/Correlacion Lineal"
+    }
+  }, {
+    "name" : "Validacion Cruzada",
+    "active" : false,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "Knime/Validacion Cruzada"
+    }
+  }, {
+    "name" : "Ejercicio 6",
+    "active" : false,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "Ejercicio 6"
+    }
+  }, {
+    "name" : "Ejercicio 7",
+    "active" : false,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "Ejercicio 7"
+    }
+  }, {
+    "name" : "PCA",
+    "active" : true,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "PCA"
+    }
+  }, {
+    "name" : "Ejercicio 103",
+    "active" : false,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "Ejercicio 103"
+    }
+  } ],
+  "mostRecentlyUsedProjects" : [ {
+    "name" : "Building a Simple Classifier",
+    "timeUsed" : "2025-01-30T09:58:32.406919168+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Example Workflows/Basic Examples/Building a Simple Classifier"
+    }
+  }, {
+    "name" : "Combine Clean and Summarize Spreadsheet Data",
+    "timeUsed" : "2025-01-30T09:59:38.27523963+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Example Workflows/Basic Examples/Combine Clean and Summarize Spreadsheet Data"
+    }
+  }, {
+    "name" : "Visual Analysis of Sales Data",
+    "timeUsed" : "2025-01-30T10:01:09.203009818+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Example Workflows/Basic Examples/Visual Analysis of Sales Data"
+    }
+  }, {
+    "name" : "Primer flujo",
+    "timeUsed" : "2025-01-30T10:35:54.630516062+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Knime/Primer flujo"
+    }
+  }, {
+    "name" : "Comparacion entre metodos",
+    "timeUsed" : "2025-01-30T10:36:20.910650801+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Knime/Comparacion entre metodos"
+    }
+  }, {
+    "name" : "Correlacion Lineal",
+    "timeUsed" : "2025-01-30T10:36:29.516134775+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Knime/Correlacion Lineal"
+    }
+  }, {
+    "name" : "P1.1",
+    "timeUsed" : "2025-01-30T10:36:37.366918173+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Knime/P1.1"
+    }
+  }, {
+    "name" : "P1.2",
+    "timeUsed" : "2025-01-30T10:36:42.001263479+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Knime/P1.2"
+    }
+  }, {
+    "name" : "Validacion Cruzada",
+    "timeUsed" : "2025-01-30T10:36:48.755651873+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Knime/Validacion Cruzada"
+    }
+  }, {
+    "name" : "Ejercicio 6",
+    "timeUsed" : "2025-01-30T19:09:55.443780465+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Ejercicio 6"
+    }
+  }, {
+    "name" : "Ejercicio 7",
+    "timeUsed" : "2025-01-30T19:52:55.414346727+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Ejercicio 7"
+    }
+  }, {
+    "name" : "PCA",
+    "timeUsed" : "2025-02-03T11:04:20.316871494+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "PCA"
+    }
+  }, {
+    "name" : "Ejercicio 103",
+    "timeUsed" : "2025-02-03T12:05:22.907492207+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Ejercicio 103"
+    }
+  } ]
+}

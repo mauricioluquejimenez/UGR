@@ -1,0 +1,60 @@
+Características principales
+- Las reglas de asociación buscan identificar relaciones frecuentes y útiles entre conjuntos de ítems en bases de datos transaccionales.
+- Términos básicos:
+  - Item: Elemento individual.
+  - Itemset: Conjunto de ítems.
+  - Soporte: Probabilidad de que una transacción contenga un conjunto de ítems.
+  - Confianza: Probabilidad de que, dado un ítem (antecedente), ocurra otro ítem (consecuente).
+
+---
+
+Algoritmo Apriori
+El algoritmo Apriori es uno de los métodos más utilizados para generar reglas de asociación en grandes bases de datos. Su objetivo es encontrar conjuntos de ítems frecuentes y derivar reglas con soporte y confianza mínimos definidos por el usuario.
+
+ Parámetros de entrada
+1. Soporte mínimo: 
+   - Define la frecuencia mínima que debe cumplir un conjunto de ítems para ser considerado frecuente.
+   - Si el soporte es muy alto → Genera pocas reglas, pero muy frecuentes.
+   - Si el soporte es muy bajo → Genera muchas reglas, pero pueden ser irrelevantes.
+2. Confianza mínima:
+   - Determina la probabilidad mínima necesaria para aceptar una regla.
+   - Si la confianza es muy alta → Pocas reglas, pero muy fiables.
+   - Si la confianza es muy baja → Muchas reglas, pero poco fiables.
+3. Número máximo de reglas: Opcional, restringe el total de reglas generadas.
+
+ Funcionamiento
+1. Principio de poda ("a priori"):
+   - Cualquier subconjunto de un conjunto frecuente es también frecuente.
+   - Esto permite reducir el espacio de búsqueda al eliminar combinaciones que no cumplen el soporte mínimo.
+2. Generación de conjuntos frecuentes:
+   - Se generan superconjuntos combinando ítems frecuentes de tamaño \(k\) para crear conjuntos de tamaño \(k+1\).
+   - Sólo se combinan ítems que difieren en el último elemento si están ordenados.
+3. Evaluación de reglas:
+   - Una vez obtenidos los conjuntos frecuentes, se evalúan las posibles reglas \(A → B\) para comprobar si cumplen los umbrales de soporte y confianza.
+
+ Ejemplo de funcionamiento
+- Base de datos:
+  - Transacción 1: {A, B, C}
+  - Transacción 2: {A, C}
+  - Transacción 3: {A, D}
+  - Transacción 4: {B, E, F}
+- Soporte de {A} = 3.
+- Soporte de {A, C} = 2.
+- Confianza de (A → C):
+   - La confianza mide la probabilidad de que el ítem C esté presente en una transacción, dado que el ítem A ya aparece en esa misma transacción.
+   - Se calcula como el cociente entre:
+     - El soporte del conjunto {A, C}, que es la proporción de transacciones en las que aparecen juntos A y C.
+     - El soporte de A, que es la proporción de transacciones en las que aparece A.
+   - Por ejemplo, si A y C aparecen juntos en 2 de las 3 transacciones en las que aparece A, la confianza sería:
+     Número de transacciones con {A, C} / Número de transacciones con A = 2 / 3 = 66.6%.
+
+---
+
+Medidas de interés
+1. Objetivas:
+   - Lift (empuje): Evalúa el factor de mejora en la probabilidad de B dado A respecto a la probabilidad de B sin considerar A. 
+
+    Lift(A → B) = P(A ∧ B)/(P(A) × P(B))
+2. Subjetivas:
+   - Inesperabilidad: Revela información poco intuitiva para el usuario.
+   - Utilidad: Evalúa si una regla es útil para la toma de decisiones.
