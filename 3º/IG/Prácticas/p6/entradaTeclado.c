@@ -81,7 +81,7 @@ float cursor_y = 0.0f;
 float sims_x = 0.0f, sims_z = 0.0f;
 float trofeo_y = 0.0f;
 
-float coche_rotacion = 0.0f, baymax_rotacion = 0.0f, sims_rotacion = 0.0f, trofeo_rotacion = 0.0f;
+float coche_rotacion = 0.0f, baymax_rotacion = 0.0f, cursor_rotacion = 0.0f, sims_rotacion = 0.0f, trofeo_rotacion = 0.0f;
 
 float arm_r_rot = 0.0f, arm_l_rot = 0.0f;
 float leg_r_rot = 0.0f, leg_l_rot = 0.0f;

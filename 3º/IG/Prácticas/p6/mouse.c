@@ -90,24 +90,36 @@ x,y: Posicion, en coordenadas de pantalla, en que se encuantra el cursor.
 
  void clickRaton( int boton, int estado, int x, int y )
 {
+	float radianes = baymax_rotacion * (M_PI / 180.0f);
+	
 	ISINTERACTING=1;
 	if(boton==GLUT_LEFT_BUTTON && estado==GLUT_DOWN)
 	{
 		MOUSE_LEFT_DOWN=1;
 		MOUSE_X=x;
 		MOUSE_Y=y;
+		unsigned int id;
 
 		if(!textura)
 		{
 			seleccion = true;
-			unsigned int id = pick(x, y);
+			id = pick(x, y);
 
         	setObjetoSeleccionado(id);
 			if (id == 0) seleccion = false;
 
 			cout << "x: " << x << " y: " << y << endl;
 			cout << "Selected object with ID: " << id << endl;
-		}		
+		}
+		if(seleccion)
+		{
+			if (id == 2)
+			{
+				baymax_x += cos(radianes);
+				baymax_z -= sin(radianes);
+			}
+			
+		}	
 	}
 	else if(boton==GLUT_MIDDLE_BUTTON && estado==GLUT_DOWN)
 	{

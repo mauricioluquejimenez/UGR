@@ -859,11 +859,12 @@ Malla arm_r = Malla("./ply/baymax_arm_r.ply", 2);
 Malla leg_l = Malla("./ply/baymax_leg_l.ply", 2);
 Malla leg_r = Malla("./ply/baymax_leg_r.ply", 2);
 Baymax baymax = Baymax(body, arm_l, arm_r, leg_l, leg_r, 2);
-Cursor cursor = Cursor(1.0f, 1.0f, 2);
-Sims sims = Sims(baymax, cursor, 2);
 
-Malla mesa = Malla("./ply/mesa.ply", 3);
-Trofeo trofeo = Trofeo("./ply/trofeo.ply", 4);
+Cursor cursor = Cursor(1.0f, 1.0f, 3);
+Sims sims = Sims(baymax, cursor, 4);
+
+Malla mesa = Malla("./ply/mesa.ply", 5);
+Trofeo trofeo = Trofeo("./ply/trofeo.ply", 6);
 
 unsigned ancho = 1024, alto = 1024;
 unsigned char * fondo = LeerArchivoJPEG("./jpg/fondo.jpg", ancho, alto);
@@ -941,13 +942,26 @@ void DibujaEscena(bool seleccion)
 
   glTranslatef(0.0f, -0.5f, 1.0f);
   glPushMatrix();
-    glTranslatef(sims_x, 0.0f, sims_z);
-    glRotatef(sims_rotacion, 0.0f, 1.0f, 0.0f);
+    glScalef(0.5f, 0.5f, 0.5f);
+    glTranslatef(baymax_x, 0.0f, baymax_z);
+    glRotatef(baymax_rotacion, 0.0f, 1.0f, 0.0f);
 
-    if (idSeleccionado == sims.getIdSeleccion()) glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, selectedRed);
+    if (idSeleccionado == baymax.getIdSeleccion()) glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, selectedRed);
     else glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, red);
 
-    sims.draw();
+    baymax.draw();
+  glPopMatrix();
+
+  glPushMatrix();
+    glTranslatef(-0.25f, 2.0f, -0.25f);
+    glScalef(0.1f, 0.1f, 0.1f);
+    //glTranslatef(sims_x, 0.0f, sims_z);
+    glRotatef(cursor_rotacion, 0.0f, 1.0f, 0.0f);
+
+    if (idSeleccionado == cursor.getIdSeleccion()) glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, selectedGreen);
+    else glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, green);
+
+    cursor.draw();
   glPopMatrix();
 
   glTranslatef(15.0, 0.5, -0.5);
@@ -1008,15 +1022,16 @@ void idle (int v)
     break;
 
     case 2:
-      sims.animacion();
+      baymax.animacion(baymax_x, baymax_z, baymax_rotacion, 5.0f);
       trofeo.animacion(); 
     break;
 
     case 3:
+      cursor.animacion();
       trofeo.animacion();
     break;
 
-    case 4:
+    case 5:
     break;
   }
 

@@ -629,6 +629,7 @@ class Ejes:Objeto3D
 
 Ejes ejesCoordenadas;
 
+Cubo cubo = Cubo(1.0f);
 Malla coche = Malla("./ply/car.ply");
 Malla body = Malla("./ply/baymax_body.ply");
 Malla arm_l = Malla("./ply/baymax_arm_l.ply");
@@ -647,6 +648,8 @@ void Dibuja(void)
 {
   static GLfloat luz[4] = {5.0f, 5.0f, 10.0f, 0.0}; // Posición de la fuente de luz
   float grey[4] = {0.1f, 0.1f, 0.1f, 1};
+  float green[4] = {0.0f, 1.0f, 0.0f, 1};
+  float blue[4] = {0.0f, 0.0f, 1.0f, 1};
 
   glPushMatrix(); // Apila la transformación geométrica actual
 
@@ -661,13 +664,13 @@ void Dibuja(void)
   glPopMatrix();
 
   if(luz && modo == GL_FILL)
-    {
-      glEnable(GL_DITHER);
-      glEnable(GL_LIGHTING);
-      glEnable(GL_TEXTURE_2D);
-    }
+  {
+    glEnable(GL_DITHER);
+    glEnable(GL_LIGHTING);
+    glEnable(GL_TEXTURE_2D);
+  }
 
-  glPushMatrix();
+  /*glPushMatrix();
     glTranslatef(0.0f, -0.15f, -1.0f);
 
     glTranslatef(coche_x, 0.0f, coche_z); // Solo afecta al coche
@@ -678,13 +681,27 @@ void Dibuja(void)
 
     coche.calculoNormales();
     coche.drawFlat();
-  glPopMatrix(); // Desapila la transformación del coche*/
+  glPopMatrix(); // Desapila la transformación del coche
 
   glTranslatef(0.0f, -0.5f, 1.0f);
   glPushMatrix();
     glTranslatef(sims_x, 0.0f, sims_z);
     glRotatef(sims_rotacion, 0.0f, 1.0f, 0.0f);
     sims.draw();
+  glPopMatrix();*/
+
+  //glPushMatrix();
+    glScalef(0.5f, 2.0f, 0.5f);
+    glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, green);
+    cubo.draw();
+  glPopMatrix();
+
+  glPushMatrix();
+    glTranslatef(0.0f, 5.0f, 0.0f);
+    glScalef(0.0f, 2.0f, 0.0f);
+    //glPopMatrix();
+    glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, blue);
+    cubo.draw();
   glPopMatrix();
 
   glutSwapBuffers();
