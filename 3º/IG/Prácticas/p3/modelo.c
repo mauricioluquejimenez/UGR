@@ -691,17 +691,15 @@ void Dibuja(void)
   glPopMatrix();*/
 
   //glPushMatrix();
-    glScalef(0.5f, 2.0f, 0.5f);
-    glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, green);
-    cubo.draw();
-  glPopMatrix();
-
-  glPushMatrix();
     glTranslatef(0.0f, 5.0f, 0.0f);
     glScalef(0.0f, 2.0f, 0.0f);
     //glPopMatrix();
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, blue);
     cubo.draw();
+  glPopMatrix();
+
+  glPushMatrix();
+    
   glPopMatrix();
 
   glutSwapBuffers();
