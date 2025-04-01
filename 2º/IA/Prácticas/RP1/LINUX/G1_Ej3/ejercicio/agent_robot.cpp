@@ -13,31 +13,60 @@ Agent::ActionType Agent::Think()
 	ActionType accion = actFORWARD;
 	
 	/* ESCRIBA AQUI SUS REGLAS */
-	if (giro180)
+	if (BUMPER_)
 	{
-		cout << "Regla 3: Terminando el giro de 180 grados" << endl;
+		cout << "Regla 1: Encontré el obstáculo" << endl;
 		accion = actTURN_L;
 		giro180 = false;
 	}
-	else if(CNY70_ and !frontera)
+	else if (giro180 == 2 and frontera & 2 == 0)
 	{
-		cout << "Regla 1: Primera vez en la frontera" << endl;
-		accion = actTURN_L;
-		giro180 = true;
-		frontera = true;
-		n_casillas = 1;
+		cout << "Regla 5: Terminando giro por la derecha" << endl;
+		accion = actTURN_R;
+		frontera++;
+		giro180 = 1;
 	}
-	else if (CNY70_ and frontera)
+	else if (giro180 == 2 and frontera & 2 != 0)
 	{
-		cout << "Regla 2: Terminé de contar" << endl;
-		cout << "El tablero es de " << n_casillas << " x " << n_casillas << endl;
-		accion = actIDLE;
+		cout << "Regla 6: Terminando giro por la izquierda" << endl;
+		accion = actTURN_L;
+		frontera++;
+		giro180 = 1;
+	}
+	else if (giro180 == 1 and CNY70_ and frontera % 2 == 0)
+	{
+		cout << "Regla 8: Evitando esquina en derecha" << endl;
+		accion = actTURN_R;
+		giro180 = 0;
+	}
+	else if (giro180 == 1 and CNY70_ and frontera % 2 != 0)
+	{
+		cout << "Regla 9: Evitando esquina en izquierda" << endl;
+		accion = actTURN_L;
+		giro180 = 0;
+	}
+	else if (giro180 == 1)
+	{
+		cout << "Regla 4: Avance entre giros" << endl;
+		accion = actFORWARD;
+		giro180 = 2;
+	}
+	else if(CNY70_ and frontera % 2 == 0)
+	{
+		cout << "Regla 2: Girando 180º a la derecha" << endl;
+		giro180 = 1;
+		accion = actTURN_R;
+	}
+	else if (CNY70_ and frontera % 2 != 0)
+	{
+		cout << "Regla 2: Girando 180º a la izquierda" << endl;
+		giro180 = 1;
+		accion = actTURN_L;
 	}	
 	else
 	{
-		cout << "Regla 4: Regla por defecto" << endl;
+		cout << "Regla 7: Regla por defecto" << endl;
 		accion = actFORWARD;
-		n_casillas++;
 	}
 
 	return accion;

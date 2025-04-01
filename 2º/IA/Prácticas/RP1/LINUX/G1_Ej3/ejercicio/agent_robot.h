@@ -17,8 +17,8 @@ public:
 		BUMPER_=false;
 
 		// Inicialización de variables de estado
-		frontera = false;
-		giro180 = false;
+		frontera = 0;
+		giro180 = 0;
 	}
 
 	enum ActionType
@@ -39,9 +39,8 @@ private:
 	bool BUMPER_;
 
 	// Variables de estado
-	int n_casillas; // Número de casillas recorridas
-	bool frontera; // verdadero cuando se activa el sensor CNY70
-	bool giro180; // verdadero durante un giro de 180 grados
+	int frontera; // Número de veces en la frontera
+	int giro180; // 0: no giro, 1: giro 90 grados, 2: giro 180 grados
 };
 
 string ActionStr(Agent::ActionType);
