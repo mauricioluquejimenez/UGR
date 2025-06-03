@@ -1,0 +1,10 @@
+1. ¿cuántos caminos se mantienen en memoria en busqueda retroactiva?
+	- Sólo 1
+2. En A* si un nodo se corresponde con un estado CERRADO
+	- El nodo se revisa para determinar cual es su mejor padre y propagar el cambio a sus sucesores
+3. Grafo Y/O, nodo O
+	- Resolver el primer nodo hijo para ver si está resuelto, (en ese caso el padre está resuelto). Si ningún nodo está resuelto, el nodo está resuelto
+4. Diferencia entre escalada simple y escalada de máxima pendiente
+	-
+5. La heurística es
+	- Criterios para definir cuál es la mejor acción para alcanzar una meta
