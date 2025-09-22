@@ -14,6 +14,20 @@ void ordenar(int *v, int n) {
             }
 }
 
+void ordenar_ej5(int *v, int n) {
+  bool cambio=true;
+  for (int i=0; i<n-1 && cambio; i++) {
+    cambio=false;
+    for (int j=0; j<n-i-1; j++)
+      if (v[j]>v[j+1]) {
+        cambio=true;
+        int aux = v[j];
+        v[j] = v[j+1];
+        v[j+1] = aux;
+      }
+  }
+}
+
 void sintaxis()
 {
   cerr << "Sintaxis:" << endl;
@@ -37,12 +51,14 @@ int main(int argc, char * argv[])
   int *v=new int[n];       // Reserva de memoria
   srand(time(0));            // Inicialización del generador de números pseudoaleatorios
   for (int i=0; i<n; i++)  // Recorrer vector
-    v[i] = rand() % vmax;    // Generar aleatorio [0,vmax[
+    v[i] = rand() % vmax;
+    
+  ordenar(v,n);  // Generar aleatorio [0,vmax[
   
   clock_t tini;    // Anotamos el tiempo de inicio
   tini=clock();
   
-  ordenar(v,n);
+  ordenar_ej5(v,n);
   
   clock_t tfin;    // Anotamos el tiempo de finalización
   tfin=clock();
