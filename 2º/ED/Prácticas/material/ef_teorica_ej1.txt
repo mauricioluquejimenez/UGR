@@ -1,0 +1,5 @@
+Línea 8: 4OE (inicialización, asignación, comparación i<n-1) -> O(n)
+Línea 9: 4OE (inicialización, asignación, comparación i<n-1) -> O(n)
+Línea 10, 11, 12, 13: sumatoria desde 0 hasta n-i-1 de 1 = O(1)
+
+Eficiencia: O(n^2) -> Bucle anidado
