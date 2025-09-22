@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="p04_tdas_no_lineales" targetName="cantidad_letras" />
+      <config projectName="p04_tdas_no_lineales" targetName="bolsa" />
+      <config projectName="p04_tdas_no_lineales" targetName="bolsa_letras" />
+      <config projectName="p04_tdas_no_lineales" targetName="palabras_longitud" />
+      <config projectName="p04_tdas_no_lineales" targetName="conjunto_letras" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8c7c765d-9ca9-4f69-8e51-54849f2bb842" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2022" />
+    <option name="minorVersion" value="2.4" />
+  </component>
+  <component name="ProjectId" id="2H4pyRAB4IR3chiNcJEu4O6eqIR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "D:/mauri/Documents/Personal/Universidad/2º/Primer Cuatrimestre/Estructura de Datos/Prácticas/Prácticas/ej02_pilas_colas",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="CMake Application.bolsa">
+    <configuration name="bolsa" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p04_tdas_no_lineales" TARGET_NAME="bolsa" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="p04_tdas_no_lineales" RUN_TARGET_NAME="bolsa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="bolsa_letras" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p04_tdas_no_lineales" TARGET_NAME="bolsa_letras" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="p04_tdas_no_lineales" RUN_TARGET_NAME="bolsa_letras">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cantidad_letras" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p04_tdas_no_lineales" TARGET_NAME="cantidad_letras" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="p04_tdas_no_lineales" RUN_TARGET_NAME="cantidad_letras">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="conjunto_letras" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p04_tdas_no_lineales" TARGET_NAME="conjunto_letras" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="p04_tdas_no_lineales" RUN_TARGET_NAME="conjunto_letras">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="palabras_longitud" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p04_tdas_no_lineales" TARGET_NAME="palabras_longitud" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="p04_tdas_no_lineales" RUN_TARGET_NAME="palabras_longitud">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.bolsa" />
+      <item itemvalue="CMake Application.bolsa_letras" />
+      <item itemvalue="CMake Application.cantidad_letras" />
+      <item itemvalue="CMake Application.conjunto_letras" />
+      <item itemvalue="CMake Application.palabras_longitud" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c7c765d-9ca9-4f69-8e51-54849f2bb842" name="Changes" comment="" />
+      <created>1667554465989</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667554465989</updated>
+      <workItem from="1667554468688" duration="1368000" />
+      <workItem from="1667557366843" duration="42000" />
+      <workItem from="1667557414261" duration="224000" />
+      <workItem from="1667572625115" duration="118000" />
+      <workItem from="1667580606892" duration="232000" />
+      <workItem from="1667836389546" duration="3785000" />
+      <workItem from="1667844537695" duration="3342000" />
+      <workItem from="1667901381576" duration="777000" />
+      <workItem from="1667902169536" duration="266000" />
+      <workItem from="1667902448449" duration="1983000" />
+      <workItem from="1667921750142" duration="1587000" />
+      <workItem from="1667925054586" duration="2937000" />
+      <workItem from="1668004617813" duration="2884000" />
+      <workItem from="1668159165199" duration="3177000" />
+      <workItem from="1668164671240" duration="121000" />
+      <workItem from="1668177283284" duration="165000" />
+      <workItem from="1668615245348" duration="613000" />
+      <workItem from="1668764175398" duration="3027000" />
+      <workItem from="1669041242551" duration="1331000" />
+      <workItem from="1669108580616" duration="329000" />
+      <workItem from="1669108934888" duration="56000" />
+      <workItem from="1669109001411" duration="2393000" />
+      <workItem from="1669112112410" duration="3443000" />
+      <workItem from="1669286075064" duration="609000" />
+      <workItem from="1669547405055" duration="1714000" />
+      <workItem from="1669562502638" duration="21000" />
+      <workItem from="1673192168301" duration="22000" />
+      <workItem from="1673192209987" duration="8000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
