@@ -23,7 +23,7 @@ int operacion(int *v, int n, int x, int inf, int sup) {
 }
 
 void sintaxis()
-{
+{ 
   cerr << "Sintaxis:" << endl;
   cerr << "  TAM: Tamaño del vector (>0)" << endl;
   cerr << "Se genera un vector de tamaño TAM con elementos aleatorios" << endl;
@@ -49,13 +49,27 @@ int main(int argc, char * argv[])
   tini=clock();
 
   // Algoritmo a evaluar
-  operacion(v,tam,tam+1,0,tam-1);
+  //operacion(v,tam,tam+1,0,tam-1);
+  for (int i=0; i<1000000; i++) 
+    operacion(v,tam,tam+1,0,tam-1);
   
   clock_t tfin;    // Anotamos el tiempo de finalización
   tfin=clock();
 
+  double t_alg = (tfin-tini)/(double)CLOCKS_PER_SEC;
+
+  clock_t tini_aux;    // Anotamos el tiempo de inicio
+  tini_aux=clock();
+
+  for (int i=0; i<1000000; i++) {/*Bucle vacío*/}
+  
+  clock_t tfin_aux;    // Anotamos el tiempo de finalización
+  tfin_aux=clock();
+
+  double t_alg_aux = (tfin_aux-tini_aux)/(double)CLOCKS_PER_SEC;
+
   // Mostramos resultados
-  cout << tam << "\t" << (tfin-tini)/(double)CLOCKS_PER_SEC << endl;
+  cout << tam << "\t" << (t_alg-t_alg_aux)/1000000 << endl;
   
   delete [] v;     // Liberamos memoria dinámica
 }
