@@ -19,14 +19,8 @@
 using namespace std ;
 using namespace std::chrono;
 
-/*
 const long m  = 1024l*1024l*1024l, // número de muestras (del orden de mil millones)
-           n  = 4  ;               // número de hebras concurrentes (divisor de 'm')
-*/
-
-const long m = 16, // número de muestras (reducido para hacer las primeras pruebas)
-			  n = 4;  // número de hebras concurrentes (divisor de 'm')
-
+           n  = 32  ;               // número de hebras concurrentes (divisor de 'm')
 
 // -----------------------------------------------------------------------------
 // evalua la función $f$ a integrar ($f(x)=4/(1+x^2)$)
@@ -50,28 +44,35 @@ double calcular_integral_secuencial(  )
 // función que ejecuta cada hebra: recibe $i$ ==índice de la hebra, ($0\leq i<n$)
 double funcion_hebra( long i )
 {
-   // completar ......
+	double suma = 0.0;
+   int puntos = m/n;
+   int inicio = i * puntos;
+   
+   for(long j = inicio; j < inicio + puntos; j++) 
+   {
+   	const double xj = double(j + 0.5)/m;
+   	suma += f(xj);
+   }
+   
+   return suma/m;
 }
 
 // -----------------------------------------------------------------------------
 // calculo de la integral de forma concurrente
 double calcular_integral_concurrente( )
 {
-
-  /*
-  
-  	// Creación de vector de futuros para poner en marcha las hebras
-  	future<long> futuros[n];
+  	double suma = 0.0;
   	
+  	// Creación de vector de futuros para poner en marcha las hebras
+  	future<double> futuros[n];
+  
   	// Poner en marcha todas las hebras y obtener los futuros
-  	for(int i = 0; i < n; i++)
-  		futuros[i] = async(launch::async, funcion_hebra(¿i?));
+  	for(long i = 0; i < n; i++) futuros[i] = async(launch::async, funcion_hebra, i);
   	
   	// Esperar a que acabe cada hebra	
-  	for(int i = 0; i < n; i++)
-  		futuros[i].get();
+  	for(int i = 0; i < n; i++) suma += futuros[i].get();
   
-  */
+  	return suma;
 }
 // -----------------------------------------------------------------------------
 
