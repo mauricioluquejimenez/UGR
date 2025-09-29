@@ -1,0 +1,8 @@
+/home/mauricio/UGR/2º/ED/Prácticas/P2/3raya_remoto_grafica/CMakeFiles/3raya.dir
+/home/mauricio/UGR/2º/ED/Prácticas/P2/3raya_remoto_grafica/CMakeFiles/doc_doxygen.dir
+/home/mauricio/UGR/2º/ED/Prácticas/P2/3raya_remoto_grafica/CMakeFiles/mrproper.dir
+/home/mauricio/UGR/2º/ED/Prácticas/P2/3raya_remoto_grafica/CMakeFiles/zip.dir
+/home/mauricio/UGR/2º/ED/Prácticas/P2/3raya_remoto_grafica/CMakeFiles/edit_cache.dir
+/home/mauricio/UGR/2º/ED/Prácticas/P2/3raya_remoto_grafica/CMakeFiles/rebuild_cache.dir
+/home/mauricio/UGR/2º/ED/Prácticas/P2/3raya_remoto_grafica/CMakeFiles/3raya_autogen_timestamp_deps.dir
+/home/mauricio/UGR/2º/ED/Prácticas/P2/3raya_remoto_grafica/CMakeFiles/3raya_autogen.dir

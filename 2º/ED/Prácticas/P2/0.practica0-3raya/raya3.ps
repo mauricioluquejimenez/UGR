@@ -1,0 +1,2053 @@
+%!PS-Adobe-3.0
+%%Title: ficha.h, ficha.cpp, tablero.h, tablero.cpp, jugador.h, jugador.cpp, juego.h, juego.cpp, main.cpp, Makefile
+%%For: mauricio
+%%Creator: a2ps version 4.14
+%%CreationDate: Mon Sep 29 18:07:25 2025
+%%BoundingBox: 24 24 571 818
+%%DocumentData: Clean7Bit
+%%Orientation: Landscape
+%%Pages: 6
+%%PageOrder: Ascend
+%%DocumentMedia: A4 595 842 0 () ()
+%%DocumentNeededResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-BoldOblique
+%%+ font Courier-Oblique
+%%+ font Helvetica
+%%+ font Helvetica-Bold
+%%+ font Symbol
+%%+ font Times-Bold
+%%+ font Times-Roman
+%%DocumentProcessColors: Black 
+%%DocumentSuppliedResources: procset a2ps-a2ps-hdr
+%%+ procset a2ps-black+white-Prolog
+%%+ encoding ISO-8859-1Encoding
+%%EndComments
+/a2psdict 200 dict def
+a2psdict begin
+%%BeginProlog
+%%Copyright: (c) 1988, 89, 90, 91, 92, 93 Miguel Santana
+%%Copyright: (c) 1995, 96, 97, 98 Akim Demaille, Miguel Santana
+% Check PostScript language level.
+/languagelevel where {
+  pop /gs_languagelevel languagelevel def
+} {
+  /gs_languagelevel 1 def
+} ifelse
+
+% EPSF import as in the Red Book
+/BeginInclude {
+  /b4_Inc_state save def    		% Save state for cleanup
+  /dict_count countdictstack def	% Count objects on dict stack
+  /op_count count 1 sub def		% Count objects on operand stack 
+  userdict begin
+    0 setgray 0 setlinecap
+    1 setlinewidth 0 setlinejoin
+    10 setmiterlimit [ ] 0 setdash newpath
+    gs_languagelevel 1 ne {
+      false setstrokeadjust false setoverprint 
+    } if
+} bind def
+
+/EndInclude {
+  count op_count sub { pos } repeat	% Clean up stacks
+  countdictstack dict_count sub { end } repeat
+  b4_Inc_state restore
+} bind def
+
+/BeginEPSF {
+  BeginInclude
+  /showpage { } def
+} bind def
+
+/EndEPSF {
+  EndInclude
+} bind def
+
+% Page prefeed
+/page_prefeed {         % bool -> -
+  statusdict /prefeed known {
+    statusdict exch /prefeed exch put
+  } {
+    pop
+  } ifelse
+} bind def
+
+/deffont {
+  findfont exch scalefont def
+} bind def
+
+/reencode_font {
+  findfont reencode 2 copy definefont pop def
+} bind def
+
+% Function c-show (str => -)
+% centers text only according to x axis.
+/c-show { 
+  dup stringwidth pop
+  2 div neg 0 rmoveto
+  show
+} bind def
+
+% Function l-show (str => -)
+% prints texts so that it ends at currentpoint
+/l-show {
+  dup stringwidth pop neg 
+  0 
+  rmoveto show
+} bind def
+
+% center-fit show (str w => -)
+% show centered, and scale currentfont so that the width is less than w
+/cfshow {
+  exch dup stringwidth pop
+  % If the title is too big, try to make it smaller
+  3 2 roll 2 copy
+  gt
+  { % if, i.e. too big
+    exch div
+    currentfont exch scalefont setfont
+  } { % ifelse
+    pop pop 
+  }
+  ifelse
+  c-show			% center title
+} bind def
+
+% Return the y size of the current font
+% - => fontsize
+/currentfontsize {
+  currentfont /FontType get 0 eq {
+    currentfont /FontMatrix get 3 get
+  }{
+    currentfont /FontMatrix get 3 get 1000 mul
+  } ifelse
+} bind def
+
+% reencode the font
+% <encoding-vector> <fontdict> -> <newfontdict>
+/reencode { %def
+  dup length 5 add dict begin
+    { %forall
+      % <vector> <key> <val>
+      1 index /FID ne 
+      { def }{ pop pop } ifelse
+    } forall
+    /Encoding exch def % -
+
+    % Use the font's bounding box to determine the ascent, descent,
+    % and overall height; don't forget that these values have to be
+    % transformed using the font's matrix.
+    % We use `load' because sometimes BBox is executable, sometimes not.
+    % Since we need 4 numbers an not an array avoid BBox from being executed
+    /FontBBox load aload pop
+    FontMatrix transform /Ascent exch def pop
+    FontMatrix transform /Descent exch def pop
+    /FontHeight Ascent Descent sub def
+
+    % Get the underline position and thickness if they're defined.
+    % Use 1 if they are not defined.
+    currentdict /FontInfo 2 copy known
+    { get
+      /UnderlinePosition 2 copy % <FontInfo> /UP <FontInfo> /UP
+      2 copy known
+      { get }{ pop pop 1 } ifelse
+      0 exch FontMatrix transform exch pop
+      def % <FontInfo>
+
+      /UnderlineThickness 2 copy % <FontInfo> /UT <FontInfo> /UT
+      2 copy known
+      { get }{ pop pop 1 } ifelse
+      0 exch FontMatrix transform exch pop
+      def % <FontInfo>
+      pop % -
+    }{ pop pop
+    } ifelse
+
+    currentdict
+  end 
+} bind def
+
+% composite fonts for ASCII-EUC mixed strings
+% Version 1.2 1/31/1990
+% Original Ken'ichi HANDA (handa@etl.go.jp)
+% Modified Norio Katayama (katayama@rd.nacsis.ac.jp),1998
+% Extend & Fix Koji Nakamaru (maru@on.cs.keio.ac.jp), 1999
+% Anyone can freely copy, modify, distribute this program.
+
+/copyfont {	% font-dic extra-entry-count  copyfont  font-dic
+	1 index maxlength add dict begin
+	{	1 index /FID ne 2 index /UniqueID ne and
+		{def} {pop pop} ifelse
+	} forall
+	currentdict
+	end
+} bind def
+
+/compositefont { % ASCIIFontName EUCFontName RomanScale RomanOffset Rot(T/F) compositefont font
+    /RomanRotation exch def
+    /RomanOffset exch def
+    /RomanScale exch def
+    userdict /fixeucfont_dict known not {
+	userdict begin
+	    /fixeucfont_dict 2 dict begin
+		/UpperByteEncoding [
+		    16#00 1 16#20 { pop 0 } for
+		    16#21 1 16#28 { 16#20 sub } for
+		    16#29 1 16#2F { pop 0 } for
+		    16#30 1 16#74 { 16#27 sub } for
+		    16#75 1 16#FF { pop 0 } for
+		] def
+	        /LowerByteEncoding [
+		    16#00 1 16#A0 { pop /.notdef } for
+		    16#A1 1 16#FE { 16#80 sub 16 2 string cvrs
+				    (cXX) dup 1 4 -1 roll
+				    putinterval cvn } for
+		    /.notdef
+		] def
+		currentdict
+	    end def
+	end
+    } if
+    findfont dup /FontType get 0 eq {
+	14 dict begin
+	    %
+	    % 7+8 bit EUC font
+	    %
+	    12 dict begin
+		/EUCFont exch def
+		/FontInfo (7+8 bit EUC font) readonly def
+		/PaintType 0 def
+		/FontType 0 def
+		/FontMatrix matrix def
+		% /FontName
+		/Encoding fixeucfont_dict /UpperByteEncoding get def
+		/FMapType 2 def
+		EUCFont /WMode known
+		{ EUCFont /WMode get /WMode exch def }
+		{ /WMode 0 def } ifelse
+		/FDepVector [
+		    EUCFont /FDepVector get 0 get
+		    [ 16#21 1 16#28 {} for 16#30 1 16#74 {} for ]
+		    {
+			13 dict begin
+			    /EUCFont EUCFont def
+			    /UpperByte exch 16#80 add def	
+			    % /FontName
+			    /FontInfo (EUC lower byte font) readonly def
+			    /PaintType 0 def
+			    /FontType 3 def
+			    /FontMatrix matrix def
+			    /FontBBox {0 0 0 0} def
+			    /Encoding
+				fixeucfont_dict /LowerByteEncoding get def
+			    % /UniqueID
+			    % /WMode
+			    /BuildChar {
+				gsave
+				exch dup /EUCFont get setfont
+				/UpperByte get
+				2 string
+				dup 0 4 -1 roll put
+				dup 1 4 -1 roll put
+				dup stringwidth setcharwidth
+				0 0 moveto show
+				grestore
+			    } bind def
+			    currentdict
+			end
+			/lowerbytefont exch definefont
+		    } forall
+		] def
+		currentdict
+	    end
+	    /eucfont exch definefont
+	    exch
+	    findfont 1 copyfont dup begin
+		RomanRotation {
+			/FontMatrix FontMatrix
+			[ 0 RomanScale neg RomanScale 0 RomanOffset neg 0 ]
+			matrix concatmatrix def
+		}{
+			/FontMatrix FontMatrix
+			[ RomanScale 0 0 RomanScale 0 RomanOffset ] matrix concatmatrix
+			def
+			/CDevProc
+			    {pop pop pop pop 0 exch -1000 exch 2 div 880} def
+		} ifelse
+	    end
+	    /asciifont exch definefont
+	    exch
+	    /FDepVector [ 4 2 roll ] def
+	    /FontType 0 def
+	    /WMode 0 def
+	    /FMapType 4 def
+	    /FontMatrix matrix def
+	    /Encoding [0 1] def
+	    /FontBBox {0 0 0 0} def
+%	    /FontHeight 1.0 def % XXXX
+	    /FontHeight RomanScale 1.0 ge { RomanScale }{ 1.0 } ifelse def
+	    /Descent -0.3 def   % XXXX
+	    currentdict
+	end
+	/tmpfont exch definefont
+	pop
+	/tmpfont findfont
+    }{
+	pop findfont 0 copyfont
+    } ifelse
+} def	
+
+/slantfont {	% FontName slant-degree  slantfont  font'
+    exch findfont 1 copyfont begin
+    [ 1 0 4 -1 roll 1 0 0 ] FontMatrix exch matrix concatmatrix
+    /FontMatrix exch def
+    currentdict
+    end
+} def
+
+% Function print line number (<string> # -)
+/# {
+  gsave
+    sx cw mul neg 2 div 0 rmoveto
+    f# setfont
+    c-show
+  grestore
+} bind def
+
+% -------- Some routines to enlight plain b/w printings ---------
+
+% Underline
+% width --
+/dounderline {
+  currentpoint
+  gsave
+    moveto
+    0 currentfont /Descent get currentfontsize mul rmoveto
+    0 rlineto
+    stroke
+  grestore
+} bind def
+
+% Underline a string
+% string --
+/dounderlinestring {
+  stringwidth pop
+  dounderline
+} bind def
+
+/UL {
+  /ul exch store
+} bind def
+
+% Draw a box of WIDTH wrt current font
+% width --
+/dobox {
+  currentpoint
+  gsave
+    newpath
+    moveto
+    0 currentfont /Descent get currentfontsize mul rmoveto
+    dup 0 rlineto
+    0 currentfont /FontHeight get currentfontsize mul rlineto
+    neg 0 rlineto
+    closepath
+    stroke
+  grestore
+} bind def
+
+/BX {
+  /bx exch store
+} bind def
+
+% Box a string
+% string --
+/doboxstring {
+  stringwidth pop
+  dobox
+} bind def
+
+%
+% ------------- Color routines ---------------
+%
+/FG /setrgbcolor load def
+
+% Draw the background
+% width --
+/dobackground {
+  currentpoint
+  gsave
+    newpath
+    moveto
+    0 currentfont /Descent get currentfontsize mul rmoveto
+    dup 0 rlineto
+    0 currentfont /FontHeight get currentfontsize mul rlineto
+    neg 0 rlineto
+    closepath
+    bgcolor aload pop setrgbcolor
+    fill
+  grestore
+} bind def
+
+% Draw bg for a string
+% string --
+/dobackgroundstring {
+  stringwidth pop
+  dobackground
+} bind def
+
+
+/BG {
+  dup /bg exch store
+  { mark 4 1 roll ] /bgcolor exch store } if
+} bind def
+
+
+/Show {
+  bg { dup dobackgroundstring } if
+  ul { dup dounderlinestring } if
+  bx { dup doboxstring } if
+  show
+} bind def
+
+% Function T(ab), jumps to the n-th tabulation in the current line
+/T {
+  cw mul x0 add
+  bg { dup currentpoint pop sub dobackground } if
+  ul { dup currentpoint pop sub dounderline } if
+  bx { dup currentpoint pop sub dobox } if
+  y0 moveto
+} bind def
+
+% Function n: move to the next line
+/n {
+  /y0 y0 bfs sub store
+  x0 y0 moveto
+} bind def
+
+% Function N: show and move to the next line
+/N {
+  Show
+  /y0 y0 bfs sub store
+  x0 y0 moveto
+} bind def
+
+/S {
+  Show
+} bind def
+
+%%BeginResource: procset a2ps-a2ps-hdr 2.0 2
+%%Copyright: (c) 1988, 89, 90, 91, 92, 93 Miguel Santana
+%%Copyright: (c) 1995, 96, 97, 98 Akim Demaille, Miguel Santana
+% Function title: prints page header.
+% <ct> <rt> <lt> are passed as argument
+/title { 
+  % 1. Draw the background
+  x v get y v get moveto
+  gsave
+    0 th 2 div neg rmoveto 
+    th setlinewidth
+    0.95 setgray
+    pw 0 rlineto stroke
+  grestore
+  % 2. Border it
+  gsave
+    0.7 setlinewidth
+    pw 0 rlineto
+    0 th neg rlineto
+    pw neg 0 rlineto
+    closepath stroke
+  grestore
+  % stk: ct rt lt
+  x v get y v get th sub 1 add moveto
+%%IncludeResource: font Helvetica
+  fHelvetica fnfs 0.8 mul scalefont setfont
+  % 3. The left title
+  gsave
+    dup stringwidth pop fnfs 0.8 mul add exch % leave space took on stack
+    fnfs 0.8 mul hm rmoveto
+    show			% left title
+  grestore
+  exch
+  % stk: ct ltw rt
+  % 4. the right title
+  gsave
+    dup stringwidth pop fnfs 0.8 mul add exch % leave space took on stack
+    dup
+    pw exch stringwidth pop fnfs 0.8 mul add sub
+    hm
+    rmoveto
+    show			% right title
+  grestore
+  % stk: ct ltw rtw
+  % 5. the center title
+  gsave
+    pw 3 1 roll
+    % stk: ct pw ltw rtw
+    3 copy 
+    % Move to the center of the left room
+    sub add 2 div hm rmoveto
+    % What is the available space in here?
+    add sub fnfs 0.8 mul sub fnfs 0.8 mul sub
+    % stk: ct space_left
+%%IncludeResource: font Helvetica-Bold
+  fHelvetica-Bold fnfs scalefont setfont
+    cfshow
+  grestore
+} bind def
+
+% Function border: prints virtual page border
+/border { %def
+  gsave				% print four sides
+    0 setgray
+    x v get y v get moveto
+    0.7 setlinewidth		% of the square
+    pw 0 rlineto
+    0 ph neg rlineto
+    pw neg 0 rlineto
+    closepath stroke
+  grestore
+} bind def
+
+% Function water: prints a water mark in background
+/water { %def
+  gsave
+    scx scy moveto rotate
+%%IncludeResource: font Times-Bold
+  fTimes-Bold 100 scalefont setfont
+    .97 setgray
+    dup stringwidth pop 2 div neg -50 rmoveto
+    show
+  grestore
+} bind def
+
+% Function rhead: prints the right header
+/rhead {  %def
+  lx ly moveto
+  fHelvetica fnfs 0.8 mul scalefont setfont
+  l-show
+} bind def
+
+% Function footer (cf rf lf -> -)
+/footer {
+  fHelvetica fnfs 0.8 mul scalefont setfont
+  dx dy moveto
+  show
+
+  snx sny moveto
+  l-show
+  
+  fnx fny moveto
+  c-show
+} bind def
+%%EndResource
+%%BeginResource: procset a2ps-black+white-Prolog 2.0 1
+
+% Function T(ab), jumps to the n-th tabulation in the current line
+/T { 
+  cw mul x0 add y0 moveto
+} bind def
+
+% Function n: move to the next line
+/n { %def
+  /y0 y0 bfs sub store
+  x0 y0 moveto
+} bind def
+
+% Function N: show and move to the next line
+/N {
+  Show
+  /y0 y0 bfs sub store
+  x0 y0 moveto
+}  bind def
+
+/S {
+  Show
+} bind def
+
+/p {
+  false UL
+  false BX
+  fCourier bfs scalefont setfont
+  Show
+} bind def
+
+/sy {
+  false UL
+  false BX
+  fSymbol bfs scalefont setfont
+  Show
+} bind def
+
+/k {
+  false UL
+  false BX
+  fCourier-Oblique bfs scalefont setfont
+  Show
+} bind def
+
+/K {
+  false UL
+  false BX
+  fCourier-Bold bfs scalefont setfont
+  Show
+} bind def
+
+/c {
+  false UL
+  false BX
+  fCourier-Oblique bfs scalefont setfont
+  Show
+} bind def
+
+/C {
+  false UL
+  false BX
+  fCourier-BoldOblique bfs scalefont setfont
+  Show 
+} bind def
+
+/l {
+  false UL
+  false BX
+  fHelvetica bfs scalefont setfont
+  Show
+} bind def
+
+/L {
+  false UL
+  false BX
+  fHelvetica-Bold bfs scalefont setfont
+  Show 
+} bind def
+
+/str{
+  false UL
+  false BX
+  fTimes-Roman bfs scalefont setfont
+  Show
+} bind def
+
+/e{
+  false UL
+  true BX
+  fHelvetica-Bold bfs scalefont setfont
+  Show
+} bind def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+%%IncludeResource: font Courier
+%%IncludeResource: font Courier-Oblique
+%%IncludeResource: font Courier-Bold
+%%IncludeResource: font Times-Roman
+%%IncludeResource: font Symbol
+%%IncludeResource: font Courier-BoldOblique
+%%BeginResource: encoding ISO-8859-1Encoding
+/ISO-8859-1Encoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright 
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash 
+/zero /one /two /three /four /five /six /seven 
+/eight /nine /colon /semicolon /less /equal /greater /question 
+/at /A /B /C /D /E /F /G 
+/H /I /J /K /L /M /N /O 
+/P /Q /R /S /T /U /V /W 
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore 
+/quoteleft /a /b /c /d /e /f /g 
+/h /i /j /k /l /m /n /o 
+/p /q /r /s /t /u /v /w 
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/space /exclamdown /cent /sterling /currency /yen /brokenbar /section 
+/dieresis /copyright /ordfeminine /guillemotleft /logicalnot /hyphen /registered /macron 
+/degree /plusminus /twosuperior /threesuperior /acute /mu /paragraph /bullet 
+/cedilla /onesuperior /ordmasculine /guillemotright /onequarter /onehalf /threequarters /questiondown 
+/Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla 
+/Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis 
+/Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply 
+/Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls 
+/agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla 
+/egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis 
+/eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide 
+/oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis 
+] def
+%%EndResource
+% Initialize page description variables.
+/sh 595 def
+/sw 842 def
+/llx 24 def
+/urx 818 def
+/ury 571 def
+/lly 24 def
+/#copies 1 def
+/th 15.000000 def
+/fnfs 11 def
+/bfs 8.005733 def
+/cw 4.803440 def
+
+% Dictionary for ISO-8859-1 support
+/iso1dict 8 dict begin
+  /fCourier ISO-8859-1Encoding /Courier reencode_font
+  /fCourier-Bold ISO-8859-1Encoding /Courier-Bold reencode_font
+  /fCourier-BoldOblique ISO-8859-1Encoding /Courier-BoldOblique reencode_font
+  /fCourier-Oblique ISO-8859-1Encoding /Courier-Oblique reencode_font
+  /fHelvetica ISO-8859-1Encoding /Helvetica reencode_font
+  /fHelvetica-Bold ISO-8859-1Encoding /Helvetica-Bold reencode_font
+  /fTimes-Bold ISO-8859-1Encoding /Times-Bold reencode_font
+  /fTimes-Roman ISO-8859-1Encoding /Times-Roman reencode_font
+currentdict end def
+/bgcolor [ 0 0 0 ] def
+/bg false def
+/ul false def
+/bx false def
+% The font for line numbering
+/f# /Helvetica findfont bfs .6 mul scalefont def
+/fSymbol /Symbol findfont def
+/hm fnfs 0.25 mul def
+/pw
+   cw 81.400000 mul
+def
+/ph
+   501.959430 th add
+def
+/pmw urx llx sub pw 2 mul sub 1 div def
+/pmh 0 def
+/v 0 def
+/x [
+  0
+  dup pmw add pw add
+] def
+/y [
+  pmh ph add 0 mul ph add
+  dup
+] def
+/scx sw 2 div def
+/scy sh 2 div def
+/snx urx def
+/sny lly 2 add def
+/dx llx def
+/dy sny def
+/fnx scx def
+/fny dy def
+/lx snx def
+/ly ury fnfs 0.8 mul sub def
+/sx 0 def
+/tab 8 def
+/x0 0 def
+/y0 0 def
+%%EndSetup
+
+%%Page: (1,1) 1
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso1dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+() p n
+(#ifndef) K
+( __FICHA__H__) p n
+(#define) K
+( __FICHA__H__) p n
+() N
+(/* ***************************************** */) c n
+() p n
+(#include) K
+( <iostream>) p n
+() N
+(/* ***************************************** */) c n
+() p n
+(// Tipos de fichas que se pueden poner en el tablero) c n
+(enum) k
+( Ficha {BLANCO, CIRCULO, CRUZ};) p n
+() N
+(/* ***************************************** */) c n
+() p n
+(// Sobrecarga de << para mostrar en ostream el s\355mbolo de la ficha) c n
+(std::ostream& operator<<\(std::ostream &salida, ) p
+(const) K
+( Ficha &fic\);) p n
+() N
+(/* ***************************************** */) c n
+() p n
+(#endif) K n
+(ficha.h) (Page 1/1) (feb 26, 20 18:30) title
+border
+/v 1 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+() p n
+(#include) K
+( <cassert>) p n
+(#include) K
+( ") p
+(ficha.h) str
+(") p n
+() N
+(/* ***************************************** */) c n
+() p n
+(std::ostream& ) S
+(operator) K
+(<<\(std::ostream &salida, ) p
+(const) K
+( Ficha &fic\)) p n
+({) N
+(  assert\(\(fic==BLANCO\)||\(fic==CIRCULO\)||\(fic==CRUZ\)\);) N
+(  ) S
+(if) K
+( \(fic==BLANCO\)) p n
+(    salida << ") S
+(   ) str
+(";) p n
+(  ) S
+(else) K
+( ) p
+(if) K
+( \(fic==CIRCULO\)) p n
+(    salida << ") S
+( O ) str
+(";) p n
+(  ) S
+(else) K
+(   ) p
+(// fic==CRUZ) c n
+(    salida << ") p
+( X ) str
+(";) p n
+(  ) S
+(return) K
+( salida;) p n
+(}) N
+() N
+(/* ***************************************** */) c n
+(ficha.cpp) (Page 1/1) (feb 26, 20 18:30) title
+border
+grestore
+(Printed by mauricio) rhead
+(ficha.h, ficha.cpp) (1/6) (lunes septiembre 29, 2025) footer
+end % of iso1dict
+pagesave restore
+showpage
+%%Page: (1,1) 2
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso1dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+() p n
+(#ifndef) K
+( __TABLERO__H__) p n
+(#define) K
+( __TABLERO__H__) p n
+() N
+(/* ***************************************** */) c n
+() p n
+(#include) K
+( <iostream>) p n
+(#include) K
+( ") p
+(ficha.h) str
+(") p n
+() N
+(/* ***************************************** */) c n
+() p n
+(class Tablero {) N
+() N
+(  private:) N
+(    Ficha tab[3][3];      ) S
+(// Tablero de fichas 3x3) c n
+(    ) p
+(int) k
+( numfichas;        ) p
+(// N\372mero de fichas que han sido puestas en total) c n
+() p n
+(    ) S
+(// Copia un tablero desde orig) c n
+(    ) p
+(void) k
+( copia_tablero\() p
+(const) K
+( Tablero &orig\);) p n
+() N
+(    ) S
+(// Devuelve true/false si la ficha de tipo fic tiene 3 en raya) c n
+(    bool hay3raya\() p
+(const) K
+( Ficha &fic\) ) p
+(const) K
+(;) p n
+() N
+(  public:) N
+(    Tablero\(\);                                  ) S
+(// Constructor por defecto) c n
+(    ~Tablero\(\) { };                             ) p
+(// Destructor \(vac\355o\)) c n
+() p n
+(    Tablero\() S
+(const) K
+( Tablero &orig\);               ) p
+(// Constructor de copia) c n
+(    Tablero& operator=\() p
+(const) K
+( Tablero &orig\);    ) p
+(// Sobrecarga de asignaci\363n) c n
+() p n
+(    ) S
+(// Inicializa el tablero poniendo en blanco todas sus casillas) c n
+(    ) p
+(void) k
+( PonerEnBlanco\(\);     ) p
+(// No es necesario) c n
+() p n
+(    ) S
+(// Pone una ficha de color fic en la fila f y la columna c) c n
+(    ) p
+(// Devuelve true si la operaci\363n ha tenido \351xito y false en caso contrario.) c n
+(    ) p
+(// S\363lo se pueden poner fichas en las casillas que est\351n en blanco) c n
+(    bool PonFicha\() p
+(int) k
+( f, ) p
+(int) k
+( c, ) p
+(const) K
+( Ficha &fic\);) p n
+() N
+(    ) S
+(// Devuelve el color de la ficha que hay en la posici\363n \(f,c\)) c n
+(    Ficha QueFichaHay\() p
+(int) k
+( f, ) p
+(int) k
+( c\) ) p
+(const) K
+(;) p n
+() N
+(    ) S
+(// Devuelve si hay alg\372n color que tenga tres en raya. Si no hay 3 en raya) c n
+(    ) p
+(// devuelve el valor blanco.) c n
+(    Ficha Busca3Raya\(\) ) p
+(const) K
+(;) p n
+() N
+(    ) S
+(// Devuelve el n\372mero de fichas que hay puestas en el tablero) c n
+(    ) p
+(int) k
+( CuantasFichas\(\) ) p
+(const) K
+( { ) p
+(return) K
+( numfichas; };) p n
+() N
+(};) N
+() N
+(// Para mostrar el tablero en pantalla sobrecargamos <<) c n
+(std::ostream& operator<<\(std::ostream &salida, ) p
+(const) K
+( Tablero &tab\);) p n
+() N
+(/* ***************************************** */) c n
+() p n
+(#endif) K n
+(tablero.h) (Page 1/1) (feb 26, 20 18:30) title
+border
+/v 1 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+() p n
+(#include) K
+( <cassert>) p n
+(#include) K
+( ") p
+(tablero.h) str
+(") p n
+() N
+(using) K
+( ) p
+(namespace) K
+( std;) p n
+() N
+(/* ***************************************** */) c n
+() p n
+(Tablero::Tablero\(\)) N
+({) N
+(  ) S
+(// El constructor pone en blanco el tablero) c n
+(  PonerEnBlanco\(\);) p n
+(}) N
+() N
+(/* ***************************************** */) c n
+() p n
+(Tablero::Tablero\() S
+(const) K
+( Tablero &orig\)) p n
+({) N
+(  copia_tablero\(orig\);) N
+(}) N
+() N
+(/* ***************************************** */) c n
+() p n
+(void) k
+( Tablero::PonerEnBlanco\(\)) p n
+({) N
+(  ) S
+(// Ponemos en blanco el tablero) c n
+(  ) p
+(for) K
+( \() p
+(int) k
+( i=0; i<3; i++\)) p n
+(    ) S
+(for) K
+( \() p
+(int) k
+( j=0; j<3; j++\)) p n
+(      tab[i][j] = BLANCO;) N
+(  numfichas=0;) N
+(}) N
+() N
+(/* ***************************************** */) c n
+() p n
+(Tablero& Tablero::) S
+(operator) K
+(=\() p
+(const) K
+( Tablero &orig\)) p n
+({) N
+(  ) S
+(if) K
+( \() p
+(this) K
+(!=&orig\)) p n
+(    copia_tablero\(orig\);) N
+(  ) S
+(return) K
+( *) p
+(this) K
+(;) p n
+(}) N
+() N
+(/* ***************************************** */) c n
+() p n
+(bool) k
+( Tablero::PonFicha\() p
+(int) k
+( f, ) p
+(int) k
+( c, ) p
+(const) K
+( Ficha &fic\)) p n
+({) N
+(  assert\(\(f>=0\) && \(f<3\) && \(c>=0\) && \(c<3\)\);    ) S
+(// Estamos dentro del tablero) c n
+(  ) p
+(if) K
+( \(tab[f][c]==BLANCO\) {                       ) p
+(// No hay ficha en esa casilla) c n
+(    tab[f][c] = fic;) p n
+(    numfichas++;) N
+(    ) S
+(return) K
+( ) p
+(true) k
+(;) p n
+(  }) N
+(  ) S
+(return) K
+( ) p
+(false) k
+(;    ) p
+(// Ya hay ficha en esa casilla) c n
+(}) p n
+() N
+(/* ***************************************** */) c n
+() p n
+(Ficha Tablero::QueFichaHay\() S
+(int) k
+( f, ) p
+(int) k
+( c\) ) p
+(const) K n
+({) p n
+(  assert\(\(f>=0\) && \(f<3\) && \(c>=0\) && \(c<3\)\);    ) S
+(// Estamos dentro del tablero) c n
+(  ) p
+(return) K
+( tab[f][c];) p n
+(}) N
+() N
+(tablero.cpp) (Page 1/2) (feb 26, 20 18:30) title
+border
+grestore
+(Printed by mauricio) rhead
+(tablero.h, tablero.cpp) (2/6) (lunes septiembre 29, 2025) footer
+end % of iso1dict
+pagesave restore
+showpage
+%%Page: (2,1) 3
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso1dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(/* ***************************************** */) c n
+() p n
+(Ficha Tablero::Busca3Raya\(\) ) S
+(const) K n
+({) p n
+(  ) S
+(if) K
+( \(hay3raya\(CIRCULO\)\) ) p
+(return) K
+( CIRCULO;) p n
+(  ) S
+(if) K
+( \(hay3raya\(CRUZ\)\) ) p
+(return) K
+( CRUZ;) p n
+(  ) S
+(return) K
+( BLANCO;    ) p
+(// No hay 3 en raya) c n
+(}) p n
+() N
+(/* ***************************************** */) c n
+() p n
+(ostream& ) S
+(operator) K
+(<<\(ostream &salida, ) p
+(const) K
+( Tablero &tab\)) p n
+({) N
+(  salida << ") S
+(   -------------) str
+("<<endl;) p n
+(  ) S
+(for) K
+( \() p
+(int) k
+( i=0; i<3; i++\) {) p n
+(    salida<<") S
+(   |) str
+(";) p n
+(    ) S
+(for) K
+( \() p
+(int) k
+( j=0; j<3; j++\)) p n
+(      salida << tab.QueFichaHay\(i,j\) << ") S
+(|) str
+(";) p n
+(    salida << endl<<") S
+(   -------------) str
+("<<endl;) p n
+(  }) N
+(  ) S
+(return) K
+( salida;) p n
+(}) N
+() N
+(/* ***************************************** */) c n
+() p n
+(// M\351todo privado) c n
+(void) k
+( Tablero::copia_tablero\() p
+(const) K
+( Tablero &orig\)) p n
+({) N
+(  ) S
+(for) K
+( \() p
+(int) k
+( i=0; i<3; i++\)) p n
+(    ) S
+(for) K
+( \() p
+(int) k
+( j=0; j<3; j++\)) p n
+(      tab[i][j] = orig.tab[i][j];) N
+(  numfichas=orig.numfichas;) N
+(}) N
+() N
+(/* ***************************************** */) c n
+() p n
+(// M\351todo privado) c n
+(bool) k
+( Tablero::hay3raya\() p
+(const) K
+( Ficha &fic\) ) p
+(const) K n
+({) p n
+(  ) S
+(// Buscaremos 3 en raya en las direcciones marcadas por estos vectores) c n
+(  ) p
+(static) K
+( ) p
+(const) K
+( ) p
+(int) k
+( dir[4][2] = {{1,0},{1,1},{0,1},{1,-1}};) p n
+() N
+(  ) S
+(for) K
+( \() p
+(int) k
+( f=0; f<3; f++\) {    ) p
+(//  Recorremos todas las casillas) c n
+(    ) p
+(for) K
+( \() p
+(int) k
+( c=0; c<3; c++\) {  ) p
+(//) c n
+(      ) p
+(if) K
+( \(tab[f][c]==fic\) {        ) p
+(// Cuando encontramos una casilla con fic) c n
+(        ) p
+(for) K
+( \() p
+(int) k
+( d=0; d<4; d++\) {  ) p
+(// Buscamos en las 4 direcciones 3 en raya) c n
+(          ) p
+(int) k
+( fx=f, cx=c;          ) p
+(//  a partir de dicha ficha) c n
+(          fx+=dir[d][0];) p n
+(          cx+=dir[d][1];) N
+(          ) S
+(int) k
+( numfic=1;) p n
+(          ) S
+(while) K
+( \(\(fx>=0\) && \(fx<3\) && \(cx>=0\) && \(cx<3\) && \(tab[fx][cx]==fic\)\) {) p n
+(            numfic++;) N
+(            fx+=dir[d][0];) N
+(            cx+=dir[d][1];) N
+(          }) N
+(          ) S
+(if) K
+( \(numfic==3\) ) p
+(return) K
+( ) p
+(true) k
+(;) p n
+(        }) N
+(      }) N
+(    }) N
+(  }) N
+(  ) S
+(return) K
+( ) p
+(false) k
+(;) p n
+(}) N
+(tablero.cpp) (Page 2/2) (feb 26, 20 18:30) title
+border
+/v 1 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+() p n
+(#ifndef) K
+( __JUGADOR__H__) p n
+(#define) K
+( __JUGADOR__H__) p n
+() N
+(/* ***************************************** */) c n
+() p n
+(#include) K
+( <iostream>) p n
+(#include) K
+( <string>) p n
+(#include) K
+( ") p
+(ficha.h) str
+(") p n
+(#include) K
+( ") p
+(tablero.h) str
+(") p n
+() N
+(/* ***************************************** */) c n
+() p n
+(class Jugador {) N
+(  private:) N
+(    std::string nombre;     ) S
+(// Nombre del jugador) c n
+(    Ficha fic;              ) p
+(// Color de la ficha \(cruz o circulo\)) c n
+(    ) p
+(int) k
+( nivel;              ) p
+(// Nivel del jugador) c n
+() p n
+(    ) S
+(// M\357\277\275todos privados que implementan distintas estrategias de juego) c n
+(    ) p
+(//   Nivel 0 : Juega una persona) c n
+(    ) p
+(//   Nivel 1 : Juega la CPU de forma muy b\357\277\275sica) c n
+(    ) p
+(//   ... podr\357\277\275amos implementar nuevos niveles m\357\277\275s "inteligentes") c n
+(    ) p
+(void) k
+( piensa_nivel_0\() p
+(const) K
+( Tablero &tab, ) p
+(int) k
+( &fil, ) p
+(int) k
+( &col\) ) p
+(const) K
+(;) p n
+(    ) S
+(void) k
+( piensa_nivel_1\() p
+(const) K
+( Tablero &tab, ) p
+(int) k
+( &fil, ) p
+(int) k
+( &col\) ) p
+(const) K
+(;) p n
+() N
+(  public:) N
+(    ) S
+(// No existe constructor por defecto. Cuando construimos un objeto de tipo) c n
+(    ) p
+(// jugador debemos asignarle un nombre y un color obligatoriamente.) c n
+(    Jugador\() p
+(const) K
+( std::string &n, ) p
+(const) K
+( Ficha &f, ) p
+(int) k
+( ni\);) p n
+() N
+(    ) S
+(//    ~Jugador\(\) { };     // El destructor est\357\277\275 vacio) c n
+() p n
+(    ) S
+(// Obtener el nombre del jugador) c n
+(    std::string Nombre\(\) ) p
+(const) K
+(         { ) p
+(return) K
+( nombre; };) p n
+() N
+(    ) S
+(// Obtener el color de la ficha) c n
+(    Ficha Color\(\) ) p
+(const) K
+(                { ) p
+(return) K
+( fic; };) p n
+() N
+(    ) S
+(// Le damos el tablero y nos devuelve d\357\277\275nde quiere poner ficha el jugador) c n
+(    ) p
+(void) k
+( PiensaJugada\() p
+(const) K
+( Tablero &tab, ) p
+(int) k
+( &fil, ) p
+(int) k
+( &col\) ) p
+(const) K
+(;) p n
+(};) N
+() N
+(/* ***************************************** */) c n
+() p n
+(// Para mostrar los datos del jugador en consola) c n
+(std::ostream& operator<<\(std::ostream &salida, ) p
+(const) K
+( Jugador &jug\);) p n
+() N
+(/* ***************************************** */) c n
+() p n
+(#endif) K n
+(jugador.h) (Page 1/1) (sep 29, 25 18:03) title
+border
+grestore
+(Printed by mauricio) rhead
+(tablero.cpp, jugador.h) (3/6) (lunes septiembre 29, 2025) footer
+end % of iso1dict
+pagesave restore
+showpage
+%%Page: (1,1) 4
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso1dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+() p n
+(#include) K
+( <cassert>) p n
+(#include) K
+( <cstdlib>) p n
+(#include) K
+( ") p
+(jugador.h) str
+(") p n
+() N
+(using) K
+( ) p
+(namespace) K
+( std;) p n
+() N
+(/* ***************************************** */) c n
+() p n
+(Jugador::Jugador\() S
+(const) K
+( std::string &n, ) p
+(const) K
+( Ficha &f, ) p
+(int) k
+( ni\)) p n
+(                 : nombre\(n\), fic\(f\), nivel\(ni\)) N
+({) N
+(  assert\(\(nivel>=0\)&&\(nivel<2\)\);   ) S
+(// Comprobamos que el nivel es correcto) c n
+(}) p n
+() N
+(/* ***************************************** */) c n
+() p n
+(std::ostream& ) S
+(operator) K
+(<<\(std::ostream &salida, ) p
+(const) K
+( Jugador &jug\)) p n
+({) N
+(  salida <<jug.Nombre\(\)<<") S
+(  \() str
+("<<jug.Color\(\)<<") p
+(\)) str
+(";) p n
+(  ) S
+(return) K
+( salida;) p n
+(}) N
+() N
+(/* ***************************************** */) c n
+() p n
+(void) k
+( Jugador::PiensaJugada\() p
+(const) K
+( Tablero &tab, ) p
+(int) k
+( &fil, ) p
+(int) k
+( &col\) ) p
+(const) K n
+({) p n
+(  ) S
+(// En funci\363n del nivel del jugador elegimos una estrategia u otra) c n
+(  ) p
+(switch) K
+( \(nivel\) {) p n
+(    ) S
+(case) K
+( 0: piensa_nivel_0\(tab,fil,col\);) p n
+(            ) S
+(break) K
+(;) p n
+(    ) S
+(case) K
+( 1: piensa_nivel_1\(tab,fil,col\);) p n
+(            ) S
+(break) K
+(;) p n
+(  }) N
+(}) N
+() N
+(/* ***************************************** */) c n
+() p n
+(void) k
+( Jugador::piensa_nivel_0\() p
+(const) K
+( Tablero &tab, ) p
+(int) k
+( &fil, ) p
+(int) k
+( &col\) ) p
+(const) K n
+({) p n
+(  cout << ") S
+( El tablero es: ) str
+(" << endl << tab;) p n
+(  ) S
+(do) K
+( {) p n
+(    cout << ") S
+( \277Donde pones ficha \(dime fila y columna\)? : ) str
+(";) p n
+(    cin >> fil >> col;) N
+(  } ) S
+(while) K
+( \(\(fil<0\)||\(fil>2\)||\(col<0\)||\(col>2\)\);) p n
+(}) N
+() N
+(/* ***************************************** */) c n
+() p n
+(void) k
+( Jugador::piensa_nivel_1\() p
+(const) K
+( Tablero &tab, ) p
+(int) k
+( &fil, ) p
+(int) k
+( &col\) ) p
+(const) K n
+({) p n
+(  cout << ") S
+( ... estoy pensando ... ) str
+(" << endl;) p n
+(  ) S
+(do) K
+( {) p n
+(    fil = rand\(\)%3;) N
+(    col = rand\(\)%3;) N
+(  } ) S
+(while) K
+( \(tab.QueFichaHay\(fil,col\)!=BLANCO\);) p n
+(  cout << ") S
+(      ... y pongo ficha en \() str
+(" << fil << ") p
+(,) str
+(" << col << ") p
+(\)) str
+(" << endl;) p n
+(}) N
+() N
+(/* ***************************************** */) c n
+(jugador.cpp) (Page 1/1) (feb 26, 20 18:30) title
+border
+/v 1 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+() p n
+(#ifndef) K
+( __JUEGO__H__) p n
+(#define) K
+( __JUEGO__H__) p n
+() N
+(/* ***************************************** */) c n
+() p n
+(#include) K
+( ") p
+(tablero.h) str
+(") p n
+(#include) K
+( ") p
+(jugador.h) str
+(") p n
+() N
+(/* ***************************************** */) c n
+() p n
+(class Juego3Raya {) N
+(  private:) N
+(    Jugador jug1, jug2;    ) S
+(// Jugadores) c n
+(    Tablero tab;           ) p
+(// Tablero) c n
+(    ) p
+(int) k
+( turno;             ) p
+(// A quien le toca jugar) c n
+() p n
+(  public:) N
+(    ) S
+(// No existe constructor por defecto) c n
+(    ) p
+(// Contructor. Para crear un nuevo juego hemos de dar un tablero) c n
+(    ) p
+(// y dos jugadores obligatoriamente) c n
+(    Juego3Raya\() p
+(const) K
+( Tablero &t, ) p
+(const) K
+( Jugador &j1, ) p
+(const) K
+( Jugador &j2\);) p n
+(    ~Juego3Raya\(\)  { };     ) S
+(// Destructor vac\355o) c n
+() p n
+(    ) S
+(void) k
+( NuevoJuego\(\);      ) p
+(// Prepara el juego para comenzar una nueva partida) c n
+(    ) p
+(void) k
+( JugarTurno\(\);      ) p
+(// Avanza un turno) c n
+() p n
+(    ) S
+(// Devuelve una referencia \(const\) al tablero de juego \(consultor\)) c n
+(    ) p
+(const) K
+( Tablero &ElTablero\(\) ) p
+(const) K
+( { ) p
+(return) K
+( tab; };) p n
+() N
+(    ) S
+(// Devuelve una referencia al jugador n-\351simo \(n=0 \363 1\)) c n
+(    ) p
+(const) K
+( Jugador &ElJugador\() p
+(int) k
+( n\) ) p
+(const) K
+(;) p n
+() N
+(    ) S
+(// Devuelve true si el juego ha terminado \(porque haya 3 en raya) c n
+(    ) p
+(//  o porque haya empate\)) c n
+(    bool HemosAcabado\(\) ) p
+(const) K
+(;) p n
+() N
+(    ) S
+(// Devuelve el n\372mero de jugador a quien le toca poner ficha) c n
+(    ) p
+(int) k
+( AQuienLeToca\(\) ) p
+(const) K
+(  { ) p
+(return) K
+( turno; };) p n
+() N
+(    ) S
+(// Devuelve el n\372mero del jugador que ha ganado. Si a\372n no ha ganado) c n
+(    ) p
+(// ninguno o hay empate devuelve -1) c n
+(    ) p
+(int) k
+( QuienGana\(\) ) p
+(const) K
+(;) p n
+(};) N
+() N
+(/* ***************************************** */) c n
+() p n
+(#endif) K n
+(juego.h) (Page 1/1) (feb 26, 20 18:30) title
+border
+grestore
+(Printed by mauricio) rhead
+(jugador.cpp, juego.h) (4/6) (lunes septiembre 29, 2025) footer
+end % of iso1dict
+pagesave restore
+showpage
+%%Page: (1,1) 5
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso1dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(#include) K
+( <cassert>) p n
+(#include) K
+( ") p
+(juego.h) str
+(") p n
+() N
+(using) K
+( ) p
+(namespace) K
+( std;) p n
+() N
+(/* ***************************************** */) c n
+() p n
+(Juego3Raya::Juego3Raya\() S
+(const) K
+( Tablero &t, ) p
+(const) K
+( Jugador &j1, ) p
+(const) K
+( Jugador &j2\)) p n
+(            : jug1\(j1\), jug2\(j2\), tab\(t\), turno\(0\)) N
+({) N
+(}) N
+() N
+(/* ***************************************** */) c n
+() p n
+(void) k
+( Juego3Raya::NuevoJuego\(\)) p n
+({) N
+(  turno = \(turno+1\) % 2;  ) S
+(// Al comenzar un nuevo juego hacemos que comience) c n
+(                          ) p
+(// a jugar el que perdi\363 en la partida anterior) c n
+(  tab.PonerEnBlanco\(\);) p n
+(}) N
+() N
+(/* ***************************************** */) c n
+() p n
+(void) k
+( Juego3Raya::JugarTurno\(\)) p n
+({) N
+(  ) S
+(int) k
+( f,c;) p n
+(  Jugador *jug[2] = {&jug1, &jug2};    ) S
+(// Vector de punteros a los jugadores) c n
+(  ) p
+(// Este vector de punteros se usa para evitar usar un if dentro del bucle) c n
+() p n
+(  ) S
+(// Preguntamos al jugador mientras su jugada no sea v\341lida) c n
+(  ) p
+(do) K
+( {) p n
+(    jug[turno]->PiensaJugada\(tab,f,c\);) N
+(  } ) S
+(while) K
+( \(!tab.PonFicha\(f,c,jug[turno]->Color\(\)\)\);) p n
+(  turno = \(turno+1\) % 2;  ) S
+(// Avanzamos para el siguiente turno) c n
+(}) p n
+() N
+(/* ***************************************** */) c n
+() p n
+(bool) k
+( Juego3Raya::HemosAcabado\(\) ) p
+(const) K n
+({) p n
+(  ) S
+(return) K
+( \(\(tab.CuantasFichas\(\)==9\) || \(tab.Busca3Raya\(\)!=BLANCO\)\);) p n
+(}) N
+() N
+(/* ***************************************** */) c n
+() p n
+(const) K
+( Jugador & Juego3Raya::ElJugador\() p
+(int) k
+( n\) ) p
+(const) K n
+({) p n
+(  assert\(\(n==0\)||\(n==1\)\);) N
+(  ) S
+(return) K
+( \(\(n==0\) ? jug1 : jug2\);) p n
+(}) N
+() N
+(/* ***************************************** */) c n
+() p n
+(int) k
+( Juego3Raya::QuienGana\(\) ) p
+(const) K n
+({) p n
+(  Ficha g = tab.Busca3Raya\(\);) N
+(  ) S
+(if) K
+( \(g==jug1.Color\(\)\)) p n
+(    ) S
+(return) K
+( 0;) p n
+(  ) S
+(else) K
+( ) p
+(if) K
+( \(g==jug2.Color\(\)\)) p n
+(    ) S
+(return) K
+( 1;) p n
+(  ) S
+(return) K
+( -1;    ) p
+(// No gana nadie) c n
+(}) p n
+(juego.cpp) (Page 1/1) (feb 26, 20 18:30) title
+border
+/v 1 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+() p n
+(#include) K
+( <iostream>) p n
+(#include) K
+( <ctime>    ) p
+(// Para funci\363n time\(\)) c n
+(#include) K
+( <cstdlib>  ) p
+(// Para n\372meros aleatorios) c n
+(#include) K
+( ") p
+(ficha.h) str
+(") p n
+(#include) K
+( ") p
+(tablero.h) str
+(") p n
+(#include) K
+( ") p
+(jugador.h) str
+(") p n
+(#include) K
+( ") p
+(juego.h) str
+(") p n
+() N
+(using) K
+( ) p
+(namespace) K
+( std;) p n
+() N
+(/* ***************************************** */) c n
+() p n
+(// Preguntamos por teclado los datos de un jugador y lo devolvemos) c n
+(Jugador LeeJugador\() p
+(const) K
+( Ficha f\)) p n
+({) N
+(  string nom;) N
+(  ) S
+(int) k
+( n;) p n
+(  cout << ") S
+(Dime el nombre del jugador ) str
+("<< f <<") p
+( : ) str
+(";) p n
+(  cin >> nom;) N
+(  cout << ") S
+(  Dime de que nivel es \(0=humano, 1=aleatorio\)) str
+(";) p n
+(  cin >> n;) N
+(  ) S
+(return) K
+( Jugador\(nom,f,n\);) p n
+(}) N
+() N
+(/* ***************************************** */) c n
+() p n
+(int) k
+( main\() p
+(int) k
+( argc, ) p
+(char) k
+( *argv[]\)) p n
+({) N
+(  ) S
+(char) k
+( p;) p n
+() N
+(  srand\(time\(0\)\);  ) S
+(// Inicializamos el generador de n\372meros aleatorios) c n
+() p n
+(  ) S
+(// Creamos un juego usando un tablero y dos jugadores leidos por teclado) c n
+(  Juego3Raya juego\(Tablero\(\),LeeJugador\(CRUZ\),LeeJugador\(CIRCULO\)\);) p n
+() N
+(  ) S
+(// Tambi\351n se podr\355a hacer de esta otra forma:) c n
+(  ) p
+(//   Jugador j1=LeeJugador\(cruz\);       // Creamos los jugadores) c n
+(  ) p
+(//   Jugador j2=LeeJugador\(circulo\);) c n
+(  ) p
+(//   Tablero tab;                       // Creamos un tablero) c n
+(  ) p
+(//   Juego3Raya juego\(tab,j1,j2\);       // Creamos el juego) c n
+() p n
+(  ) S
+(do) K
+( {) p n
+() N
+(    cout << ") S
+(Los jugadores son: ) str
+(" << endl;) p n
+(    cout << ") S
+(  ) str
+(" << juego.ElJugador\(0\) << endl;) p n
+(    cout << ") S
+(  ) str
+(" << juego.ElJugador\(1\) << endl;) p n
+(    cout << ") S
+(Comenzamos!!!) str
+(" << endl << endl;) p n
+() N
+(    juego.NuevoJuego\(\);    ) S
+(// Comenzamos el juego) c n
+(    ) p
+(do) K
+( {) p n
+(      cout << ") S
+(Le toca jugar a : ) str
+(" << juego.AQuienLeToca\(\) << endl;) p n
+(      juego.JugarTurno\(\);    ) S
+(// Avanzamos turno) c n
+(      cout << ") p
+(Tras poner la ficha, el tablero queda as\355: ) str
+(" << endl) p n
+(           << juego.ElTablero\(\) << endl;) N
+(    } ) S
+(while) K
+( \(!juego.HemosAcabado\(\)\);    ) p
+(// Comprobamos si hemos acabado) c n
+() p n
+(    cout << ") S
+(Se acab\363 la partida !!!) str
+(" << endl;) p n
+() N
+(    ) S
+(int) k
+( ganador=juego.QuienGana\(\);   ) p
+(// Consultamos quien gan\363) c n
+(    ) p
+(if) K
+( \(ganador==-1\)) p n
+(      cout << ") S
+(Hubo empate) str
+(" << endl;) p n
+(main.cpp) (Page 1/2) (feb 26, 20 18:30) title
+border
+grestore
+(Printed by mauricio) rhead
+(juego.cpp, main.cpp) (5/6) (lunes septiembre 29, 2025) footer
+end % of iso1dict
+pagesave restore
+showpage
+%%Page: (2,1) 6
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso1dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(    ) p
+(else) K n
+(      cout << ") p
+(El ganador ha sido: ) str
+(" << juego.ElJugador\(ganador\) << endl;) p n
+() N
+(    cout << ") S
+(\277Otra partida \(S/N\)?) str
+(";) p n
+(    cin >> p;) N
+() N
+(  } ) S
+(while) K
+( \(\(p==') p
+(s) str
+('\) || \(p==') p
+(S) str
+('\)\);) p n
+(}) N
+(main.cpp) (Page 2/2) (feb 26, 20 18:30) title
+border
+/v 1 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+() p n
+(all) L
+(: raya raya3.ps) p n
+() N
+(juego.o) L
+(: juego.cpp juego.h tablero.h jugador.h) p n
+() S 8 T (g++ -Wall -c juego.cpp) N
+() N
+(tablero.o) L
+(: tablero.cpp tablero.h ficha.h) p n
+() S 8 T (g++ -Wall -c tablero.cpp) N
+() N
+(ficha.o) L
+(: ficha.cpp ficha.h) p n
+() S 8 T (g++ -Wall -c ficha.cpp) N
+() N
+(jugador.o) L
+(: jugador.cpp jugador.h ficha.h) p n
+() S 8 T (g++ -Wall -c jugador.cpp) N
+() N
+(main.o) L
+(: main.cpp tablero.h ficha.h jugador.h juego.h) p n
+() S 8 T (g++ -Wall -c main.cpp) N
+() N
+(raya) L
+(: main.o jugador.o ficha.o tablero.o juego.o) p n
+() S 8 T (g++ -o raya main.o jugador.o ficha.o tablero.o juego.o) N
+() N
+(raya3.ps) L
+(: main.cpp jugador.cpp ficha.cpp tablero.cpp juego.cpp \\) p n
+(         jugador.h ficha.h tablero.h juego.h Makefile) N
+() S 8 T (a2ps -A fill ficha.h ficha.cpp tablero.h tablero.cpp jugador.h \\) N
+(                     jugador.cpp juego.h juego.cpp main.cpp \\) N
+(                     Makefile -o raya3.ps) N
+() N
+(clean) L
+( :) p n
+() S 8 T (-rm main.o ficha.o jugador.o tablero.o juego.o) N
+() N
+(mrproper) L
+( : clean) p n
+() S 8 T (-rm raya raya3.ps) N
+(Makefile) (Page 1/1) (feb 26, 20 18:30) title
+border
+grestore
+(Printed by mauricio) rhead
+(main.cpp, Makefile) (6/6) (lunes septiembre 29, 2025) footer
+end % of iso1dict
+pagesave restore
+showpage
+
+%%Trailer
+end
+%%EOF

@@ -1,0 +1,11 @@
+Instalar Qt5 versiones mayores o iguales Qt5.10
+Usar el comando en linux como root
+	sudo apt-get install qt5-default
+
+Dentro de la carpeta 3raya ejecutar desde la linea de ordenes
+	cmake CMakeLists.txt
+	make 
+Debe crear en  el directorio bin el ejecutable 3raya. Ejecutar
+	./bin/3raya
+	
+

@@ -1,0 +1,6 @@
+PROJECT_NAME           = "3 en Raya"
+OUTPUT_DIRECTORY       = /home/mauricio/UGR/2º/ED/Prácticas/P2/3raya_remoto_grafica/doc_doxygen/
+INPUT                  = /home/mauricio/UGR/2º/ED/Prácticas/P2/3raya_remoto_grafica/.//include /home/mauricio/UGR/2º/ED/Prácticas/P2/3raya_remoto_grafica/.//src /home/mauricio/UGR/2º/ED/Prácticas/P2/3raya_remoto_grafica/.//doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/mauricio/UGR/2º/ED/Prácticas/P2/3raya_remoto_grafica/.//doc
+EXTRACT_PRIVATE        = NO
