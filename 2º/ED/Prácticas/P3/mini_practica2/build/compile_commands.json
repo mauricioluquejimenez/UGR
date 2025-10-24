@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/build",
+  "command": "/usr/bin/c++ -I/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/./include -g -std=gnu++17 -o CMakeFiles/maxstack.dir/src/maxstack.cpp.o -c /home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/src/maxstack.cpp",
+  "file": "/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/src/maxstack.cpp",
+  "output": "CMakeFiles/maxstack.dir/src/maxstack.cpp.o"
+},
+{
+  "directory": "/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/build",
+  "command": "/usr/bin/c++ -I/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/./include -g -std=gnu++17 -o CMakeFiles/maxqueue.dir/src/maxqueue.cpp.o -c /home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/src/maxqueue.cpp",
+  "file": "/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/src/maxqueue.cpp",
+  "output": "CMakeFiles/maxqueue.dir/src/maxqueue.cpp.o"
+},
+{
+  "directory": "/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/build",
+  "command": "/usr/bin/c++ -I/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/./include -g -std=gnu++17 -o CMakeFiles/pila_max.dir/src/pila_max.cpp.o -c /home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/src/pila_max.cpp",
+  "file": "/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/src/pila_max.cpp",
+  "output": "CMakeFiles/pila_max.dir/src/pila_max.cpp.o"
+},
+{
+  "directory": "/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/build",
+  "command": "/usr/bin/c++ -I/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/./include -g -std=gnu++17 -o CMakeFiles/cola_max.dir/src/cola_max.cpp.o -c /home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/src/cola_max.cpp",
+  "file": "/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/src/cola_max.cpp",
+  "output": "CMakeFiles/cola_max.dir/src/cola_max.cpp.o"
+}
+]

@@ -1,0 +1,6 @@
+PROJECT_NAME           = "Práctica 2. Pilas y Colas"
+OUTPUT_DIRECTORY       = /home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/build/doc_doxygen/
+INPUT                  = /home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/.//include /home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/.//src /home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/.//doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/.//doc
+EXTRACT_PRIVATE	       = NO
