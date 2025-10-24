@@ -1,0 +1,6 @@
+PROJECT_NAME           = "3 en Raya"
+OUTPUT_DIRECTORY       = /home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/doc_doxygen/
+INPUT                  = /home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/.//include /home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/.//src /home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/.//doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/.//doc
+EXTRACT_PRIVATE        = NO

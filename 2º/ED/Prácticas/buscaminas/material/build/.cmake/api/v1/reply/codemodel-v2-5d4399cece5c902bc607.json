@@ -1,0 +1,105 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "buscaminas",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "buscaminas::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buscaminas-Debug-7c2c802280c489167212.json",
+					"name" : "buscaminas",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "buscaminas_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buscaminas_autogen-Debug-9cf9bccfb6fadb7022f3.json",
+					"name" : "buscaminas_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "buscaminas_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-buscaminas_autogen_timestamp_deps-Debug-de9e6c831c11270dc8be.json",
+					"name" : "buscaminas_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "doc_doxygen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-doc_doxygen-Debug-607c97220b7189744862.json",
+					"name" : "doc_doxygen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mrproper::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mrproper-Debug-a9f06ad4b35ba94d7a4d.json",
+					"name" : "mrproper",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "zip::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-zip-Debug-a7edc1eb82e84e19d47d.json",
+					"name" : "zip",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/mauricio/UGR/2\u00ba/ED/Pr\u00e1cticas/buscaminas/material/build",
+		"source" : "/home/mauricio/UGR/2\u00ba/ED/Pr\u00e1cticas/buscaminas/material/estudiante"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

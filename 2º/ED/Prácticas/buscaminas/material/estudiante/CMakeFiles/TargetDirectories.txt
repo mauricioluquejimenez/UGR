@@ -1,0 +1,8 @@
+/home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/CMakeFiles/buscaminas.dir
+/home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/CMakeFiles/doc_doxygen.dir
+/home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/CMakeFiles/mrproper.dir
+/home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/CMakeFiles/zip.dir
+/home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/CMakeFiles/edit_cache.dir
+/home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/CMakeFiles/rebuild_cache.dir
+/home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/CMakeFiles/buscaminas_autogen_timestamp_deps.dir
+/home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/CMakeFiles/buscaminas_autogen.dir
