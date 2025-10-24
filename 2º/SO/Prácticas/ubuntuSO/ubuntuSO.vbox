@@ -8,16 +8,19 @@
 ** Written by VirtualBox 7.2.2 (r170484)
 -->
 <VirtualBox xmlns="http://www.virtualbox.org/" version="1.19-linux">
-  <Machine uuid="{e430aae2-a4ef-4770-a614-d652e6ad3dce}" name="ubuntuSO" OSType="Ubuntu_64" currentSnapshot="{a1809e80-adae-4721-b696-342375be177f}" snapshotFolder="Snapshots" lastStateChange="2025-09-24T15:44:21Z">
+  <Machine uuid="{0acf3bfb-9fab-4b88-b4a7-e28e73deb3fd}" name="ubuntuSO" OSType="Ubuntu_64" currentSnapshot="{43589ae5-cdd8-490d-bbd6-f9736bdd3570}" snapshotFolder="Snapshots" lastStateChange="2025-10-20T10:25:52Z">
     <MediaRegistry>
       <HardDisks>
-        <HardDisk uuid="{3f5c00c2-21da-4120-b042-cee0751370f0}" location="/home/mauricio/UGR/2&#xBA;/SO/Pr&#xE1;cticas/ubuntuSO/ubuntuSO.vdi" format="VDI" type="Normal">
-          <HardDisk uuid="{f9ab633f-0137-4d7b-b165-9dbcce8f59a5}" location="/home/mauricio/UGR/2&#xBA;/SO/Pr&#xE1;cticas/ubuntuSO/Snapshots/{f9ab633f-0137-4d7b-b165-9dbcce8f59a5}.vdi" format="VDI"/>
+        <HardDisk uuid="{cb7c4427-5ebd-467b-9830-082ec296a62d}" location="ubuntuSO.vdi" format="VDI" type="Normal">
+          <HardDisk uuid="{3bac7614-629b-4d8b-8c0f-984063768ceb}" location="Snapshots/{3bac7614-629b-4d8b-8c0f-984063768ceb}.vdi" format="VDI">
+            <HardDisk uuid="{68474555-eefe-4541-b6c2-66c6f217b7fb}" location="Snapshots/{68474555-eefe-4541-b6c2-66c6f217b7fb}.vdi" format="VDI"/>
+          </HardDisk>
+          <HardDisk uuid="{99a9e1a2-692c-4305-a4c4-0e2e8ae2ced1}" location="Snapshots/{99a9e1a2-692c-4305-a4c4-0e2e8ae2ced1}.vdi" format="VDI"/>
+          <HardDisk uuid="{dda85178-4b84-43f8-8016-3eed7b7ccbc4}" location="Snapshots/{dda85178-4b84-43f8-8016-3eed7b7ccbc4}.vdi" format="VDI"/>
         </HardDisk>
       </HardDisks>
       <DVDImages>
-        <Image uuid="{e094764d-d4f8-4fdb-8cce-42fcb4143b6e}" location="/home/mauricio/UGR/2&#xBA;/SO/Pr&#xE1;cticas/ubuntu-24.04.3-desktop-amd64.iso"/>
-        <Image uuid="{9211b4b1-94ef-4996-8bc5-29a677d04f38}" location="Unattended-e430aae2-a4ef-4770-a614-d652e6ad3dce-aux-iso.viso" format="VBoxIsoMaker">
+        <Image uuid="{65f27a3f-ab5b-44e2-be5d-d6b2d6b8c3c0}" location="Unattended-0acf3bfb-9fab-4b88-b4a7-e28e73deb3fd-aux-iso.viso" format="VBoxIsoMaker">
           <Property name="UnattendedInstall" value="1"/>
         </Image>
       </DVDImages>
@@ -25,10 +28,11 @@
     <ExtraData>
       <ExtraDataItem name="GUI/Fullscreen" value="true"/>
       <ExtraDataItem name="GUI/LastCloseAction" value="PowerOff"/>
-      <ExtraDataItem name="GUI/LastGuestSizeHint" value="800,600"/>
-      <ExtraDataItem name="GUI/LastNormalWindowPosition" value="448,170,640,523,max"/>
+      <ExtraDataItem name="GUI/LastNormalWindowPosition" value="768,69,768,795,max"/>
+      <ExtraDataItem name="GUI/LastScaleWindowPosition" value="448,208,544,260"/>
     </ExtraData>
-    <Snapshot uuid="{a1809e80-adae-4721-b696-342375be177f}" name="Estado inicial" timeStamp="2025-09-23T15:52:28Z" stateFile="/home/mauricio/UGR/2&#xBA;/SO/Pr&#xE1;cticas/ubuntuSO/Snapshots/2025-09-23T15-52-28-023467000Z.sav">
+    <Snapshot uuid="{43589ae5-cdd8-490d-bbd6-f9736bdd3570}" name="Estado inicial" timeStamp="2025-10-12T18:33:45Z">
+      <Description>Instalacion y preparacion de entorno</Description>
       <Hardware>
         <Memory RAMSize="4096"/>
         <HID Pointing="USBTablet"/>
@@ -38,7 +42,7 @@
           <Order position="3" device="Floppy"/>
           <Order position="4" device="None"/>
         </Boot>
-        <Display VRAMSize="16"/>
+        <Display controller="VMSVGA" VRAMSize="16"/>
         <Firmware/>
         <BIOS>
           <IOAPIC enabled="true"/>
@@ -52,14 +56,14 @@
           </Controllers>
         </USB>
         <Network>
-          <Adapter slot="0" enabled="true" MACAddress="08002756EA97" type="82540EM">
+          <Adapter slot="0" enabled="true" MACAddress="080027A18609" type="82540EM">
             <NAT localhost-reachable="true"/>
           </Adapter>
         </Network>
         <AudioAdapter codec="AD1980" useDefault="true" driver="ALSA" enabled="true" enabledOut="true"/>
         <Clipboard/>
         <GuestProperties>
-          <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="es_ES" timestamp="1758642748014826000" flags="RDONLYGUEST"/>
+          <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="es_ES" timestamp="1760290836363301000" flags="RDONLYGUEST"/>
         </GuestProperties>
         <StorageControllers>
           <StorageController name="IDE" type="PIIX4" PortCount="2" useHostIOCache="true" Bootable="true">
@@ -67,18 +71,178 @@
           </StorageController>
           <StorageController name="SATA" type="AHCI" PortCount="1" useHostIOCache="false" Bootable="true" IDE0MasterEmulationPort="0" IDE0SlaveEmulationPort="1" IDE1MasterEmulationPort="2" IDE1SlaveEmulationPort="3">
             <AttachedDevice type="HardDisk" hotpluggable="false" port="0" device="0">
-              <Image uuid="{3f5c00c2-21da-4120-b042-cee0751370f0}"/>
+              <Image uuid="{cb7c4427-5ebd-467b-9830-082ec296a62d}"/>
             </AttachedDevice>
           </StorageController>
         </StorageControllers>
         <RTC localOrUTC="UTC"/>
-        <CPU count="6">
+        <CPU count="4">
           <HardwareVirtExLargePages enabled="false"/>
           <PAE enabled="false"/>
           <LongMode enabled="true"/>
           <X2APIC enabled="true"/>
         </CPU>
       </Hardware>
+      <Snapshots>
+        <Snapshot uuid="{fefc4c6b-d612-41de-aeba-910f2d4c31ab}" name="M1-P1" timeStamp="2025-10-17T12:08:55Z">
+          <Hardware>
+            <Memory RAMSize="4096"/>
+            <HID Pointing="USBTablet"/>
+            <Boot>
+              <Order position="1" device="HardDisk"/>
+              <Order position="2" device="DVD"/>
+              <Order position="3" device="Floppy"/>
+              <Order position="4" device="None"/>
+            </Boot>
+            <Display controller="VMSVGA" VRAMSize="16"/>
+            <Firmware/>
+            <BIOS>
+              <IOAPIC enabled="true"/>
+              <SmbiosUuidLittleEndian enabled="true"/>
+              <AutoSerialNumGen enabled="true"/>
+            </BIOS>
+            <USB>
+              <Controllers>
+                <Controller name="OHCI" type="OHCI"/>
+                <Controller name="EHCI" type="EHCI"/>
+              </Controllers>
+            </USB>
+            <Network>
+              <Adapter slot="0" enabled="true" MACAddress="080027A18609" type="82540EM">
+                <NAT localhost-reachable="true"/>
+              </Adapter>
+            </Network>
+            <AudioAdapter codec="AD1980" useDefault="true" driver="ALSA" enabled="true" enabledOut="true"/>
+            <Clipboard/>
+            <GuestProperties>
+              <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="es_ES" timestamp="1760290836363301000" flags="RDONLYGUEST"/>
+            </GuestProperties>
+            <StorageControllers>
+              <StorageController name="IDE" type="PIIX4" PortCount="2" useHostIOCache="true" Bootable="true">
+                <AttachedDevice passthrough="false" type="DVD" hotpluggable="false" port="0" device="0"/>
+              </StorageController>
+              <StorageController name="SATA" type="AHCI" PortCount="1" useHostIOCache="false" Bootable="true" IDE0MasterEmulationPort="0" IDE0SlaveEmulationPort="1" IDE1MasterEmulationPort="2" IDE1SlaveEmulationPort="3">
+                <AttachedDevice type="HardDisk" hotpluggable="false" port="0" device="0">
+                  <Image uuid="{3bac7614-629b-4d8b-8c0f-984063768ceb}"/>
+                </AttachedDevice>
+              </StorageController>
+            </StorageControllers>
+            <RTC localOrUTC="UTC"/>
+            <CPU count="4">
+              <HardwareVirtExLargePages enabled="false"/>
+              <PAE enabled="false"/>
+              <LongMode enabled="true"/>
+              <X2APIC enabled="true"/>
+            </CPU>
+          </Hardware>
+          <Snapshots>
+            <Snapshot uuid="{0881fe03-3918-43bb-97ad-c03e2cef6a72}" name="M1-P1 (comando history)" timeStamp="2025-10-17T14:30:48Z">
+              <Hardware>
+                <Memory RAMSize="4096"/>
+                <HID Pointing="USBTablet"/>
+                <Boot>
+                  <Order position="1" device="HardDisk"/>
+                  <Order position="2" device="DVD"/>
+                  <Order position="3" device="Floppy"/>
+                  <Order position="4" device="None"/>
+                </Boot>
+                <Display controller="VMSVGA" VRAMSize="16"/>
+                <Firmware/>
+                <BIOS>
+                  <IOAPIC enabled="true"/>
+                  <SmbiosUuidLittleEndian enabled="true"/>
+                  <AutoSerialNumGen enabled="true"/>
+                </BIOS>
+                <USB>
+                  <Controllers>
+                    <Controller name="OHCI" type="OHCI"/>
+                    <Controller name="EHCI" type="EHCI"/>
+                  </Controllers>
+                </USB>
+                <Network>
+                  <Adapter slot="0" enabled="true" MACAddress="080027A18609" type="82540EM">
+                    <NAT localhost-reachable="true"/>
+                  </Adapter>
+                </Network>
+                <AudioAdapter codec="AD1980" useDefault="true" driver="ALSA" enabled="true" enabledOut="true"/>
+                <Clipboard/>
+                <GuestProperties>
+                  <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="es_ES" timestamp="1760290836363301000" flags="RDONLYGUEST"/>
+                </GuestProperties>
+                <StorageControllers>
+                  <StorageController name="IDE" type="PIIX4" PortCount="2" useHostIOCache="true" Bootable="true">
+                    <AttachedDevice passthrough="false" type="DVD" hotpluggable="false" port="0" device="0"/>
+                  </StorageController>
+                  <StorageController name="SATA" type="AHCI" PortCount="1" useHostIOCache="false" Bootable="true" IDE0MasterEmulationPort="0" IDE0SlaveEmulationPort="1" IDE1MasterEmulationPort="2" IDE1SlaveEmulationPort="3">
+                    <AttachedDevice type="HardDisk" hotpluggable="false" port="0" device="0">
+                      <Image uuid="{68474555-eefe-4541-b6c2-66c6f217b7fb}"/>
+                    </AttachedDevice>
+                  </StorageController>
+                </StorageControllers>
+                <RTC localOrUTC="UTC"/>
+                <CPU count="4">
+                  <HardwareVirtExLargePages enabled="false"/>
+                  <PAE enabled="false"/>
+                  <LongMode enabled="true"/>
+                  <X2APIC enabled="true"/>
+                </CPU>
+              </Hardware>
+            </Snapshot>
+          </Snapshots>
+        </Snapshot>
+        <Snapshot uuid="{7cba6838-61b5-4293-9b8f-3958011f4742}" name="M1-P2" timeStamp="2025-10-19T11:32:53Z">
+          <Hardware>
+            <Memory RAMSize="4096"/>
+            <HID Pointing="USBTablet"/>
+            <Boot>
+              <Order position="1" device="HardDisk"/>
+              <Order position="2" device="DVD"/>
+              <Order position="3" device="Floppy"/>
+              <Order position="4" device="None"/>
+            </Boot>
+            <Display controller="VMSVGA" VRAMSize="16"/>
+            <Firmware/>
+            <BIOS>
+              <IOAPIC enabled="true"/>
+              <SmbiosUuidLittleEndian enabled="true"/>
+              <AutoSerialNumGen enabled="true"/>
+            </BIOS>
+            <USB>
+              <Controllers>
+                <Controller name="OHCI" type="OHCI"/>
+                <Controller name="EHCI" type="EHCI"/>
+              </Controllers>
+            </USB>
+            <Network>
+              <Adapter slot="0" enabled="true" MACAddress="080027A18609" type="82540EM">
+                <NAT localhost-reachable="true"/>
+              </Adapter>
+            </Network>
+            <AudioAdapter codec="AD1980" useDefault="true" driver="ALSA" enabled="true" enabledOut="true"/>
+            <Clipboard/>
+            <GuestProperties>
+              <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="es_ES" timestamp="1760711918035996000" flags="RDONLYGUEST"/>
+            </GuestProperties>
+            <StorageControllers>
+              <StorageController name="IDE" type="PIIX4" PortCount="2" useHostIOCache="true" Bootable="true">
+                <AttachedDevice passthrough="false" type="DVD" hotpluggable="false" port="0" device="0"/>
+              </StorageController>
+              <StorageController name="SATA" type="AHCI" PortCount="1" useHostIOCache="false" Bootable="true" IDE0MasterEmulationPort="0" IDE0SlaveEmulationPort="1" IDE1MasterEmulationPort="2" IDE1SlaveEmulationPort="3">
+                <AttachedDevice type="HardDisk" hotpluggable="false" port="0" device="0">
+                  <Image uuid="{99a9e1a2-692c-4305-a4c4-0e2e8ae2ced1}"/>
+                </AttachedDevice>
+              </StorageController>
+            </StorageControllers>
+            <RTC localOrUTC="UTC"/>
+            <CPU count="4">
+              <HardwareVirtExLargePages enabled="false"/>
+              <PAE enabled="false"/>
+              <LongMode enabled="true"/>
+              <X2APIC enabled="true"/>
+            </CPU>
+          </Hardware>
+        </Snapshot>
+      </Snapshots>
     </Snapshot>
     <Hardware>
       <Memory RAMSize="4096"/>
@@ -89,7 +253,7 @@
         <Order position="3" device="Floppy"/>
         <Order position="4" device="None"/>
       </Boot>
-      <Display VRAMSize="16"/>
+      <Display controller="VMSVGA" VRAMSize="16"/>
       <Firmware/>
       <BIOS>
         <IOAPIC enabled="true"/>
@@ -103,14 +267,14 @@
         </Controllers>
       </USB>
       <Network>
-        <Adapter slot="0" enabled="true" MACAddress="08002756EA97" type="82540EM">
+        <Adapter slot="0" enabled="true" MACAddress="080027A18609" type="82540EM">
           <NAT localhost-reachable="true"/>
         </Adapter>
       </Network>
       <AudioAdapter codec="AD1980" useDefault="true" driver="ALSA" enabled="true" enabledOut="true"/>
       <Clipboard/>
       <GuestProperties>
-        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="es_ES" timestamp="1758642748014826000" flags="RDONLYGUEST"/>
+        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="es_ES" timestamp="1760290836363301000" flags="RDONLYGUEST"/>
       </GuestProperties>
       <StorageControllers>
         <StorageController name="IDE" type="PIIX4" PortCount="2" useHostIOCache="true" Bootable="true">
@@ -118,12 +282,12 @@
         </StorageController>
         <StorageController name="SATA" type="AHCI" PortCount="1" useHostIOCache="false" Bootable="true" IDE0MasterEmulationPort="0" IDE0SlaveEmulationPort="1" IDE1MasterEmulationPort="2" IDE1SlaveEmulationPort="3">
           <AttachedDevice type="HardDisk" hotpluggable="false" port="0" device="0">
-            <Image uuid="{f9ab633f-0137-4d7b-b165-9dbcce8f59a5}"/>
+            <Image uuid="{dda85178-4b84-43f8-8016-3eed7b7ccbc4}"/>
           </AttachedDevice>
         </StorageController>
       </StorageControllers>
       <RTC localOrUTC="UTC"/>
-      <CPU count="6">
+      <CPU count="4">
         <HardwareVirtExLargePages enabled="false"/>
         <PAE enabled="false"/>
         <LongMode enabled="true"/>
