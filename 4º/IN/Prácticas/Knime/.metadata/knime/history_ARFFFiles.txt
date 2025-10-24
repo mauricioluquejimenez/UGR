@@ -1,4 +1,0 @@
-/home/mauricio/Documentos/Material UGR/IN/Datos/datasets/sonar.arff
-file:/home/mauricio/Documentos/Material%20UGR/IN/Datos/datasets/sonar.arff
-/home/mauricio/Documentos/Material UGR/IN/Datos/iris
-/home/mauricio/Documentos/Material UGR/IN/datasets/sonar.arff
