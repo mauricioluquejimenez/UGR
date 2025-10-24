@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/build",
+  "command": "/usr/bin/c++ -I\"/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/estudiante/include\" -g -std=gnu++14 -o CMakeFiles/maxstack.dir/estudiante/src/maxstack.cpp.o -c \"/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/estudiante/src/maxstack.cpp\"",
+  "file": "/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/estudiante/src/maxstack.cpp",
+  "output": "CMakeFiles/maxstack.dir/estudiante/src/maxstack.cpp.o"
+},
+{
+  "directory": "/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/build",
+  "command": "/usr/bin/c++ -I\"/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/estudiante/include\" -g -std=gnu++14 -o CMakeFiles/maxqueue.dir/estudiante/src/maxqueue.cpp.o -c \"/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/estudiante/src/maxqueue.cpp\"",
+  "file": "/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/estudiante/src/maxqueue.cpp",
+  "output": "CMakeFiles/maxqueue.dir/estudiante/src/maxqueue.cpp.o"
+},
+{
+  "directory": "/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/build",
+  "command": "/usr/bin/c++ -I\"/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/estudiante/include\" -g -std=gnu++14 -o CMakeFiles/pila_max.dir/estudiante/src/pila_max.cpp.o -c \"/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/estudiante/src/pila_max.cpp\"",
+  "file": "/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/estudiante/src/pila_max.cpp",
+  "output": "CMakeFiles/pila_max.dir/estudiante/src/pila_max.cpp.o"
+},
+{
+  "directory": "/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/build",
+  "command": "/usr/bin/c++ -I\"/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/estudiante/include\" -g -std=gnu++14 -o CMakeFiles/cola_max.dir/estudiante/src/cola_max.cpp.o -c \"/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/estudiante/src/cola_max.cpp\"",
+  "file": "/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/estudiante/src/cola_max.cpp",
+  "output": "CMakeFiles/cola_max.dir/estudiante/src/cola_max.cpp.o"
+}
+]

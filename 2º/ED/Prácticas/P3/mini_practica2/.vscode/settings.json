@@ -1,4 +1,7 @@
 {
     "cmake.sourceDirectory": "/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante",
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "files.associations": {
+        "iosfwd": "cpp"
+    }
 }

@@ -1,0 +1,6 @@
+PROJECT_NAME           = "Práctica 2. Pilas y Colas"
+OUTPUT_DIRECTORY       = /home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/build/doc_doxygen/
+INPUT                  = /home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/estudiante/include /home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/estudiante/src /home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/estudiante/doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/estudiante/doc
+EXTRACT_PRIVATE	       = NO

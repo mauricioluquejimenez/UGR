@@ -1,0 +1,11 @@
+# ninja log v5
+1	150	0	CMakeFiles/doc_doxygen	a32eb3efbfec8f27
+1	150	0	/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/build/CMakeFiles/doc_doxygen	a32eb3efbfec8f27
+0	251	1761308322521357927	CMakeFiles/cola_max.dir/estudiante/src/cola_max.cpp.o	d8abf8b453ce819d
+0	260	1761308322528357922	CMakeFiles/pila_max.dir/estudiante/src/pila_max.cpp.o	3cfc51cd50550315
+0	384	1761308322652357815	CMakeFiles/maxqueue.dir/estudiante/src/maxqueue.cpp.o	1c9a7b89f719e5d1
+384	401	1761308322672098695	libmaxqueue.a	af8e06ae091bea21
+402	476	1761308322745176084	cola_max	bc003ebdace43711
+0	498	1761308322767357716	CMakeFiles/maxstack.dir/estudiante/src/maxstack.cpp.o	bb19db7aca2fdc89
+498	511	1761308322781631905	libmaxstack.a	d80fc8cbbfeb92c2
+511	586	1761308322855617454	pila_max	b16730d47a811941

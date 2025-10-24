@@ -1,0 +1,8 @@
+/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/CMakeFiles/maxstack.dir
+/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/CMakeFiles/maxqueue.dir
+/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/CMakeFiles/pila_max.dir
+/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/CMakeFiles/cola_max.dir
+/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/CMakeFiles/doc_doxygen.dir
+/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/CMakeFiles/mrproper.dir
+/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/CMakeFiles/edit_cache.dir
+/home/mauricio/UGR/2º/ED/Prácticas/P3/mini_practica2/estudiante/CMakeFiles/rebuild_cache.dir

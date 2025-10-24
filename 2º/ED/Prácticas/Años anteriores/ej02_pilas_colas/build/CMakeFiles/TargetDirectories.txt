@@ -1,0 +1,7 @@
+/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/build/CMakeFiles/maxstack.dir
+/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/build/CMakeFiles/maxqueue.dir
+/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/build/CMakeFiles/pila_max.dir
+/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/build/CMakeFiles/cola_max.dir
+/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/build/CMakeFiles/doc_doxygen.dir
+/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/build/CMakeFiles/edit_cache.dir
+/home/mauricio/UGR/2º/ED/Prácticas/Años anteriores/ej02_pilas_colas/build/CMakeFiles/rebuild_cache.dir

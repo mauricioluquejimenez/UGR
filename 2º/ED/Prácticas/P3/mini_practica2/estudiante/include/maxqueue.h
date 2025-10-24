@@ -14,9 +14,9 @@ struct element
     int e;
     int max;
 
-    friend ostream & operator << (ostream & flujo, const element & n)
+    friend ostream & operator <<(ostream & flujo, const element & n)
     {
-        flujo << n.e << " (" << n.max << ")";
+        flujo << n.e << "," << n.max;
         return flujo;
     }
 };
@@ -60,4 +60,3 @@ class MaxQueue
          */
         int size() const;
 };
-

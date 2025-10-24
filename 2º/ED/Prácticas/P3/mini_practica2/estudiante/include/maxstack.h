@@ -16,7 +16,7 @@ struct element
 
     friend ostream & operator << (ostream & flujo, const element & n)
     {
-        flujo << n.e << " (" << n.max << ")";
+        flujo << n.e << "," << n.max;
         return flujo;
     }
 };
