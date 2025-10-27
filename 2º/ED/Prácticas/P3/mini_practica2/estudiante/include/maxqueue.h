@@ -9,6 +9,11 @@
 
 using namespace std;
 
+/**
+ * @brief Estructura para representar un elemento del MaxQueue. Requiere sobrecarga del operador << para mostrar correctamente su contenido
+ * @param e Elemento a almacenar en la cola
+ * @param max Elemento máximo almacenado en la cola
+ */
 struct element
 {
     int e;
@@ -35,7 +40,7 @@ class MaxQueue
         bool empty() const;
 
         /**
-         * @brief Añade un elemento a la cola
+         * @brief Añade un elemento a la cola. Crea un nuevo elemento auxiliar al que le asigna el argumento e, y mientras que la pila no esté vacía, lo compara con el máximo del elemento que está en la cima. Si el máximo actual es menor que e, actualiza dicho valor y elimina el elemento de la cima, además de guardarlo en la pila auxiliar. Finalmente, va rellenando la pila original con los elementos guardados en la pila auxiliar.
          * @param e Elemento a añadir
          */
         void push(const int & e);
