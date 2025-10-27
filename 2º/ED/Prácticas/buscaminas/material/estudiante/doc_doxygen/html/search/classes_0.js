@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['conexion_37',['Conexion',['../classConexion.html',1,'']]],
-  ['consola_38',['Consola',['../classConsola.html',1,'']]]
+  ['conexion_40',['Conexion',['../classConexion.html',1,'']]],
+  ['consola_41',['Consola',['../classConsola.html',1,'']]]
 ];

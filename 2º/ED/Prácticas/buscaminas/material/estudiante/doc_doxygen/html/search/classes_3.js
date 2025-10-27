@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['tablero_42',['Tablero',['../classTablero.html',1,'']]],
-  ['tablerografico_43',['TableroGrafico',['../classTableroGrafico.html',1,'']]]
+  ['tablero_48',['Tablero',['../classTablero.html',1,'']]],
+  ['tablerografico_49',['TableroGrafico',['../classTableroGrafico.html',1,'']]]
 ];

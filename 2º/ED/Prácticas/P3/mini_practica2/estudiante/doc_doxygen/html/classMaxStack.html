@@ -75,7 +75,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a47c4d2d2f56ad3d059fdd541f10b2f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprueba si la pila está vacía.  <a href="classMaxStack.html#a47c4d2d2f56ad3d059fdd541f10b2f68">More...</a><br /></td></tr>
 <tr class="separator:a47c4d2d2f56ad3d059fdd541f10b2f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62e806375fbb972ebb1fcdb633e52c8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaxStack.html#a62e806375fbb972ebb1fcdb633e52c8e">push</a> (const int &amp;e)</td></tr>
-<tr class="memdesc:a62e806375fbb972ebb1fcdb633e52c8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Añade un elemento a la pila.  <a href="classMaxStack.html#a62e806375fbb972ebb1fcdb633e52c8e">More...</a><br /></td></tr>
+<tr class="memdesc:a62e806375fbb972ebb1fcdb633e52c8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Añade un elemento a la pila. Crea un nuevo elemento auxiliar al que le asigna el argumento e. Si la cola está vacía, también asigna e como el valor máximo. En caso contrario, compara e con el máximo del elemento que está al final de la cola para decidir si al máximo del valor auxiliar le asigna el parámetro e o el máximo del elemento final de la cola. Finalmente, vuelva toda la cola auxiliar en original en la cola auxiliar, para acabar copiando el valor actual de la cola auxiliar en la cola original.  <a href="classMaxStack.html#a62e806375fbb972ebb1fcdb633e52c8e">More...</a><br /></td></tr>
 <tr class="separator:a62e806375fbb972ebb1fcdb633e52c8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1498f141850cbf2ce83873fa0551747"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaxStack.html#ab1498f141850cbf2ce83873fa0551747">pop</a> ()</td></tr>
 <tr class="memdesc:ab1498f141850cbf2ce83873fa0551747"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elimina el último elemento de la pila.  <a href="classMaxStack.html#ab1498f141850cbf2ce83873fa0551747">More...</a><br /></td></tr>
@@ -145,7 +145,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Añade un elemento a la pila. </p>
+<p>Añade un elemento a la pila. Crea un nuevo elemento auxiliar al que le asigna el argumento e. Si la cola está vacía, también asigna e como el valor máximo. En caso contrario, compara e con el máximo del elemento que está al final de la cola para decidir si al máximo del valor auxiliar le asigna el parámetro e o el máximo del elemento final de la cola. Finalmente, vuelva toda la cola auxiliar en original en la cola auxiliar, para acabar copiando el valor actual de la cola auxiliar en la cola original. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">e</td><td>Elemento a añadir </td></tr>

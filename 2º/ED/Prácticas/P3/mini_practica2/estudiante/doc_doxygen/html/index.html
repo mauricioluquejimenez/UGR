@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Práctica 2. Pilas y Colas: Título de la página principal</title>
+<title>Práctica 2. Pilas y Colas: TDAs lineales: Pilas y colas con máximo</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,15 +62,38 @@ $(function() {
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Título de la página principal </div>  </div>
+<div class="title">TDAs lineales: Pilas y colas con máximo </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="autotoc_md0"></a>
 Introducción</h1>
-<p>A RELLENAR POR EL ESTUDIANTE</p>
+<p>En esta práctica se representan dos TDA, la pila y la cola, implementados mediante el uso de colas y pilas respectivamente. Para ello, se hace uso de contenedores auxiliares para simular el funcionamiento de cada TDA. Además, cada TDA permite almacenar el valor máximo existente en cada momento. Para cumplir estos dos objetivos, se han sobreescrito las funciones básicas de una pila y una cola, tales como devolver un elemento, borrarlo, comprobar si la estructura está vacía, y, principalmente, insertar un nuevo valor. Es aquí donde se hace la comprobación y la actualización del valor máximo de la estructura, en el momento de la inserción de un valor.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Ejecutables</h1>
-<p>A RELLENAR POR EL ESTUDIANTE </p>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Cola_Max:</h2>
+<blockquote class="doxtable">
+<p><em><a class="el" href="classMaxQueue.html">MaxQueue</a></em> &lt;ValoresAIntroducirQueue&gt; </p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&lt;ValoresAIntroducirQueue&gt;</td><td>Valor de los numeros a introducir en la cola separados por espacios. También se puede introducir un punto "." que indica sacar el primer elemento de la cola (estructura FIFO: "first in, first out").</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Representación del TDA <a class="el" href="classMaxQueue.html">MaxQueue</a> utilizando como contenedor subyacente una pila</p>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Pila_Max</h2>
+<blockquote class="doxtable">
+<p><em><a class="el" href="classMaxStack.html">MaxStack</a></em> &lt;ValoresAIntroducirStack&gt; </p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&lt;ValoresAIntroducirStack&gt;</td><td>Valor de los numeros a introducir en la cola separados por espacios. También se puede introducir un punto "." que indica sacar el último elemento de la pila (estructura LIFO: "last in, first out").</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Representación del TDA <a class="el" href="classMaxStack.html">MaxStack</a> utilizando como contenedor subyacente una cola </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

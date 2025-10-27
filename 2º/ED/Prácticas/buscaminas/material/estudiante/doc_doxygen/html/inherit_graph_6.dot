@@ -4,9 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node8 [label="QWidget",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
-  Node8 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node0 [label="TableroGrafico",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTableroGrafico.html",tooltip="The TableroGrafico class."];
-  Node8 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node10 [label="Ventana",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classVentana.html",tooltip="The Ventana class. Un objeto de la clase Ventana esta compuesta por dos objetos uno de tipo consola y..."];
+  Node0 [label="Matriz\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMatriz.html",tooltip=" "];
 }

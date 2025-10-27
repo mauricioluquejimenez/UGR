@@ -75,7 +75,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:adba5dfd3c6b07b142726b5caeb2a3ca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprueba si la cola está vacía.  <a href="classMaxQueue.html#adba5dfd3c6b07b142726b5caeb2a3ca5">More...</a><br /></td></tr>
 <tr class="separator:adba5dfd3c6b07b142726b5caeb2a3ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30bdc6d6949060303ea280b0269cc1cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaxQueue.html#a30bdc6d6949060303ea280b0269cc1cc">push</a> (const int &amp;e)</td></tr>
-<tr class="memdesc:a30bdc6d6949060303ea280b0269cc1cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Añade un elemento a la cola.  <a href="classMaxQueue.html#a30bdc6d6949060303ea280b0269cc1cc">More...</a><br /></td></tr>
+<tr class="memdesc:a30bdc6d6949060303ea280b0269cc1cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Añade un elemento a la cola. Crea un nuevo elemento auxiliar al que le asigna el argumento e, y mientras que la pila no esté vacía, lo compara con el máximo del elemento que está en la cima. Si el máximo actual es menor que e, actualiza dicho valor y elimina el elemento de la cima, además de guardarlo en la pila auxiliar. Finalmente, va rellenando la pila original con los elementos guardados en la pila auxiliar.  <a href="classMaxQueue.html#a30bdc6d6949060303ea280b0269cc1cc">More...</a><br /></td></tr>
 <tr class="separator:a30bdc6d6949060303ea280b0269cc1cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e03f10bfb0ccfe9471dc061b7659ef2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaxQueue.html#a7e03f10bfb0ccfe9471dc061b7659ef2">pop</a> ()</td></tr>
 <tr class="memdesc:a7e03f10bfb0ccfe9471dc061b7659ef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elimina el último elemento de la cola.  <a href="classMaxQueue.html#a7e03f10bfb0ccfe9471dc061b7659ef2">More...</a><br /></td></tr>
@@ -166,7 +166,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Añade un elemento a la cola. </p>
+<p>Añade un elemento a la cola. Crea un nuevo elemento auxiliar al que le asigna el argumento e, y mientras que la pila no esté vacía, lo compara con el máximo del elemento que está en la cima. Si el máximo actual es menor que e, actualiza dicho valor y elimina el elemento de la cima, además de guardarlo en la pila auxiliar. Finalmente, va rellenando la pila original con los elementos guardados en la pila auxiliar. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">e</td><td>Elemento a añadir </td></tr>

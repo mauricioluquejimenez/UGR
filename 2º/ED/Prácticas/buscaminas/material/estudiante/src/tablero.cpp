@@ -14,30 +14,24 @@ void Tablero::copia_tableros(const Tablero &orig)
   numminas = orig.numminas;
   inicio_row = orig.inicio_row;
   inicio_col = orig.inicio_col;	
+  
   //reservamos
-  tab = new int*[numfilas];
-  cerradas = new bool*[numfilas];
-  marcadas = new bool*[numfilas];
-  entorno = new int *[numfilas];
-  for (int i=0; i<numfilas; i++){
-       tab[i]= new int[numcols];
-       cerradas[i]= new bool[numcols];
-       marcadas[i]= new bool[numcols];
-       entorno[i] = new int [numcols];
-  }   
-  for (int i=0; i<numfilas; i++)
-    for (int j=0; j<numcols; j++){
-      tab[i][j] = orig.tab[i][j];
-      cerradas[i][j]= orig.cerradas[i][j];
-      marcadas[i][j]= orig.marcadas[i][j];
-      entorno[i][j]= orig.entorno[i][j];
-    }    
+  //tab = Matriz<int>(numfilas,numcols);
+  //cerradas = Matriz<bool>(numfilas,numcols);
+  //arcadas = Matriz<bool>(numfilas,numcols);
+  //entorno = Matriz<int>(numfilas,numcols);
+
+  tab.Copiar(orig.tab);
+  cerradas.Copiar(orig.cerradas);
+  marcadas.Copiar(orig.marcadas);
+  entorno.Copiar(orig.entorno);
+    
   if (orig.TG!=nullptr){
     TG =orig.TG;
     for (int f=0; f<numfilas; f++) {    //  Recorremos todas las casillas
         for (int c=0; c<numcols; c++) {  //
-          if (cerradas[f][c]==false && tab[f][c]!=-1){
-                  string aux = to_string(entorno[f][c]);
+          if (cerradas.get(f,c)==false && tab.get(f,c)!=-1){
+                  string aux = to_string(entorno.get(f,c));
 	          TG->putTexto(f,c,aux);
 	   }       
        }
@@ -49,15 +43,11 @@ void Tablero::copia_tableros(const Tablero &orig)
 /* ***************************************** */
 // Método privado
 void Tablero::borrar_tableros(){
-  for (int i=0; i<numfilas; i++){
-     delete[]tab[i];
-     delete[]cerradas[i];
-     delete[]marcadas[i];
-  }
-  delete[]tab;
-  delete[]cerradas;
-  delete[]marcadas;
-}  
+  tab = Matriz<int>();
+  cerradas = Matriz<bool>();
+  marcadas = Matriz<bool>();
+  entorno = Matriz<int>();
+} 
 	
 /* ***************************************** */
 void Tablero::contabilizaEntorno(int f,int c){
@@ -66,8 +56,8 @@ void Tablero::contabilizaEntorno(int f,int c){
 	 if (f+i>=0 && f+i<numfilas){
 	    for (int j=-1;j<=1;j++){
 	      if (c+j>=0 && c+j<numcols){
-	        if (tab[f+i][j+c]==-1)
-	          entorno[f][c]+=1;
+	        if (tab.get(f+i, j+c)==-1)
+	          entorno.set(f, c, entorno.get(f, c)+1);
 	      }
 	    }
 	 }        
@@ -76,29 +66,28 @@ void Tablero::contabilizaEntorno(int f,int c){
 void Tablero::iniciaEntorno(){
    for (int f=0;f<numfilas;f++)
      for (int c=0;c<numcols;c++)
-       entorno[f][c]=0;
+       entorno.set(f, c, 0);
 
    for (int f=0;f<numfilas;f++)
      for (int c=0;c<numcols;c++)
-         if (tab[f][c]!=-1)
+         if (tab.get(f, c)!=-1)
                contabilizaEntorno(f,c);
-          else entorno[f][c]=-1;
+          else entorno.set(f, c, -1);
 }          
 	
 /* ***************************************** */
 
 Tablero::Tablero()
 {
-   TG=nullptr; //por defecto se crea sin tablero grafico
+  TG=nullptr; //por defecto se crea sin tablero grafico
   // El constructor pone en blanco el tablero
   numfilas=numcols=0;
   numminas =0;
   inicio_row=inicio_col=-1;
-  tab=0;
-  cerradas=0;
-  entorno=0;
-  marcadas=0;
-
+  tab=Matriz<int>();
+  cerradas=Matriz<bool>();
+  entorno=Matriz<int>();
+  marcadas=Matriz<bool>();
 }
 
 
@@ -108,22 +97,19 @@ Tablero::Tablero(int filas, int cols,int nminas){
    numfilas =filas;
    numcols =cols;
    numminas = nminas;
-  //reservamos
-   tab = new int*[numfilas];
-   cerradas = new bool*[numfilas];
-   marcadas = new bool*[numfilas];
-   entorno = new int*[numfilas];
-   for (int i=0; i<numfilas; i++){
-       tab[i]= new int[numcols];
-       cerradas[i]= new bool[numcols];
-       marcadas[i]= new bool[numcols];
-       entorno[i]= new int[numcols];	
-     for (int j=0;j<numcols; j++){
-	cerradas[i][j]=true; //no esta abierta
-	tab[i][j]=0 ; //no contiene mina
-	entorno[i][j]=0;
-	marcadas[i][j]=false;//no esta marcada
-     }
+
+  cerradas = Matriz<bool>(numfilas,numcols);
+  tab = Matriz<int>(numfilas,numcols);
+  entorno = Matriz<int>(numfilas,numcols);
+  marcadas = Matriz<bool>(numfilas,numcols);
+
+  for(int i = 0; i < numfilas; i++) {
+      for(int j = 0; j < numcols; j++) {
+          cerradas.set(i, j, true); //no esta abierta
+          tab.set(i, j, 0); //no contiene mina
+          entorno.set(i, j, 0);
+          marcadas.set(i, j, false);//no esta marcada
+      }
   }
   //colocamos las minas
   for (int cnt=0;cnt<numminas;cnt++){
@@ -132,8 +118,8 @@ Tablero::Tablero(int filas, int cols,int nminas){
     	f = rand()%numfilas;
     	c = rand()%numcols;
     
-    }while (tab[f][c]==-1);
-    tab[f][c]=-1;
+    }while (tab.get(f, c)==-1);
+    tab.set(f, c, -1);
   
   }
   //colocamos los valores 0 
@@ -156,7 +142,7 @@ Tablero::Tablero(int filas, int cols,int nminas){
      inicio_row = rand()%numfilas;
      inicio_col = rand()%numcols;	
  	
-  }while (tab[inicio_row][inicio_col]==-1);
+  }while (tab.get(inicio_row, inicio_col)==-1);
   	  
 }
 /* ***************************************** */
@@ -180,10 +166,10 @@ Tablero& Tablero::operator=(const Tablero &orig)
 void Tablero::iniciaTableros(){
    for (int i=0; i<numfilas; i++){
      for (int j=0;j<numcols; j++){
-	cerradas[i][j]=true; //no esta abierta
-	tab[i][j]=0; //no contiene mina
-	entorno[i][j]=0;
-	marcadas[i][j]=false;
+      cerradas.set(i, j, true); //no esta abierta
+	    tab.set(i, j, 0); //no contiene mina
+	    entorno.set(i, j, 0);
+	    marcadas.set(i, j, false);//no esta marcada
      }
   }
   for (int cnt=0;cnt<numminas;cnt++){
@@ -193,9 +179,8 @@ void Tablero::iniciaTableros(){
     	c = rand()%numcols;
 
     
-    }while (tab[f][c]==-1);
-    tab[f][c]=-1;
-  
+    }while (tab.get(f, c)==-1);
+    tab.set(f, c, -1);
   }
   
   	
@@ -207,28 +192,27 @@ void Tablero::iniciaTableros(){
   do{
      inicio_row = rand()%numfilas;
      inicio_col = rand()%numcols;	
- 	
-  }while (tab[inicio_row][inicio_col]==-1);
+  }while (tab.get(inicio_row, inicio_col)==-1);
 	 
 }
 
 /* ***************************************** */
 bool Tablero::destapaCasilla(int f, int c, bool &estalla){
 	assert(f>=0 && f<numfilas && c>=0 && c<numcols);
-	if (!cerradas[f][c])
+	if (!cerradas.get(f, c))
 		return false;
 	
-	if (tab[f][c]==-1) //es mina
+	if (tab.get(f, c)==-1) //es mina
 		estalla=true;
-	else if (entorno[f][c]==0){
+	else if (entorno.get(f, c)==0){
 	    cout<<"Entorno 0 "<<endl;
-            cerradas[f][c]=false;
+            cerradas.set(f, c, false);
             estalla=false;
             abreEntorno(f,c);
             pintaEntorno(f,c);
            }
-           else if (entorno[f][c]>0){
-                 cerradas[f][c]=false;
+           else if (entorno.get(f, c)>0){
+                 cerradas.set(f, c, false);
                  estalla=false;
                  pintaEntorno(f,c);
           }  
@@ -237,15 +221,15 @@ bool Tablero::destapaCasilla(int f, int c, bool &estalla){
 }
 /* ***************************************** */  
 bool Tablero::pintaEntorno(int f, int c){
-	if (entorno[f][c]==0){ //todas las casillas no minadas en el entorno se descubren
+	if (entorno.get(f, c)==0){ //todas las casillas no minadas en el entorno se descubren
 	 for (int i=-1;i<=1;i++){
     	  int posf=f+i; 
     	  if (posf>=0 && posf<numfilas){
 	    for (int j=-1;j<=1;j++){
 	      int posc=c+j;
 	      if (posc>=0 && posc<numcols && !(f==posf && c==posc)){
-	        if (!cerradas[posf][posc] && tab[posf][posc]!=-1){
-	         string aux = to_string(entorno[posf][posc]);
+	        if (!cerradas.get(posf, posc) && tab.get(posf, posc)!=-1){
+	         string aux = to_string(entorno.get(posf, posc));
 	         cout<<"Pintando en "<<posf << " " <<posc <<" " <<aux<<endl;
 	         
 	      	 TG->putTexto(posf,posc,aux);    
@@ -259,8 +243,8 @@ bool Tablero::pintaEntorno(int f, int c){
       TG->putTexto(f,c,aux);
       return true;
      } 
-     else if (entorno[f][c]>0){
-     		string aux =to_string(entorno[f][c]); 
+     else if (entorno.get(f, c)>0){
+     		string aux =to_string(entorno.get(f, c)); 
      		TG->putTexto(f,c,aux);    
      		return true;
      }		 
@@ -275,9 +259,9 @@ void Tablero::abreEntorno(int f, int c){
 	    for (int j=-1;j<=1;j++){
 	      int posc=c+j;
 	      if (posc>=0 &&posc<numcols){
-	        if (cerradas[posf][posc] && tab[posf][posc]!=-1){
+	        if (cerradas.get(posf, posc) && tab.get(posf, posc)!=-1){
 	          
-	      	 cerradas[posf][posc]=false;
+	      	 cerradas.set(posf, posc, false);
 	      	} 
 	      
 	      }
@@ -291,9 +275,9 @@ void Tablero::abreEntorno(int f, int c){
 bool Tablero::ponerBandera(int f, int c)
 {
   assert((f>=0) && (f<numfilas) && (c>=0) && (c<numcols));
-  if (cerradas[f][c]){ 
+  if (cerradas.get(f, c)){ 
 
-     marcadas[f][c]=true;
+     marcadas.set(f, c, true);
      string aux ="F";
      TG->putTexto(f,c,aux);    
      return true;
@@ -306,7 +290,7 @@ int Tablero::numClose()const{
   int cnt=0;
   for (int i=0;i<numfilas;i++)
     for (int j=0;j<numcols;j++)
-     if (cerradas[i][j]==true) cnt++;
+     if (cerradas.get(i, j)==true) cnt++;
   return cnt;
 
 }
@@ -315,7 +299,7 @@ int Tablero::numOpen()const{
   int cnt=0;
   for (int i=0;i<numfilas;i++)
     for (int j=0;j<numcols;j++)
-     if (cerradas[i][j]==false) cnt++;
+     if (cerradas.get(i, j)==false) cnt++;
   return cnt;
 
 }
@@ -334,9 +318,9 @@ void Tablero::Redraw(){
         
         for (int i=0; i<numfilas; i++)
             for (int j=0; j<numcols; j++){
-		if (cerradas[i][j]==false && tab[i][j]!=-1){
+		if (cerradas.get(i, j)==false && tab.get(i, j)!=-1){
 		 string aux;
-		 aux =to_string(entorno[i][j]); 	  
+		 aux =to_string(entorno.get(i, j)); 	  
                  TG->putTexto(i,j,aux);
                } 
             }
@@ -365,9 +349,9 @@ void Tablero::drawAll()const{
         
         for (int i=0; i<numfilas; i++)
             for (int j=0; j<numcols; j++){
-		if (tab[i][j]!=-1){
+		if (tab.get(i, j)!=-1){
 		 string aux;
-		 aux =to_string(entorno[i][j]); 	  
+		 aux =to_string(entorno.get(i, j)); 	  
                 TG->putTexto(i,j,aux);
                } 
                else {
@@ -394,28 +378,28 @@ ostream& operator<<(ostream &salida, const Tablero &T)
   for (int i=0; i<T.numfilas; i++) {
     salida<<"   |";
     for (int j=0; j<T.numcols; j++)
-      salida <<T.tab[i][j]  << "|";
+      salida <<T.tab.get(i, j)  << "|";
     salida << endl<<"   -------------"<<endl;
   }
   salida <<"Información de los entornos "<<endl;
   for (int i=0; i<T.numfilas; i++) {
     salida<<"   |";
     for (int j=0; j<T.numcols; j++)
-      salida <<T.entorno[i][j]  << "|";
+      salida <<T.entorno.get(i, j)  << "|";
     salida << endl<<"   -------------"<<endl;
   }
   salida <<"Información marcadas "<<endl;
   for (int i=0; i<T.numfilas; i++) {
     salida<<"   |";
     for (int j=0; j<T.numcols; j++)
-      salida <<T.marcadas[i][j]  << "|";
+      salida <<T.marcadas.get(i, j)  << "|";
     salida << endl<<"   -------------"<<endl;
   }
   salida <<"Información abiertas "<<endl;
   for (int i=0; i<T.numfilas; i++) {
     salida<<"   |";
     for (int j=0; j<T.numcols; j++)
-      salida <<T.cerradas[i][j]  << "|";
+      salida <<T.cerradas.get(i, j)  << "|";
     salida << endl<<"   -------------"<<endl;
   }
   return salida;

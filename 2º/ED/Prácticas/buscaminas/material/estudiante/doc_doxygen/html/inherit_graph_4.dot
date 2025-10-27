@@ -4,7 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node6 [label="QPushButton",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
-  Node6 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node0 [label="MyButton",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMyButton.html",tooltip="MyButton class. Un objeto de la clase MyButton es una boton grafico que permite ser clickeado TaBlero..."];
+  Node0 [label="Matriz\< bool \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMatriz.html",tooltip=" "];
 }

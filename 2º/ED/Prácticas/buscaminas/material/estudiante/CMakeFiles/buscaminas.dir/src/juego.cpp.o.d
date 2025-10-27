@@ -337,6 +337,9 @@ CMakeFiles/buscaminas.dir/src/juego.cpp.o: \
  /usr/include/c++/11/condition_variable \
  /usr/include/c++/11/bits/atomic_futex.h \
  /usr/include/c++/11/bits/std_thread.h \
+ /home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/./include/matriz.h \
+ /home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/src/matriz.cpp \
+ /home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/./include/matriz.h \
  /home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/./include/jugador.h \
  /home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/./include/conexion.h \
  /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \

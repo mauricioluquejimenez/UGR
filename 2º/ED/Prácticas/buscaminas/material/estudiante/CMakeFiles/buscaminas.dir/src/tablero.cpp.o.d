@@ -335,4 +335,7 @@ CMakeFiles/buscaminas.dir/src/tablero.cpp.o: \
  /usr/include/c++/11/bits/unique_lock.h \
  /usr/include/c++/11/condition_variable \
  /usr/include/c++/11/bits/atomic_futex.h \
- /usr/include/c++/11/bits/std_thread.h
+ /usr/include/c++/11/bits/std_thread.h \
+ /home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/src/../include/matriz.h \
+ /home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/src/matriz.cpp \
+ /home/mauricio/UGR/2º/ED/Prácticas/buscaminas/material/estudiante/./include/matriz.h

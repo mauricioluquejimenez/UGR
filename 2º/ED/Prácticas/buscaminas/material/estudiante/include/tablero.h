@@ -6,6 +6,7 @@
 
 #include <iostream>
 #include "tablerografico.h"
+#include "matriz.h"
 #include <map>
 /* ***************************************** */
 
@@ -17,11 +18,11 @@
 class Tablero {
 
   private:
-    int **tab;      //-1 hay mina 0 no
-    bool ** cerradas; //tablero indicando si la casilla esta abierta o cerrada
-    bool **marcadas ; //tablero para poner banderas en las casillas.True puesta
+    Matriz<int> tab;      //-1 hay mina 0 no
+    Matriz<bool> cerradas; //tablero indicando si la casilla esta abierta o cerrada
+    Matriz<bool> marcadas ; //tablero para poner banderas en las casillas.True puesta
     		       //false no puesta
-    int ** entorno ; //numero de minas en el entorno de cada casilla
+    Matriz<int> entorno ; //numero de minas en el entorno de cada casilla
     int numminas;  // Número de  minas
     int numfilas;  // Número de filas
     int numcols;           //Numero de columnas del tablero
