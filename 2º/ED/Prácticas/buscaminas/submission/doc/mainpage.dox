@@ -1,0 +1,22 @@
+/*! \mainpage El Juego del buscaminas
+
+@image html buscaminas.jpeg
+
+# Introducción
+
+En este ejercicio se implementa el juego del buscaminas. Para ello, se modifica una base de código ya dada para añadir un tipo de dato abstracto denominado Matriz, que almacena distiintos tipos de datos. Esta nueva estructura requiere modificar el código de la clase Tablero.
+
+# Ejecutables
+
+> _buscaminas_
+
+Simula el juego del buscaminas con el siguiente proceso:
+
+1. Se abre la ventana del juego y se especifica el modo de seleccionar una casilla.
+2. Se introduce el nombre del jugador.
+3. Comienza la partida del buscaminas.
+4. Cuando el jugador selecciona una casilla en la que se encuentra una mina, se pregunta si desea ver el mapa completo.
+5. Se le pregunta al jugador si desea volver a jugar otra partida o si prefire salir del juego.
+6. Cuando el jugador elige salir, se cierra la ventana del juego.
+
+*/

@@ -26,6 +26,11 @@ struct element
     }
 };
 
+/**
+ * @brief TDA MaxQueue. Implementa una cola con capacidad de obtener el elemento máximo en tiempo constante
+ * @param pila pila que almacena los elementos del TDA
+ * @author Mauricio Luque Jiménez
+ */
 class MaxQueue
 {
     private:
@@ -34,8 +39,8 @@ class MaxQueue
     public:
 
         /**
-            * @brief Comprueba si la cola está vacía
-            * @return true si la cola está vacía, false en caso contrario
+         * @brief Comprueba si la cola está vacía
+         * @return true si la cola está vacía, false en caso contrario
          */
         bool empty() const;
 

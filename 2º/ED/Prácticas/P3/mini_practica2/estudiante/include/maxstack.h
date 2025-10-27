@@ -26,6 +26,11 @@ struct element
     }
 };
 
+/**
+ * @brief TDA MaxStack. Implementa una pila con capacidad de obtener el elemento máximo en tiempo constante
+ * @param cola cola que almacena los elementos del TDA
+ * @author Mauricio Luque Jiménez
+ */
 class MaxStack
 {
     private:
@@ -34,8 +39,8 @@ class MaxStack
     public:
 
         /**
-            * @brief Comprueba si la pila está vacía
-            * @return true si la pila está vacía, false en caso contrario
+         * @brief Comprueba si la pila está vacía
+         * @return true si la pila está vacía, false en caso contrario
          */
         bool empty() const;
 
