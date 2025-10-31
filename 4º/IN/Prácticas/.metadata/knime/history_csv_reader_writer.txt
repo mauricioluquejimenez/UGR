@@ -1,1 +1,0 @@
-/home/mauricio/UGR/4º/IN/Seminarios/Python para Ciencias de Datos/adult.csv
