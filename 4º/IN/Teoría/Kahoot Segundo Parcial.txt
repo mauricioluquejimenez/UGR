@@ -1,9 +1,0 @@
-1. Algoritmo k-means sólo genera clusters convexos
-2. Birch almacena suma lineal, suma cuadrática y número de objetos en CF
-3. En clustering aglomerativo con enlace simple, los outliers se agrupan en el nivel alto de la jerarquía
-4. Principio de poda en Apriori: cualquier subconjunto de un conjunto de artículos frecuente debe ser frecuente
-5. El lift en la regla A => B mide el factor de mejora en la frecuencia de B restringido a A
-6. Pooling en una CNN -> reducir la dimensión y acelerar la convergencia
-7. Backpropagation utiliza CNN para aprender
-8. Problema de SMOTE en clases desbalanceadas -> sobregeneralizar por crear datos minoritarios
-9. Aprendizaje multi-etiqueta -> cuando un ejemplo tiene varias clases
