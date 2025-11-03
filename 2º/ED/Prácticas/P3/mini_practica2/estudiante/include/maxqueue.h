@@ -69,4 +69,16 @@ class MaxQueue
          * @return Tamaño de la cola 
          */
         int size() const;
+
+        /**************************************/
+        /* Funciones de prueba para el examen del 03/11  */ 
+        /**************************************/
+        
+        /**
+         * @brief Devuelve una nueva MaxQueue con los los máximos de cada ventana de tamaño n a lo largo de Q
+         * @param q Cola de la que se quieren obtener los n elementos máximos
+         * @param n Tamaño de la ventana que se va a considerar para obtener los máximos
+         * @return Nueva MaxQueue con los n elementos máximos
+         */
+        MaxQueue Maximos(MaxQueue q, int n);
 };

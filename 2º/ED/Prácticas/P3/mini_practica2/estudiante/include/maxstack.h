@@ -69,4 +69,47 @@ class MaxStack
          * @return Tamaño de la pila 
          */
         int size() const;
+
+
+        /**************************************/
+        /* Funciones de prueba para el examen del 03/11  */ 
+        /**************************************/
+
+        /**
+         * @brief Devuelve una nueva MaxStack sin los valores impares de A
+         * @param A Pila de la que se eliminarán los elementos impares
+         * @return Nueva pila sin los elementos impares de A
+         */
+        MaxStack QuitaImpares(MaxStack & A);
+
+        /**
+         * @brief Dadas 2 MaxStack A y B obtiene la resta de las dos pilas elemento a elemento A - B, de tal forma que la nueva pila solo almacenen elementos positivos
+         * @param A Primera pila
+         * @param B Segunda pila
+         * @return Nueva pila con la resta positiva A - B
+         */
+        MaxStack RestaPositiva(MaxStack A, MaxStack B);
+
+        /**
+         * @brief Dadas 2 MaxStack A y B devuelve una MaxStack C con los elementos que aparecen en ambas pilas (intersección por valor), en el mismo orden en que aparecen desde la base hasta la cima de A
+         * @param A Primera pila
+         * @param B Segunda pila
+         * @return Nueva pila con la intersección de A y B
+         */
+        MaxStack Interseccion(MaxStack A, MaxStack B);
+
+        /**
+         * @brief Dadas 2 MaxStack A y B devuelve una MaxStack C que alterna los elementos de A y B, empezando por la base de A. Si una pila es más larga que la otra, los elementos sobrantes se añaden al final de C
+         * @param A Primera pila
+         * @param B Segunda pila
+         * @return Nueva pila con los elementos de A y B alternados
+         */
+        MaxStack Alterna(MaxStack A, MaxStack B);
+
+        /**
+         * @brief Dada una MaxStack A devuelve una nueva MaxStack con los elementos consecutivos de A (elementos que difieren en 1 respecto a su anterior)
+         * @param A Pila de la que se obtendrán los elementos consecutivos
+         * @return Nueva pila con los elementos consecutivos de A
+         */
+        MaxStack Compacta(MaxStack A);
 };

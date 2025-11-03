@@ -49,3 +49,30 @@ int MaxQueue::size() const
 {
     return pila.size();
 }
+
+/**************************************/
+/* Funciones de prueba para el examen del 03/11  */ 
+/**************************************/
+
+MaxQueue MaxQueue::Maximos(MaxQueue q, int n)
+{
+    MaxQueue aux, maximos;
+    
+    for(int i = 0; i < n; i++)
+    {
+        aux.push(q.front().e);
+        q.pop();
+    }
+
+    maximos.push(aux.front().max);
+
+    while(!q.empty())
+    {
+        aux.pop();
+        aux.push(q.front().e);
+        q.pop();
+        maximos.push(aux.front().max);
+    }
+    
+    return maximos;
+}
