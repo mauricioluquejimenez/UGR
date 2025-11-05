@@ -3,7 +3,7 @@
 // Sistemas concurrentes y Distribuidos.
 // Seminario 2. Introducción a los monitores en C++11.
 //
-// Archivo: prodcons1_su.cpp
+// Archivo: prodcons_mu.cpp
 //
 // Ejemplo de un monitor en C++11 con semántica SU, para el problema
 // del productor/consumidor, con productor y consumidor únicos.
@@ -26,7 +26,7 @@ using namespace std ;
 using namespace scd ;
 
 constexpr int
-   num_items = 15 ;   // número de items a producir/consumir
+   num_items = 20 ;   // número de items a producir/consumir
 int
    siguiente_dato = 0 ; // siguiente valor a devolver en 'producir_dato'
    
@@ -34,23 +34,28 @@ constexpr int
    min_ms    = 5,     // tiempo minimo de espera en sleep_for
    max_ms    = 20 ;   // tiempo máximo de espera en sleep_for
 
+const unsigned
+   num_prod = 4 , // número de hebras productoras
+   num_cons	= 2 ; // número de hebras consumidoras
 
 mutex
    mtx ;                 // mutex de escritura en pantalla
 unsigned
    cont_prod[num_items] = {0}, // contadores de verificación: producidos
-   cont_cons[num_items] = {0}; // contadores de verificación: consumidos
+   cont_cons[num_items] = {0}, // contadores de verificación: consumidos
+   producidos[num_prod]	= {0}; // Se deja de usar la variable "siguiente_dato" porque la producción ya no es lineal y cada hebra produce un rango concreto de items.
+										 // Cuenta los datos producidos por cada hebra individualmente
 
 //**********************************************************************
 // funciones comunes a las dos soluciones (fifo y lifo)
 //----------------------------------------------------------------------
 
-int producir_dato(  )
+int producir_dato( unsigned hebra )
 {
    
    this_thread::sleep_for( chrono::milliseconds( aleatorio<min_ms,max_ms>() ));
-   const int valor_producido = siguiente_dato ;
-   siguiente_dato ++ ;
+   const unsigned valor_producido = hebra * (num_items / num_prod) + producidos[hebra] ;
+   producidos[hebra] ++;
    mtx.lock();
    cout << "hebra productora, produce " << valor_producido << endl << flush ;
    mtx.unlock();
@@ -168,19 +173,19 @@ void ProdConsMu::escribir( int valor )
 // *****************************************************************************
 // funciones de hebras
 
-void funcion_hebra_productora( MRef<ProdConsMu> monitor )
+void funcion_hebra_productora( MRef<ProdConsMu> monitor, unsigned hebra )
 {
-   for( unsigned i = 0 ; i < num_items ; i++ )
+   for( unsigned i = 0 ; i < num_items / num_prod ; i++ )
    {
-      int valor = producir_dato(  ) ;
+      int valor = producir_dato( hebra ) ;
       monitor->escribir( valor );
    }
 }
 // -----------------------------------------------------------------------------
 
-void funcion_hebra_consumidora( MRef<ProdConsMu>  monitor )
+void funcion_hebra_consumidora( MRef<ProdConsMu>  monitor, unsigned hebra )
 {
-   for( unsigned i = 0 ; i < num_items ; i++ )
+   for( unsigned i = 0 ; i < num_items / num_cons ; i++ )
    {
       int valor = monitor->leer();
       consumir_dato( valor ) ;
@@ -190,21 +195,24 @@ void funcion_hebra_consumidora( MRef<ProdConsMu>  monitor )
 
 int main()
 {
-   cout << "--------------------------------------------------------------------" << endl
-        << "Problema del productor-consumidor únicos (Monitor SU, buffer LIFO). " << endl
-        << "--------------------------------------------------------------------" << endl
+   cout << "----------------------------------------------------------------------------" << endl
+        << "Problema de los productores-consumidores múltiples (Monitor SU, buffer LIFO). " << endl
+        << "----------------------------------------------------------------------------" << endl
         << flush ;
 
    // crear monitor  ('monitor' es una referencia al mismo, de tipo MRef<...>)
    MRef<ProdConsMu> monitor = Create<ProdConsMu>() ;
 
    // crear y lanzar las hebras
-   thread hebra_prod( funcion_hebra_productora, monitor ),
-          hebra_cons( funcion_hebra_consumidora, monitor );
-
+   thread hebra_productora[num_prod],
+          hebra_consumidora[num_cons];
+        
+   for(int i = 0; i < num_prod; i++) hebra_productora[i]  = thread(funcion_hebra_productora, monitor, i);
+   for(int i = 0; i < num_cons; i++) hebra_consumidora[i] = thread(funcion_hebra_consumidora, monitor, i);
+   
    // esperar a que terminen las hebras
-   hebra_prod.join();
-   hebra_cons.join();
+   for(int i = 0; i < num_prod; i++) hebra_productora[i].join() ;
+   for(int i = 0; i < num_cons; i++) hebra_consumidora[i].join() ;
 
    test_contadores() ;
 }
