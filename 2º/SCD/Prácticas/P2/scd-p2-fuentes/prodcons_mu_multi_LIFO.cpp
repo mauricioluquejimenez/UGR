@@ -14,7 +14,6 @@
 // 20 oct 22 --> paso este archivo de FIFO a LIFO, para que se corresponda con lo que dicen las transparencias
 // -----------------------------------------------------------------------------------
 
-
 #include <iostream>
 #include <iomanip>
 #include <cassert>
@@ -26,7 +25,7 @@ using namespace std ;
 using namespace scd ;
 
 constexpr int
-   num_items = 20 ;   // número de items a producir/consumir
+   num_items = 50 ;   // número de items a producir/consumir
 int
    siguiente_dato = 0 ; // siguiente valor a devolver en 'producir_dato'
    
@@ -35,16 +34,16 @@ constexpr int
    max_ms    = 20 ;   // tiempo máximo de espera en sleep_for
 
 const unsigned
-   num_prod = 4 , // número de hebras productoras
-   num_cons	= 2 ; // número de hebras consumidoras
+   num_prod = 10 , // número de hebras productoras
+   num_cons	= 5 ; // número de hebras consumidoras
 
-mutex
-   mtx ;                 // mutex de escritura en pantalla
 unsigned
    cont_prod[num_items] = {0}, // contadores de verificación: producidos
    cont_cons[num_items] = {0}, // contadores de verificación: consumidos
    producidos[num_prod]	= {0}; // Se deja de usar la variable "siguiente_dato" porque la producción ya no es lineal y cada hebra produce un rango concreto de items.
 										 // Cuenta los datos producidos por cada hebra individualmente
+
+mutex mtx;
 
 //**********************************************************************
 // funciones comunes a las dos soluciones (fifo y lifo)
@@ -55,16 +54,18 @@ int producir_dato( unsigned hebra )
    
    this_thread::sleep_for( chrono::milliseconds( aleatorio<min_ms,max_ms>() ));
    const unsigned valor_producido = hebra * (num_items / num_prod) + producidos[hebra] ;
-   producidos[hebra] ++;
+      
+
    mtx.lock();
-   cout << "hebra productora, produce " << valor_producido << endl << flush ;
+   cout << "Productor " << hebra << " produce: " << valor_producido << endl << flush ;
    mtx.unlock();
+
    cont_prod[valor_producido]++ ;
    return valor_producido ;
 }
 //----------------------------------------------------------------------
 
-void consumir_dato( unsigned valor_consumir )
+void consumir_dato( unsigned valor_consumir, unsigned hebra )
 {
    if ( num_items <= valor_consumir )
    {
@@ -73,8 +74,9 @@ void consumir_dato( unsigned valor_consumir )
    }
    cont_cons[valor_consumir] ++ ;
    this_thread::sleep_for( chrono::milliseconds( aleatorio<min_ms,max_ms>() ));
+   
    mtx.lock();
-   cout << "                  hebra consumidora, consume: " << valor_consumir << endl ;
+   cout << "                  Consumidor " << hebra << " consume: " << valor_consumir << endl ;
    mtx.unlock();
 }
 //----------------------------------------------------------------------
@@ -188,7 +190,7 @@ void funcion_hebra_consumidora( MRef<ProdConsMu>  monitor, unsigned hebra )
    for( unsigned i = 0 ; i < num_items / num_cons ; i++ )
    {
       int valor = monitor->leer();
-      consumir_dato( valor ) ;
+      consumir_dato( valor, hebra ) ;
    }
 }
 // -----------------------------------------------------------------------------
