@@ -1,0 +1,1 @@
+/home/mauricio/UGR/4º/IN/Prácticas/P1/datasets_practica1/spotify_churn_dataset.csv

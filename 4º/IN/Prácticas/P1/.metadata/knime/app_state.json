@@ -1,0 +1,22 @@
+{
+  "version" : "5.8.0.v202510131944",
+  "projects" : [ {
+    "name" : "Spotify",
+    "active" : true,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "Knime/Spotify"
+    }
+  } ],
+  "mostRecentlyUsedProjects" : [ {
+    "name" : "Spotify",
+    "timeUsed" : "2025-11-06T18:05:25.615935333+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Knime/Spotify"
+    }
+  } ]
+}

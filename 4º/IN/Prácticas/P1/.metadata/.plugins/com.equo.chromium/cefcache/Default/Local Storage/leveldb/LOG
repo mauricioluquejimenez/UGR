@@ -1,2 +1,3 @@
-2025/10/31-13:24:28.434 90a5 Creating DB /home/mauricio/UGR/4º/IN/Prácticas/P1/.metadata/.plugins/com.equo.chromium/cefcache/Default/Local Storage/leveldb since it was missing.
-2025/10/31-13:24:28.459 90a5 Reusing MANIFEST /home/mauricio/UGR/4º/IN/Prácticas/P1/.metadata/.plugins/com.equo.chromium/cefcache/Default/Local Storage/leveldb/MANIFEST-000001
+2025/11/06-18:04:45.502 2f37 Reusing MANIFEST /home/mauricio/UGR/4º/IN/Prácticas/P1/.metadata/.plugins/com.equo.chromium/cefcache/Default/Local Storage/leveldb/MANIFEST-000001
+2025/11/06-18:04:45.508 2f37 Recovering log #3
+2025/11/06-18:04:45.508 2f37 Reusing old log /home/mauricio/UGR/4º/IN/Prácticas/P1/.metadata/.plugins/com.equo.chromium/cefcache/Default/Local Storage/leveldb/000003.log 

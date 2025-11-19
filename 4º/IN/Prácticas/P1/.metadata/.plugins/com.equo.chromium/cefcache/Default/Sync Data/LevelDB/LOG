@@ -1,2 +1,3 @@
-2025/10/31-13:24:28.431 9084 Creating DB /home/mauricio/UGR/4º/IN/Prácticas/P1/.metadata/.plugins/com.equo.chromium/cefcache/Default/Sync Data/LevelDB since it was missing.
-2025/10/31-13:24:28.458 9084 Reusing MANIFEST /home/mauricio/UGR/4º/IN/Prácticas/P1/.metadata/.plugins/com.equo.chromium/cefcache/Default/Sync Data/LevelDB/MANIFEST-000001
+2025/11/06-18:04:45.497 2f0a Reusing MANIFEST /home/mauricio/UGR/4º/IN/Prácticas/P1/.metadata/.plugins/com.equo.chromium/cefcache/Default/Sync Data/LevelDB/MANIFEST-000001
+2025/11/06-18:04:45.505 2f0a Recovering log #3
+2025/11/06-18:04:45.505 2f0a Reusing old log /home/mauricio/UGR/4º/IN/Prácticas/P1/.metadata/.plugins/com.equo.chromium/cefcache/Default/Sync Data/LevelDB/000003.log 

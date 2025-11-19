@@ -1,0 +1,83 @@
+{
+  "version" : "5.8.0.v202510131944",
+  "projects" : [ {
+    "name" : "Spotify",
+    "active" : true,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "Prácticas/P1/Knime/Spotify"
+    }
+  }, {
+    "name" : "Pasajeros",
+    "active" : false,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "Prácticas/P1/Knime/Pasajeros"
+    }
+  }, {
+    "name" : "Contaminacion",
+    "active" : false,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "Prácticas/P1/Knime/Contaminacion"
+    }
+  } ],
+  "mostRecentlyUsedProjects" : [ {
+    "name" : "Primer flujo",
+    "timeUsed" : "2025-11-06T18:31:14.759454437+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Prácticas/KNIME/Primer flujo"
+    }
+  }, {
+    "name" : "Spotify",
+    "timeUsed" : "2025-11-06T18:32:11.160195536+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Prácticas/P1/Knime/Spotify"
+    }
+  }, {
+    "name" : "Building a Churn Prediction Model",
+    "timeUsed" : "2025-11-13T11:52:03.034384668+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Example Workflows/Customer Intelligence/Churn Prediction/Building a Churn Prediction Model"
+    }
+  }, {
+    "name" : "Aprobacion de prestamos",
+    "timeUsed" : "2025-11-13T12:47:28.367122327+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Prácticas/KNIME/Aprobacion de prestamos"
+    }
+  }, {
+    "name" : "Pasajeros",
+    "timeUsed" : "2025-11-14T13:19:27.512960322+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Prácticas/P1/Knime/Pasajeros"
+    }
+  }, {
+    "name" : "Contaminacion",
+    "timeUsed" : "2025-11-16T18:59:03.643072617+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Prácticas/P1/Knime/Contaminacion"
+    }
+  } ]
+}

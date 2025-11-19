@@ -1,2 +1,3 @@
-2025/10/31-13:24:28.572 9083 Creating DB /home/mauricio/UGR/4º/IN/Prácticas/P1/.metadata/.plugins/com.equo.chromium/cefcache/Default/shared_proto_db since it was missing.
-2025/10/31-13:24:28.608 9083 Reusing MANIFEST /home/mauricio/UGR/4º/IN/Prácticas/P1/.metadata/.plugins/com.equo.chromium/cefcache/Default/shared_proto_db/MANIFEST-000001
+2025/11/06-18:04:45.535 2f14 Reusing MANIFEST /home/mauricio/UGR/4º/IN/Prácticas/P1/.metadata/.plugins/com.equo.chromium/cefcache/Default/shared_proto_db/MANIFEST-000001
+2025/11/06-18:04:45.536 2f14 Recovering log #3
+2025/11/06-18:04:45.538 2f14 Reusing old log /home/mauricio/UGR/4º/IN/Prácticas/P1/.metadata/.plugins/com.equo.chromium/cefcache/Default/shared_proto_db/000003.log 
