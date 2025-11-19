@@ -1,3 +1,5 @@
+/* g++ -std=c++11 -pthread -o lecescrib lecescrib.cpp scd.cpp */
+
 #include <iostream>
 #include <iomanip>
 #include <cassert>

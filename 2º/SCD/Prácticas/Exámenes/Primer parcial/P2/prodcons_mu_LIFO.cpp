@@ -1,18 +1,4 @@
-// -----------------------------------------------------------------------------
-//
-// Sistemas concurrentes y Distribuidos.
-// Seminario 2. Introducción a los monitores en C++11.
-//
-// Archivo: prodcons_mu.cpp
-//
-// Ejemplo de un monitor en C++11 con semántica SU, para el problema
-// del productor/consumidor, con productor y consumidor únicos.
-// Opcion LIFO
-//
-// Historial:
-// Creado el 30 Sept de 2022. (adaptado de prodcons2_su.cpp)
-// 20 oct 22 --> paso este archivo de FIFO a LIFO, para que se corresponda con lo que dicen las transparencias
-// -----------------------------------------------------------------------------------
+/* g++ -std=c++11 -pthread -o prodcons_mu_LIFO prodcons_mu_LIFO.cpp scd.cpp */
 
 #include <iostream>
 #include <iomanip>
