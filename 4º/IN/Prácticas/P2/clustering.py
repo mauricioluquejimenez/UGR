@@ -34,8 +34,7 @@ import seaborn as sns
 def norm_to_zero_one(df):
     return (df - df.min()) * 1.0 / (df.max() - df.min())
 
-datos = pd.read_csv('alojamientos_booking_Granada_2024.csv',sep= ';', encoding="iso-8859-1")
-
+datos = pd.read_csv('ECV.csv',sep= ';', encoding="iso-8859-1")
 
 # Seleccionar casos, alojamineto del ALbaicín
 subset = datos[datos.Location.str.contains('Ronda') & datos.Rating != 0]
@@ -47,7 +46,6 @@ usadas = ['precio','distancia','valoracion','posicion', 'dormitorios']
 
 n_var = len(usadas)
 X = subset[usadas]
-
 
 # normalizamos
 X_normal = X.apply(norm_to_zero_one)
@@ -77,9 +75,6 @@ size = size.sort_index()
 
 for i,c in enumerate(size):
    print('%s: %5d (%5.2f%%)' % (i,c,100*c/len(clusters)))
-
-
-
 
 k = len(size)
 colors = sns.color_palette(palette='Paired', n_colors=k, desat=None)
@@ -120,7 +115,3 @@ sns_plot.fig.set_size_inches(15,15)
 sns_plot.savefig("scatter.pdf")
 plt.show()
 #'''
-
-
-
-
