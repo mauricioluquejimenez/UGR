@@ -50,24 +50,23 @@ vector<string> Dictionary::getWordsLength(int length)
 
 }
 
-Dictionary::iterator::iterator()
-{
-
-}
+Dictionary::iterator::iterator() = default;
 
 bool Dictionary::iterator::operator==(const iterator &i) const
 {
-    this->it == i.it;
+    return this->it == i.it;
 }
+
 
 bool Dictionary::iterator::operator!=(const iterator &i) const
 {
-    this->it != i.it;
+    return this->it != i.it;
 }
 
 Dictionary::iterator &Dictionary::iterator::operator++()
 {
     ++this->it;
+    return *this;
 }
 
 const string &Dictionary::iterator::operator*()
@@ -75,24 +74,22 @@ const string &Dictionary::iterator::operator*()
     return *this->it;
 }
 
-Dictionary::const_iterator::const_iterator()
-{
-
-}
+Dictionary::const_iterator::const_iterator() = default;
 
 bool Dictionary::const_iterator::operator==(const const_iterator &i) const
 {
-    this->it == i.it;
+    return this->it == i.it;
 }
 
 bool Dictionary::const_iterator::operator!=(const const_iterator &i) const
 {
-    this->it != i.it;
+    return this->it != i.it;
 }
 
 Dictionary::const_iterator &Dictionary::const_iterator::operator++()
 {
     ++this->it;
+    return *this;
 }
 
 const string &Dictionary::const_iterator::operator*() const
@@ -117,20 +114,28 @@ pair<Dictionary::iterator, Dictionary::iterator> Dictionary::range_prefix(const 
 
 Dictionary::iterator Dictionary::begin()
 {
-
+    Dictionary::iterator it;
+    it.it = this->words.begin();
+    return it;
 }
 
-Dictionary::const_iterator Dictionary::begin() const
+Dictionary::const_iterator Dictionary::cbegin() const
 {
-
+    Dictionary::const_iterator it;
+    it.it = this->words.begin();
+    return it;
 }
 
 Dictionary::iterator Dictionary::end()
 {
-
+    Dictionary::iterator it;
+    it.it = this->words.end();
+    return it;
 }
 
-Dictionary::const_iterator Dictionary::end() const
+Dictionary::const_iterator Dictionary::cend() const
 {
-
+    Dictionary::const_iterator it;
+    it.it = this->words.end();
+    return it;
 }

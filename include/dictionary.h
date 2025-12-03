@@ -62,8 +62,8 @@ class Dictionary {
     pair<iterator, bool> insert(const string &val);
     pair<iterator, iterator> range_prefix(const string &val);
     iterator begin();
-    const_iterator begin() const;
+    const_iterator cbegin() const;
     iterator end();
-    const_iterator end() const;
+    const_iterator cend() const;
 };
 #endif //DICTIONARY_H
