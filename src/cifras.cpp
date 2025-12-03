@@ -3,6 +3,8 @@
 #include <set>
 #include <cmath>
 #include <climits>
+#include <cstdlib> 
+#include <ctime> 
 
 using namespace std;
 
@@ -45,7 +47,7 @@ bool mejor(const Estado &a, const Estado &b, int objetivo) {
 }
 
 
-void Cifras(set<int> S, int objetivo, Estado actual, Estado &best) {
+void Cifras(multiset<int> S, int objetivo, Estado actual, Estado &best) {
     //si hemos llegado al numero terminamos
     if (actual.valor == objetivo) {
         best = actual;
@@ -56,8 +58,10 @@ void Cifras(set<int> S, int objetivo, Estado actual, Estado &best) {
         best = actual;
 
     for (int n : S) {
-        set<int> restantes = S;
-        restantes.erase(n);
+        multiset<int> restantes = S;
+
+        auto it = restantes.find(n);
+        restantes.erase(it);
 
         vector<Estado> ops = GeneraOperaciones(actual, n);
 
@@ -66,7 +70,51 @@ void Cifras(set<int> S, int objetivo, Estado actual, Estado &best) {
     }
 }
 
-int main(){
-    
+int main() {
+
+    srand(time(NULL));  
+
+    vector<int> C = {1,2,3,4,5,6,7,8,9,10,25,50,75,100};
+
+    // 6 números aleatorios 
+    multiset<int> S;
+    while (S.size() < 6) {
+        int num = C[rand() % C.size()];
+        S.insert(num);
+    }
+
+    // Objetivo aleatorio entre 100 y 999
+    int objetivo = 100 + rand() % 900;
+
+    // Mostrar datos
+    cout << " S = { ";
+    for (int x : S){ 
+        cout << x << " ";
+    }
+    cout << " } " << endl;
+    cout << "Objetivo = " << objetivo << endl;
+
+    // Inicializo best a un valor muy lejano 
+    Estado best(999999, ""); 
+
+    // Probar cada número como inicio posible
+    for (int n : S) {
+        Estado inicial(n, "Empiezo con " + to_string(n) + "\n");
+
+        multiset<int> resto = S;
+        auto it = resto.find(n);
+        resto.erase(it);
+
+        Cifras(resto, objetivo, inicial, best);
+    }
+
+    cout << "\n --> MEJOR SOLUCION \n";
+    cout << "Valor obtenido: " << best.valor << endl;
+    cout << "Diferencia con el objetivo: " << abs(best.valor - objetivo) << endl;
+
+    cout << "\n Operaciones realizadas: " << endl;
+    cout << best.operaciones << endl;
+
+    return 0;
 }
 
