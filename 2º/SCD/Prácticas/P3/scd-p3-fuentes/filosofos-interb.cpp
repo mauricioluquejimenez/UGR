@@ -2,16 +2,15 @@
 // Sistemas concurrentes y Distribuidos.
 // Práctica 3. Implementación de algoritmos distribuidos con MPI
 //
-// Archivo: filosofos-plantilla.cpp
+// Archivo: filosofos-interb.cpp
 // Implementación del problema de los filósofos (sin camarero).
 // Solución con interbloqueo.
 //
 // Historial:
 // Actualizado a C++11 en Septiembre de 2017
-// Compilación: mpicxx -std=c++11 -o filosofos filosofos-plantilla.cpp
-// Ejecución: mpirun -oversubscriibe -np <num_procesos> ./filos
+// Compilación: mpicxx -std=c++11 -o filosofos-interb filosofos-interb.cpp
+// Ejecución: mpirun -oversubscribe -np <num_procesos> ./filosofos-interb
 // -----------------------------------------------------------------------------
-
 
 #include <mpi.h>
 #include <thread> // this_thread::sleep_for
@@ -25,7 +24,7 @@ using namespace std::chrono ;
 
 const int
    num_filosofos = 5 ,              // número de filósofos 
-   num_filo_ten  = 2*num_filosofos, // número de filósofos y tenedores 
+   num_filo_ten  = 2 * num_filosofos, // número de filósofos y tenedores 
    num_procesos  = num_filo_ten ,   // número de procesos total (por ahora solo hay filo y ten)
    etiq_solicitar = 0,
    etiq_soltar = 1;
