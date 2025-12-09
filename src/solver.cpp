@@ -6,7 +6,7 @@ Solver::Solver(const Dictionary &dict, const LettersSet &letters_set)
     this->letters_set = letters_set;
 }
 
-vector<string> Solver::getSolutions(const vector<char> &available_letters, bool score_game)
+pair<vector<string>, int> Solver::getSolutions(const vector<char> &available_letters, bool score_game)
 {
     vector<string> solutions;
     int score = -1, curr_score = 0;
@@ -26,5 +26,5 @@ vector<string> Solver::getSolutions(const vector<char> &available_letters, bool 
             score = curr_score;
         }
     }    
-    return solutions;
+    return make_pair(solutions, score);
 }

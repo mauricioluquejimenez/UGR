@@ -12,7 +12,57 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-  //A Completar
-  
-  
+  if (argc != 5)
+  {
+    cout << "Los parametros son: " << endl;
+    cout << "1.- El fichero con el diccionario" << endl;
+    cout << "2.- El fichero con las letras" << endl;
+    cout << "3.- El numero de letras a generar" << endl;
+    cout << "4.- Modo de juego (L/P)" << endl;
+    return 0;
+  }
+
+  ifstream dic_file(argv[1]);
+  if (!dic_file)
+  {
+    cerr << "No puedo abrir el fichero de diccionario " << argv[1] << endl;
+    return 1;
+  }
+
+  ifstream letters_file(argv[2]);
+  if (!letters_file)
+  {
+    cerr << "No puedo abrir el fichero de letras " << argv[2] << endl;
+    return 1;
+  }
+
+  Dictionary dic; dic_file >> dic;
+  LettersSet set; letters_file >> set;
+
+  int num_letras = atoi(argv[3]);
+  char modo = argv[4][0];
+  bool score_game =  (modo == 'P' || modo == 'p');
+
+  char seguir = 'S';
+
+  while(seguir == 'S' || seguir == 's')
+  {
+    LettersBag bag(set);
+    vector<char> letras = bag.extractLetters(num_letras);
+
+    Solver solver(dic, set);
+    pair<vector<string>, int> resultado = solver.getSolutions(letras, score_game);
+
+    cout << "\nLetras generadas: ";
+    for(unsigned int i = 0; i < letras.size(); i++) cout << letras[i] << " ";
+
+    cout << "\nMejores soluciones: " << endl;
+    for(unsigned int i = 0; i < resultado.first.size(); i++) cout << resultado.first[i] << " ";
+
+    cout << "\nPuntuacion/Longitud de la mejor solucion: " << resultado.second << endl;
+    cout << "\n¿Desea generar otra partida? (S/N): ";
+    cin >> seguir;
+  }
+
+  return 0;  
 }
