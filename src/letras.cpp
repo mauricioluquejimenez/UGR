@@ -39,11 +39,10 @@ int main(int argc, char *argv[])
   Dictionary dic; dic_file >> dic;
   LettersSet set; letters_file >> set;
 
-  int num_letras = atoi(argv[3]);
-  char modo = argv[4][0];
-  bool score_game =  (modo == 'P' || modo == 'p');
-
-  char seguir = 'S';
+  int num_letras = atoi(argv[3]), puntuacion_usuario = -1;
+  char modo = argv[4][0], seguir = 'S';
+  bool score_game = (modo == 'P' || modo == 'p');
+  string palabra_usuario;
 
   while(seguir == 'S' || seguir == 's')
   {
@@ -56,10 +55,18 @@ int main(int argc, char *argv[])
     cout << "\nLetras generadas: ";
     for(unsigned int i = 0; i < letras.size(); i++) cout << letras[i] << " ";
 
+    cout << "\nDime tu solucion: ";
+    cin >> palabra_usuario;
+
+    puntuacion_usuario = score_game ? set.getScore(palabra_usuario) : static_cast<int>(palabra_usuario.size());
+
+    cout << "\nTu solución: " << palabra_usuario;
+    cout << "\nPuntuacion: " << puntuacion_usuario;
+
     cout << "\nMejores soluciones: " << endl;
     for(unsigned int i = 0; i < resultado.first.size(); i++) cout << resultado.first[i] << " ";
 
-    cout << "\nPuntuacion/Longitud de la mejor solucion: " << resultado.second << endl;
+    cout << "\nPuntuacion/Longitud de la mejor solucion: " << resultado.second;
     cout << "\n¿Desea generar otra partida? (S/N): ";
     cin >> seguir;
   }
