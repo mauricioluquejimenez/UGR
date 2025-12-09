@@ -17,7 +17,6 @@ struct LetterInfo{
 
   /**
    * @brief Constructor con parámetros
-   *
    * @param reps Número de repeticiones del carácter en la partida
    * @param score Puntuación del carácter
    */
@@ -30,21 +29,18 @@ private:
   map<char, LetterInfo> letters;
   public:
     /**
-     * @brief Constructor por defecto.
-     * Crea un LettersSet.
+     * @brief Constructor por defecto. Crea un LettersSet.
     */
     LettersSet();
     /**
-    * @brief Constructor por copia.
-     * Crea un LettersSet a partir de otro.
+    * @brief Constructor por copia. Crea un LettersSet a partir de otro.
     * @param other LettersSet que se va a copiar.
     */
     LettersSet(const LettersSet & other);
     /**
    * @brief Inserta el elemento @p val en el LettersSet.
    * @param val Pareja formada por un caracter y un LetterInfo.
-   * @return Bool que indica si se ha podido insertar el caracter en el LettersSet (solo se inserta
-   * si no estaba ya incluido).
+   * @return Bool que indica si se ha podido insertar el caracter en el LettersSet (solo se inserta si no estaba ya incluido).
    */
     bool insert(const pair<char,LetterInfo> & val);
     /**
@@ -68,7 +64,7 @@ private:
     */
     unsigned int size();
     /**
-    * Calcula la puntuación de @p word como la suma de las puntuaciones de cada letra.
+    * @brief Calcula la puntuación de @p word como la suma de las puntuaciones de cada letra.
     * @param word String del que queremos calcular la puntuación.
     * @return Puntuación de la palabra.
    */
@@ -80,8 +76,7 @@ private:
    */
     LettersSet & operator = (const LettersSet & cl);
     /**
-    * @brief Sobrecarga del operador de consulta.
-    * Para acceder a los elementos del map que hay en la clase.
+    * @brief Sobrecarga del operador de consulta. Para acceder a los elementos del map que hay en la clase.
     * @param val Carácter que queremos consultar.
     * @return Estructura de tipo LetterInfo con la información del caracter: puntuación y número de repeticiones .
     */
@@ -94,7 +89,7 @@ private:
      */
     friend ostream & operator << (ostream & os, const LettersSet & cl);
     /**
-     * Sobrecarga del operador de entrada.
+     * @brief Sobrecarga del operador de entrada.
      * @param is Flujo de entrada, del que se va a  leer el LettersSet.
      * @param cl LettersSet en el que se va a almacendar la información leí­da.
      * @return El flujo de entrada, @p is.
@@ -144,8 +139,6 @@ private:
 
     const_iterator cbegin() const { const_iterator i = letters.begin(); return i; }
     const_iterator cend() const { const_iterator i = letters.end(); return i; }
-
-
 };
 
 ostream & operator << (ostream & os, const LettersSet & cl);

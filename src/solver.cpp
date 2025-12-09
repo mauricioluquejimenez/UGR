@@ -6,67 +6,25 @@ Solver::Solver(const Dictionary &dict, const LettersSet &letters_set)
     this->letters_set = letters_set;
 }
 
-pair<vector<string>, int> Solver::getSolutions(const vector<char> &available_letters, bool score_game)
+vector<string> Solver::getSolutions(const vector<char> &available_letters, bool score_game)
 {
-    int score = 0, curr_score;
     vector<string> solutions;
-    vector<string>::const_iterator i = (dictionary.getWords(available_letters)).cbegin();
+    int score = -1, curr_score = 0;
 
-    while(i != (dictionary.getWords(available_letters)).cend())
+    for (Dictionary::const_iterator it = dictionary.cbegin(); it != dictionary.cend(); ++it)
     {
-        if(score_game) curr_score = letters_set.getScore(*i);
-        else curr_score = (*i).size();
+        const string &word = *it;
 
-        if(curr_score == score) solutions.push_back(*i);
+        if(score_game) curr_score = letters_set.getScore(word);
+        else curr_score = (word).size();
+
+        if(curr_score == score) solutions.push_back(word);
         else if(curr_score > score)
         {
             solutions.clear();
-            solutions.push_back(*i);
+            solutions.push_back(word);
             score = curr_score;
         }
-        i++;
-    }
-
-    pair<vector<string>, int> solution = {solutions, score};
-    return solution;
-}
-
-pair<vector<string>, int> Solver::getSolutionsE(const vector<char> &available_letters, bool score_game)
-{
-    int score = 0;
-    vector<string> mejores_resultados;
-    vector<string> results = this->dictionary.getWords(available_letters);
-
-    if (score_game)
-    {
-        for (vector<string>::iterator it = results.begin(); it != results.end(); ++it)
-        {
-            string word = *it;
-            int puntuacion_actual = this->letters_set.getScore(word);
-            if (puntuacion_actual == score) mejores_resultados.push_back(word);
-            else if (puntuacion_actual > score)
-            {
-                mejores_resultados.clear();
-                score = puntuacion_actual;
-                mejores_resultados.push_back(word);
-            }
-        }
-    }
-    else
-    {
-        for (vector<string>::iterator it = results.begin(); it != results.end(); ++it)
-        {
-            string word = *it;
-            int puntuacion_actual = word.size();
-            if (puntuacion_actual == score)  mejores_resultados.push_back(word);
-            else if (puntuacion_actual > score)
-            {
-                mejores_resultados.clear();
-                score = puntuacion_actual;
-                mejores_resultados.push_back(word);
-            }
-        }
-    }
-
-    return pair<vector<string>, int> (mejores_resultados, score);
+    }    
+    return solutions;
 }

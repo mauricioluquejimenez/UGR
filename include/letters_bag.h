@@ -49,8 +49,7 @@ public:
     char extractLetter();
 
     /**
-     * @brief Extrae varias letras aleatorias.
-     * Extrae un conjunto de letras del LettersBag, y las elimina de la bolsa.
+     * @brief Extrae varias letras aleatorias. Extrae un conjunto de letras del LettersBag, y las elimina de la bolsa.
      * @param num Número de letras a extraer.
      * @return Vector con las letras extraídas.
      */
