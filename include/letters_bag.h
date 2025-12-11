@@ -1,3 +1,10 @@
+/**
+ * @file letters_bag.h
+ * @brief TDA LettersBag: bolsa de palabras para el juego de letras.
+ * @author Mauricio Luque Jiménez
+ * @author Yeray Ortega Fernández
+ */
+
 #ifndef __LETTERS_BAG_H__
 #define __LETTERS_BAG_H__
 

@@ -1,3 +1,10 @@
+/**
+ * @file solver.h
+ * @brief TDA Solver: resuelve el juego de las letras.
+ * @author Mauricio Luque Jiménez
+ * @author Yeray Ortega Fernández
+ */
+
 #ifndef __SOLVER_H__
 #define __SOLVER_H__
 

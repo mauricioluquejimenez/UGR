@@ -1,3 +1,10 @@
+/**
+ * @file letters_set.h
+ * @brief TDA LettersSet: conjunto de letras para el juego de las letras.
+ * @author Mauricio Luque Jiménez
+ * @author Yeray Ortega Fernández
+ */
+
 #ifndef __LETTER_SET_H__
 #define __LETTER_SET_H__
 

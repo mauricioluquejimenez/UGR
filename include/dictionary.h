@@ -1,6 +1,9 @@
-//
-// Created by 
-//
+/**
+ * @file dictionary.h
+ * @brief TDA Dictionary: diccionario de palabras para el juego de letras.
+ * @author Mauricio Luque Jiménez
+ * @author Yeray Ortega Fernández
+ */
 
 #ifndef DICTIONARY_H
 #define DICTIONARY_H

@@ -20,20 +20,22 @@ Utiliza el TDA Estado para representar el valor actual (el resultado de las oper
 ## Letras
 > __letras__ \<Diccionario\> \<Letras\>
 
+Construye un LettersSet a partir de un conjunto de letras, un Dictionary con las palabras que se consideran soluciones, un Solver
+que va a jugar la partida y un LettersBag con la que se van a extraer las letras.s
+
 @param <Diccionario> Archivo con extensión .txt que contiene todas las palabras incluidas en un diccionario.
 @param <Letras> Archivo extensión .txt con las letras, el número de veces que se pueden repetir y su puntuación
 @param <Num_Letras> Número entero que indica el número de letras que el jugador va a tener disponibles para formar palabras
 @param <Modo> Booleano que indica si el juego es por puntuación o por longitud. True si es por puntuación, false si es por longitud
 
-Construye un LettersSet a partir de un conjunto de letras, un Dictionary con las palabras que se consideran soluciones, un Solver
-que va a jugar la partida y un LettersBag con la que se van a extraer las letras.
 
 ## Cantidad_Letras
 > __cantidad_letras__ \<Diccionario\> \<Letras\>
+
+Construye un Dictionary y un LettersSet para calcular el número de veces que se usa una palabra dada de una lista de palabras, así como el número de ocurrencias de la letra
+en el diccionario.
+
 @param <Diccionario> Archivo con extensión .txt que contiene todas las palabras incluidas en un diccionario.
 @param <Letras> Archivo con las letras que se van a contar
-
-Calcula el número de veces que se usa una palabra dada de una lista de palabras, así como el número de ocurrencias de la letra
-en el diccionario
 
 */
