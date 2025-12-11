@@ -10,8 +10,16 @@ using namespace std;
  * @brief TDA LetterInfo. Estructura que almacena la información de cada carácter en el LettersSet.
  */
 struct LetterInfo{
-  unsigned int repetitions;
-  unsigned int score;
+
+    /**
+     * @brief Número de veces que un caracter puede repetirse en la partida
+     */
+    unsigned int repetitions;
+
+    /**
+     * @brief Puntuación asociada al caracter
+     */
+    unsigned int score;
 
   /**
    * @brief Constructor por defecto
@@ -102,7 +110,7 @@ private:
     friend istream & operator >> (istream & is, LettersSet & cl);
 
     /**
-    * @brief Iterador del LetterSet. Permite recorrer los elementos del LetterSet
+    * @brief Iterador del LettersSet. Permite recorrer los elementos del LettersSet
     */
     class iterator{
     private:
@@ -191,7 +199,7 @@ private:
     iterator end() { iterator i = letters.end(); return i; }
 
     /**
-    * @brief Iterador constante del LetterSet. Permite recorrer los elementos del LetterSet sin modificarlos
+    * @brief Iterador constante del LettersSet. Permite recorrer los elementos del LettersSet sin modificarlos
     */
     class const_iterator{
     private:

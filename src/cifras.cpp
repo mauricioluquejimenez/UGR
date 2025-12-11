@@ -9,12 +9,24 @@
 using namespace std;
 
 /**
- * @brief Estructura que representa un estado en el juego de las cifras.
+ * @brief Estructura que representa un estado en el juego de las cifras. Contiene el valor actual y las operaciones realizadas para llegar a ese estado
  */
 struct Estado {
+    /**
+     * @brief Valor actual: el resultado de las operaciones que se han realizado hasta ese momento
+     */
     int valor;
+
+    /**
+     * @brief Cadena que almacena las operaciones realizadas para llegar a este estado
+     */
     string operaciones;
 
+    /**
+     * @brief Construye un nuevo estado para el juego de las cifras
+     * @param v Valor actual: resultado de las operaciones que se han realizado hasta ese momento)
+     * @param op Operaciones realizadas hasta ese momento (en formato string)
+     */
     Estado(int v = 0, string op = "") : valor(v), operaciones(op) {}
 };
 

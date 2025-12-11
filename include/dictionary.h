@@ -14,7 +14,7 @@
 using namespace std;
 
 /**
- * @brief TDA Diccionario. Almacena un conjunto de palabras y permite operaciones de inserción, borrado y búsqueda.
+ * @brief TDA Dictionary. Almacena un conjunto de palabras y permite operaciones de inserción, borrado y búsqueda.
  */
 class Dictionary {
   private:
