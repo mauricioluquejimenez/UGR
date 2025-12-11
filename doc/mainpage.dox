@@ -5,7 +5,7 @@
 En esta práctica se implementa del juego "Cifras y Letras". Para ello, se crean diversas estructuras que almacenan información como letras, palabras, puntuaciones, etc. basándose en las estructuras de datos vistos a lo largo de la asignatura.
 La dinámica de ambas partes del juego es idéntica a la del juego original. Para la parte de cifras, hay que tratar de obtener un resultado objetivo realizando operaciones simples (suma, resta, multiplicación y división) sobre un conjunto de números dado, ganando el jugador que se acerque más al resulatdo objetivo.
 Para la parte de letras, hay que tratar de formar palabras existentes en el diccionario con un conjunto de letras concreto. Hay dos maneras de decidir al ganador: por la longitud de la palabra formada o por la suma total de sus puntuaciones, ya que en este caso cada letra tiene una puntuación asignada.
-Mientras que para la parte de cifras no se han creado nuevas estructuras, para la parte de letras se han creado TDAs tales como Dictionary (representa el diccionario del que se extraen las posibles palabras a formar), LetterSet (contiene todas las letras del abecedario, el número máximo de veces que pueden aparecer en el conjunto de letras disponible y su puntuación correspondiente para el modo de juego por puntuación), y LetterBag (contiene las letras disponibles para formar palabras).
+Mientras que para la parte de cifras no se han creado nuevas estructuras, para la parte de letras se han creado TDAs tales como Dictionary (representa el diccionario del que se extraen las posibles palabras a formar), LettersSet (contiene todas las letras del abecedario, el número máximo de veces que pueden aparecer en el conjunto de letras disponible y su puntuación correspondiente para el modo de juego por puntuación), y LettersBag (contiene las letras disponibles para formar palabras).
 El motor de esta segunda parte para calcular las puntuaciones de las palabrases el TDA Solver, que se encarga de calcular la puntuación de las palabras formadas con las letras disponibles.
 
 # Programas principales
@@ -20,20 +20,22 @@ Utiliza el TDA Estado para representar el valor actual (el resultado de las oper
 ## Letras
 > __letras__ \<Diccionario\> \<Letras\>
 
+Construye un LettersSet a partir de un conjunto de letras, un Dictionary con las palabras que se consideran soluciones, un Solver
+que va a jugar la partida y un LettersBag con la que se van a extraer las letras.s
+
 @param <Diccionario> Archivo con extensión .txt que contiene todas las palabras incluidas en un diccionario.
 @param <Letras> Archivo extensión .txt con las letras, el número de veces que se pueden repetir y su puntuación
 @param <Num_Letras> Número entero que indica el número de letras que el jugador va a tener disponibles para formar palabras
 @param <Modo> Booleano que indica si el juego es por puntuación o por longitud. True si es por puntuación, false si es por longitud
 
-Construye un LettersSet a partir de un conjunto de letras, un Dictionary con las palabras que se consideran soluciones, un Solver
-que va a jugar la partida y un LettersBag con la que se van a extraer las letras.
 
 ## Cantidad_Letras
 > __cantidad_letras__ \<Diccionario\> \<Letras\>
+
+Construye un Dictionary y un LettersSet para calcular el número de veces que se usa una palabra dada de una lista de palabras, así como el número de ocurrencias de la letra
+en el diccionario.
+
 @param <Diccionario> Archivo con extensión .txt que contiene todas las palabras incluidas en un diccionario.
 @param <Letras> Archivo con las letras que se van a contar
-
-Calcula el número de veces que se usa una palabra dada de una lista de palabras, así como el número de ocurrencias de la letra
-en el diccionario
 
 */

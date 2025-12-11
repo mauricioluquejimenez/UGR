@@ -1,4 +1,4 @@
-PROJECT_NAME           = "Práctica Final.-Cifras y Letras "
+PROJECT_NAME           = "Práctica Final. Cifras y Letras "
 OUTPUT_DIRECTORY       = @CMAKE_CURRENT_BINARY_DIR@/doc_doxygen/
 INPUT                  = @CMAKE_SOURCE_DIR@/@BASE_FOLDER@/include @CMAKE_SOURCE_DIR@/@BASE_FOLDER@/src @CMAKE_SOURCE_DIR@/@BASE_FOLDER@/doc
 GENERATE_LATEX         = NO

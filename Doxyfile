@@ -1,6 +1,6 @@
-PROJECT_NAME           = "Práctica Final.-Cifras y Letras "
-OUTPUT_DIRECTORY       = /home/aulas/Descargas/4.practicafinal/sol-letras/juego_letras/misol/doc_doxygen/
-INPUT                  = /home/aulas/Descargas/4.practicafinal/sol-letras/juego_letras/misol/.//include /home/aulas/Descargas/4.practicafinal/sol-letras/juego_letras/misol/.//src /home/aulas/Descargas/4.practicafinal/sol-letras/juego_letras/misol/.//doc
+PROJECT_NAME           = "Práctica Final. Cifras y Letras "
+OUTPUT_DIRECTORY       = /home/mauricio/ed_practica_final/doc_doxygen/
+INPUT                  = /home/mauricio/ed_practica_final/.//include /home/mauricio/ed_practica_final/.//src /home/mauricio/ed_practica_final/.//doc
 GENERATE_LATEX         = NO
-IMAGE_PATH             = /home/aulas/Descargas/4.practicafinal/sol-letras/juego_letras/misol/.//doc
+IMAGE_PATH             = /home/mauricio/ed_practica_final/.//doc
 EXTRACT_PRIVATE	       = NO
