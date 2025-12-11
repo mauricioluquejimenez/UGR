@@ -46,7 +46,7 @@ int Dictionary::getOcurrences(const char c) const
     {
         word = *it;
         for(int i = 0; i < word.size(); i++ )
-            if(word[i] == c) ocurrences++;
+            if(tolower(word[i]) == tolower(c)) ocurrences++;
     }
 
     return ocurrences;
@@ -83,7 +83,7 @@ vector<string> Dictionary::getWordsLength(int longitud)
     return words_length;
 }
 
-Dictionary::iterator::iterator() = default;
+Dictionary::iterator::iterator(){};
 
 bool Dictionary::iterator::operator==(const iterator &i) const
 {
@@ -106,7 +106,7 @@ const string &Dictionary::iterator::operator*()
     return *this->it;
 }
 
-Dictionary::const_iterator::const_iterator() = default;
+Dictionary::const_iterator::const_iterator(){};
 
 bool Dictionary::const_iterator::operator==(const const_iterator &i) const
 {
@@ -143,12 +143,11 @@ pair<Dictionary::iterator, bool> Dictionary::insert(const string &val)
     Dictionary::iterator it;
     it.it = insercion.first;
     
-    return make_pair(it, insercion.second);;
+    return make_pair(it, insercion.second);
 }
 
 pair<Dictionary::iterator, Dictionary::iterator> Dictionary::range_prefix(const string &prefix)
 {
-    pair<Dictionary::iterator, Dictionary::iterator> range;
     Dictionary::iterator it1, it2;
 
     set<string>::iterator inf = words.lower_bound(prefix);
@@ -158,14 +157,15 @@ pair<Dictionary::iterator, Dictionary::iterator> Dictionary::range_prefix(const 
         it1.it = words.end();
         it2.it = words.end();
     }
-
-    string sup = prefix;
-    sup.push_back(char(127));
+    else
+    {
+        string sup = prefix;
+        sup.push_back(char(127));
     
-    set<string>::iterator sup_it = words.upper_bound(sup);
-    it1.it = inf;
-    it2.it = sup_it;
-    
+        set<string>::iterator sup_it = words.upper_bound(sup);
+        it1.it = inf;
+        it2.it = sup_it;
+    }
 
     return make_pair(it1, it2);
 }

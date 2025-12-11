@@ -40,12 +40,10 @@ vector<Estado> GeneraOperaciones(const Estado &actual, int n) {
     return op;
 }
 
-//Caso imposible de encontrar solucion: la salida sería el numero mas
-//  cercano posible al que nos piden
+//Caso imposible de encontrar solucion: la salida sería el numero mas cercano posible al que nos piden
 bool mejor(const Estado &a, const Estado &b, int objetivo) {
     return abs(a.valor - objetivo) < abs(b.valor - objetivo);
 }
-
 
 void Cifras(multiset<int> S, int objetivo, Estado actual, Estado &best) {
     //si hemos llegado al numero terminamos
@@ -117,4 +115,3 @@ int main() {
 
     return 0;
 }
-

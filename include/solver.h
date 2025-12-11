@@ -4,6 +4,7 @@
 #include <string>
 #include <utility>
 #include <vector>
+#include <cctype>
 
 #include "letters_set.h"
 #include "dictionary.h"

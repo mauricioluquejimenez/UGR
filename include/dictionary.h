@@ -9,6 +9,7 @@
 #include <iostream>
 #include <set>
 #include <vector>
+#include <cctype>
 
 using namespace std;
 
@@ -136,9 +137,9 @@ class Dictionary {
     iterator find(const string &w);
 
     /**
-    * @brief Obtiene todas las palabras de una longitud
-    * @param longitud: valor de longitud de la palabras a devolver
-    * @return un vector con palabra de la longitud dada
+    * @brief Inserta una palabra en el diccionario
+    * @param val palabra que se quiere insertar en el diccionario
+    * @return un pair con un iterator apuntando a la palabra insertada y un booleano que indica si la palabra se ha insertado o no
     */
     pair<iterator, bool> insert(const string &val);
 

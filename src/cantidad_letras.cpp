@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
     porcentaje = (total > 0) ? static_cast<double>(apariciones) / total : 0.0;
     peso = (porcentaje > 0.0) ? 10 * (-log10(porcentaje) / min_log) : 0.0;
 
-    salida << "\nLetra: " << letra << " Apariciones: " << apariciones << " Peso: " << peso;
+    salida << letra << " " << apariciones << " " << peso << endl;
   }
 
   return 0;

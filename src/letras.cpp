@@ -2,6 +2,7 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include <cstdlib>
 
 #include "dictionary.h"
 #include "letters_bag.h"
@@ -38,18 +39,20 @@ int main(int argc, char *argv[])
 
   Dictionary dic; dic_file >> dic;
   LettersSet set; letters_file >> set;
+  
+  Solver solver(dic, set);
 
   int num_letras = atoi(argv[3]), puntuacion_usuario = -1;
   char modo = argv[4][0], seguir = 'S';
   bool score_game = (modo == 'P' || modo == 'p');
   string palabra_usuario;
+  
 
   while(seguir == 'S' || seguir == 's')
   {
     LettersBag bag(set);
-    vector<char> letras = bag.extractLetters(num_letras);
 
-    Solver solver(dic, set);
+    vector<char> letras = bag.extractLetters(num_letras);
     pair<vector<string>, int> resultado = solver.getSolutions(letras, score_game);
 
     cout << "\nLetras generadas: ";
@@ -64,9 +67,20 @@ int main(int argc, char *argv[])
     cout << "\nPuntuacion: " << puntuacion_usuario;
 
     cout << "\nMejores soluciones: " << endl;
-    for(unsigned int i = 0; i < resultado.first.size(); i++) cout << resultado.first[i] << " ";
+    for(unsigned int i = 0; i < resultado.first.size(); i++)
+    {
+      cout << " " << resultado.first[i];
+      if (score_game)
+      {
+        int pts = set.getScore(resultado.first[i]);
+        cout << " (Puntuacion: " << pts << ")";
+      }
+      else cout << " (Longitud: " << resultado.first[i].size() << ")";
 
-    cout << "\nPuntuacion/Longitud de la mejor solucion: " << resultado.second;
+      cout << '\n';
+    }
+
+    cout << "\nPuntuacion/Longitud de la mejor solucion: " << resultado.second << endl;
     cout << "\n¿Desea generar otra partida? (S/N): ";
     cin >> seguir;
   }
