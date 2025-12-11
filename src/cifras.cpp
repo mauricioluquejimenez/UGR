@@ -8,7 +8,9 @@
 
 using namespace std;
 
-//guardar estado
+/**
+ * @brief Estructura que representa un estado en el juego de las cifras.
+ */
 struct Estado {
     int valor;
     string operaciones;
@@ -45,7 +47,9 @@ bool mejor(const Estado &a, const Estado &b, int objetivo) {
     return abs(a.valor - objetivo) < abs(b.valor - objetivo);
 }
 
-void Cifras(multiset<int> S, int objetivo, Estado actual, Estado &best) {
+void Cifras(multiset<int> S, int objetivo, Estado actual, Estado &best, int intento_jugador, bool &alcanzable) {
+    if(actual.valor == intento_jugador) alcanzable = true;
+    
     //si hemos llegado al numero terminamos
     if (actual.valor == objetivo) {
         best = actual;
@@ -64,7 +68,7 @@ void Cifras(multiset<int> S, int objetivo, Estado actual, Estado &best) {
         vector<Estado> ops = GeneraOperaciones(actual, n);
 
         for (auto &op : ops)
-            Cifras(restantes, objetivo, op, best);
+            Cifras(restantes, objetivo, op, best, intento_jugador, alcanzable);
     }
 }
 
@@ -83,6 +87,8 @@ int main() {
 
     // Objetivo aleatorio entre 100 y 999
     int objetivo = 100 + rand() % 900;
+    int intento, intento_jugador;
+    bool alcanzable = false;
 
     // Mostrar datos
     cout << " S = { ";
@@ -91,6 +97,9 @@ int main() {
     }
     cout << " } " << endl;
     cout << "Objetivo = " << objetivo << endl;
+
+    cout << "\nIntroduce tu solución: ";
+    cin >> intento;
 
     // Inicializo best a un valor muy lejano 
     Estado best(999999, ""); 
@@ -103,15 +112,19 @@ int main() {
         auto it = resto.find(n);
         resto.erase(it);
 
-        Cifras(resto, objetivo, inicial, best);
+        Cifras(resto, objetivo, inicial, best, intento, alcanzable);
     }
 
     cout << "\n --> MEJOR SOLUCION \n";
     cout << "Valor obtenido: " << best.valor << endl;
     cout << "Diferencia con el objetivo: " << abs(best.valor - objetivo) << endl;
 
-    cout << "\n Operaciones realizadas: " << endl;
+    cout << "\nOperaciones realizadas: " << endl;
     cout << best.operaciones << endl;
+
+    cout << " --> TU SOLUCION: " << intento << endl;
+    if(alcanzable) cout << "Diferencia con el objetivo: " << abs(intento - objetivo) << endl;
+    else cout << "Tu solución no es alcanzable con los números dados." << endl;
 
     return 0;
 }

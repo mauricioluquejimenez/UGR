@@ -10,10 +10,13 @@ LettersBag::LettersBag(const LettersSet & letterSet) {
 
     LettersSet l = letterSet;
 
-    for(int letra = 'A'; letra <= 'Z'; letra++){
-        for(int n  = 0; n < l[letra].repetitions; n++){
-            letters.push_back(letra);
-        }
+    for(LettersSet::iterator it = l.begin(); it != l.end(); ++it)
+    {
+      char letra = (*it).first;
+      int repeticiones = (*it).second.repetitions;
+
+      for(int i = 0; i < repeticiones; i++)
+        insertLetter(letra);
     }
 }
 

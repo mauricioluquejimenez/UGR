@@ -22,21 +22,21 @@ int main(int argc, char *argv[])
   if (!dic_file)
   {
     cerr << "No puedo abrir el fichero de diccionario " << argv[1] << endl;
-    return 1;
+    return 0;
   }
 
   ifstream letters_file(argv[2]);
   if (!letters_file)
   {
     cerr << "No puedo abrir el fichero de letras " << argv[2] << endl;
-    return 1;
+    return 0;
   }
 
   ofstream salida(argv[3]);
   if (!salida)
   {
-        cerr << "No puedo abrir el fichero de salida " << argv[3] << endl;
-        return 1;
+    cerr << "No puedo abrir el fichero de salida " << argv[3] << endl;
+    return 0;
   }
 
   LettersSet set; letters_file >> set;

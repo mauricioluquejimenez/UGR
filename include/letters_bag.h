@@ -19,6 +19,9 @@
 
 using namespace std;
 
+/**
+ * @brief TDA LettersBag. Almacena el conjunto de letras disponibles para formar palabras en el juego de las letras.
+ */
 class LettersBag {
 private:
     vector<char> letters;

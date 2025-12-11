@@ -33,7 +33,7 @@ int LettersSet::getScore(string word){
     int puntos = 0;
 
     transform(word.begin(),word.end(),word.begin(),[](unsigned char c){
-        return toupper(c);
+        return tolower(c);
     });
 
     for(int i = 0; i < word.length(); i++)
@@ -81,5 +81,4 @@ istream & operator >> (istream & is, LettersSet & cl){
     }
 
     return is;
-
 }

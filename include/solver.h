@@ -11,6 +11,9 @@
 
 using namespace std;
 
+/**
+ * @brief TDA Solver. Resuelve el juego de las letras, obteniendo las mejores soluciones posibles dadas unas letras y un diccionario.
+ */
 class Solver{
 private:
   Dictionary dictionary;

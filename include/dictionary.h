@@ -13,6 +13,9 @@
 
 using namespace std;
 
+/**
+ * @brief TDA Diccionario. Almacena un conjunto de palabras y permite operaciones de inserción, borrado y búsqueda.
+ */
 class Dictionary {
   private:
     set<string> words;
@@ -49,7 +52,7 @@ class Dictionary {
 
     /**
     * @brief Indica si una palabra esta en el diccionario o no. Este método comprueba si una determinada palabra se encuentra o no en el dicccionario
-    * @param palabra: la palabra que se quiere buscar.
+    * @param val: la palabra que se quiere buscar.
     * @return Booleano indicando si la palabra existe o no en el diccionario
     */
     bool exists(const string &val);
@@ -105,10 +108,31 @@ class Dictionary {
         set<string>::iterator it;
 
       public:
+        /**
+         * @brief Constructor por defecto del iterador. No hace nada
+         */
         iterator();
+
+        /**
+         * @brief Sobrecarga del operador de igualdad
+         * @param i Iterador con el que se va a comparar
+         */
         bool operator==(const iterator &i) const;
+
+        /**
+         * @brief Sobrecarga del operador de desigualdad
+         * @param i Iterador con el que se va a comparar
+         */
         bool operator!=(const iterator &i) const;
+
+        /**
+         * @brief Sobrecarga del operador de incremento
+         */
         iterator &operator++();
+
+        /**
+         * @brief Sobrecarga del operador de acceso al valor al que apunta el iterador
+         */
         const string &operator*();
         friend class Dictionary;
     };
@@ -122,10 +146,32 @@ class Dictionary {
         set<string>::const_iterator it;
 
       public:
+
+        /**
+         * @brief Constructor por defecto del iterador. No hace nada
+         */
         const_iterator();
+
+        /**
+         * @brief Sobrecarga del operador de igualdad
+         * @param i Iterador constante con el que se va a comparar
+         */
         bool operator==(const const_iterator &i) const;
+
+        /**
+         * @brief Sobrecarga del operador de desigualdad
+         * @param i Iterador constante con el que se va a comparar
+         */
         bool operator!=(const const_iterator &i) const;
+
+        /**
+         * @brief Sobrecarga del operador de incremento
+         */
         const_iterator &operator++();
+
+        /**
+         * @brief Sobrecarga del operador de acceso al valor al que apunta el iterador
+         */
         const string &operator*() const;
         friend class Dictionary;
     };
@@ -154,12 +200,20 @@ class Dictionary {
     * @brief Obtiene el iterador apuntando a la primera palabra del diccionario
     */
     iterator begin();
+
+    /**
+    * @brief Obtiene el iterador constante apuntando a la primera palabra del diccionario
+    */
     const_iterator cbegin() const;
 
     /**
     * @brief Obtiene el iterador apuntando al final del diccionario.
     */
     iterator end();
+
+    /**
+    * @brief Obtiene el iterador constante apuntando al final del diccionario.
+    */
     const_iterator cend() const;
 };
 #endif //DICTIONARY_H
