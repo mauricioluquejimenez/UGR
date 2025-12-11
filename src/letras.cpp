@@ -115,11 +115,13 @@ int main(int argc, char *argv[])
     {
       cout << "\nLa palabra no es válida (no está en el diccionario o no se puede formar con las letras dadas)." << endl;
       puntuacion_usuario = 0;
-      continue;
     }
-    else puntuacion_usuario = score_game ? set.getScore(palabra_usuario) : static_cast<int>(palabra_usuario.size());
-    
-    cout << "\nPuntuacion: " << puntuacion_usuario << endl;
+    else
+    {
+      puntuacion_usuario = score_game ? set.getScore(palabra_usuario) : static_cast<int>(palabra_usuario.size());
+      cout << "\nPuntuacion: " << puntuacion_usuario << endl;
+    }
+
     cout << "\nMejores soluciones: " << endl;
     for(unsigned int i = 0; i < resultado.first.size(); i++)
     {
