@@ -51,6 +51,7 @@ void funcion_filosofos( int id )
       id_ten_der = (id+num_filo_ten-1) % num_filo_ten, //id. tenedor der.
       valor;
 
+   // Todos los filósofos solicitan primero el tenedor izquierdo, lo que provoca interbloqueo
   while ( true )
   {
     // ... solicitar tenedor izquierdo 
@@ -85,14 +86,17 @@ void funcion_tenedores( int id )
 
   while ( true )
   {
-     // ...... recibir petición de cualquier filósofo
+     // ...... recibir petición de cualquier filósofo (MPI_ANY_SOURCE)
+     // Como está recibiendo la petición de un filósofo para coger un tenedor, la etiqueta debe ser etiq_solicitar
      MPI_Recv(&valor, 1, MPI_INT, MPI_ANY_SOURCE, etiq_solicitar, MPI_COMM_WORLD, &estado);
 
      // ...... guardar en 'id_filosofo' el id. del emisor
      id_filosofo = estado.MPI_SOURCE ;
      cout <<"Ten. " <<id <<" ha sido cogido por filo. " <<id_filosofo <<endl;
 
-     // ...... recibir liberación de filósofo 'id_filosofo'
+     // ...... recibir liberación de filósofo 'id_filosofo' (por eso se usa id_filosofo en vez de MPI_ANY_SOURCE)
+     // Sólo el filósofo que previamente había cogido el tenedor con el MPI_Recv anterior puede soltarlo
+     // Como está recibiendo la petición de un filósofo para soltar un tenedor, la etiqueta debe ser etiq_soltar
      MPI_Recv(&valor, 1, MPI_INT, id_filosofo, etiq_soltar, MPI_COMM_WORLD, &estado);
      cout <<"Ten. "<< id << " ha sido liberado por filo. " <<id_filosofo <<endl ;
   }
@@ -104,7 +108,11 @@ int main( int argc, char** argv )
    int id_propio, num_procesos_actual ;
 
    MPI_Init( &argc, &argv );
+
+   // Conocer el identificador del proceso que actualmente se está ejecutando
    MPI_Comm_rank( MPI_COMM_WORLD, &id_propio );
+
+   // Conocer el número total de procesos que hay en ejecución
    MPI_Comm_size( MPI_COMM_WORLD, &num_procesos_actual );
 
 
