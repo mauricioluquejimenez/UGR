@@ -1,6 +1,7 @@
 # Mauricio Luque Jiménez
 # Primer caso de estudio: ingresos recientes y expectativa económica
 
+import os
 import time
 import matplotlib.pyplot as plt
 import numpy as np
@@ -9,6 +10,9 @@ import seaborn as sns
 from sklearn import metrics
 from sklearn.cluster import KMeans, AgglomerativeClustering, Birch, DBSCAN, MeanShift, estimate_bandwidth
 from sklearn.impute import KNNImputer
+from sklearn.metrics import silhouette_samples
+from sklearn.manifold import MDS
+from scipy.cluster.hierarchy import linkage, dendrogram
 
 def normalizacion(df): return (df - df.min()) * 1.0 / (df.max() - df.min())
 
@@ -291,5 +295,193 @@ df_resultados = pd.DataFrame(resultados)
 print("\nResumen global de modelos:")
 print(df_resultados)
 
-# Guardar resultados a CSV para usar en la memoria
-df_resultados.to_csv("resultados_caso6_algoritmos.csv", index = False)
+# Ruta donde se van a almacenar los resultados (para poder ejecutar en Windows y Linux)
+directorio = "Primer caso de estudio"
+algoritmos = os.path.join(directorio, "algoritmos")
+tablas = os.path.join(directorio, "tablas")
+figuras = os.path.join(directorio, "figuras")
+
+# Crear la subcarpeta 'algoritmos' si no existe
+os.makedirs(algoritmos, exist_ok = True)
+os.makedirs(tablas, exist_ok = True)
+os.makedirs(figuras, exist_ok = True)
+
+# Guardar resultados a CSV
+df_resultados.to_csv(
+    os.path.join(algoritmos, "resultados.csv"),
+    index = False
+)
+
+# ---------------------------------------------------------
+# 15) K-Means definitivo con k = 5
+# ---------------------------------------------------------
+
+kmeans_final = KMeans(
+    n_clusters = 5,
+    init = "k-means++",
+    n_init = 10,
+    random_state = 42
+)
+labels_final = kmeans_final.fit_predict(matriz)
+
+# Guardar el cluster de K-Means en el subset para interpretación
+subset_clust["cluster_kmeans"] = labels_final
+
+# ---------------------------------------------------------
+# 16) Scatter matrix (pairplot) con K-Means k=5
+# ---------------------------------------------------------
+print("\nGenerando scatter matrix (K-Means k=5)...")
+
+vars_plot = ["renta_equiv", "fin_de_mes", "exp_ingresos"]
+
+datos_plot = subset_clust[vars_plot + ["cluster_kmeans"]].copy()
+datos_plot["cluster_kmeans"] = datos_plot["cluster_kmeans"].astype("category")
+
+sns.pairplot(
+    datos_plot,
+    vars = vars_plot,
+    hue = "cluster_kmeans",
+    diag_kind = "hist",
+    corner = True
+)
+plt.tight_layout()
+plt.savefig(
+    os.path.join(figuras, "scatter_matrix_kmeans.png"),
+    dpi = 300
+)
+plt.close()
+
+# ---------------------------------------------------------
+# 17) Distribución del coeficiente silhouette por cluster
+# ---------------------------------------------------------
+print("\nCalculando coeficiente silhouette por cluster (K-Means k=5)...")
+
+sil_values = silhouette_samples(matriz, subset_clust["cluster_kmeans"])
+subset_clust["silhouette"] = sil_values
+
+plt.figure(figsize = (8, 4))
+sns.boxplot(
+    data = subset_clust,
+    x = "cluster_kmeans",
+    y = "silhouette"
+)
+plt.xlabel("Cluster (K-Means k=5)")
+plt.ylabel("Coeficiente silhouette")
+plt.title("Distribución del coeficiente silhouette por cluster")
+plt.tight_layout()
+plt.savefig(
+    os.path.join(figuras, "silhouette_kmeans.png"),
+    dpi = 300
+)
+plt.close()
+
+# Tabla con silhouette medio por cluster (por si la quieres en la memoria)
+tabla_silhouette = (
+    subset_clust.groupby("cluster_kmeans")["silhouette"]
+    .agg(["mean", "median", "min", "max"])
+)
+tabla_silhouette.to_csv(
+    os.path.join(tablas, "silhouette_kmeans.csv")
+)
+
+# ---------------------------------------------------------
+# 18) Heatmap de centroides de K-Means (k=5)
+# ---------------------------------------------------------
+print("\nGenerando heatmap de centroides (K-Means k=5)")
+
+centroides = pd.DataFrame(
+    kmeans_final.cluster_centers_,
+    columns = usadas
+)
+centroides.index = [f"cluster_{i}" for i in range(5)]
+
+plt.figure(figsize = (10, 4))
+sns.heatmap(
+    centroides,
+    annot = True,
+    fmt = ".2f",
+    cmap = "viridis"
+)
+plt.title("Heatmap de centroides (K-Means k=5)")
+plt.tight_layout()
+plt.savefig(
+    os.path.join(figuras, "centroides_kmeans.png"),
+    dpi = 300
+)
+plt.close()
+
+centroides.to_csv(
+    os.path.join(tablas, "centroides_kmeans.csv")
+)
+
+# ---------------------------------------------------------
+# 19) Gráfico de burbujas con MDS de centroides
+# ---------------------------------------------------------
+print("\nGenerando gráfico de burbujas con MDS de centroides (K-Means k=5)...")
+
+# Distancias euclídeas entre centroides
+dist_centroides = metrics.pairwise_distances(centroides.values, metric = "euclidean")
+
+mds = MDS(
+    n_components = 2,
+    dissimilarity = "precomputed",
+    random_state = 42
+)
+coords = mds.fit_transform(dist_centroides)
+
+# Tamaño de cada cluster (para las burbujas)
+tam_clusters = subset_clust["cluster_kmeans"].value_counts().sort_index()
+sizes = tam_clusters.values
+labels_clusters = tam_clusters.index.values
+
+plt.figure(figsize = (6, 6))
+plt.scatter(
+    coords[:, 0],
+    coords[:, 1],
+    s = sizes * 5,  # factor de escala para que se vean bien
+    alpha = 0.7
+)
+
+for i, label in enumerate(labels_clusters):
+    plt.text(
+        coords[i, 0],
+        coords[i, 1],
+        f"C{label}",
+        ha = "center",
+        va = "center",
+        fontsize = 10,
+        color = "black"
+    )
+
+plt.xlabel("Dimensión 1 (MDS)")
+plt.ylabel("Dimensión 2 (MDS)")
+plt.title("MDS de centroides (tamaño según nº de hogares ")
+plt.tight_layout()
+plt.savefig(
+    os.path.join(figuras, "centroides_mds.png"),
+    dpi = 300
+)
+plt.close()
+
+# ---------------------------------------------------------
+# 20) Dendrograma (Agglomerative Ward sobre muestra)
+# ---------------------------------------------------------
+print("\nGenerando dendrograma jerárquico (Ward) sobre muestra...")
+
+Z = linkage(muestra, method = "ward")
+
+plt.figure(figsize = (10, 5))
+dendrogram(
+    Z,
+    truncate_mode = "level",  # mostramos solo los niveles superiores
+    p = 5                      # número de niveles a mostrar
+)
+plt.title("Dendrograma jerárquico (Ward) sobre muestra ")
+plt.xlabel("Observaciones agrupadas")
+plt.ylabel("Distancia")
+plt.tight_layout()
+plt.savefig(
+    os.path.join(figuras, "dendrograma.png"),
+    dpi = 300
+)
+plt.close()
