@@ -68,11 +68,11 @@ datos = pd.read_csv("ECV.csv", low_memory = False)
 print("Filas, columnas (datos completos):", datos.shape)
 
 # ---------------------------------------------------------
-# 2) Selección de segmento: HI010 informada (flag = 1)
+# 2) Selección de segmento: Hogares según tipo y número de miembros
 # ---------------------------------------------------------
 datos["HX060"] = pd.to_numeric(datos["HX060"], errors = "coerce")
 
-# Elegimos todos los posibles valores de tipo de hogar excluyendo los "otros" hogares (9, 14)
+# Elegimos todos los posibles valores de tipo de hogar donde pueda haber menores
 codigos = [10,11,12,13, 14]
 subset = datos[datos["HX060"].isin(codigos)].copy()
 print("Filas, columnas:", subset.shape)
