@@ -1,5 +1,5 @@
 # Mauricio Luque Jiménez
-# Segundo caso de estudio: estructura familiar y bieniestar económica
+# Segundo caso de estudio: estructura familiar y bieniestar económico
 
 import os
 import time
@@ -68,39 +68,54 @@ datos = pd.read_csv("ECV.csv", low_memory = False)
 print("Filas, columnas (datos completos):", datos.shape)
 
 # ---------------------------------------------------------
-# 2) Selección de segmento: HI010 informada (flag = 1)
+# 2) Selección de segmento: Hogares según tipo y número de miembros
 # ---------------------------------------------------------
-subset = datos[datos["HI010_F"] == 1].copy()
+datos["HX060"] = pd.to_numeric(datos["HX060"], errors = "coerce")
+
+# Elegimos todos los posibles valores de tipo de hogar excluyendo los "otros" hogares (9, 14)
+codigos = [1,2,3,4,5,6,7,8,10,11,12,13]
+subset = datos[datos["HX060"].isin(codigos)].copy()
 print("Filas, columnas:", subset.shape)
 
 # ---------------------------------------------------------
 # 3) Renombrar variables de interés para trabajar más cómodo
 # ---------------------------------------------------------
 subset = subset.rename(columns = {
-    "HY020":   "renta_disp",
-    "HY022":   "renta_antes_trans_no_pensiones",
-    "HY023":   "renta_antes_todas_trans",
+    "HX040":   "n_miembros",
+    "HX060":   "tipo_hogar",
     "vhRentaa": "renta_equiv",
+    "HS120":  "fin_de_mes",
     "HS040":   "vacaciones",
     "HS050":   "comida_calidad",
     "HS060":   "gasto_imprevisto",
-    "HS120":   "fin_de_mes",
-    "HI040":   "exp_ingresos"
+    "vhPobreza":  "pobreza",
+    "vhMATDEP": "carencia_material"
 })
+
+subset["hay_menores"] = np.where(subset["tipo_hogar"].isin([10, 11, 12, 13, 14]), 1, 0)
+subset["monoparental"] = np.where(subset["tipo_hogar"] == 10, 1, 0)
+subset["pareja_hijos"] = np.where(subset["tipo_hogar"].isin([11, 12, 13]), 1, 0)
+subset["unipersonal"] = np.where(subset["tipo_hogar"].isin(range(1, 7)), 1, 0)
 
 # ---------------------------------------------------------
 # 4) Lista de variables que entran en el clustering
 # ---------------------------------------------------------
 usadas = [
-    "renta_disp",
-    "renta_antes_trans_no_pensiones",
-    "renta_antes_todas_trans",
+    # estructura familiar
+    "n_miembros",
+    "hay_menores",
+    "monoparental",
+    "pareja_hijos",
+    "unipersonal",
+
+    # bienestar económico
     "renta_equiv",
+    "fin_de_mes",
+    "gasto_imprevisto",
     "vacaciones",
     "comida_calidad",
-    "gasto_imprevisto",
-    "fin_de_mes",
-    "exp_ingresos"
+    "pobreza",
+    "carencia_material"
 ]
 
 # ---------------------------------------------------------
@@ -317,7 +332,7 @@ df_resultados.to_csv(
 # ---------------------------------------------------------
 
 kmeans_final = KMeans(
-    n_clusters = 5,
+    n_clusters = 4,
     init = "k-means++",
     n_init = 10,
     random_state = 42
@@ -330,9 +345,9 @@ subset_clust["cluster_kmeans"] = labels_final
 # ---------------------------------------------------------
 # 16) Scatter matrix (pairplot) con K-Means k=5
 # ---------------------------------------------------------
-print("\nGenerando scatter matrix (K-Means k=5)...")
+print("\nGenerando scatter matrix (K-Means k=4)...")
 
-vars_plot = ["renta_equiv", "fin_de_mes", "exp_ingresos"]
+vars_plot = ["renta_equiv", "fin_de_mes", "n_miembros"]
 
 datos_plot = subset_clust[vars_plot + ["cluster_kmeans"]].copy()
 datos_plot["cluster_kmeans"] = datos_plot["cluster_kmeans"].astype("category")
@@ -354,7 +369,7 @@ plt.close()
 # ---------------------------------------------------------
 # 17) Distribución del coeficiente silhouette por cluster
 # ---------------------------------------------------------
-print("\nCalculando coeficiente silhouette por cluster (K-Means k=5)...")
+print("Calculando coeficiente silhouette por cluster (K-Means k=4)...")
 
 sil_values = silhouette_samples(matriz, subset_clust["cluster_kmeans"])
 subset_clust["silhouette"] = sil_values
@@ -365,7 +380,7 @@ sns.boxplot(
     x = "cluster_kmeans",
     y = "silhouette"
 )
-plt.xlabel("Cluster (K-Means k=5)")
+plt.xlabel("Cluster (K-Means k=4)")
 plt.ylabel("Coeficiente silhouette")
 plt.title("Distribución del coeficiente silhouette por cluster")
 plt.tight_layout()
@@ -387,13 +402,13 @@ tabla_silhouette.to_csv(
 # ---------------------------------------------------------
 # 18) Heatmap de centroides de K-Means (k=5)
 # ---------------------------------------------------------
-print("\nGenerando heatmap de centroides (K-Means k=5)")
+print("Generando heatmap de centroides (K-Means k=4)")
 
 centroides = pd.DataFrame(
     kmeans_final.cluster_centers_,
     columns = usadas
 )
-centroides.index = [f"cluster_{i}" for i in range(5)]
+centroides.index = [f"{i}" for i in range(4)]
 
 plt.figure(figsize = (10, 4))
 sns.heatmap(
@@ -402,7 +417,7 @@ sns.heatmap(
     fmt = ".2f",
     cmap = "viridis"
 )
-plt.title("Heatmap de centroides (K-Means k=5)")
+plt.title("Heatmap de centroides (K-Means k=4)")
 plt.tight_layout()
 plt.savefig(
     os.path.join(figuras, "centroides_kmeans.png"),
@@ -417,7 +432,7 @@ centroides.to_csv(
 # ---------------------------------------------------------
 # 19) Gráfico de burbujas con MDS de centroides
 # ---------------------------------------------------------
-print("\nGenerando gráfico de burbujas con MDS de centroides (K-Means k=5)...")
+print("Generando gráfico de burbujas con MDS de centroides (K-Means k=4)...")
 
 # Distancias euclídeas entre centroides
 dist_centroides = metrics.pairwise_distances(centroides.values, metric = "euclidean")
@@ -466,7 +481,7 @@ plt.close()
 # ---------------------------------------------------------
 # 20) Dendrograma (Agglomerative Ward sobre muestra)
 # ---------------------------------------------------------
-print("\nGenerando dendrograma jerárquico (Ward) sobre muestra...")
+print("Generando dendrograma jerárquico (Ward) sobre muestra...")
 
 Z = linkage(muestra, method = "ward")
 

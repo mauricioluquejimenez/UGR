@@ -76,6 +76,7 @@ print("Filas, columnas:", subset.shape)
 # ---------------------------------------------------------
 # 3) Renombrar variables de interés para trabajar más cómodo
 # ---------------------------------------------------------
+
 subset = subset.rename(columns = {
     "HY020":   "renta_disp",
     "HY022":   "renta_antes_trans_no_pensiones",
@@ -354,7 +355,7 @@ plt.close()
 # ---------------------------------------------------------
 # 17) Distribución del coeficiente silhouette por cluster
 # ---------------------------------------------------------
-print("\nCalculando coeficiente silhouette por cluster (K-Means k=5)...")
+print("Calculando coeficiente silhouette por cluster (K-Means k=5)...")
 
 sil_values = silhouette_samples(matriz, subset_clust["cluster_kmeans"])
 subset_clust["silhouette"] = sil_values
@@ -387,13 +388,13 @@ tabla_silhouette.to_csv(
 # ---------------------------------------------------------
 # 18) Heatmap de centroides de K-Means (k=5)
 # ---------------------------------------------------------
-print("\nGenerando heatmap de centroides (K-Means k=5)")
+print("Generando heatmap de centroides (K-Means k=5)")
 
 centroides = pd.DataFrame(
     kmeans_final.cluster_centers_,
     columns = usadas
 )
-centroides.index = [f"cluster_{i}" for i in range(5)]
+centroides.index = [f"{i}" for i in range(5)]
 
 plt.figure(figsize = (10, 4))
 sns.heatmap(
@@ -417,7 +418,7 @@ centroides.to_csv(
 # ---------------------------------------------------------
 # 19) Gráfico de burbujas con MDS de centroides
 # ---------------------------------------------------------
-print("\nGenerando gráfico de burbujas con MDS de centroides (K-Means k=5)...")
+print("Generando gráfico de burbujas con MDS de centroides (K-Means k=5)...")
 
 # Distancias euclídeas entre centroides
 dist_centroides = metrics.pairwise_distances(centroides.values, metric = "euclidean")
@@ -455,7 +456,7 @@ for i, label in enumerate(labels_clusters):
 
 plt.xlabel("Dimensión 1 (MDS)")
 plt.ylabel("Dimensión 2 (MDS)")
-plt.title("MDS de centroides (tamaño según nº de hogares ")
+plt.title("MDS de centroides (tamaño según nº de hogares) ")
 plt.tight_layout()
 plt.savefig(
     os.path.join(figuras, "centroides_mds.png"),
@@ -466,7 +467,7 @@ plt.close()
 # ---------------------------------------------------------
 # 20) Dendrograma (Agglomerative Ward sobre muestra)
 # ---------------------------------------------------------
-print("\nGenerando dendrograma jerárquico (Ward) sobre muestra...")
+print("Generando dendrograma jerárquico (Ward) sobre muestra...")
 
 Z = linkage(muestra, method = "ward")
 

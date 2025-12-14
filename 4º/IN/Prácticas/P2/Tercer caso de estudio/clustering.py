@@ -1,5 +1,5 @@
 # Mauricio Luque Jiménez
-# Tercer caso de estudio: hogares con menores y carencias familiares
+# Tercer caso de estudio: hogares con menores y carencias infantiles
 
 import os
 import time
@@ -70,37 +70,50 @@ print("Filas, columnas (datos completos):", datos.shape)
 # ---------------------------------------------------------
 # 2) Selección de segmento: HI010 informada (flag = 1)
 # ---------------------------------------------------------
-subset = datos[datos["HI010_F"] == 1].copy()
+datos["HX060"] = pd.to_numeric(datos["HX060"], errors = "coerce")
+
+# Elegimos todos los posibles valores de tipo de hogar excluyendo los "otros" hogares (9, 14)
+codigos = [10,11,12,13, 14]
+subset = datos[datos["HX060"].isin(codigos)].copy()
 print("Filas, columnas:", subset.shape)
 
 # ---------------------------------------------------------
 # 3) Renombrar variables de interés para trabajar más cómodo
 # ---------------------------------------------------------
 subset = subset.rename(columns = {
-    "HY020":   "renta_disp",
-    "HY022":   "renta_antes_trans_no_pensiones",
-    "HY023":   "renta_antes_todas_trans",
-    "vhRentaa": "renta_equiv",
-    "HS040":   "vacaciones",
-    "HS050":   "comida_calidad",
-    "HS060":   "gasto_imprevisto",
-    "HS120":   "fin_de_mes",
-    "HI040":   "exp_ingresos"
+    "HCH010":  "medico",
+    "HCH030":  "dentista",
+    "HD100":   "ropa_nueva",
+    "HD110":   "pares_zapatos",
+    "HD120":   "comida_fresca",
+    "HD140":   "proteinas",
+    "HD150":   "libros",
+    "HD160":   "equipos_aire_libre",
+    "HD170":   "juguetes",
+    "HD180":   "ocio",
+    "HD190":   "ocasiones_especiales",
+    "HD200":   "reuniones_amigos",
+    "HD210":   "excursiones",
+    "HD220":   "lugar_estudio",
+    "HD240":   "vacaciones"
 })
 
 # ---------------------------------------------------------
 # 4) Lista de variables que entran en el clustering
 # ---------------------------------------------------------
 usadas = [
-    "renta_disp",
-    "renta_antes_trans_no_pensiones",
-    "renta_antes_todas_trans",
-    "renta_equiv",
-    "vacaciones",
-    "comida_calidad",
-    "gasto_imprevisto",
-    "fin_de_mes",
-    "exp_ingresos"
+    "medico",
+    "dentista",
+    "ropa_nueva",
+    "pares_zapatos",
+    "comida_fresca",
+    "proteinas",
+    "libros",
+    "ocasiones_especiales",
+    "reuniones_amigos",
+    "excursiones",
+    "lugar_estudio",
+    "vacaciones"
 ]
 
 # ---------------------------------------------------------
@@ -313,26 +326,27 @@ df_resultados.to_csv(
 )
 
 # ---------------------------------------------------------
-# 15) K-Means definitivo con k = 5
+# 15) K-Means definitivo con k = 4
 # ---------------------------------------------------------
 
 kmeans_final = KMeans(
-    n_clusters = 5,
+    n_clusters = 4,
     init = "k-means++",
     n_init = 10,
     random_state = 42
 )
+
 labels_final = kmeans_final.fit_predict(matriz)
 
 # Guardar el cluster de K-Means en el subset para interpretación
 subset_clust["cluster_kmeans"] = labels_final
 
 # ---------------------------------------------------------
-# 16) Scatter matrix (pairplot) con K-Means k=5
+# 16) Scatter matrix (pairplot) con K-Means k=4
 # ---------------------------------------------------------
-print("\nGenerando scatter matrix (K-Means k=5)...")
+print("\nGenerando scatter matrix (K-Means k=4)...")
 
-vars_plot = ["renta_equiv", "fin_de_mes", "exp_ingresos"]
+vars_plot = ["medico", "ropa_nueva", "comida_fresca"]
 
 datos_plot = subset_clust[vars_plot + ["cluster_kmeans"]].copy()
 datos_plot["cluster_kmeans"] = datos_plot["cluster_kmeans"].astype("category")
@@ -354,7 +368,7 @@ plt.close()
 # ---------------------------------------------------------
 # 17) Distribución del coeficiente silhouette por cluster
 # ---------------------------------------------------------
-print("\nCalculando coeficiente silhouette por cluster (K-Means k=5)...")
+print("Galculando coeficiente silhouette por cluster (K-Means k=4)...")
 
 sil_values = silhouette_samples(matriz, subset_clust["cluster_kmeans"])
 subset_clust["silhouette"] = sil_values
@@ -365,7 +379,7 @@ sns.boxplot(
     x = "cluster_kmeans",
     y = "silhouette"
 )
-plt.xlabel("Cluster (K-Means k=5)")
+plt.xlabel("Cluster (K-Means k=4)")
 plt.ylabel("Coeficiente silhouette")
 plt.title("Distribución del coeficiente silhouette por cluster")
 plt.tight_layout()
@@ -385,15 +399,15 @@ tabla_silhouette.to_csv(
 )
 
 # ---------------------------------------------------------
-# 18) Heatmap de centroides de K-Means (k=5)
+# 18) Heatmap de centroides de K-Means (k=4)
 # ---------------------------------------------------------
-print("\nGenerando heatmap de centroides (K-Means k=5)")
+print("Generando heatmap de centroides (K-Means k=4)")
 
 centroides = pd.DataFrame(
     kmeans_final.cluster_centers_,
     columns = usadas
 )
-centroides.index = [f"cluster_{i}" for i in range(5)]
+centroides.index = [f"{i}" for i in range(4)]
 
 plt.figure(figsize = (10, 4))
 sns.heatmap(
@@ -402,7 +416,7 @@ sns.heatmap(
     fmt = ".2f",
     cmap = "viridis"
 )
-plt.title("Heatmap de centroides (K-Means k=5)")
+plt.title("Heatmap de centroides (K-Means k=4)")
 plt.tight_layout()
 plt.savefig(
     os.path.join(figuras, "centroides_kmeans.png"),
@@ -417,7 +431,7 @@ centroides.to_csv(
 # ---------------------------------------------------------
 # 19) Gráfico de burbujas con MDS de centroides
 # ---------------------------------------------------------
-print("\nGenerando gráfico de burbujas con MDS de centroides (K-Means k=5)...")
+print("Generando gráfico de burbujas con MDS de centroides (K-Means k=4)...")
 
 # Distancias euclídeas entre centroides
 dist_centroides = metrics.pairwise_distances(centroides.values, metric = "euclidean")
@@ -466,7 +480,7 @@ plt.close()
 # ---------------------------------------------------------
 # 20) Dendrograma (Agglomerative Ward sobre muestra)
 # ---------------------------------------------------------
-print("\nGenerando dendrograma jerárquico (Ward) sobre muestra...")
+print("Generando dendrograma jerárquico (Ward) sobre muestra...")
 
 Z = linkage(muestra, method = "ward")
 
