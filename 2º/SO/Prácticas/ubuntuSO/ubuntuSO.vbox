@@ -8,7 +8,7 @@
 ** Written by VirtualBox 7.2.2 (r170484)
 -->
 <VirtualBox xmlns="http://www.virtualbox.org/" version="1.19-linux">
-  <Machine uuid="{0acf3bfb-9fab-4b88-b4a7-e28e73deb3fd}" name="ubuntuSO" OSType="Ubuntu_64" currentSnapshot="{43589ae5-cdd8-490d-bbd6-f9736bdd3570}" snapshotFolder="Snapshots" lastStateChange="2025-11-25T18:19:16Z">
+  <Machine uuid="{0acf3bfb-9fab-4b88-b4a7-e28e73deb3fd}" name="ubuntuSO" OSType="Ubuntu_64" currentSnapshot="{43589ae5-cdd8-490d-bbd6-f9736bdd3570}" snapshotFolder="Snapshots" lastStateChange="2025-12-15T18:45:10Z">
     <MediaRegistry>
       <HardDisks>
         <HardDisk uuid="{cb7c4427-5ebd-467b-9830-082ec296a62d}" location="ubuntuSO.vdi" format="VDI" type="Normal">
