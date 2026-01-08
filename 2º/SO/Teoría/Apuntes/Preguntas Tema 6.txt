@@ -1,0 +1,30 @@
+1. En sistemas operativos, la seguridad se define como el conjunto de protocolos y mecanismos ideados para evitar posibles ataques, virus, incursiones, uso indebido o fallos accidentales que pongan en peligro información del sistema o información que no debe ser consultada o modificada.
+
+- Confidencialidad: el sistema operativo debe asegurarse de que a un archivo protegido sólo pueda acceder quien tenga permisos para ello
+- Integridad: el sistema operativo debe asegurarse de que los datos que se manejen no se modifiquen cuando no es debido, de manera que al consultar o transferir datos, la información sea correcta
+- Disponibilidad: el sistema operativo debe asegurarse de que los recursos y datos sean accesibles para los usuarios que los necesiten en un determinado momento
+
+2. Los componentes críticos son CPU, memoria, sistema de archivos, información de (super)usuario y kernel. Su compromiso puede equivaler a control total porque son los componentes que gestionan prácticamente la totalidad del funcionamiento del sistema
+
+3. La política de seguridad se puede entender como el conjunto de reglas lógicas o ideas pensadas para preservar la seguridad de un sistema operativo, mientras que un mecanismo es el conjunto de pasos, métodos y algoritmos que se ponen en práctica para cumplir con la política de seguridad anteriormente mencionada. Por ejemplo, una política de seguridad puede ser que sólo los usuarios propietarios de archivos puedan cambiar el nombre del mismo, mientras que el mecanismo de seguridad sea, cada vez que alguien va a modificar el nombre de un archivo, comprobar si el usuario que va a realizar el cambio tiene permitido dicha acción.
+
+4. - Problemas físicos: desastres naturales (incendio, derrumbe, etc.), problemas de instalación, daño de componentes físicos o accesos físicos no autorizados.
+   - Problemas lógicos: usuarios malintencionados, claves poco seguras, programas con errores involuntarios, programas maliciosos
+
+   Un problema de acceso físico puede volver inútiles controles lógicos porque con acceso físico puedes saltarte la seguridad lógica: arrancar desde un USB, extraer el disco y leerlo en otra máquina, manipular el hardware, resetear contraseñas según el escenario o instalar dispositivos maliciosos.
+
+5. - Caballo de Troya: función maliciosa oculta en un programa aparentemente normal
+   - Puerta trasera: punto secreto de entrada al sistema que permite acceder sin identificación
+   - Virus: código malicioso que se copia a otros programas y perjudica el rendimiento del sistema
+   - Gusano: código que se copia a través de la red
+   - Bomba lógica: lógica introducida en un programa que, cuando se dan ciertas condiciones en el sistema, ejecuta una función no autorizada
+
+6. La autenticación asegura que un usuario es quien dice ser, de manera que sea seguro asignarle permisos o directamente acceso a determinada información. Es importante guardar credenciales con hash para evitar que un ataque imprevisto pueda acceder a dichas credenciales, de manera que sólo el administrador sea capaz de encontrar las credenciales correctas para un usuario
+
+7. La autorización permite a un usuario acceder a unos recursos concretos El principio de mínimo privilegio busca otorgar a un usuario los permisos necesarios para sus funciones y nada más, sin excederse ni "regalar" permisos para así evitar que pueda acceder a secciones donde es conveniente no acceder
+
+8. Significa evaluar quién quiere realizar la acción, sobre qué va a realizar la acción y qué acción va a realizar. En resumen, controlar cada modificación que se pueda realizar en el sistema. Para ello, existen permisos que controlan, poniendo como ejemplo los ficheros, quién puede qué acciones.
+
+9. El aislamiento de procesos implica que los procesos actúen de forma mayormente independiente y sin "chocarse" unos con otros, evitando errores en memoria o de trasvase de datos incorrecto. La protección de memoria básicamente evita acceder a determinadas direcciones de memoria. El modo usuario/kernel permite realizar acciones concretas a las que el usuario normal no debería tener acceso, sino que se realizan en un nivel superior puesto que afectan a niveles base del sistema. Las llamadas al sistema son la única manera que tiene el usuario de solicitar kernel
+
+10. Las auditorías permiten identificar quién realizó qué modificaciones en qué instantes de tiempo, lo que puede ayudar a corregir errores derivados de dichas modificaciones (o detectar ataques a partir de ciertas modificaciones), mientras que los parches y actualizaciones existen para paliar esos posibles errores y mejorar el funcionamiento del sistema. Secure boot es un mecanismo que verifica la integridad del software durante el arranque, ejecutando menos software del habitual (únicamente software confiable)
