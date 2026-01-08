@@ -47,19 +47,19 @@ int main(int argc, char *argv[])
     cout<<"Palabra no borrada "<<diccionario.size()<<endl;
 
   int longitud;
-  cout<<"Dime la longitud de las palabras que  quieres ver";
+  cout<<"Dime la longitud de las palabras que  quieres ver: ";
   cin>>longitud;
   vector<string> v=diccionario.getWordsLength(longitud);
   for (int i=0;i<v.size();i++)
      cout<<v[i]<<endl;
 
   string input;
-  cout<<"Dime una palabra ";
+  cout<<"Dime una palabra: ";
   cin>>input;
   if (diccionario.find(input)!=diccionario.end())
-        cout<<"La palabra esta"<<endl;
+        cout<<"La palabra está"<<endl;
   else
-        cout<<"La palabra no esta"<<endl;
+        cout<<"La palabra no está"<<endl;
 
 
   return 0;
