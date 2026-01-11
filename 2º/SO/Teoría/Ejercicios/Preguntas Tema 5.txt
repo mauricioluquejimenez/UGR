@@ -1,0 +1,29 @@
+1. - Abstracción: utilizar únicamente la información o los recursos necesarios para hacer funcionar una parte del sistema, pudiendo ocultar características específicas sin acceder a detalles internos
+   - Uniformidad: establecer una manera de actuar, unos comportamientos y una cohesión lógica entre distintos y diversos dispositivos
+   - Rendimiento: solucionar la enorme diferencia de velocidad entre la CPU y los dispositivos
+   - Errores: preparar una serie de mecanismos para detectar y solucionar posibles errores que puedan surgir
+   - Compartición: permitir que varios procesos o usuarios compartan dispositivos con control
+   - Habilitar funcionamiento asíncrono bloqueando procesos mientras se hace E/S (para que la CPU pueda seguir con otros).
+
+2. En la parte hardware tienes la CPU, el bus y sobre todo los controladores hardware, que actúan de intermediarios entre el ordenador y uno o varios dispositivos. El controlador expone registros y una interfaz con el bus, además de una interfaz con el dispositivo real.
+
+3. Un controlador hardware es un dispositivo que hace de intermediario entre el propio dispositivo y el sistema operativo, de manera que éste último pueda integrarlo en el funcionamiento del sistema. Cuando decimos que el SO habla "directamente" con el dispositivo nos referimos, en realidad, en que no existe una comunicación entre el SO y el dispositivo, sino que la conexión es entre el SO y el controlador (mientras que a su vez el controlador es el que se comunica con el dispositivo)
+
+4. - E/S programada: una vez empieza una operación E/S, la CPU se mantiene bloqueada esperando a que termine dicha operación. Evidentemente exige mucho coste CPU y puede compensar cuando esa operación es esencial.
+   - Sondeo: una vez empieza una operación E/S, cada cierto tiempo la CPU comprueba periódicamente el estado del controlador. Puede ser conveniente cuando hay un proceso periódico.
+   - Interrupciones: La CPU sólo se preocupa por la operación de E/S cuando el controlador genera una interrupción, cosa que sólo ocurre cuando la operación ha terminado y hay que informar a la CPU. No es la que más exige a la CPU y acaba siendo el caso más habitual para tratar operaciones E/S.
+   - DMA: Mismo esquema de interrupciones salvo que aquí es el propio controlador E/S el que se comunica con la memoria para leer/escribir información, descargando aún más de trabajo a la CPU (ya que cuando llega la interrupción a la CPU la transferencia ya se ha completado)
+
+5. DMA consiste en la gestión de E/S mediante interrupciones, con el añadido de que la CPU no tiene que comunicarse con memoria para escribir/leer información, sino que es el propio controlador E/S el que realiza esta tarea. Eso sí, la CPU debe comunicarse con memoria para indicarle correctamente al controlador las direcciones a las que debe acceder.
+
+6. Un gestor de dispositivo se encarga de recibir peticiones de alto nivel del SO y traducirlas para el controlador, y viceversa. La parte dependiente del dispositivo utiliza registros y órdenes propios del dispositivo para su programación, mientras que la parte independiente trabaja con una interfaz a alto nivel para atender al SO.
+
+7. El IORB es una estructura/bloque de petición que representa una operación de E/S y que se encarga de procesar peticiones E/S ordenándolas según su ejecución: si el dispositivo E/S no es rápido, queda bloqueado a la espera de una interrupción, mientras que si el dispositivo es rápido responde inmediatamente. El software de E/S independiente del dispositivo crea los IORB y se los entrega a los gestores de dispositivo para que los programen y los planifiquen.
+
+8. El software independiente de E/S crea una interfaz uniforme para acceder a los dispositivos E/S (asignándole un nombre a cada dispositivo), de manera que se puedan gestionar, tal y como dice su nombre, independientemente del tipo de dispositivo que sean. Esto se hace para facilitar la interacción del SO con todos los dispositivos y requerir funciones muy concretas que a la larga pueden dificultar esta conexión.
+
+9. El software de E/S independiente del dispositivo incluye mecanismos de buffering y caché. El buffering usa memoria intermedia para absorber diferencias de velocidad y de tamaño entre productor y consumidor (por ejemplo, CPU rápida y dispositivo lento) y para facilitar el funcionamiento asíncrono.
+
+   La caché guarda en memoria copias de datos recientemente usados para acelerar accesos repetidos y reducir E/S real. El precio es claro: consume memoria, puede introducir problemas de consistencia (datos en caché vs datos reales) y puede complicar la medición de rendimiento porque parte del “tiempo” desaparece al evitar accesos al hardware.
+
+10. Permite tratar a todos los dispositivos por igual, independientemente del tipo de dispositivo, además de poder establecer permisos y controlar el acceso al mismo como se hace con un archivo regular normal.

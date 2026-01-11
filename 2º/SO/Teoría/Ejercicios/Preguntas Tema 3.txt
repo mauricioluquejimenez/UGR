@@ -1,0 +1,20 @@
+1. La jerarquía de memoria está pensada para que los accesos más frecuentes sean los que tarden menos tiempo, agilizando así el funcionamiento del sistema y aprovechando que lo rápido suele ser más caro y de menor capacidad, mientras que lo lento suele ser más barato y de mayor capacidad. La razón práctica es el principio de localidad: si una instrucción o dato se accede ahora, es probable que se vuelva a acceder pronto o se acceda a algo cercano, lo que hace que las cachés tengan muchos aciertos. De esta manera, los accesos más rápidos son los accesos a registros del procesador, seguidos de la caché del mismo, la memoria principal y memorias auxiliares que requieren E/S o discos duros.
+
+2. Una dirección lógica es una dirección de memoria asignada por un programa durante su ejecución, mientras que una dirección física es la dirección real en memoria a la que se traduce la dirección lógica en un determinado instante de tiempo. El programa en cuestión genera la dirección lógica "abstracta" y esa dirección lógica se traduce en una dirección física en memoria. Por tanto, el espacio de direcciones lógico es el conjunto de direcciones lógicas generadas durante la ejecución de un programa, mientras que el espacio de direcciones físicas es el conjunto de direcciones que se le asignan a las direcciones lógicas en un determinado instante de tiempo. Como existen ambos espacios, hace falta un proceso de traducción entre direcciones lógicas y físicas.
+
+3. MMU: Dispositivo hardware, gestionado por el sistema operativo y que forma parte del procesador, que traduce direcciones lógicas en direcciones físicas. TLB: buffer de caché utilizado por la MMU para reducir el coste de las direcciones usadas por un programa (guarda las traducciones para no traducirlas una y otra vez)
+
+4. La paginación es una técnica de asignación no contigua que consiste en fragmentar la información almacenada en memoria en páginas y marcos de página, minimizando la fragmentación externa. La información más común es bit de modificación (indican si un dato se ha modificado anteriormente), bit de referencia (indica si una página o marco de página ha sido referenciada/utilizada recientemente), o bit de validez.
+
+5. La paginación multinivel consiste en hacer paginación de la propia tabla de páginas: el primer nivel indica qué tabla del segundo nivel hay que usar y el segundo nivel contiene la traducción. Esto permite evitar marcos de página demasiado grandes y mantener en memoria tablas gigantes completas, pudiendo reducir su tamaño y el tiempo de búsqueda, aparte de indexar y enlazar información si es necesario.
+
+6. Una falta de página es un suceso que ocurre cuando un determinado proceso/página que se necesita leer de memoria no está cargado en la misma. Cuando se produce una falta de página, el proceso se bloquea, se localiza la página en disco, se busca marco libre (o se genera expulsando una página), se carga la página, se actualiza la tabla y se desbloquea el proceso.
+
+7. La hiperpaginación es un suceso que se da cuando se llega a cierto nivel de multiprogramación en el que el rendimiento del sistema cae en picado ya que las faltas de página son más costosas que el resto de operaciones.
+
+8. FIFO ignora la importancia o relevancia de cada página, ya que sólo tiene en cuenta el instante de llegada aunque, por ejemplo, se usa durante largos intervalos de tiempo. LRU sustituye la página cuya última referencia queda más lejos en el pasado. Por otra parte, el óptimo no es implementable porque requiere conocer el futuro.
+
+9. Conjunto de páginas constante relativas a un único proceso durante un intervalo de tiempo. Eso sí, para evitar hiperpaginación y sobrecargar memoria, cada cierto intervalo de tiempo se eliminan páginas que no hayan sido referenciadas durante dicho periodo de tiempo.
+
+10. FFP comprueba en cada instante en el que se produce falta de página si ha pasado el tiempo suficiente para eliminar páginas alojadas en memoria que no han sido referenciadas. De esta manera, se tiene en cuenta la demanda de cada página para eliminarla de memoria si se considera que no es importante a nivel global.
+
