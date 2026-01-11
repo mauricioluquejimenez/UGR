@@ -1,0 +1,4 @@
+timestamp_local,model,cv,seed,tune,tune_iter,oof_rmse,out_csv,best_params_json,notes
+2026-01-07 21:27:29,catboost,KFold(5),42,False,0,23.18921879158637,submission_catboost_rmse_23.189219.csv,,
+2026-01-07 21:39:25,lightgbm,KFold(5),42,False,0,20.579487841640248,submission_lightgbm_rmse_20.579488.csv,,
+2026-01-07 21:53:47,catboost,KFold(5),42,False,0,22.20891901881708,submission_catboost_rmse_22.208919.csv,,
