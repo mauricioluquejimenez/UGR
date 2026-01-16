@@ -1,0 +1,23 @@
+Explica justificadamente tres medidas que usarías para valorar el rendimiento de un clasificador sobre un conjunto de datos altamente desbalanceado.
+
+Explica cómo tratarías el sobreaprendizaje en clasificación mediante árboles de decisión.
+
+Explica qué inconvenientes puede presentar la confianza para valorar la fiabilidad de una regla de asociación y propón una alternativa que palíe esos inconvenientes.
+
+Justifica en qué orden aplicarías los siguientes métodos de procesado de datos: reducción del ruido, balanceo de clases por muestreo, selección de características e imputación de valores perdidos.
+
+Compara justificadamente ventajas y desventajas de los siguientes algoritmos de clustering: K-Means, DBSCAN, Mean Shift, Jerárquico Aglomerativo Ward y BIRCH.
+
+En un problema de clasificación con tres clases, donde la clase minoritaria es 10 veces menos frecuente que la clase mayoritaria, responde justificadamente a las siguientes cuestiones:
+a) ¿Qué medida emplearías para valorar el acierto de un clasificador?
+b) ¿Qué método usarías para comparar la eficacia de diferentes algoritmos de clasificación?
+c) ¿Qué solución propondrías para mejorar la capacidad predictiva de los clasificadores generados por un algoritmo de aprendizaje de árboles de decisión?
+d) ¿Y de un algoritmo ensemble learning?
+
+Explica en qué consiste la clasificación multi-etiqueta, el aprendizaje multi-instancia y el aprendizaje semisupervisado. En cada caso, propón un ejemplo de resolución de un problema apropiado para él.
+
+Describe brevemente los modelos básicos de ensemble learning Bagging y Boosting explicando los aspectos relevantes de cada uno de ellos y destacando sus diferencias.
+
+Indica ventajas e inconvenientes de la selecci´on de características de tipo filtro y envolvente.
+
+Explica brevemente las similitudes, diferencias y qué retos abordan el aprendizaje incremental y la minería de flujo de datos.

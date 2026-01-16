@@ -1,0 +1,43 @@
+1. Explica por qué la accuracy puede ser engañosa en un problema con clases muy desbalanceadas y propone tres métricas alternativas indicando qué tipo de error penaliza más cada una.
+	
+	Puede ser engañosa ya que el algoritmo puede tender a dar demasiadas veces la clase mayoritaria como resultado, independientemente de cuál debería ser el valor correcto. De esta manera, la mayoría de veces se acierta, pero puede ser muy peligoro en aquellos casos donde se dé un falso positivo. Tres métricas para solucionar este problema pueden ser GMean, AUC y F1
+	
+2. Justifica qué protocolo de validación usarías para comparar dos clasificadores cuando hay desbalanceo fuerte y además necesitas ajustar hiperparámetros, indicando cómo evitar una estimación optimista.
+
+	Validación cruzada estratificada (en cada partición se mantiene la proporciónde clases) y permite seleccionar hiperparámetros
+	
+3. Explica cómo afrontarías el sobreaprendizaje en árboles de decisión distinguiendo entre medidas de pre-poda y post-poda y señalando qué señales en datos te harían preferir una u otra.
+
+4. Compara Bagging y Boosting: objetivo principal, cómo generan diversidad, sensibilidad al ruido, paralelización y un caso típico donde elegirías cada uno. 
+
+5. Propón un orden razonado para aplicar imputación, reducción de ruido, balanceo por muestreo y selección de características, explicando qué puede salir mal si alteras ese orden. 
+
+6. Indica ventajas e inconvenientes de selección de características tipo filtro y tipo envolvente, y explica cuándo un enfoque “más caro” es justificable en un entorno real. 
+
+7. Compara K-Means, DBSCAN, Mean Shift, Ward y BIRCH para un dataset con ruido y clusters de densidad desigual, señalando qué supuestos rompe cada algoritmo y qué parámetro es más delicado. 
+
+8. Explica por qué la confianza puede inflar reglas poco útiles cuando el consecuente es muy frecuente y justifica el uso de lift u otra medida para corregirlo.
+
+9. Define clasificación multi-etiqueta, aprendizaje multi-instancia y aprendizaje semisupervisado, y da un ejemplo realista de cada uno indicando el reto principal de evaluación. 
+
+10. Explica similitudes y diferencias entre aprendizaje incremental y minería de flujo de datos, y qué implica el concept drift a nivel de datos, modelo y validación. 
+
+11. Elige una métrica para un problema de 3 clases donde una minoritaria es 15× menos frecuente y justifica por qué esa métrica es preferible a macro-accuracy, micro-accuracy o accuracy “a secas”. 
+
+12. Propón dos estrategias de nivel de datos y dos de nivel de algoritmo para tratar desbalanceo, indicando una ventaja y un riesgo de cada estrategia.
+
+13. Explica qué significa que un clasificador sea estable o inestable y por qué eso afecta a si Bagging suele mejorar o no su rendimiento.
+
+14. Justifica qué harías si un modelo con SMOTE y Random Forest obtiene un resultado mediocre: enumera tres causas plausibles no triviales (más allá de “está desbalanceado”) y cómo las diagnosticarías.
+
+15. Describe los componentes de una serie temporal (tendencia, estacionalidad, ciclo y ruido) y explica cómo condicionan la elección de validación y de modelo de predicción.
+
+Explica qué es validación bootstrap y compárala con hold-out y k-fold en términos de sesgo, varianza y coste computacional, indicando cuándo tiene sentido usarla.
+
+Dado un dataset con mezcla de variables numéricas y categóricas, justifica qué preprocesamiento es más importante si vas a usar k-NN frente a si vas a usar árboles de decisión, y por qué.
+
+Explica qué es una medida grupal de fairness en aprendizaje automático y describe dos métricas típicas, indicando un caso donde mejorar fairness puede empeorar otras métricas de rendimiento.
+
+Propón un criterio razonado para elegir entre AUC, F1 y G-mean en un problema binario desbalanceado, indicando qué suposición implícita haces sobre el coste de FP y FN en cada caso.
+
+Dadas estas propiedades del conjunto de datos: 5 millones de instancias, 300 características, llegada continua de datos y cambio de distribución cada cierto tiempo, elige un enfoque general (offline, incremental o stream) y justifica qué técnicas usarías para afrontar memoria limitada, latencia y concept drift. 
