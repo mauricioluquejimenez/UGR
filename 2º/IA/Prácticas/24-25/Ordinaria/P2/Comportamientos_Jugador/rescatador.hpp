@@ -1,0 +1,51 @@
+#ifndef COMPORTAMIENTORESCATADOR_H
+#define COMPORTAMIENTORESCATADOR_H
+
+#include <chrono>
+#include <time.h>
+#include <thread>
+
+#include "comportamientos/comportamiento.hpp"
+
+class ComportamientoRescatador : public Comportamiento
+{
+
+public:
+  ComportamientoRescatador(unsigned int size = 0) : Comportamiento(size)
+  {
+    last_action = IDLE;
+    tiene_zapatillas = false;
+    giro45izq = 0;
+    visitado = vector<vector<int>>(size, vector<int>(size, 0));
+  }
+  ComportamientoRescatador(std::vector<std::vector<unsigned char>> mapaR, std::vector<std::vector<unsigned char>> mapaC) : Comportamiento(mapaR,mapaC)
+  {
+    // Inicializar Variables de Estado Niveles 2,3
+  }
+  ComportamientoRescatador(const ComportamientoRescatador &comport) : Comportamiento(comport) {}
+  ~ComportamientoRescatador() {}
+
+  Action think(Sensores sensores);
+
+  int interact(Action accion, int valor);
+
+  int CasillasDesconocidasAlFrente(const Sensores &sensores);
+  int VeoCasillaInteresanteR(char i, char c, char d, bool zap);
+  int VeoCasillaInteresanteR_1(char i, char c, char d, bool zap);
+  char ViablePorAlturaR(char casilla, int dif, bool zap);
+  void SituarSensorEnMapaR(vector<vector<unsigned char>> &m, vector<vector<unsigned char>> &a, Sensores sensores);
+
+  Action ComportamientoRescatadorNivel_0(Sensores sensores);
+  Action ComportamientoRescatadorNivel_1(Sensores sensores);
+  Action ComportamientoRescatadorNivel_2(Sensores sensores);
+  Action ComportamientoRescatadorNivel_3(Sensores sensores);
+  Action ComportamientoRescatadorNivel_4(Sensores sensores);
+
+private:
+  Action last_action;
+  bool tiene_zapatillas;
+  int giro45izq;
+  vector<vector<int>> visitado;
+};
+
+#endif
